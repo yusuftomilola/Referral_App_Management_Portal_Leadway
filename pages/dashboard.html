@@ -10,12 +10,15 @@
     />
   </h1>
 
-  <!-- prospects, users, converted and unconverted container -->
-  <!-- [2] -->
-  <div class="w-full flex gap-6 justify-between items-center">
+  <div class="w-full flex gap-5">
+
+    <!-- LEFT CONTENT CONTAINER -->
+    <div class="w-[50%] flex flex-col gap-5">
+      <!-- [2] -->
+<div class="w-full flex gap-5 justify-between items-center">
     <!-- Prospects Box -->
     <div
-      class="bg-[#002855] rounded-md flex flex-col w-[180px] h-[100px] px-4 py-2 justify-between"
+      class="bg-[#002855] rounded-md flex flex-col w-[50%] h-[100px] px-4 py-2 justify-between"
     >
       <a href="#" class="text-[#F3F5F6] text-left">Prospects</a>
 
@@ -24,27 +27,9 @@
 
     <!-- Users Box -->
     <div
-      class="bg-[#E6B014] rounded-md flex flex-col w-[180px] h-[100px] px-4 py-2 justify-between"
+      class="bg-[#E6B014] rounded-md flex flex-col w-[50%] h-[100px] px-4 py-2 justify-between"
     >
       <a href="#" class="text-[#F3F5F6] text-left">Users</a>
-
-      <p class="text-[#F3F5F6] text-[40px] text-right font-bold">150</p>
-    </div>
-
-    <!-- Converted Box -->
-    <div
-      class="bg-[#353535] rounded-md flex flex-col w-[180px] h-[100px] px-4 py-2 justify-between"
-    >
-      <a href="#" class="text-[#F3F5F6] text-left">Converted</a>
-
-      <p class="text-[#F3F5F6] text-[40px] text-right font-bold">150</p>
-    </div>
-
-    <!-- Unconverted Box -->
-    <div
-      class="bg-[#00B388] rounded-md flex flex-col w-[180px] h-[100px] px-4 py-2 justify-between"
-    >
-      <a href="#" class="text-[#F3F5F6] text-left">Unconverted</a>
 
       <p class="text-[#F3F5F6] text-[40px] text-right font-bold">150</p>
     </div>
@@ -55,21 +40,21 @@
   <div class="flex gap-3 items-center">
     <!-- view prospects box -->
     <div
-      class="bg-[#002855] text-[#F3F5F6] w-[125px] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+      class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>View Prospect</p>
     </div>
 
     <!-- view report box -->
     <div
-      class="bg-[#002855] text-[#F3F5F6] w-[125px] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+      class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>View Report</p>
     </div>
 
     <!-- create prospect box -->
     <div
-      class="bg-[#002855] text-[#F3F5F6] w-[135px] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+      class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>+ Create Prospects</p>
     </div>
@@ -77,8 +62,7 @@
 
   <!-- [4] -->
   <!-- prospects table-->
-
-  <div class="overflow-x-auto w-[410px] bg-white">
+  <div class="overflow-x-auto w-full bg-white rounded-md">
     <table class="mt-4 w-full min-w-max table-auto text-left">
       <thead>
         <tr>
@@ -139,9 +123,110 @@
         </button>
       </div>
 
-      <tbody id="dashboard-table-body"></tbody>
+      <tbody id="dashboard-table-body">
+        <tr class="text-[11px] text-center">
+          <td>Nurudeen Ibrahim</td>
+          <td>Seyi Olarewanju</td>
+          <td>04-01-2023</td>
+          <td>Pending</td>
+        </tr>
+      </tbody>
     </table>
   </div>
+    </div>
+
+    <!-- RIGHT CONTENT CONTAINER -->
+    <div class="w-[50%] flex flex-col gap-5">
+
+      <!-- [2] -->
+      <div class="w-full flex gap-5 justify-between items-center">
+
+      <!-- Converted Box -->
+      <div
+        class="bg-[#353535] rounded-md flex flex-col w-[50%] h-[100px] px-4 py-2 justify-between"
+      >
+        <a href="#" class="text-[#F3F5F6] text-left">Converted</a>
+
+        <p class="text-[#F3F5F6] text-[40px] text-right font-bold">150</p>
+      </div>
+
+      <!-- Unconverted Box -->
+      <div
+        class="bg-[#00B388] rounded-md flex flex-col w-[50%] h-[100px] px-4 py-2 justify-between"
+      >
+        <a href="#" class="text-[#F3F5F6] text-left">Unconverted</a>
+
+        <p class="text-[#F3F5F6] text-[40px] text-right font-bold">150</p>
+      </div>
+      </div>
+
+      <!-- [3] -->
+      <div class="">
+        <img src="../assets/prospectConversionChart.JPG" alt="prospect conversion image" width="100%" height="auto" class="rounded-md">
+      </div>
+
+      <!-- [4] -->
+<div class="w-full rounded-md flex flex-col bg-white gap-3 ">
+  <h2 class="px-5 pt-3 text-[#353535] font-bold text-[20px]">Activity</h2>
+
+  <hr>
+
+  <!-- info container -->
+  <div class="px-5 pt-2 pb-3 flex flex-col gap-5">
+    <!-- single user container -->
+    <div class="flex justify-between">
+      <div class="flex flex-col gap-1">
+        <p class="text-[#585858] text-[12px]"><span class="font-bold">New User "Adeniyi Sam</span> has been created</p>
+        <p class="text-[10px] text-[#002855] font-semibold">10 mins</p>
+      </div>
+
+      <p class="text-[12px] font-bold text-[#002855]">VIEW</p>
+    </div>
+
+<!-- single user container -->
+    <div class="flex justify-between">
+      <div class="flex flex-col gap-1">
+        <p class="text-[#585858] text-[12px]"><span class="font-bold">Seyi Olanrewaju</span> has been assigned a prospect</p>
+        <p class="text-[10px] text-[#002855] font-semibold">10 mins</p>
+      </div>
+
+      <p class="text-[12px] font-bold text-[#002855]">VIEW</p>
+    </div>
+
+    <!-- single user container -->
+    <div class="flex justify-between">
+      <div class="flex flex-col gap-1">
+        <p class="text-[#585858] text-[12px]"><span class="font-bold">Jide Alade</span> just converted a prospect</p>
+        <p class="text-[10px] text-[#002855] font-semibold">10 mins</p>
+      </div>
+
+      <p class="text-[12px] font-bold text-[#002855]">VIEW</p>
+    </div>
+
+    <!-- single user container -->
+    <div class="flex justify-between">
+      <div class="flex flex-col gap-1">
+        <p class="text-[#585858] text-[12px]"><span class="font-bold">New User "Adeniyi Sam</span> has been created</p>
+        <p class="text-[10px] text-[#002855] font-semibold">10 mins</p>
+      </div>
+
+      <p class="text-[12px] font-bold text-[#002855]">VIEW</p>
+    </div>
+
+    <!-- single user container -->
+    <div class="flex justify-between">
+      <div class="flex flex-col gap-1">
+        <p class="text-[#585858] text-[12px]"><span class="font-bold">Seyi Olanrewaju</span> has been assigned to a prospect</p>
+        <p class="text-[10px] text-[#002855] font-semibold">10 mins</p>
+      </div>
+
+      <p class="text-[12px] font-bold text-[#002855]">VIEW</p>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  
 </div>
 
 <script src="../scripts/dashboard.js"></script>
