@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" href="../assets/general/firstBankFavicon.JPG" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <script src="../scripts/layouts.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Whole layout container -->
+    <div class="flex w-screen h-screen bg-blue-500">
+      <!-- sidebar layout container -->
+      <aside
+        class="hidden lg:flex flex-col gap-20 w-[260px] bg-[#002855] h-screen justify-start pt-8 pl-8"
+      >
+        <!-- first bank logo container -->
+        <a href="/">
+          <img
+            src="../assets/general/firstBankLogo.svg"
+            alt="first bank logo"
+            width="150px"
+            height="54px"
+          />
+        </a>
+
+        <ul class="flex flex-col gap-8">
+          <li class="nav-item active">
+            <!-- dashboard link -->
+            <button
+              class="flex gap-[10px] items-center text-white text-[14px] nav-link circularSTD-font"
+              onclick="loadPage('../pages/dashboard.html', this)"
+            >
+              <img
+                src="../assets/general/dashboardIcon.svg"
+                alt="dashboard icon"
+                width="18px"
+                height="auto"
+                class="nav-item-image"
+              />
+              Dashboard
+            </button>
+          </li>
+
+          <li class="nav-item active">
+            <!-- prospects link -->
+            <button
+              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
+              onclick="loadPage('../pages/prospects.html', this)"
+            >
+              <img
+                src="../assets/general/prospectsIcon.svg"
+                alt="prospects icon"
+                width="18.2px"
+                height="18.2px"
+                class="nav-item-image"
+              />
+              Prospects
+            </button>
+          </li>
+
+          <li class="nav-item active circularSTD-font">
+            <!-- reports link -->
+            <button
+              class="flex items-center gap-[14px] text-white text-[14px] nav-link"
+              onclick="loadPage('../pages/reports.html', this)"
+            >
+              <img
+                src="../assets/general/reportsIcon.svg"
+                alt="reports icon"
+                width="14px"
+                height="auto"
+                class="nav-item-image"
+              />
+              Reports
+            </button>
+          </li>
+
+          <li class="nav-item active">
+            <!-- settings link -->
+            <button
+              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
+              onclick="loadPage('../pages/settings.html', this)"
+            >
+              <img
+                src="../assets/general/settingsIcon.svg"
+                alt="settings icon"
+                width="18.2px"
+                height="18.2px"
+                class="nav-item-image"
+              />
+              Settings
+            </button>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- right layout container -->
+      <section class="flex flex-col w-full bg-[#F0F2FA]">
+        <!-- RIGHT TOP BAR -->
+        <header
+          class="h-[70px] pl-7 pr-10 flex justify-between items-center bg-white"
+        >
+          <!-- search box area -->
+          <div
+            class="rounded-md flex items-center bg-[#F0F2FA] h-[40px] w-[300px] px-3 gap-3 items-center"
+          >
+            <img
+              src="../assets/general/searchIcon.svg"
+              alt="search icon"
+              class="br-red-500"
+            />
+            <input
+              type="text"
+              placeholder="what are you looking for?"
+              class="outline-none border-none focus:outline-none focus:ring-0 bg-[#F0F2FA] mt-[-3px] placeholder:text-[#C4C4C4] w-[80%]"
+            />
+          </div>
+
+          <!-- user icons area -->
+          <div class="flex gap-4 items-center">
+            <!-- notification bell icon -->
+            <span
+              ><img
+                src="../assets/general/notificationBellIcon.svg"
+                alt="notification bell icon"
+                class="cursor-pointer"
+                width="20px"
+                height="auto"
+            /></span>
+
+            <!-- user profile image icon -->
+            <span>
+              <img
+                src="../assets/general/userProfileImageIcon.svg"
+                alt="user profile image icon"
+                width="30px"
+                height="auto"
+                class="cursor-pointer"
+              />
+            </span>
+
+            <!-- user name text -->
+            <span>
+              <p
+                class="font-semibold text-[#353535] text-[13px] cursor-pointer"
+              >
+                TheEndDeen
+              </p>
+            </span>
+
+            <!-- drop down arrow icon -->
+            <span>
+              <img
+                src="../assets/general/shortDownArrowIcon.svg"
+                alt="drop down arrow icon"
+                class="cursor-pointer mt-[3px]"
+                width="15px"
+                height="auto"
+              />
+            </span>
+          </div>
+        </header>
+
+        <!-- RIGHT MAIN CONTENT AREA -->
+        <main id="content" class="pl-7 pr-10 pt-6"></main>
+      </section>
+    </div>
+
+    <script src="../scripts/dashboard.js"></script>
+  </body>
+</html>
