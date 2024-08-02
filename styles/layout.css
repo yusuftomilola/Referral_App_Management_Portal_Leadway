@@ -24,3 +24,13 @@ body {
   background-color: #e6b014;
   border-left-width: 3px;
 }
+
+/* Custom styles for mobile menu animation */
+.mobile-menu {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}

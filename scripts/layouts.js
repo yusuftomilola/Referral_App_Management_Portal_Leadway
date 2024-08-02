@@ -12,6 +12,7 @@
 //   loadPage("../pages/dashboard.html");
 // });
 
+// [1] Function to inject each page data into the main content area
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-link");
   const contentSection = document.querySelector("#content");
@@ -55,13 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
   loadContent("dashboard");
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const navItems = document.querySelectorAll(".nav-item");
+// [2] TOGGLE MENU ON & OFF
+document.getElementById("hamburger").addEventListener("click", function () {
+  document.getElementById("mobile-menu").classList.add("open");
+});
 
-//   navItems.forEach((item) => {
-//     item.addEventListener("click", () => {
-//       document.querySelector(".nav-item.active")?.classList.remove("active");
-//       item.classList.add("active");
-//     });
-//   });
-// });
+document.getElementById("close-menu").addEventListener("click", function () {
+  document.getElementById("mobile-menu").classList.remove("open");
+});
