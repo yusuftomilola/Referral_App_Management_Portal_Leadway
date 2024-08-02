@@ -6,7 +6,7 @@
     <title>Dashboard | Referral Portal</title>
     <link rel="icon" href="../assets/general/firstBankFavicon.JPG" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
     <script src="../scripts/layouts.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .nav-item:hover {
+        background-color: #e6b014;
+        border-left-width: 3px;
+      }
+
+      body {
+        font-family: "Circular Std Medium", sans-serif;
+      }
+    </style>
   </head>
 
   <body>
@@ -34,7 +44,7 @@
         </a>
 
         <ul class="flex flex-col">
-          <li class="nav-item active bg-[#E6B014] border-l-[3px] py-3 pl-8">
+          <li class="nav-item bg-[#E6B014] border-l-[3px] pl-8 py-3">
             <!-- dashboard link -->
             <a
               class="flex gap-[10px] items-center text-white text-[14px] nav-link"
@@ -46,13 +56,13 @@
                 alt="dashboard icon"
                 width="18px"
                 height="auto"
-                class="nav-item-image"
+                class="nav-item-image mulish-font"
               />
               Dashboard
             </a>
           </li>
 
-          <li class="nav-item active pl-8 py-3">
+          <li class="nav-item pl-8 py-3">
             <!-- prospects link -->
             <a
               class="flex items-center gap-[10px] text-white text-[14px] nav-link"
@@ -70,7 +80,7 @@
             </a>
           </li>
 
-          <li class="nav-item active pl-8 py-3">
+          <li class="nav-item pl-8 py-3">
             <!-- reports link -->
             <button
               class="flex items-center gap-[14px] text-white text-[14px] nav-link"
@@ -88,7 +98,7 @@
             </button>
           </li>
 
-          <li class="nav-item active pl-8 py-3">
+          <li class="nav-item pl-8 py-3">
             <!-- settings link -->
             <button
               class="flex items-center gap-[10px] text-white text-[14px] nav-link"

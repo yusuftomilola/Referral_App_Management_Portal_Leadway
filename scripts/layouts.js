@@ -14,7 +14,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-link");
-
   const contentSection = document.querySelector("#content");
 
   const loadContent = async (page) => {
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch(`/pages/${page}.html`);
       if (response.ok) {
         const content = await response.text();
-
         contentSection.innerHTML = content;
       } else {
         contentSection.innerHTML = `<p>Error loading page: ${page}.html</p>`;
@@ -33,26 +31,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
+  const handleNavClick = (event) => {
+    event.preventDefault();
 
-      const page = link.getAttribute("href").substring(1);
-
-      loadContent(page);
+    navLinks.forEach((link) => {
+      link.parentElement.classList.remove("bg-[#E6B014]", "border-l-[3px]");
     });
+
+    const page = event.currentTarget.getAttribute("href").substring(1);
+    loadContent(page);
+
+    event.currentTarget.parentElement.classList.add(
+      "bg-[#E6B014]",
+      "border-l-[3px]"
+    );
+  };
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", handleNavClick);
   });
 
+  // Load the dashboard content by default
   loadContent("dashboard");
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const navItems = document.querySelectorAll(".nav-item");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const navItems = document.querySelectorAll(".nav-item");
 
-  navItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      document.querySelector(".nav-item.active")?.classList.remove("active");
-      item.classList.add("active");
-    });
-  });
-});
+//   navItems.forEach((item) => {
+//     item.addEventListener("click", () => {
+//       document.querySelector(".nav-item.active")?.classList.remove("active");
+//       item.classList.add("active");
+//     });
+//   });
+// });
