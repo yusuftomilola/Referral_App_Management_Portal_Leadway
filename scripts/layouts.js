@@ -33,7 +33,7 @@ const routes = {
   },
   prospectChat: {
     template: "../pages/prospectChat.html",
-    title: "Settings | " + pageTitle,
+    title: "Chat | " + pageTitle,
     description: "This is the settings page",
   },
 };
