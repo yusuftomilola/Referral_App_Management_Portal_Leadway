@@ -1,63 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Referral Management Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/index.css" />
     <!-- Link to Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
     <!-- Link to Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="container">
-        <div class="login-section">
-            <div class="hero">
-                <img src="/Group 2531.svg" alt="FirstBank Logo" class="logo">
-                <h2>Referral Management</h2>
-                <p>Welcome. Login to your portal account.</p>
+      <div class="login-section">
+        <div class="hero">
+          <img
+            src="./assets/Group 2531.svg"
+            alt="FirstBank Logo"
+            class="logo"
+          />
+          <h2>Referral Management</h2>
+          <p>Welcome. Login to your portal account.</p>
+        </div>
+        <form>
+          <div class="input-group">
+            <div>
+              <label for="email">Email Address</label>
             </div>
-            <form>
-                <div class="input-group">
-                    <div> 
-                        <label for="email">Email Address</label>
-                    </div>
-                    <div class="input-icon">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" id="email" placeholder="Enter your email address" required>
-                    </div>
-                </div>
-                <div class="input-group">
-                    <div>
-                        <label for="password">Password</label> 
-                        <button type="button" class="show-password">SHOW</button>
-                    </div>
-                    <div class="input-icon">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" id="password" placeholder="Enter your password" required>  
-                    </div>
-                </div>
-                <div class="options">
-                    <div>
-                        <input type="checkbox" id="keep-logged-in">
-                        <label for="keep-logged-in" style="font-size: smaller;" id="keepIn">Keep me logged in</label><br>
-                    </div>
-                    <div>
-                        <a href="#" class="reset-password">Reset Password</a>
-                    </div>
-                </div>
-                <button type="submit" class="login-button">
-                    <a href="#" style="text-decoration: none; color: white;">Login</a>
-                </button>
-            </form>
-            <p class="signup">Don't have an account? <a href="#">Sign Up</a></p>
-        </div>
-        <div class="image-section">
-            <img src="Mask Group.svg" alt="Hourglass">
-            <img src="Group 162.svg" alt="Info" class="info-icon"> <!-- Add the info icon image here -->
-        </div>
+            <div class="input-icon">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <div>
+              <label for="password">Password</label>
+              <button type="button" class="show-password">SHOW</button>
+            </div>
+            <div class="input-icon">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+          </div>
+          <div class="options">
+            <div>
+              <input type="checkbox" id="keep-logged-in" />
+              <label for="keep-logged-in" style="font-size: smaller" id="keepIn"
+                >Keep me logged in</label
+              ><br />
+            </div>
+            <div>
+              <a href="#" class="reset-password">Reset Password</a>
+            </div>
+          </div>
+          <button type="submit" class="login-button">
+            <a
+              href="./layout/index.html"
+              style="text-decoration: none; color: white"
+              >Login</a
+            >
+          </button>
+        </form>
+        <p class="signup">Don't have an account? <a href="#">Sign Up</a></p>
+      </div>
+      <div class="image-section">
+        <img src="./assets/Mask Group.svg" alt="Hourglass" />
+        <img src="./assets/Group 162.svg" alt="Info" class="info-icon" />
+        <!-- Add the info icon image here -->
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>
