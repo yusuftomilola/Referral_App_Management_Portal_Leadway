@@ -31,6 +31,11 @@ const routes = {
     title: "Settings | " + pageTitle,
     description: "This is the settings page",
   },
+  prospectChat: {
+    template: "../pages/prospectChat.html",
+    title: "Settings | " + pageTitle,
+    description: "This is the settings page",
+  },
 };
 
 // create a function that watches the url and calls the urlLocationHandler
