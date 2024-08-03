@@ -55,10 +55,8 @@
   </div>
 
   <!-- Prospects Table -->
-  <div
-    class="overflow-x-auto flex-col justify-between lg:h-[606px] p-4 bg-[#FFFFFF]"
-  >
-    <div>
+  <div class="flex-col justify-between lg:h-[606px] p-4 bg-[#FFFFFF]">
+    <div class="overflow-x-auto">
       <table class="min-w-full bg-white whitespace-nowrap">
         <thead class="text-xs text-[#7F8B94] border-none p-4">
           <tr>
@@ -258,25 +256,37 @@
     </div>
 
     <!-- Pagination -->
-    <div class="flex justify-between items-center mt-4">
+    <div class="mt-32 flex justify-between items-center px-12 py-2">
       <div class="flex space-x-2">
-        <button class="bg-blue-500 text-white px-2 py-1 rounded-md">1</button>
-        <button class="bg-gray-300 text-gray-800 px-2 py-1 rounded-md">
-          2
+        <button class="bg-[#F5F8FA] px-2 py-1">
+          <img
+            src="../assets/general/paginationBackArrow.svg"
+            class="w-4 h-4 self-center"
+            alt=""
+          />
         </button>
-        <button class="bg-gray-300 text-gray-800 px-2 py-1 rounded-md">
-          3
+        <button class="rounded-md text-[#002855] text-sm">1</button>
+        <button class="rounded-md text-[#737373] text-sm">2</button>
+        <button class="rounded-md text-[#737373] text-sm">3</button>
+        <span class="px-2 py-1">..</span>
+        <button class="rounded-md text-sm text-[#737373]">6</button>
+        <button class="bg-[#F5F8FA] px-2 py-1">
+          <img
+            src="../assets/general/paginationForwardArrow.svg"
+            class="w-4 h-4 self-center"
+            alt=""
+          />
         </button>
-        <!-- Add more pagination buttons as needed -->
       </div>
-      <div>
-        <span>Views </span>
-        <select class="border rounded-md p-1">
+      <div class="flex items-center space-x-2">
+        <span class="text-[#7F8B94] text-sm">Views</span>
+        <select class="border rounded-md p-1 text-sm">
           <option>15</option>
           <option>30</option>
           <option>45</option>
         </select>
-        <span> items per page</span>
+        <span class="text-[#7F8B94] text-sm">items per page</span>
+        <span class="text-sm text-[#9F9F9F]">1 - 15 of 15 Entries</span>
       </div>
     </div>
   </div>
