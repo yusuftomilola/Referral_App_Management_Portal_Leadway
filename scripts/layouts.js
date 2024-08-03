@@ -1,4 +1,4 @@
-const pageTitle = "JS Single Page Application Router";
+const pageTitle = "Refferal Portal";
 // create an object that maps the url to the template, title, and description
 const routes = {
 	404: {

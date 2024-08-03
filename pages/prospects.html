@@ -1,1 +1,270 @@
-<p>This is the prospects page g</p>
+<div class="container mx-auto p-6 rounded-lg">
+  <!-- Header -->
+  <div class="flex justify-between">
+    <h1 class="text-xl font-bold text-[#353535]">Prospects</h1>
+    <button class="bg-[#002855] text-white px-4 py-2 rounded-sm">
+      + Create Prospect
+    </button>
+  </div>
+
+  <!-- Search and Add Prospect -->
+  <div class="bg-[#FFFFFF] rounded p-4 mt-2">
+    <div
+      class="flex justify-between bg-[#FFFFFF] border rounded items-center p-4"
+    >
+      <div class="flex items-center border overflow-hidden w-full">
+        <select class="p-2 border-r bg-gray-100 text-gray-600">
+          <option>Search By: Name</option>
+        </select>
+        <!-- search box area -->
+        <div class="flex items-center h-[40px] px-3 gap-3 w-full">
+          <img
+            src="../assets/general/searchIcon.svg"
+            alt="search icon"
+            class="br-red-500"
+          />
+          <input
+            type="text"
+            class="outline-none border-none focus:outline-none focus:ring-0 mt-[-3px] w-full"
+          />
+        </div>
+      </div>
+      <div class="ml-2">
+        <button class="p-2 px-12 rounded bg-[#002855] text-white">Find</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Status Tabs -->
+  <div class="flex space-x-1 mt-4">
+    <button class="py-2 w-[99px] bg-[#ffffff] text-sm rounded">All</button>
+    <button class="py-2 w-[99px] bg-[#0277E6] text-sm text-white rounded">
+      Open
+    </button>
+    <button class="py-2 w-[99px] bg-[#00B388] text-sm text-white rounded">
+      Closed
+    </button>
+    <button class="py-2 w-[99px] bg-[#FFB946] text-sm text-white rounded">
+      Ongoing
+    </button>
+    <button class="py-2 w-[99px] bg-[#E30000] text-sm text-white rounded">
+      Out of SLA
+    </button>
+  </div>
+
+  <!-- Prospects Table -->
+  <div class="overflow-x-auto mt-6 bg-[#FFFFFF]">
+    <table class="min-w-full bg-white">
+      <thead class="text-xs text-[#7F8B94] border-none p-4">
+        <tr>
+          <th class="py-2 px-4 border-none"></th>
+          <!-- Empty header for profile pic -->
+          <th class="py-2 px-4">
+            <div class="flex items-center">
+              <span class="mr-2">Name</span>
+              <img
+                src="../assets/general/sortArrow.svg"
+                alt="Sort Icon"
+                class="w-2 h-2"
+              />
+            </div>
+          </th>
+          <th class="py-2 px-4">
+            <div class="flex items-center">
+              <span class="mr-2">Email</span>
+              <img
+                src="../assets/general/sortArrow.svg"
+                alt="Sort Icon"
+                class="w-2 h-2"
+              />
+            </div>
+          </th>
+          <th class="py-2 px-4">
+            <div class="flex items-center">
+              <span class="mr-2">Phone Number</span>
+              <img
+                src="../assets/general/sortArrow.svg"
+                alt="Sort Icon"
+                class="w-2 h-2"
+              />
+            </div>
+          </th>
+          <th class="py-2 px-4">
+            <div class="flex items-center">
+              <span class="mr-2">Product Interest</span>
+              <img
+                src="../assets/general/sortArrow.svg"
+                alt="Sort Icon"
+                class="w-2 h-2"
+              />
+            </div>
+          </th>
+          <th class="py-2 px-4 border-b text-left">
+            <div class="flex items-center">
+              <span class="mr-2">Assigned to</span>
+              <img
+                src="../assets/general/sortArrow.svg"
+                alt="Sort Icon"
+                class="w-2 h-2"
+              />
+            </div>
+          </th>
+          <th class="py-2 px-4">
+            <div class="flex items-center">
+              <span class="mr-2">Date Added</span>
+              <img
+                src="../assets/general/sortArrow.svg"
+                alt="Sort Icon"
+                class="w-2 h-2"
+              />
+            </div>
+          </th>
+          <th class="py-2 px-4">
+            <div class="flex items-center">
+              <span class="mr-2">Status</span>
+              <img
+                src="../assets/general/sortArrow.svg"
+                alt="Sort Icon"
+                class="w-2 h-2"
+              />
+            </div>
+          </th>
+          <th class="py-2 px-4">
+            <div class="flex items-center justify-center">
+              <span class="mr-2">Action</span>
+              <img
+                src="../assets/general/sortArrow.svg"
+                alt="Sort Icon"
+                class="w-2 h-2"
+              />
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="text-[#353535]">
+        <!-- Example Row -->
+        <tr class="border">
+          <td class="py-2 px-4 text-center">
+            <img
+              src="../assets/general/profilePic.svg"
+              alt="Profile"
+              class="w-10 h-10 rounded-full"
+            />
+          </td>
+          <td class="py-2 px-4">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4">theenddeens@gmail.com</td>
+          <td class="py-2 px-4">08165476543</td>
+          <td class="py-2 px-4">Auto Insurance</td>
+          <td class="py-2 px-4">Seyi Olanrewaju</td>
+          <td class="py-2 px-4">01 Jan 2023</td>
+          <td class="py-2 px-4">
+            <span class="bg-[#FFB946] text-white py-1 px-3 rounded-md text-xs"
+              >Ongoing</span
+            >
+          </td>
+          <td class="py-2 px-4 text-center">
+            <button class="text-gray-800">
+              <img src="../assets/general/3dots.svg" alt="" />
+            </button>
+          </td>
+        </tr>
+        <tr class="border">
+          <td class="py-2 px-4 text-center">
+            <img
+              src="../assets/general/profilePic.svg"
+              alt="Profile"
+              class="w-10 h-10 rounded-full"
+            />
+          </td>
+          <td class="py-2 px-4">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4">theenddeens@gmail.com</td>
+          <td class="py-2 px-4">08165476543</td>
+          <td class="py-2 px-4">Auto Insurance</td>
+          <td class="py-2 px-4">Seyi Olanrewaju</td>
+          <td class="py-2 px-4">01 Jan 2023</td>
+          <td class="py-2 px-4">
+            <span class="bg-[#00B388] text-white py-1 px-4 rounded-md text-xs"
+              >Closed</span
+            >
+          </td>
+          <td class="py-2 px-4 text-center">
+            <button class="text-gray-800">
+              <img src="../assets/general/3dots.svg" alt="" />
+            </button>
+          </td>
+        </tr>
+        <tr class="border">
+          <td class="py-2 px-4 text-center">
+            <img
+              src="../assets/general/profilePic.svg"
+              alt="Profile"
+              class="w-10 h-10 rounded-full"
+            />
+          </td>
+          <td class="py-2 px-4">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4">theenddeens@gmail.com</td>
+          <td class="py-2 px-4">08165476543</td>
+          <td class="py-2 px-4">Auto Insurance</td>
+          <td class="py-2 px-4">Seyi Olanrewaju</td>
+          <td class="py-2 px-4">01 Jan 2023</td>
+          <td class="py-2 px-4">
+            <span class="bg-[#E30000] text-white py-1 px-3 rounded-md text-xs"
+              >Out of SLA</span
+            >
+          </td>
+          <td class="py-2 px-4 text-center">
+            <button class="text-gray-800">
+              <img src="../assets/general/3dots.svg" alt="" />
+            </button>
+          </td>
+        </tr>
+
+        <tr class="border">
+          <td class="py-2 px-4 text-center">
+            <img
+              src="../assets/general/profilePic.svg"
+              alt="Profile"
+              class="w-10 h-10 rounded-full"
+            />
+          </td>
+          <td class="py-2 px-4">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4">theenddeens@gmail.com</td>
+          <td class="py-2 px-4">08165476543</td>
+          <td class="py-2 px-4">Auto Insurance</td>
+          <td class="py-2 px-4">Seyi Olanrewaju</td>
+          <td class="py-2 px-4">01 Jan 2023</td>
+          <td class="py-2 px-4">
+            <span class="bg-[#0277E6] text-white py-1 px-4 rounded-md text-xs"
+              >Open</span
+            >
+          </td>
+          <td class="py-2 px-4 text-center">
+            <button class="text-gray-800">
+              <img src="../assets/general/3dots.svg" alt="" />
+            </button>
+          </td>
+        </tr>
+        <!-- Repeat similar rows as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  <div class="flex justify-between items-center mt-4">
+    <div class="flex space-x-2">
+      <button class="bg-blue-500 text-white px-2 py-1 rounded-md">1</button>
+      <button class="bg-gray-300 text-gray-800 px-2 py-1 rounded-md">2</button>
+      <button class="bg-gray-300 text-gray-800 px-2 py-1 rounded-md">3</button>
+      <!-- Add more pagination buttons as needed -->
+    </div>
+    <div>
+      <span>Views </span>
+      <select class="border rounded-md p-1">
+        <option>15</option>
+        <option>30</option>
+        <option>45</option>
+      </select>
+      <span> items per page</span>
+    </div>
+  </div>
+</div>
