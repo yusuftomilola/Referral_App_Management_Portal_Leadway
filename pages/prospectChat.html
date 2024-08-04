@@ -15,15 +15,19 @@
   </div>
 
   <!-- top card -->
-  <div class="w-full lg:h-[258px] bg-white mt-4 flex justify- p-4 rounded-md">
+  <div
+    class="w-full bg-white mt-4 flex justify-between p-4 rounded-md overflow-x-auto"
+  >
     <div class="flex-col items-center space-y-4 justify-between pr-8">
-      <span><img src="../assets/general/profilePic2.svg" alt="" /></span>
+      <span id="profile-pic" class=""
+        ><img src="../assets/general/profilePic2.svg" alt=""
+      /></span>
       <span
         class="mx-auto text-[20px] text-[#353535] font-bold whitespace-nowrap"
         >Nurudeen Ibrahim</span
       >
     </div>
-    <div class="flex-grow">
+    <div id="collapsible-content" class="flex-grow">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 p-4">
         <div class="grid grid-row-2 p-4">
           <span class="text-[10px] text-[#7A7C87]">Name</span>
@@ -83,12 +87,14 @@
       </button>
     </div>
     <!-- Right section: Icon -->
-    <div class="flex items-start mx-auto px-4">
-      <img
-        src="../assets/general/upArrowicon.svg"
-        alt="Icon"
-        class="w-6 h-6 cursor-pointer"
-      />
+    <div class="flex items-start ml-auto px-4">
+      <button id="collapseBtn" onclick="toggleCollapse()">
+        <img
+          src="../assets/general/upArrowicon.svg"
+          alt="Icon"
+          class="w-6 h-6 cursor-pointer"
+        />
+      </button>
     </div>
   </div>
 

@@ -25,3 +25,18 @@ function selectTab(tab) {
   window.onload = function() {
     selectTab('activity');
   }
+
+  function toggleCollapse() {
+    const chatBtn = document.getElementById('chatBtn');
+    const collapseBtn = document.getElementById('collapseBtn')
+    const collapsibleContent = document.getElementById('collapsible-content');
+    const profilePic = document.getElementById('profile-pic');
+    const name = document.querySelector('.name');
+
+    if (chatBtn.classList.contains('bg-[#ffffff]')) {
+      collapsibleContent.classList.toggle('hidden');
+      profilePic.classList.toggle('hidden');
+      name.classList.toggle('ml-8');
+      collapseBtn.classList.toggle('mr-2');
+    }
+  }
