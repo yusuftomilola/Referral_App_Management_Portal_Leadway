@@ -25,6 +25,7 @@ function toggleBulkUpload() {
     // }
 }
 
+// implementing the cancel button on new prospect upload document page  so that wjen clicked it takes you back to bulk upload
 function switchToBulkUpload() {
     const bulkUploadContainer = document.getElementById('bulkUploadContainer');
     const myProspect = document.getElementById('myProspect');
@@ -43,6 +44,22 @@ function switchToBulkUpload() {
         }
     }
 }
-
-
 document.getElementById('cancel').addEventListener('click', switchToBulkUpload);
+
+
+// file upload logic
+
+const uploadButton = document.getElementById('uploadButton');
+const fileInput = document.getElementById('fileInput');
+
+uploadButton.addEventListener('click', () => {
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+
+
+  //redirect
+  window.location.href = 'new_pros_doc_upload.html'; // 
+});

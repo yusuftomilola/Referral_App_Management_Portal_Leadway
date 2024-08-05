@@ -392,12 +392,13 @@
             <!-- Bulk upload -->
             <div class="bulk-upload-container" id="bulkUploadContainer">
                 <h3>Bulk Upload</h3>
-                <p>Please ensure the file is in Excel (.XLS) format</p>
+                <p> Please ensure the file is in Excel (.XLS) format</p>
                 <div class="upload-area">
                     <div class="upload-icon">
                         <img src="../assets/icons8_upload-2.svg" alt="Upload Icon">
                     </div>
-                    <p>Select file or drag and drop</p>
+                    <p><a href="#" id="uploadButton">Select file</a> or drag and drop</p>
+                    <input type="file" id="fileInput" style="display: none;">
                     <p>CSV or .XLSX file</p>
                 </div>
                 <button class="download-template">Download excel template</button>
