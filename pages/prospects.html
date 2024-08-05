@@ -13,9 +13,12 @@
       class="md:flex justify-between bg-[#FFFFFF] border rounded items-center p-4"
     >
       <div class="flex items-center border overflow-hidden w-full mr-2">
-        <select class="p-2 border-r bg-gray-100 text-gray-600">
-          <option>Search By: Name</option>
-        </select>
+        <button
+          class="whitespace-nowrap w-[184px] flex justify-between items-center p-2 border bg-[#F3F5F6] text-[#34475E]"
+        >
+          <span class="text-[15.15px] font-[500]">Search By: Name</span>
+          <span><img src="../assets/general/downArrowIcon.svg" alt="" /></span>
+        </button>
         <!-- search box area -->
         <div class="flex items-center h-[40px] px-3 gap-3 w-full">
           <img
@@ -62,7 +65,7 @@
   <div class="flex-col justify-between lg:h-[506px] p-4 bg-[#FFFFFF]">
     <div class="overflow-x-auto">
       <table class="min-w-full bg-white whitespace-nowrap">
-        <thead class="text-xs text-[#7F8B94] border-none p-4">
+        <thead class="text-[12px] font-[700] text-[#7F8B94] border-none p-4">
           <tr>
             <th class="py-2 px-2 border-none"></th>
             <!-- Empty header for profile pic -->
@@ -150,7 +153,9 @@
         </thead>
         <tbody class="text-[#353535] text-sm">
           <!-- Example Row -->
-          <tr class="bg-white border shadow rounded mb-4">
+          <tr
+            class="bg-white border shadow rounded mb-4 text-[12px] font-[450]"
+          >
             <td class="py-2 px-2 text-center">
               <img
                 src="../assets/general/profilePic.svg"
@@ -182,7 +187,9 @@
               </button>
             </td>
           </tr>
-          <tr class="bg-white border shadow rounded mb-4">
+          <tr
+            class="bg-white border shadow rounded mb-4 text-[12px] font-[450]"
+          >
             <td class="py-2 px-2 text-center">
               <img
                 src="../assets/general/profilePic.svg"
@@ -208,7 +215,9 @@
               </button>
             </td>
           </tr>
-          <tr class="bg-white border shadow rounded mb-4">
+          <tr
+            class="bg-white border shadow rounded mb-4 text-[12px] font-[450]"
+          >
             <td class="py-2 px-2 text-center">
               <img
                 src="../assets/general/profilePic.svg"
@@ -234,7 +243,9 @@
               </button>
             </td>
           </tr>
-          <tr class="bg-white border shadow rounded mb-4">
+          <tr
+            class="bg-white border shadow rounded mb-4 text-[12px] font-[450]"
+          >
             <td class="py-2 px-2 text-center">
               <img
                 src="../assets/general/profilePic.svg"
@@ -273,34 +284,34 @@
         <button class="bg-[#F5F8FA] px-2 py-1">
           <img
             src="../assets/general/paginationBackArrow.svg"
-            class="w-4 h-4 self-center"
+            class="w-2 h-2 self-center"
             alt=""
           />
         </button>
-        <button class="rounded-md text-[#002855] text-sm">1</button>
-        <button class="rounded-md text-[#737373] text-sm">2</button>
-        <button class="rounded-md text-[#737373] text-sm">3</button>
-        <span class="px-2 py-1">..</span>
-        <button class="rounded-md text-sm text-[#737373]">6</button>
+        <button class="rounded-md text-[#002855] text-[12px]">1</button>
+        <button class="rounded-md text-[#737373] text-[12px]">2</button>
+        <button class="rounded-md text-[#737373] text-[12px]">3</button>
+        <span class="px-2 py-1 text-[12px]">..</span>
+        <button class="rounded-md text-[12px] text-[#737373]">6</button>
         <button class="bg-[#F5F8FA] px-2 py-1">
           <img
             src="../assets/general/paginationForwardArrow.svg"
-            class="w-4 h-4 self-center"
+            class="w-2 h-2 self-center"
             alt=""
           />
         </button>
       </div>
       <div class="flex items-center space-x-2">
-        <span class="text-[#7F8B94] text-sm">Views</span>
-        <select class="border rounded-md p-1 text-sm">
+        <span class="text-[#7F8B94] text-[12px] font-[700]">Views</span>
+        <select class="border rounded-md p-1 text-[9px] text-[#7F8B94]">
           <option>15</option>
           <option>30</option>
           <option>45</option>
         </select>
-        <span class="text-[#7F8B94] text-sm whitespace-nowrap"
+        <span class="text-[#7F8B94] text-[12px] font-[700] whitespace-nowrap"
           >items per page</span
         >
-        <span class="text-sm text-[#9F9F9F] whitespace-nowrap"
+        <span class="text-[12px] font-[700] text-[#9F9F9F] whitespace-nowrap"
           >1 - 15 of 15 Entries</span
         >
       </div>
