@@ -1,0 +1,78 @@
+.prospect-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.prospect-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-right: 150px;
+}
+
+.prospect-row.header {
+    font-weight: bold;
+}
+
+.prospect-row img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.prospect-row span {
+    flex: 1;
+    text-align: center;
+}
+
+.buttons-2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    margin-bottom: 0;
+    gap: 10px;
+}
+
+.kb-1{
+    font-family: Circular Std;  
+    font-weight: 450; 
+    font-size: 25px;
+}
+
+.kb{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+
+
+.header span{
+    font-family: Circular Std;  
+    font-weight:700;
+    font-size:12px;
+    color: #7F8B94;
+}
+.row span{
+    font-family: Circular Std;  
+    font-weight:450;
+    font-size:12px;
+    color: #353535;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.cancel {
+    background-color: #ddd;
+}
+
+button.create {
+    background-color: #007bff;
+    color: white;
+}
