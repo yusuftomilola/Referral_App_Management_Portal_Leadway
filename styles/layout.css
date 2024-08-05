@@ -25,6 +25,10 @@ body {
   border-left-width: 3px;
 }
 
+.pt-6{
+  padding-top: 1.0rem;
+}
+
 /* Custom styles for mobile menu animation */
 .mobile-menu {
   transform: translateX(-100%);
