@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report parameter</title>
+    <link rel="stylesheet" href="parameter.css" />
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Report Parameters</h2>
+        <span class="close">&times;</span>
+      </div>
+      <div class="para">
+        <p>Select parameters you want to include in your report</p>
+      </div>
+      <div class="modal-body">
+        <div class="section-title">
+          <span>Sales Overview</span>
+          <span id="change">Change</span>
+        </div>
+        <div class="date-picker">
+          <label for="date">Showing data from:</label>
+          <select name="date" id="" class="date-picker">
+            <option value=" date">Wed March 29, 2020</option>
+          </select>
+          <select name="date" id="" class="date-picker">
+            <option value=" date">Wed March 29, 2020</option>
+          </select>
+        </div>
+        <div class="checkbox-container">
+          <input type="checkbox" />
+          <label>Turn on recurrent reporting</label>
+        </div>
+        <div class="select-actions">
+          <span>Select All</span>
+          <span>Select None</span>
+        </div>
+        <div class="checkbox-list">
+          <div>
+            <input type="checkbox" />
+            <label>No of Active Customers</label>
+          </div>
+          <div>
+            <input type="checkbox" />
+            <label>No of Drop Off Customers (Prospects)</label>
+          </div>
+          <div>
+            <input type="checkbox" />
+            <label>No of Admin Users</label>
+          </div>
+          <div>
+            <input type="checkbox" />
+            <label>Income Statement</label>
+          </div>
+          <div>
+            <input type="checkbox" />
+            <label>Commission Payment</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="cancel-btn">Cancel</button>
+        <button class="export-btn">Export Report</button>
+      </div>
+    </div>
+  </body>
+</html>

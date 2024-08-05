@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Circular Std";
+  src: url(font/circular-std-medium-500.ttf);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+.modal {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 646.09px;
+  height: 506px;
+
+  padding: 20px;
+  text-align: center;
+}
+.success {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  color: #000000;
+  line-height: 40.48px;
+  margin-bottom: 20px;
+  font-family: "Circular Std";
+}
+.modal p {
+  font-size: 15px;
+  font-weight: 450;
+  color: #000000;
+  line-height: 18.97px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.modal .icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .icon img {
+  margin-top: 6rem;
+}
+.modal button {
+  background-color: #002855;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 185.94px;
+  height: 53.13px;
+  font-size: 17.08px;
+  line-height: 17.08px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 12rem;
+}
+.modal button:hover {
+  background-color: #162c70;
+}
+
+.prospect {
+  font-size: 32px;
+  line-height: 40.48px;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  margin-top: 3.5rem;
+  font-family: "Circular Std";
+}
+
+.profile {
+  font-size: 32.3px;
+  line-height: 40.48px;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  margin-top: 3.5rem;
+  font-family: "Circular Std";
+}
+
+.report {
+  font-size: 32.3px;
+  line-height: 40.48px;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  margin-top: 3.5rem;
+  font-family: "Circular Std";
+}

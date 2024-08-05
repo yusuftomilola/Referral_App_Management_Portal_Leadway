@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch modal</title>
+    <link rel="stylesheet" href="switch.css" />
+  </head>
+  <body>
+    <body>
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Report Parameters</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="para">
+          <p>Select parameters you want to include in your report</p>
+        </div>
+        <div class="modal-body">
+          <div class="section-title">
+            <span>Sales Overview</span>
+            <span id="change">Change</span>
+          </div>
+          <div class="date-picker">
+            <label for="date">Showing data from:</label>
+            <select name="date" id="" class="date-picker">
+              <option value=" date">Wed March 29, 2020</option>
+            </select>
+            <select name="date" id="" class="date-picker">
+              <option value=" date">Wed March 29, 2020</option>
+            </select>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" checked />
+            <label>Turn on recurrent reporting</label>
+          </div>
+
+          <div class="input-group">
+            <label for="">When:</label>
+            <input type="email" placeholder="Every first day of the month" />
+          </div>
+
+          <div class="input-group" id="magen">
+            <label for="">To:</label>
+            <input type="email" placeholder="Enter Email Addresses" />
+          </div>
+
+          <div class="format-container">
+            <div class="format-item">
+              <p>Format:</p>
+              <span>Excel</span>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="format-item" id="margin">
+              <span>PDF</span>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="format-item" id="margin">
+              <span>PPT</span>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="cancel-btn">Cancel</button>
+          <button class="export-btn">Export</button>
+        </div>
+      </div>
+    </body>
+  </body>
+</html>
