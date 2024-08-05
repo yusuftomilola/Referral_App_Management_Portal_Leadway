@@ -55,7 +55,6 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 /* Style for the cancel link */
@@ -63,14 +62,16 @@ h2 {
     color: rgb(0 40 85 / var(--tw-bg-opacity));
     text-decoration: none;
     font-weight: 500;
+        margin-bottom: 25px;
 }
 
 /* Container for the form */
 .form-container {
     background-color: #fff;
     border-radius: 8px;
-    padding: 20px;
+    /* padding: 20px; */
     width: 95%;
+    margin-top: 20px;
 }
 
 /* Form styling */
@@ -83,6 +84,7 @@ h2 {
 .form-row {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
     margin-bottom: 15px;
 }
 
@@ -119,6 +121,45 @@ h2 {
     margin-right: 5px;
 }
 
+/* radio button color */
+input[type="radio"] {
+    accent-color: black;
+}
+
+/* dropdown */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+.dropdown select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,100 30,40 110,40" fill="black"/></svg>') no-repeat right 10px center;
+    background-size: 10px;
+}
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,100 30,40 110,40" fill="black"/></svg>') no-repeat right 10px center;
+    background-size: 10px;
+}
 /* Submit button */
 .create-prospect {
     align-self: flex-end;
@@ -155,10 +196,17 @@ h2 {
     /* Initially hidden */
     background-color: #fff;
     border-radius: 8px;
-    padding: 20px;
+    padding: 3px;
     margin-top: 20px;
-    text-align: center;
+    /* text-align: center; */
+
 }
+.bulk-upload-container h3{
+    font-weight: 500;
+    font-size: 22px;
+    color: #32404F;
+}
+
 
 /* Upload area styling */
 .upload-area {
@@ -195,4 +243,28 @@ h2 {
 /* Change background color on hover */
 .download-template:hover {
     background-color: #0056b3;
+}
+
+
+/* smaller screens */
+@media only screen and (max-width:400px) {
+    h2,
+    label {
+        font-size: smaller;
+    }
+    .prospect-container h2{
+        font-size: 20px;
+    }
+    .creation-type .cancel{
+        margin-bottom: 10px;
+        font-size: smaller;
+    }
+    .span{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .create-prospect{
+        /* width: 70%; */
+    }
 }

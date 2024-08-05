@@ -49,17 +49,9 @@ document.getElementById('cancel').addEventListener('click', switchToBulkUpload);
 
 // file upload logic
 
-const uploadButton = document.getElementById('uploadButton');
-const fileInput = document.getElementById('fileInput');
-
-uploadButton.addEventListener('click', () => {
-  fileInput.click();
-});
-
-fileInput.addEventListener('change', (event) => {
-  const file = event.target.files[0];
-
-
-  //redirect
-  window.location.href = 'new_pros_doc_upload.html'; // 
+document.getElementById('fileInput').addEventListener('change', function() {
+if (this.files && this.files.length > 0) {
+// redirection
+window.location.href = '../pages/new_pros_doc_upload.html';
+}
 });
