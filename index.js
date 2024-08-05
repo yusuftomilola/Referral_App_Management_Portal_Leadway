@@ -1,3 +1,4 @@
+/*This is a is file*/
 function togglePassword() {
     const passwordField = document.getElementById('password');
     const showPasswordText = document.querySelector('.show-password');
