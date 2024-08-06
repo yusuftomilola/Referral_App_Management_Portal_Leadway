@@ -26,7 +26,8 @@ body {
 }
 .signupP{
     text-decoration: none;
-    color: #021a33;
+    
+    color: #002855;
     font-weight: 600;
 }
 .right {
@@ -41,7 +42,7 @@ body {
     position: relative;
 }
 .checkmark{
-    background-color: #021a33;
+    background-color:#002855;
 }
 
 .right img {
@@ -105,7 +106,7 @@ h1 {
     top: 5px;
     right: 15px;
     cursor: pointer;
-    color: #021a33;
+    color: #002855;
     user-select: none;
     font-size: 10px;
     font-weight: 600;
@@ -128,7 +129,7 @@ h1 {
 button {
     width: 100%;
     padding: 10px; 
-    background-color: #021a33;
+    background-color:#002855;
     border: none;
     border-radius: 5px;
     color: white;
@@ -149,7 +150,7 @@ button:hover {
 }
 #keepLoggedIn{
     font-size: 10px;
-    background-color: #021a33;
+    background-color: #002855;
     
 }
 .reset-password{
@@ -159,6 +160,7 @@ button:hover {
 
 }
 
+/* media queries for responsiveness on all screenview */
 @media (min-width: 1200px) {
     .left {
         padding: 80px;
@@ -188,5 +190,8 @@ button:hover {
 
     .actions label, .actions a {
         font-size: 12px;
+    }
+    .show-password {
+        font-size: 8px;
     }
 }
