@@ -12,7 +12,7 @@ body {
   background-color: #f8f9fa;
 }
 
-.modal {
+.modal2 {
   background: white;
   border-radius: 8px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
@@ -47,7 +47,7 @@ body {
   margin-bottom: 20px;
   font-family: "Circular Std";
 }
-.modal p {
+.modal2 p {
   font-size: 15px;
   font-weight: 450;
   color: #000000;
@@ -55,7 +55,7 @@ body {
   margin-bottom: 20px;
   text-align: center;
 }
-.modal .icon {
+.modal2 .icon {
   width: 50px;
   height: 50px;
   margin: 0 auto 20px auto;
@@ -64,11 +64,11 @@ body {
   justify-content: center;
   align-items: center;
 }
-.modal .icon img {
+.modal2 .icon img {
   width: 80px;
   height: auto;
 }
-.modal button {
+.modal2 button {
   background-color: #002855;
   color: #fff;
   border: none;
@@ -82,7 +82,7 @@ body {
   text-align: center;
   font-weight: 500;
 }
-.modal button:hover {
+.modal2 button:hover {
   background-color: #162c70;
 }
 
