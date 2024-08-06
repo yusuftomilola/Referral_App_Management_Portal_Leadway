@@ -37,7 +37,7 @@ body {
   font-weight: 600;
 }
 .right {
-  background-image: url(/Mask\ Group.svg);
+  background-image: url(../assets/Mask\ Group.svg);
   background-position: center;
   background-size: cover;
   flex: 1;
