@@ -3,7 +3,24 @@
   src: url(font/circular-std-medium-500.ttf);
 }
 
+.lato-font {
+  font-family: Lato, sans-serif;
+}
+
+.mulish-font {
+  font-family: Mulish, sans-serif;
+}
+
+.poppins-font {
+  font-family: Poppins, sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
 body {
+  font-family: "Circular Std";
   background-color: #f5f5f5;
   margin: 0;
   display: flex;
@@ -12,13 +29,22 @@ body {
   height: 100vh;
 }
 .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 587px;
-  height: 680px;
+  /* width: 587px; */
+  /* height: 680px; */
   padding: 30px;
-  position: relative;
+  /* position: relative; */
+  z-index: 10;
 }
 .modal-header {
   display: flex;
@@ -26,8 +52,8 @@ body {
   align-items: center;
 }
 .modal-header h2 {
-  margin: 0;
-  font-size: 24px;
+  margin-bottom: 8px;
+  font-size: 22px;
   color: #34475e;
   line-height: 30.12px;
   font-weight: 800;
@@ -35,26 +61,28 @@ body {
 
 .para p {
   font-size: 14px;
-  font-weight: 450;
+  font-weight: 600;
   line-height: 17.71px;
   color: #000;
 }
+
 .modal-header .close {
-  font-size: 28px;
+  font-size: 26px;
   cursor: pointer;
 }
 .modal-body {
   margin-top: 20px;
 }
 .section-title {
-  background-color: #fff3d4;
+  background-color: #ffedd1;
   padding: 10px;
   border-radius: 5px;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
+  margin-top: 25px;
   margin-bottom: 20px;
-  height: 40px;
+  height: 45px;
 }
 .section-title span {
   color: #34475e;
@@ -66,17 +94,18 @@ body {
 
 #change {
   color: #e30000;
-  font-size: 9px;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: 400;
   font-family: "poppins";
   line-height: 12px;
 }
+
 .date-picker {
   display: flex;
   justify-content: center;
   align-items: baseline;
   margin-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .date-picker label {
@@ -90,15 +119,36 @@ body {
 }
 .date-picker select {
   width: 40%;
-  padding: 15px;
+  font-size: 12px;
+  color: #585858;
+  padding: 10px 15px;
   border: 1px solid #7f8b94;
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  /* border-left: 5px; */
 }
+
+.picker1 {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: none;
+  border-right-color: white;
+  border-right-width: 0px;
+}
+
+.picker2 {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .checkbox-container {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
   background-color: #f5f8fa;
+  border-radius: 3px;
+  padding-inline: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .checkbox-container input {
   margin-right: 10px;
@@ -106,7 +156,7 @@ body {
 
 .checkbox-container label {
   color: #7f8b94;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 12px;
   line-height: 15.18px;
 }
@@ -117,30 +167,37 @@ body {
   font-size: 11px;
   font-weight: 700;
   text-decoration: underline;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .checkbox-list {
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 10px;
-  height: 251px;
+  height: 200px;
   color: #7f8b94;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 15.18px;
+  overflow-y: auto;
+}
+
+.checkbox-list div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .checkbox-list input {
   border: 2px solid #002855;
 }
 .checkbox-list div {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .modal-footer {
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
-  gap: 10px;
+  gap: 12px;
 }
 .modal-footer button {
   padding: 10px 20px;
@@ -161,8 +218,8 @@ body {
   background: #002855;
   width: 171px;
   height: 48px;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   line-height: 22.77px;
   color: #fff;
 }
