@@ -1,0 +1,268 @@
+@font-face {
+  font-family: "Circular Std";
+  src: url(font/circular-std-medium-500.ttf);
+}
+
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.modal {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 587px;
+  height: 680px;
+  padding: 30px;
+  position: relative;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #34475e;
+  line-height: 30.12px;
+  font-weight: 800;
+}
+
+.para p {
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 17.71px;
+  color: #000;
+}
+.modal-header .close {
+  font-size: 28px;
+  cursor: pointer;
+}
+.modal-body {
+  margin-top: 20px;
+}
+.section-title {
+  background-color: #fff3d4;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 40px;
+}
+.section-title span {
+  color: #34475e;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17.57px;
+  cursor: pointer;
+}
+
+#change {
+  color: #e30000;
+  font-size: 9px;
+  font-weight: 700;
+  font-family: "poppins";
+  line-height: 12px;
+}
+.date-picker {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.date-picker label {
+  margin-top: 10px;
+  white-space: nowrap;
+  margin-right: 30px;
+  color: #7f8b94;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17.71px;
+}
+.date-picker select {
+  width: 40%;
+  padding: 15px;
+  border: 1px solid #7f8b94;
+  border-radius: 5px;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  background-color: #f5f8fa;
+}
+.checkbox-container input {
+  margin-right: 10px;
+}
+
+.checkbox-container label {
+  color: #7f8b94;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15.18px;
+}
+.select-actions {
+  display: flex;
+  gap: 20px;
+  color: #002855;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+.checkbox-list {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  height: 251px;
+  color: #7f8b94;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15.18px;
+}
+
+.checkbox-list input {
+  border: 2px solid #002855;
+}
+.checkbox-list div {
+  margin-bottom: 10px;
+}
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 10px;
+}
+.modal-footer button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cancel-btn {
+  background: #d4d4d4;
+  width: 171px;
+  height: 48px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.77px;
+  color: #fff;
+}
+.export-btn {
+  background: #002855;
+  width: 171px;
+  height: 48px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.77px;
+  color: #fff;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.input-group input {
+  width: 425px;
+  height: 35px;
+  padding: 8px;
+  border: 1px solid #7f8b94;
+  border-radius: 3px;
+  margin-left: 42px;
+}
+
+.input-group label {
+  color: #7f8b94;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.71px;
+}
+
+#magen {
+  margin-left: 20px;
+}
+
+#magen input::placeholder {
+  color: #d4d4d4;
+}
+
+.format-container {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 40px;
+}
+
+.format-container span {
+  color: #34475e;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.71px;
+}
+
+.format-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#margin {
+  margin-left: 72px;
+}
+
+.format-item p {
+  color: #7f8b94;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.71px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #4caf50;
+}
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
