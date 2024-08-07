@@ -13,12 +13,35 @@ const sectionMap = {
 
 // Function to show action dropdown
 function actionmenu(event) {
+  // Close any open dropdowns
+  const openDropdowns = document.querySelectorAll('.action-menu[style*="display: block"]');
+  openDropdowns.forEach(dropdown => {
+    dropdown.style.display = "none";
+  });
+
+  // Open the clicked dropdown
   const dropdown = event.currentTarget.nextElementSibling;
-  dropdown.style.display =
-    dropdown.style.display === "none" || dropdown.style.display === ""
-      ? "block"
-      : "none";
+  dropdown.style.display = "block";
+
+  // Add event listener to close dropdown when clicking outside
+  document.addEventListener("click", closeDropdown);
+
+  // Prevent the event from propagating to the document
+  event.stopPropagation();
 }
+
+function closeDropdown(event) {
+  const openDropdowns = document.querySelectorAll('.action-menu[style*="display: block"]');
+  openDropdowns.forEach(dropdown => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.style.display = "none";
+    }
+  });
+
+  // Remove event listener to avoid multiple bindings
+  document.removeEventListener("click", closeDropdown);
+}
+
 
 // incomeBreakdownDashboard.html chartjs
 function initChart() {
