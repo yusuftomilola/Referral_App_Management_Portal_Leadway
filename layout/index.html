@@ -6,8 +6,10 @@
     <title>Dashboard | Referral Portal</title>
     <link rel="icon" href="../assets/general/firstBankFavicon.JPG" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./styles/layout.css" />
-    <script src="../scripts/layouts.js" defer></script>
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/reports.css" />
+    <link rel="stylesheet" href="../styles/reportAll.css" />
+    <link rel="stylesheet" href="../styles/modal.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -196,10 +198,9 @@
 
           <li class="nav-item pl-8 py-3 cursor-pointer" data-section="reports">
             <!-- reports link -->
-            <button
-              class="flex items-center gap-[14px] text-white text-[14px] nav-link"
-              href="#reports"
-              data-url="/pages/reports.html"
+            <a
+              data-page="../pages/reports.html"
+              class="page-link flex items-center gap-[14px] text-white text-[14px] nav-link"
             >
               <img
                 src="../assets/general/reportsIcon.svg"
@@ -214,10 +215,9 @@
 
           <li class="nav-item pl-8 py-3 cursor-pointer" data-section="settings">
             <!-- settings link -->
-            <button
-              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              href="#settings"
-              data-url="/pages/settings.html"
+            <a
+              data-page="../pages/settings.html"
+              class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
             >
               <img
                 src="../assets/general/settingsIcon.svg"
@@ -240,6 +240,7 @@
         <header
           class="py-[10px] pl-7 pr-7 sm:pl-7 sm:pr-10 flex justify-between items-center bg-white sticky top-0"
         >
+          <!-- z-20 -->
           <!-- hamburger icon -->
           <button class="lg:hidden" id="hamburger">
             <img
@@ -322,6 +323,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script src="../scripts/layouts.js"></script>
+    <script src="../scripts/prospectChat.js"></script>
     <script src="../scripts/modal.js"></script>
   </body>
 </html>

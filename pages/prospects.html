@@ -1,361 +1,420 @@
-<div class="container mx-auto p-6 rounded-lg">
-  <!-- Header -->
-  <div class="md:flex justify-between overflow-hidden items-center">
-    <h1 class="text-[24px] font-bold text-[#353535]">Prospects</h1>
-    <button class="bg-[#002855] text-white px-4 py-2 rounded-sm">
-      + Create Prospect
+<div class="flex flex-col gap-4 overflow-auto">
+  <!-- 1st section -->
+  <div
+    class="flex flex-col justify-start gap-4 sm:flex-row sm:justify-between sm:items-center"
+  >
+    <!-- report title -->
+    <h1 class="flex gap-1 text-[#585858] font-bold text-[16px]">Prospects</h1>
+
+    <!-- create report box -->
+    <button
+      type="button"
+      class="show-modal bg-[#002855] text-[#F3F5F6] w-[170px] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+    >
+      <p class="flex gap-3 items-center justify-center">
+        <span class="text-[20px]">+</span> Create Prospect
+      </p>
     </button>
   </div>
 
   <!-- Search and Add Prospect -->
-  <div class="bg-[#FFFFFF] rounded p-4 mt-2 overflow-hidden">
+  <div
+    class="flex flex-col gap-4 md:gap-0 lg:gap-0 md:flex-row lg:flex-row items-center justify-center md:items-center md:justify-around lg:items-center lg:justify-around w-full pl-0 md:pl-[11px] pr-0 md:pr-[35px] py-4 border rounded-md border-[#D8D8D8] bg-[#FFFFFF] h-[95px]"
+  >
     <div
-      class="md:flex justify-between bg-[#FFFFFF] border rounded items-center p-4"
+      class="w-full border rounded-md border-[#D8D8D8] bg-[#FFFFFF] p-0"
+      style="
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
     >
-      <div class="flex items-center border overflow-hidden w-full mr-2">
-        <button
-          class="whitespace-nowrap w-[184px] flex justify-between items-center p-2 border bg-[#F3F5F6] text-[#34475E]"
+      <div
+        class="w-full md:w-[95%] rounded-md bg-[#FFFFFF] flex flex-col md:flex-row md:items-center gap-5"
+      >
+        <div
+          class="w-full md:w-[85%] border rounded-md border-[#D8D8D8] flex h-[35px]"
         >
-          <span class="text-[15.15px] font-[500]">Search By: Name</span>
-          <span><img src="../assets/general/downArrowIcon.svg" alt="" /></span>
-        </button>
-        <!-- search box area -->
-        <div class="flex items-center h-[40px] px-3 gap-3 w-full">
-          <img
-            src="../assets/general/searchIcon.svg"
-            alt="search icon"
-            class="br-red-500"
-          />
-          <input
-            type="text"
-            class="outline-none border-none focus:outline-none focus:ring-0 mt-[-3px] w-full"
-          />
+          <!-- search by name container -->
+          <div
+            class="bg-[#F3F5F6] w-1/4 flex flex-col justify-around items-center md:flex-row"
+          >
+            <span class="hidden lg:inline text-[#34475E] text-[13px]"
+              >Search By: Name</span
+            >
+            <span
+              ><img
+                src="../assets/shortBlueDownArrow.svg"
+                alt=""
+                width="13px"
+                height="auto"
+            /></span>
+          </div>
+
+          <!-- search icon & input container -->
+          <div class="w-3/4 flex">
+            <svg
+              class="w-[15px] h-[16px] mx-[10px] my-[auto] text-[#9F9F9F]"
+              fill="#9F9F9F"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21.71 20.29l-5.4-5.4A7.92 7.92 0 0 0 18 10a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.89-1.69l5.4 5.4a1 1 0 0 0 1.42-1.42zM10 16a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"
+              ></path>
+            </svg>
+            <input type="search" class="w-[90%]" style="outline: none" />
+          </div>
         </div>
-      </div>
-      <div class="md:ml-2">
-        <button class="p-2 px-12 rounded bg-[#002855] w-[180px] text-white">
+
+        <!-- find button -->
+        <button
+          class="w-full md:w-[15%] h-[35px] border rounded-md bg-[#002855] text-[#F3F5F6] text-[13px] flex items-center justify-center"
+        >
           Find
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Status Tabs -->
-  <div class="flex space-x-1 mt-4 overflow-hidden">
-    <button
-      class="py-2 w-[99px] bg-[#ffffff] text-[#002855] font-bold text-sm rounded"
-    >
-      <span class="border-[#002855] border-b-2 px-2 pb-2">All</span>
-    </button>
-    <button class="py-2 w-[99px] bg-[#0277E6] text-sm text-white rounded">
-      Open
-    </button>
-    <button class="py-2 w-[99px] bg-[#00B388] text-sm text-white rounded">
-      Closed
-    </button>
-    <button class="py-2 w-[99px] bg-[#FFB946] text-sm text-white rounded">
-      Ongoing
-    </button>
-    <button class="py-2 w-[99px] bg-[#E30000] text-sm text-white rounded">
-      Out of SLA
-    </button>
-  </div>
-
-  <!-- Prospects Table -->
-  <div class="flex-col justify-between p-4 bg-[#FFFFFF]">
-    <div class="overflow-x-auto">
-      <table
-        class="min-w-full bg-white whitespace-nowrap border-separate border-spacing-y-[6px]"
+  <div>
+    <!-- Status Tabs -->
+    <div class="flex space-x-1 mt-4 overflow-hidden">
+      <button
+        class="py-2 w-[99px] bg-[#ffffff] text-[#002855] font-bold text-sm rounded"
       >
-        <thead class="text-[12px] font-[700] text-[#7F8B94] border-none p-4">
-          <tr>
-            <th class="py-2 px-2 border-none"></th>
-            <!-- Empty header for profile pic -->
-            <th class="py-2 px-2 text-center">
-              <div class="flex justify-center items-center">
-                <span class="mr-2">Name</span>
-                <img
-                  src="../assets/general/sortArrow.svg"
-                  alt="Sort Icon"
-                  class="w-2 h-2"
-                />
-              </div>
-            </th>
-            <th class="py-2 px-2 text-center">
-              <div class="flex justify-center items-center">
-                <span class="mr-2">Email</span>
-                <img
-                  src="../assets/general/sortArrow.svg"
-                  alt="Sort Icon"
-                  class="w-2 h-2"
-                />
-              </div>
-            </th>
-            <th class="py-2 px-2 text-center">
-              <div class="flex justify-center items-center">
-                <span class="mr-2">Phone Number</span>
-                <img
-                  src="../assets/general/sortArrow.svg"
-                  alt="Sort Icon"
-                  class="w-2 h-2"
-                />
-              </div>
-            </th>
-            <th class="py-2 px-2 text-center">
-              <div class="flex justify-center items-center">
-                <span class="mr-2">Product Interest</span>
-                <img
-                  src="../assets/general/sortArrow.svg"
-                  alt="Sort Icon"
-                  class="w-2 h-2"
-                />
-              </div>
-            </th>
-            <th class="py-2 px-2 text-center">
-              <div class="flex justify-center items-center">
-                <span class="mr-2">Assigned to</span>
-                <img
-                  src="../assets/general/sortArrow.svg"
-                  alt="Sort Icon"
-                  class="w-2 h-2"
-                />
-              </div>
-            </th>
-            <th class="py-2 px-2 text-center">
-              <div class="flex justify-center items-center">
-                <span class="mr-2">Date Added</span>
-                <img
-                  src="../assets/general/sortArrow.svg"
-                  alt="Sort Icon"
-                  class="w-2 h-2"
-                />
-              </div>
-            </th>
-            <th class="py-2 px-2 text-center">
-              <div class="flex justify-center items-center">
-                <span class="mr-2">Status</span>
-                <img
-                  src="../assets/general/sortArrow.svg"
-                  alt="Sort Icon"
-                  class="w-2 h-2"
-                />
-              </div>
-            </th>
-            <th class="py-2 px-2 text-center">
-              <div class="flex justify-center items-center">
-                <span class="mr-2">Action</span>
-                <img
-                  src="../assets/general/sortArrow.svg"
-                  alt="Sort Icon"
-                  class="w-2 h-2"
-                />
-              </div>
-            </th>
-          </tr>
-        </thead>
-        <tbody class="text-[#353535] text-sm">
-          <!-- Example Row -->
-          <tr class="bg-white rounded mb-4 text-[12px] font-[450]">
-            <td
-              class="py-2 px-2 text-center border-l-[1px] border-t-[1px] border-b-[1px]"
-            >
-              <img
-                src="../assets/general/profilePic.svg"
-                alt="Profile"
-                class="w-10 h-10 rounded-full"
-              />
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              Nurudeen Ibrahim
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              theenddeens@gmail.com
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">08165476543</td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              Auto Insurance
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              Seyi Olanrewaju
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">01 Jan 2023</td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              <a
-                class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-                href="#prospectChat"
-                data-url="/pages/prospectChat.html"
-              >
-                <span
-                  class="bg-[#FFB946] text-white py-1 px-4 w-20 block text-center rounded-md text-xs"
-                  >Ongoing</span
-                ></a
-              >
-            </td>
-            <td
-              class="py-4 px-4 text-center border-t-[1px] border-b-[1px] border-r-[1px]"
-            >
-              <button class="text-gray-800">
-                <img src="../assets/general/3dots.svg" alt="" />
-              </button>
-            </td>
-          </tr>
-          <tr class="bg-white border rounded mb-4 text-[12px] font-[450]">
-            <td
-              class="py-2 px-2 border-l-[1px] border-t-[1px] border-b-[1px] text-center"
-            >
-              <img
-                src="../assets/general/profilePic.svg"
-                alt="Profile"
-                class="w-10 h-10 rounded-full"
-              />
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              Nurudeen Ibrahim
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              theenddeens@gmail.com
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">08165476543</td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              Auto Insurance
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              Seyi Olanrewaju
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">01 Jan 2023</td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              <span
-                class="bg-[#00B388] text-white py-1 px-4 w-20 block text-center rounded-md text-xs"
-                >Closed</span
-              >
-            </td>
-            <td
-              class="py-2 px-2 text-center border-r-[1px] border-t-[1px] border-b-[1px]"
-            >
-              <button class="text-gray-800">
-                <img src="../assets/general/3dots.svg" alt="" />
-              </button>
-            </td>
-          </tr>
-          <tr class="bg-white border rounded mb-4 text-[12px] font-[450]">
-            <td
-              class="border-l-[1px] border-t-[1px] border-b-[1px] py-2 px-2 text-center"
-            >
-              <img
-                src="../assets/general/profilePic.svg"
-                alt="Profile"
-                class="w-10 h-10 rounded-full"
-              />
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              Nurudeen Ibrahim
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              theenddeens@gmail.com
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">08165476543</td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              Auto Insurance
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              Seyi Olanrewaju
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">01 Jan 2023</td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              <span
-                class="bg-[#E30000] text-white whitespace-nowrap py-1 px-4 w-20 block text-center rounded-md text-xs"
-                >Out of SLA</span
-              >
-            </td>
-            <td
-              class="py-2 px-2 text-center border-r-[1px] border-t-[1px] border-b-[1px]"
-            >
-              <button class="text-gray-800">
-                <img src="../assets/general/3dots.svg" alt="" />
-              </button>
-            </td>
-          </tr>
-          <tr class="bg-white border rounded mb-4 text-[12px] font-[450]">
-            <td
-              class="py-2 px-2 text-center border-l-[1px] border-t-[1px] border-b-[1px]"
-            >
-              <img
-                src="../assets/general/profilePic.svg"
-                alt="Profile"
-                class="w-10 h-10 rounded-full"
-              />
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              Nurudeen Ibrahim
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              theenddeens@gmail.com
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">08165476543</td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              Auto Insurance
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              Seyi Olanrewaju
-            </td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">01 Jan 2023</td>
-            <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
-              <span
-                class="bg-[#0277E6] text-white py-1 px-4 w-20 block text-center rounded-md text-xs"
-                >Open</span
-              >
-            </td>
-            <td
-              class="py-2 px-2 text-center border-r-[1px] border-t-[1px] border-b-[1px]"
-            >
-              <button class="text-gray-800">
-                <img src="../assets/general/3dots.svg" alt="" />
-              </button>
-            </td>
-          </tr>
-          <!-- Repeat similar rows as needed -->
-        </tbody>
-      </table>
+        <span class="border-[#002855] border-b-2 px-2 pb-2">All</span>
+      </button>
+      <button class="py-2 w-[99px] bg-[#0277E6] text-sm text-white rounded">
+        Open
+      </button>
+      <button class="py-2 w-[99px] bg-[#00B388] text-sm text-white rounded">
+        Closed
+      </button>
+      <button class="py-2 w-[99px] bg-[#FFB946] text-sm text-white rounded">
+        Ongoing
+      </button>
+      <button class="py-2 w-[99px] bg-[#E30000] text-sm text-white rounded">
+        Out of SLA
+      </button>
     </div>
 
-    <!-- Pagination -->
-    <div
-      class="mt-32 flex justify-between items-center px-12 py-2 overflow-x-auto"
-    >
-      <div class="flex space-x-2">
-        <button class="bg-[#F5F8FA] px-2 py-1">
-          <img
-            src="../assets/general/paginationBackArrow.svg"
-            class="w-2 h-2 self-center"
-            alt=""
-          />
-        </button>
-        <button class="rounded-md text-[#002855] text-[12px]">1</button>
-        <button class="rounded-md text-[#737373] text-[12px]">2</button>
-        <button class="rounded-md text-[#737373] text-[12px]">3</button>
-        <span class="px-2 py-1 text-[12px]">..</span>
-        <button class="rounded-md text-[12px] text-[#737373]">6</button>
-        <button class="bg-[#F5F8FA] px-2 py-1">
-          <img
-            src="../assets/general/paginationForwardArrow.svg"
-            class="w-2 h-2 self-center"
-            alt=""
-          />
-        </button>
+    <!-- Prospects Table -->
+    <div class="flex-col justify-between p-4 bg-[#FFFFFF]">
+      <div class="overflow-x-auto">
+        <table
+          class="min-w-full bg-white whitespace-nowrap border-separate border-spacing-y-[6px]"
+        >
+          <thead class="text-[12px] font-[700] text-[#7F8B94] border-none p-4">
+            <tr>
+              <th class="py-2 px-2 border-none"></th>
+              <!-- Empty header for profile pic -->
+              <th class="py-2 px-2 text-center">
+                <div class="flex justify-center items-center">
+                  <span class="mr-2">Name</span>
+                  <img
+                    src="../assets/general/sortArrow.svg"
+                    alt="Sort Icon"
+                    class="w-2 h-2"
+                  />
+                </div>
+              </th>
+              <th class="py-2 px-2 text-center">
+                <div class="flex justify-center items-center">
+                  <span class="mr-2">Email</span>
+                  <img
+                    src="../assets/general/sortArrow.svg"
+                    alt="Sort Icon"
+                    class="w-2 h-2"
+                  />
+                </div>
+              </th>
+              <th class="py-2 px-2 text-center">
+                <div class="flex justify-center items-center">
+                  <span class="mr-2">Phone Number</span>
+                  <img
+                    src="../assets/general/sortArrow.svg"
+                    alt="Sort Icon"
+                    class="w-2 h-2"
+                  />
+                </div>
+              </th>
+              <th class="py-2 px-2 text-center">
+                <div class="flex justify-center items-center">
+                  <span class="mr-2">Product Interest</span>
+                  <img
+                    src="../assets/general/sortArrow.svg"
+                    alt="Sort Icon"
+                    class="w-2 h-2"
+                  />
+                </div>
+              </th>
+              <th class="py-2 px-2 text-center">
+                <div class="flex justify-center items-center">
+                  <span class="mr-2">Assigned to</span>
+                  <img
+                    src="../assets/general/sortArrow.svg"
+                    alt="Sort Icon"
+                    class="w-2 h-2"
+                  />
+                </div>
+              </th>
+              <th class="py-2 px-2 text-center">
+                <div class="flex justify-center items-center">
+                  <span class="mr-2">Date Added</span>
+                  <img
+                    src="../assets/general/sortArrow.svg"
+                    alt="Sort Icon"
+                    class="w-2 h-2"
+                  />
+                </div>
+              </th>
+              <th class="py-2 px-2 text-center">
+                <div class="flex justify-center items-center">
+                  <span class="mr-2">Status</span>
+                  <img
+                    src="../assets/general/sortArrow.svg"
+                    alt="Sort Icon"
+                    class="w-2 h-2"
+                  />
+                </div>
+              </th>
+              <th class="py-2 px-2 text-center">
+                <div class="flex justify-center items-center">
+                  <span class="mr-2">Action</span>
+                  <img
+                    src="../assets/general/sortArrow.svg"
+                    alt="Sort Icon"
+                    class="w-2 h-2"
+                  />
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="text-[#353535] text-sm">
+            <!-- Example Row -->
+            <tr
+              class="bg-white rounded mb-4 text-[12px] font-[450] cursor-pointer"
+              onclick="loadPage('../pages/prospectsChat.html', this)"
+            >
+              <td
+                class="py-2 px-2 text-center border-l-[1px] border-t-[1px] border-b-[1px]"
+              >
+                <img
+                  src="../assets/general/profilePic.svg"
+                  alt="Profile"
+                  class="w-10 h-10 rounded-full"
+                />
+              </td>
+
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                Nurudeen Ibrahim
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                theenddeens@gmail.com
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                08165476543
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                Auto Insurance
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                Seyi Olanrewaju
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                01 Jan 2023
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                <a
+                  class="flex items-center gap-[10px] text-white text-[14px] nav-link"
+                  href="#prospectChat"
+                  data-url="/pages/prospectChat.html"
+                >
+                  <span
+                    class="bg-[#FFB946] text-white py-1 px-4 w-20 block text-center rounded-md text-xs"
+                    >Ongoing</span
+                  ></a
+                >
+              </td>
+              <td
+                class="py-4 px-4 text-center border-t-[1px] border-b-[1px] border-r-[1px]"
+              >
+                <button class="text-gray-800">
+                  <img src="../assets/general/3dots.svg" alt="" />
+                </button>
+              </td>
+            </tr>
+            <tr class="bg-white border rounded mb-4 text-[12px] font-[450]">
+              <td
+                class="py-2 px-2 border-l-[1px] border-t-[1px] border-b-[1px] text-center"
+              >
+                <img
+                  src="../assets/general/profilePic.svg"
+                  alt="Profile"
+                  class="w-10 h-10 rounded-full"
+                />
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                Nurudeen Ibrahim
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                theenddeens@gmail.com
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                08165476543
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                Auto Insurance
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                Seyi Olanrewaju
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                01 Jan 2023
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                <span
+                  class="bg-[#00B388] text-white py-1 px-4 w-20 block text-center rounded-md text-xs"
+                  >Closed</span
+                >
+              </td>
+              <td
+                class="py-2 px-2 text-center border-r-[1px] border-t-[1px] border-b-[1px]"
+              >
+                <button class="text-gray-800">
+                  <img src="../assets/general/3dots.svg" alt="" />
+                </button>
+              </td>
+            </tr>
+            <tr class="bg-white border rounded mb-4 text-[12px] font-[450]">
+              <td
+                class="border-l-[1px] border-t-[1px] border-b-[1px] py-2 px-2 text-center"
+              >
+                <img
+                  src="../assets/general/profilePic.svg"
+                  alt="Profile"
+                  class="w-10 h-10 rounded-full"
+                />
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                Nurudeen Ibrahim
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                theenddeens@gmail.com
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                08165476543
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                Auto Insurance
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                Seyi Olanrewaju
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                01 Jan 2023
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                <span
+                  class="bg-[#E30000] text-white whitespace-nowrap py-1 px-4 w-20 block text-center rounded-md text-xs"
+                  >Out of SLA</span
+                >
+              </td>
+              <td
+                class="py-2 px-2 text-center border-r-[1px] border-t-[1px] border-b-[1px]"
+              >
+                <button class="text-gray-800">
+                  <img src="../assets/general/3dots.svg" alt="" />
+                </button>
+              </td>
+            </tr>
+            <tr class="bg-white border rounded mb-4 text-[12px] font-[450]">
+              <td
+                class="py-2 px-2 text-center border-l-[1px] border-t-[1px] border-b-[1px]"
+              >
+                <img
+                  src="../assets/general/profilePic.svg"
+                  alt="Profile"
+                  class="w-10 h-10 rounded-full"
+                />
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                Nurudeen Ibrahim
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                theenddeens@gmail.com
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                08165476543
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                Auto Insurance
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                Seyi Olanrewaju
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                01 Jan 2023
+              </td>
+              <td class="py-2 px-2 border-t-[1px] border-b-[1px]">
+                <span
+                  class="bg-[#0277E6] text-white py-1 px-4 w-20 block text-center rounded-md text-xs"
+                  >Open</span
+                >
+              </td>
+              <td
+                class="py-2 px-2 text-center border-r-[1px] border-t-[1px] border-b-[1px]"
+              >
+                <button class="text-gray-800">
+                  <img src="../assets/general/3dots.svg" alt="" />
+                </button>
+              </td>
+            </tr>
+            <!-- Repeat similar rows as needed -->
+          </tbody>
+        </table>
       </div>
-      <div class="flex items-center space-x-2">
-        <span class="text-[#7F8B94] text-[12px] font-[700]">Views</span>
-        <select class="border rounded-md p-1 text-[9px] text-[#7F8B94]">
-          <option>15</option>
-          <option>30</option>
-          <option>45</option>
-        </select>
-        <span class="text-[#7F8B94] text-[12px] font-[700] whitespace-nowrap"
-          >items per page</span
-        >
-        <span class="text-[12px] font-[700] text-[#9F9F9F] whitespace-nowrap"
-          >1 - 15 of 15 Entries</span
-        >
+
+      <!-- Pagination -->
+      <div
+        class="mt-32 flex justify-between items-center px-12 py-2 overflow-x-auto"
+      >
+        <div class="flex space-x-2">
+          <button class="bg-[#F5F8FA] px-2 py-1">
+            <img
+              src="../assets/general/paginationBackArrow.svg"
+              class="w-2 h-2 self-center"
+              alt=""
+            />
+          </button>
+          <button class="rounded-md text-[#002855] text-[12px]">1</button>
+          <button class="rounded-md text-[#737373] text-[12px]">2</button>
+          <button class="rounded-md text-[#737373] text-[12px]">3</button>
+          <span class="px-2 py-1 text-[12px]">..</span>
+          <button class="rounded-md text-[12px] text-[#737373]">6</button>
+          <button class="bg-[#F5F8FA] px-2 py-1">
+            <img
+              src="../assets/general/paginationForwardArrow.svg"
+              class="w-2 h-2 self-center"
+              alt=""
+            />
+          </button>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-[#7F8B94] text-[12px] font-[700]">Views</span>
+          <select class="border rounded-md p-1 text-[9px] text-[#7F8B94]">
+            <option>15</option>
+            <option>30</option>
+            <option>45</option>
+          </select>
+          <span class="text-[#7F8B94] text-[12px] font-[700] whitespace-nowrap"
+            >items per page</span
+          >
+          <span class="text-[12px] font-[700] text-[#9F9F9F] whitespace-nowrap"
+            >1 - 15 of 15 Entries</span
+          >
+        </div>
       </div>
     </div>
   </div>

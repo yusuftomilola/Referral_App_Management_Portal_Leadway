@@ -7,13 +7,14 @@
     <h1 class="flex gap-1 text-[#585858] font-bold text-[16px]">Reports</h1>
 
     <!-- create report box -->
-    <div
-      class="bg-[#002855] text-[#F3F5F6] w-[170px] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+    <button
+      type="button"
+      class="show-modal bg-[#002855] text-[#F3F5F6] w-[170px] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p class="flex gap-3 items-center justify-center">
         <span class="text-[20px]">+</span> Create Report
       </p>
-    </div>
+    </button>
   </div>
 
   <div></div>
@@ -318,3 +319,122 @@
     </div>
   </div>
 </div>
+
+<!-- FIRST OVERLAY -->
+<div class="modal hidden">
+  <div class="modal-header">
+    <h2 class="mulish-font">Report Parameters</h2>
+    <button class="close close-modal" type="button">
+      <img src="../assets/xCloseIcon2.svg" alt="close icon" />
+    </button>
+  </div>
+  <div class="para">
+    <p class="mulish-font">
+      Select parameters you want to include in your report
+    </p>
+  </div>
+  <div class="modal-body">
+    <div class="section-title">
+      <span>Sales Overview</span>
+      <span id="change">Change</span>
+    </div>
+    <div class="date-picker">
+      <label for="date">Showing data from:</label>
+      <select name="date" id="" class="date-picker picker1">
+        <option value=" date">Wed March 29, 2020</option>
+      </select>
+      <select name="date" id="" class="date-picker picker2">
+        <option value=" date">Wed March 29, 2020</option>
+      </select>
+    </div>
+    <div class="checkbox-container">
+      <input type="checkbox" />
+      <label>Turn on recurrent reporting</label>
+    </div>
+    <div class="select-actions">
+      <span>Select All</span>
+      <span>Select None</span>
+    </div>
+    <div class="checkbox-list">
+      <div>
+        <input type="checkbox" />
+        <label>No of New Customers</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of New Corporate Customers</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Retail Customer</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of New Retail Customer</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Active Customers</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Inactive Customers</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Customers with Active Products</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Customers with InActive Products</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Current Prospects</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Prospects Turned to Customers</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Customers Who Made Claims</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Customers Who Made Renewals</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Customers Who Made Claims</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Customers Who Made Claims</label>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="close-modal cancel-btn">Cancel</button>
+
+    <button class="export-btn show-modal2">Create Report</button>
+  </div>
+</div>
+
+<div class="overlay hidden"></div>
+
+<!-- SECOND OVERLAY -->
+<!-- hidden -->
+<div class="modal2 hidden">
+  <h1 class="report">Report created successfully</h1>
+
+  <div class="icon">
+    <img src="../assets/checked.svg" />
+  </div>
+
+  <a href="#" data-page="../pages/reportsDashboard.html" class="page-link">
+    <button>View</button></a
+  >
+</div>
+
+<div class="overlay2 hidden"></div>
