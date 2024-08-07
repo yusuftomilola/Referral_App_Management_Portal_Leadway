@@ -8,7 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/layout.css" />
     <script src="../scripts/layouts.js" defer></script>
-    <script src="../scripts/prospectChat.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +16,7 @@
     />
   </head>
 
-  <body>
+  <body class="overflow-hidden lg:overflow-auto">
     <!-- Whole layout container -->
     <div class="flex w-screen h-screen bg-blue-500">
       <!-- sidebar layout container -->
@@ -35,30 +34,34 @@
         </a>
 
         <ul class="flex flex-col">
-          <li class="nav-item active bg-[#E6B014] border-l-[3px] py-3 pl-8">
+          <li
+            class="nav-item pl-8 py-3 cursor-pointer"
+            data-section="dashboard"
+          >
             <!-- dashboard link -->
             <a
-              class="flex gap-[10px] items-center text-white text-[14px] nav-link"
-              href="#dashboard"
-              data-url="/pages/dashboard.html"
+              data-page="../pages/dashboard.html"
+              class="page-link flex gap-[10px] items-center text-white text-[14px] nav-link"
             >
               <img
                 src="../assets/general/dashboardIcon.svg"
                 alt="dashboard icon"
                 width="18px"
                 height="auto"
-                class="nav-item-image"
+                class="nav-item-image mulish-font"
               />
               Dashboard
             </a>
           </li>
 
-          <li class="nav-item active pl-8 py-3">
+          <li
+            class="nav-item pl-8 py-3 cursor-pointer"
+            data-section="prospects"
+          >
             <!-- prospects link -->
             <a
-              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              href="#prospects"
-              data-url="/pages/prospects.html"
+              data-page="../pages/prospects.html"
+              class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
             >
               <img
                 src="../assets/general/prospectsIcon.svg"
@@ -71,9 +74,129 @@
             </a>
           </li>
 
-          <li class="nav-item active pl-8 py-3">
+          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="reports">
             <!-- reports link -->
             <a
+              data-page="../pages/reports.html"
+              class="page-link flex gap-[14px] text-white text-[14px] nav-link"
+            >
+              <img
+                src="../assets/general/reportsIcon.svg"
+                alt="reports icon"
+                width="14px"
+                height="auto"
+                class="nav-item-image"
+              />
+              Reports
+            </a>
+          </li>
+
+          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="settings">
+            <!-- settings link -->
+            <a
+              data-page="../pages/settings.html"
+              class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
+            >
+              <img
+                src="../assets/general/settingsIcon.svg"
+                alt="settings icon"
+                width="18.2px"
+                height="18.2px"
+                class="nav-item-image"
+              />
+              Settings
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- mobile sidebar menu layout container -->
+      <aside
+        class="fixed inset-0 z-50 flex flex-col gap-5 w-[260px] bg-[#002855] md:w-[35%] h-screen justify-start pt-8 mobile-menu lg:hidden"
+        id="mobile-menu"
+      >
+        <div class="flex items-center justify-between gap-6 pr-4 md:pr-8">
+          <!-- first bank logo container -->
+          <a href="/layout" class="pl-8">
+            <img
+              src="../assets/general/firstBankLogo.svg"
+              alt="first bank logo"
+              width="150px"
+              height="54px"
+            />
+          </a>
+
+          <!-- close button -->
+          <button class="text-white font-bold" id="close-menu">
+            <img
+              src="../assets/general/closeIcon.svg"
+              alt="close icon"
+              width="26px"
+              height="26px"
+            />
+          </button>
+        </div>
+
+        <!-- search box area -->
+        <div
+          class="rounded-md flex items-center bg-[#F0F2FA] h-[40px] w-[80%] mx-auto px-3 gap-3"
+        >
+          <img
+            src="../assets/general/searchIcon.svg"
+            alt="search icon"
+            class="br-red-500"
+          />
+          <input
+            type="text"
+            placeholder="what are you looking for?"
+            class="outline-none border-none focus:outline-none focus:ring-0 bg-[#F0F2FA] mt-[-3px] placeholder:text-[#C4C4C4] w-[80%] placeholder:text-[12px] text-[12px]"
+          />
+        </div>
+
+        <ul class="flex flex-col">
+          <li
+            class="nav-item pl-8 py-3 cursor-pointer"
+            data-section="dashboard"
+          >
+            <!-- dashboard link -->
+            <a
+              data-page="../pages/dashboard.html"
+              class="page-link flex gap-[10px] items-center text-white text-[14px] nav-link"
+            >
+              <img
+                src="../assets/general/dashboardIcon.svg"
+                alt="dashboard icon"
+                width="18px"
+                height="auto"
+                class="nav-item-image mulish-font"
+              />
+              Dashboard
+            </a>
+          </li>
+
+          <li
+            class="nav-item pl-8 py-3 cursor-pointer"
+            data-section="prospects"
+          >
+            <!-- prospects link -->
+            <a
+              data-page="../pages/prospects.html"
+              class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
+            >
+              <img
+                src="../assets/general/prospectsIcon.svg"
+                alt="prospects icon"
+                width="18.2px"
+                height="18.2px"
+                class="nav-item-image"
+              />
+              Prospects
+            </a>
+          </li>
+
+          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="reports">
+            <!-- reports link -->
+            <button
               class="flex items-center gap-[14px] text-white text-[14px] nav-link"
               href="#reports"
               data-url="/pages/reports.html"
@@ -89,9 +212,9 @@
             </a>
           </li>
 
-          <li class="nav-item active pl-8 py-3">
+          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="settings">
             <!-- settings link -->
-            <a
+            <button
               class="flex items-center gap-[10px] text-white text-[14px] nav-link"
               href="#settings"
               data-url="/pages/settings.html"
@@ -113,13 +236,23 @@
       <section
         class="flex flex-col w-full bg-[#F0F2FA] min-h-screen overflow-y-auto"
       >
-        <!-- RIGHT TOP BAR -->
+        <!-- TOP BAR -->
         <header
-          class="py-[10px] pl-7 pr-10 flex justify-between items-center bg-white sticky top-0"
+          class="py-[10px] pl-7 pr-7 sm:pl-7 sm:pr-10 flex justify-between items-center bg-white sticky top-0"
         >
+          <!-- hamburger icon -->
+          <button class="lg:hidden" id="hamburger">
+            <img
+              src="../assets/general/hamburgerIcon.svg"
+              alt="hamburger icon"
+              width="24px"
+              height="24px"
+            />
+          </button>
+
           <!-- search box area -->
           <div
-            class="rounded-md flex items-center bg-[#F0F2FA] h-[40px] w-[300px] px-3 gap-3 items-center"
+            class="hidden rounded-md lg:flex items-center bg-[#F0F2FA] h-[40px] w-[300px] px-3 gap-3 items-center"
           >
             <img
               src="../assets/general/searchIcon.svg"
@@ -129,7 +262,7 @@
             <input
               type="text"
               placeholder="what are you looking for?"
-              class="outline-none border-none focus:outline-none focus:ring-0 bg-[#F0F2FA] mt-[-3px] placeholder:text-[#C4C4C4] w-[80%]"
+              class="outline-none border-none focus:outline-none focus:ring-0 bg-[#F0F2FA] mt-[-3px] placeholder:text-[#C4C4C4] w-[80%] placeholder:text-[14pxh]"
             />
           </div>
 
@@ -145,25 +278,25 @@
                 height="auto"
             /></span>
 
-            <!-- user profile image icon -->
-            <span>
-              <img
-                src="../assets/general/userProfileImageIcon.svg"
-                alt="user profile image icon"
-                width="30px"
-                height="auto"
-                class="cursor-pointer"
-              />
-            </span>
+            <div class="flex gap-2 items-center">
+              <!-- user profile image icon -->
+              <span>
+                <img
+                  src="../assets/general/userProfileImageIcon.svg"
+                  alt="user profile image icon"
+                  width="30px"
+                  height="auto"
+                  class="cursor-pointer"
+                />
+              </span>
 
-            <!-- user name text -->
-            <span>
-              <p
-                class="font-semibold text-[#353535] text-[13px] cursor-pointer"
-              >
-                TheEndDeen
-              </p>
-            </span>
+              <!-- user name text -->
+              <span>
+                <p class="text-[#353535] text-[13px] cursor-pointer">
+                  TheEndDeen
+                </p>
+              </span>
+            </div>
 
             <!-- drop down arrow icon -->
             <span>
@@ -179,8 +312,16 @@
         </header>
 
         <!-- RIGHT MAIN CONTENT AREA -->
-        <main id="content" class="pl-7 pr-10 pt-6 flex-grow mb-10"></main>
+        <main
+          id="content"
+          class="pl-6 pr-6 sm:pl-8 sm:pr-8 pt-6 flex-grow mb-10"
+        ></main>
       </section>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="../scripts/layouts.js"></script>
+    <script src="../scripts/modal.js"></script>
   </body>
 </html>

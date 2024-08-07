@@ -1,7 +1,8 @@
 <div class="flex flex-col gap-4">
+  
   <!-- [1] -->
   <h1 class="flex gap-1 text-[#585858] font-bold items-center text-[18px]">
-    Welcome, Deens
+    Welcome, Deen
     <img
       src="../assets/wavingHand.svg"
       alt="waving hand"
@@ -10,7 +11,8 @@
     />
   </h1>
 
-  <div class="w-full flex gap-5">
+  <!-- OTHER DASHBOARD VIEWS -->
+  <div class="w-full hidden lg:flex gap-5">
 
     <!-- LEFT CONTENT CONTAINER -->
     <div class="w-[50%] flex flex-col gap-5">
@@ -18,20 +20,21 @@
 <div class="w-full flex gap-5 justify-between items-center">
     <!-- Prospects Box -->
     <div
-      class="bg-[#002855] rounded-md flex flex-col w-[50%] h-[100px] px-4 py-2 justify-between"
+      class="bg-[#002855] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
     >
-      <a href="#" class="text-[#F3F5F6] text-left">Prospects</a>
+      <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#F3F5F6] text-left">Prospects</button>
 
-      <p class="text-[#F3F5F6] text-[40px] text-right font-bold">200</p>
+      <p class="text-[#F3F5F6] text-[45px] text-right font-bold pr-3">200</p>
     </div>
+
 
     <!-- Users Box -->
     <div
-      class="bg-[#E6B014] rounded-md flex flex-col w-[50%] h-[100px] px-4 py-2 justify-between"
+      class="bg-[#E6B014] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
     >
       <a href="#" class="text-[#F3F5F6] text-left">Users</a>
 
-      <p class="text-[#F3F5F6] text-[40px] text-right font-bold">150</p>
+      <p class="text-[#F3F5F6] text-[45px] text-right font-bold pr-3">150</p>
     </div>
   </div>
 
@@ -39,100 +42,127 @@
   <!-- view prospects, view reports, create prospects -->
   <div class="flex gap-3 items-center">
     <!-- view prospects box -->
-    <div
+    <button
+    onclick="loadPage('../pages/prospects.html', this)"
       class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>View Prospect</p>
-    </div>
+    </button>
 
     <!-- view report box -->
-    <div
+    <button
+    onclick="loadPage('../pages/reports.html', this)"
       class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>View Report</p>
-    </div>
+    </button>
 
     <!-- create prospect box -->
-    <div
+    <button
+    onclick="loadPage('../pages/prospects.html', this)"
       class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>+ Create Prospects</p>
-    </div>
+    </button>
   </div>
 
   <!-- [4] -->
   <!-- prospects table-->
-  <div class="overflow-x-auto w-full bg-white rounded-md">
-    <table class="mt-4 w-full min-w-max table-auto text-left">
-      <thead>
-        <tr>
-          <!-- heading 1 - name -->
-          <th
-            class="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50"
-          >
-            <p
-              class="antialiased font-sans text-[13px] text-[#7F8B94] flex items-center justify-start gap-2 font-normal leading-none opacity-70"
-            >
-              Name
-            </p>
-          </th>
-
-          <!-- heading 2 - assigned to -->
-          <th
-            class="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50"
-          >
-            <p
-              class="antialiased font-sans text-[13px] text-[#7F8B94] flex items-center justify-start gap-2 font-normal leading-none opacity-70"
-            >
-              Assigned To
-            </p>
-          </th>
-
-          <!-- heading 3 - date added -->
-          <th
-            class="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50"
-          >
-            <p
-              class="antialiased font-sans text-[13px] text-[#7F8B94] flex items-center justify-start gap-2 font-normal leading-none opacity-70"
-            >
-              Date Added
-            </p>
-          </th>
-
-          <!-- Heading 4 - status -->
-          <th
-            class="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50"
-          >
-            <p
-              class="antialiased font-sans text-[13px] text-[#7F8B94] flex items-center justify-start gap-2 font-normal leading-none opacity-70"
-            >
-              Status
-            </p>
-          </th>
-        </tr>
-      </thead>
-
-      <div class="flex items-center justify-between w-full px-4 pt-3">
-        <p class="text-[#353535] text-[18px] font-bold">Prospects</p>
+  <div class="overflow-x-auto overflow-y-hidden w-full bg-white rounded-md flex flex-col lg:h-[600px] xl:h-[80vh]">
+      <div class="flex items-center justify-between w-full px-4 pt-3 pb-3">
+        <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#353535] text-[20px]">Prospects</button>
 
           <button
-            class="bg-[#002855] text-[#F3F5F6] w-[80px] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+          onclick="loadPage('../pages/prospects.html', this)"
+            class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
           >
             View All
           </button>
         </button>
       </div>
 
-      <tbody id="dashboard-table-body">
-        <tr class="text-[11px] text-center">
-          <td>Nurudeen Ibrahim</td>
-          <td>Seyi Olarewanju</td>
-          <td>04-01-2023</td>
-          <td>Pending</td>
+      <hr>
+
+<div class="overflow-x-auto overflow-y-hidden flex-grow flex flex-col pt-4">
+    <table class="min-w-full">
+      <thead>
+        <tr>
+          <th class="py-2 xl:py-4  px-4 text-left text-[12px] text-[#1F4173]">Name</th>
+          <th class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]">Assigned To</th>
+          <th class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]">Date Added</th>
+          <th class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]">Status</th>
+        </tr>
+      </thead>
+      <tbody class="overflow-hidden flex-grow">
+        <tr onclick="loadPage('../pages/prospects.html', this)" class="cursor-pointer">
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Mohammed Ganiyu</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Ade Ayobami</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">David Jacobs</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Jide Alade</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#00B388]">Completed</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#00B388]">Completed</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
         </tr>
       </tbody>
     </table>
   </div>
+      
+ 
+
+    
+  </div>
+
     </div>
 
     <!-- RIGHT CONTENT CONTAINER -->
@@ -143,20 +173,20 @@
 
       <!-- Converted Box -->
       <div
-        class="bg-[#353535] rounded-md flex flex-col w-[50%] h-[100px] px-4 py-2 justify-between"
+        class="bg-[#353535] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
       >
         <a href="#" class="text-[#F3F5F6] text-left">Converted</a>
 
-        <p class="text-[#F3F5F6] text-[40px] text-right font-bold">150</p>
+        <p class="text-[#F3F5F6] text-[45px] text-right font-bold pr-3">150</p>
       </div>
 
       <!-- Unconverted Box -->
       <div
-        class="bg-[#00B388] rounded-md flex flex-col w-[50%] h-[100px] px-4 py-2 justify-between"
+        class="bg-[#00B388] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
       >
         <a href="#" class="text-[#F3F5F6] text-left">Unconverted</a>
 
-        <p class="text-[#F3F5F6] text-[40px] text-right font-bold">150</p>
+        <p class="text-[#F3F5F6] text-[45px] text-right pr-3 font-bold">150</p>
       </div>
       </div>
 
@@ -166,67 +196,303 @@
       </div>
 
       <!-- [4] -->
-<div class="w-full rounded-md flex flex-col bg-white gap-3 ">
-  <h2 class="px-5 pt-3 text-[#353535] font-bold text-[20px]">Activity</h2>
+    <div class="w-full rounded-md flex flex-col bg-white gap-2 ">
+      <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Activity</h2>
 
-  <hr>
+        <hr>
 
-  <!-- info container -->
-  <div class="px-5 pt-2 pb-3 flex flex-col gap-5">
+        <!-- info container -->
+      <div class="px-5 pt-6 pb-8 flex flex-col gap-5">
     <!-- single user container -->
     <div class="flex justify-between">
       <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-bold">New User "Adeniyi Sam</span> has been created</p>
-        <p class="text-[10px] text-[#002855] font-semibold">10 mins</p>
+        <p class="text-[#585858] text-[12px]"><span class="font-semibold">New User "Adeniyi Sam</span> has been created</p>
+        <p class="text-[10px] text-[#002855]">10 mins</p>
       </div>
 
-      <p class="text-[12px] font-bold text-[#002855]">VIEW</p>
+      <p class="text-[12px] text-[#002855]">VIEW</p>
     </div>
 
 <!-- single user container -->
     <div class="flex justify-between">
       <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-bold">Seyi Olanrewaju</span> has been assigned a prospect</p>
-        <p class="text-[10px] text-[#002855] font-semibold">10 mins</p>
+        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Seyi Olanrewaju</span> has been assigned a prospect</p>
+        <p class="text-[10px] text-[#002855]">10 mins</p>
       </div>
 
-      <p class="text-[12px] font-bold text-[#002855]">VIEW</p>
+      <p class="text-[12px] text-[#002855]">VIEW</p>
     </div>
 
     <!-- single user container -->
     <div class="flex justify-between">
       <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-bold">Jide Alade</span> just converted a prospect</p>
-        <p class="text-[10px] text-[#002855] font-semibold">10 mins</p>
+        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Jide Alade</span> just converted a prospect</p>
+        <p class="text-[10px] text-[#002855]">10 mins</p>
       </div>
 
-      <p class="text-[12px] font-bold text-[#002855]">VIEW</p>
+      <p class="text-[12px] text-[#002855]">VIEW</p>
     </div>
 
     <!-- single user container -->
     <div class="flex justify-between">
       <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-bold">New User "Adeniyi Sam</span> has been created</p>
-        <p class="text-[10px] text-[#002855] font-semibold">10 mins</p>
+        <p class="text-[#585858] text-[12px]"><span class="font-semibold">New User "Adeniyi Sam</span> has been created</p>
+        <p class="text-[10px] text-[#002855]">10 mins</p>
       </div>
 
-      <p class="text-[12px] font-bold text-[#002855]">VIEW</p>
+      <p class="text-[12px] text-[#002855]">VIEW</p>
     </div>
 
     <!-- single user container -->
     <div class="flex justify-between">
       <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-bold">Seyi Olanrewaju</span> has been assigned to a prospect</p>
-        <p class="text-[10px] text-[#002855] font-semibold">10 mins</p>
+        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Seyi Olanrewaju</span> has been assigned to a prospect</p>
+        <p class="text-[10px] text-[#002855]">10 mins</p>
       </div>
 
-      <p class="text-[12px] font-bold text-[#002855]">VIEW</p>
+      <p class="text-[12px] text-[#002855]">VIEW</p>
+    </div>
+      </div>
+
     </div>
   </div>
+  </div>
+
+
+<!-- MOBILE DASHBOARD VIEW -->
+
+<!-- 4 boxes -->
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2    lg:hidden gap-5">
+    <!-- Prospects Box -->
+    <div
+      class="bg-[#002855] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
+    >
+      <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#F3F5F6] text-left">Prospects</button>
+
+      <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">200</p>
     </div>
+
+    <!-- Users Box -->
+    <div
+      class="bg-[#E6B014] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
+    >
+      <a href="#" class="text-[#F3F5F6] text-left">Users</a>
+
+      <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">150</p>
+    </div>
+
+    <!-- Converted Box -->
+    <div
+        class="bg-[#353535] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
+      >
+        <a href="#" class="text-[#F3F5F6] text-left">Converted</a>
+
+        <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">150</p>
+    </div>
+
+    <!-- Unconverted Box -->
+    <div
+        class="bg-[#00B388] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
+      >
+        <a href="#" class="text-[#F3F5F6] text-left">Unconverted</a>
+
+        <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">150</p>
+    </div>
+</div>
+
+<!-- 3 boxes -->
+<div class="flex lg:hidden justify-between items-center gap-1 sm:gap-3 flex-wrap sm:flex-nowrap">
+<!-- view prospects box -->
+    <button
+    onclick="loadPage('../pages/prospects.html', this)"
+      class="bg-[#002855] text-[#F3F5F6] w-[48.5%] sm:w-[100%]  h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+    >
+      <p>View Prospect</p>
+    </button>
+
+    <!-- view report box -->
+    <button
+    onclick="loadPage('../pages/reports.html', this)"
+      class="bg-[#002855] text-[#F3F5F6] w-[48.5%] sm:w-[100%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+    >
+      <p>View Report</p>
+    </button>
+
+    <!-- create prospect box -->
+    <button
+    onclick="loadPage('../pages/prospects.html', this)"
+      class="bg-[#002855] text-[#F3F5F6] w-[100%] sm:w-[100%] max-lg:h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+    >
+      <p>+ Create Prospects</p>
+    </button>
+</div>
+
+<!-- charts table -->
+<div class="lg:hidden">
+        <img src="../assets/prospectConversionChart.JPG" alt="prospect conversion image" width="100%" height="auto" class="rounded-md">
+      </div>
+
+      <!-- activity table -->
+<div class="w-full rounded-md flex flex-col bg-white gap-2 lg:hidden ">
+      <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Activity</h2>
+
+        <hr>
+
+        <!-- info container -->
+      <div class="px-5 pt-6 pb-8 flex flex-col gap-5">
+    <!-- single user container -->
+    <div class="flex justify-between">
+      <div class="flex flex-col gap-1">
+        <p class="text-[#585858] text-[12px]"><span class="font-semibold">New User "Adeniyi Sam</span> has been created</p>
+        <p class="text-[10px] text-[#002855]">10 mins</p>
+      </div>
+
+      <p class="text-[12px] text-[#002855]">VIEW</p>
+    </div>
+
+<!-- single user container -->
+    <div class="flex justify-between">
+      <div class="flex flex-col gap-1">
+        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Seyi Olanrewaju</span> has been assigned a prospect</p>
+        <p class="text-[10px] text-[#002855]">10 mins</p>
+      </div>
+
+      <p class="text-[12px] text-[#002855]">VIEW</p>
+    </div>
+
+    <!-- single user container -->
+    <div class="flex justify-between">
+      <div class="flex flex-col gap-1">
+        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Jide Alade</span> just converted a prospect</p>
+        <p class="text-[10px] text-[#002855]">10 mins</p>
+      </div>
+
+      <p class="text-[12px] text-[#002855]">VIEW</p>
+    </div>
+
+    <!-- single user container -->
+    <div class="flex justify-between">
+      <div class="flex flex-col gap-1">
+        <p class="text-[#585858] text-[12px]"><span class="font-semibold">New User "Adeniyi Sam</span> has been created</p>
+        <p class="text-[10px] text-[#002855]">10 mins</p>
+      </div>
+
+      <p class="text-[12px] text-[#002855]">VIEW</p>
+    </div>
+
+    <!-- single user container -->
+    <div class="flex justify-between">
+      <div class="flex flex-col gap-1">
+        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Seyi Olanrewaju</span> has been assigned to a prospect</p>
+        <p class="text-[10px] text-[#002855]">10 mins</p>
+      </div>
+
+      <p class="text-[12px] text-[#002855]">VIEW</p>
+    </div>
+      </div>
+
+    </div>
+
+<!-- prospects table-->
+  <div class="overflow-x-auto w-full bg-white rounded-md lg:hidden">
+    
+
+      <div class="flex items-center justify-between w-full px-4 pt-3 pb-3">
+        <p class="text-[#353535] text-[20px] cursor-pointer" onclick="loadPage('../pages/prospects.html', this)">Prospects</p>
+
+          <button
+          onclick="loadPage('../pages/prospects.html', this)"
+            class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+          >
+            View All
+          </button>
+        
+      </div>
+
+      <hr>
+
+<div class="overflow-x-auto pt-4">
+    <table class="min-w-full">
+      <thead>
+        <tr>
+          <th class="py-4 px-4 text-left text-[12px] text-[#1F4173]">Name</th>
+          <th class="py-4 px-4 text-left text-[12px] text-[#1F4173]">Assigned To</th>
+          <th class="py-4 px-4 text-left text-[12px] text-[#1F4173]">Date Added</th>
+          <th class="py-4 px-4 text-left text-[12px] text-[#1F4173]">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="cursor-pointer"
+        onclick="loadPage('../pages/prospects.html', this)"
+        >
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Mohammed Ganiyu</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Ade Ayobami</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">David Jacobs</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Jide Alade</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-4 px-4 text-[11px] text-[#00B388]">Completed</td>
+        </tr>
+        <tr>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-4 px-4 text-[11px] text-[#00B388]">Completed</td>
+        </tr>
+        <tr>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+        <tr>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+      
+    
+
+    
   </div>
 
   
 </div>
 
-<script src="../scripts/dashboard.js"></script>

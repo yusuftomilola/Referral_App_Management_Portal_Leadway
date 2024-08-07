@@ -1,0 +1,446 @@
+<div class="flex flex-col gap-4">
+  <!-- 1st section -->
+  <div
+    class="flex flex-col justify-start gap-4 sm:flex-row sm:justify-between sm:items-center mb-3"
+  >
+    <!-- report title -->
+    <h1
+      class="flex gap-1 text-[#585858] font-bold text-[16px]"
+      onclick="loadPage('../pages/reports.html', this)"
+    >
+      Reports
+    </h1>
+
+    <!-- Date area -->
+    <div class="flex gap-2 items-start flex-col sm:flex-row sm:items-center">
+      <p class="text-[11px] text-[#7F8B94]">Showing data from:</p>
+
+      <div class="flex gap-2 items-center">
+        <button
+          class="bg-white text-[10px] flex justify-between text-[#585858] items-center gap-5 px-2 py-2 border-[1px] border-[#909090]"
+        >
+          Wed March 29, 2020
+          <img src="../assets/shortDownArrow.svg" alt="down arrow" />
+        </button>
+
+        <button
+          class="bg-white text-[10px] flex justify-between text-[#585858] items-center gap-5 px-2 py-2 border-[1px] border-[#909090]"
+        >
+          Wed March 29, 2020
+          <img src="../assets/shortDownArrow.svg" alt="down arrow" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2nd section -->
+  <div
+    class="flex flex-col justify-start gap-4 sm:flex-row sm:justify-between sm:items-center"
+  >
+    <!-- sales report title -->
+    <h1
+      class="flex gap-3 text-[#585858] font-semibold text-[12px] items-center"
+    >
+      Sales Report
+      <span
+        ><img src="../assets/xCloseIcon.svg" alt="" width="10px" height="auto"
+      /></span>
+    </h1>
+
+    <!-- back to report & export report container -->
+    <div class="flex gap-4 justify-start items-center">
+      <!-- back to repor box -->
+      <button
+        onclick="loadPage('../pages/reports.html', this)"
+        class="text-[10px] flex justify-between text-[#002855] items-center gap-2"
+      >
+        <img
+          src="../assets/leftArrowIcon.svg"
+          alt="down arrow"
+          width="10px"
+          height="auto"
+        />
+        Back To Report
+      </button>
+
+      <!-- export report box -->
+      <div
+        class="bg-[#002855] text-[#F3F5F6] w-[170px] h-[35px] rounded-[3px] flex items-center justify-center text-[12px]"
+      >
+        <p class="flex gap-3 items-center justify-center">
+          <span class="w-[15px] h-auto"
+            ><img src="../assets/exportIcon.svg" alt=""
+          /></span>
+          Export Report
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3rd section -->
+  <div class="w-full bg-[#9F9F9F] h-[1px] flex items-center mt-[-7px]">
+    <div class="bg-[#002855] h-[3px] w-[80px] rounded-full"></div>
+  </div>
+
+  <!-- 4th section -->
+  <div
+    class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[20px] mt-[3px]"
+  >
+    <!-- products bought Box -->
+    <div
+      class="bg-white rounded-md flex flex-col w-full h-[100px] justify-between"
+    >
+      <!-- upside -->
+      <div class="flex justify-between pl-5 pr-4">
+        <div class="flex items-start gap-2">
+          <img
+            src="../assets/gridBoxBlue.svg"
+            alt="blue grid box"
+            width="17px"
+            height="auto"
+            class="pt-[20px]"
+          />
+
+          <div class="flex flex-col">
+            <p class="text-[#585858] text-[28px] font-semibold pt-[10px]">
+              134
+            </p>
+
+            <p class="text-[9px] text-[#7F8B94] mt-[-5px]">Products Bought</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <img
+            src="../assets/greenUpArrow.svg"
+            alt="green arrow up"
+            width="15px"
+            height="auto"
+            class="pt-[20px]"
+          />
+          <p
+            class="text-[9px] text-[#585858] mulish-font font-semibold pt-[1px]"
+          >
+            +6
+          </p>
+        </div>
+      </div>
+
+      <!-- downside -->
+      <div
+        class="h-[30px] bg-[#C0DDF9] pl-5 pr-4 flex items-center justify-end rounded-br-md rounded-bl-md"
+      >
+        <p class="text-end text-[#585858] text-[8px] mulish-font font-semibold">
+          See Breakdown
+        </p>
+      </div>
+    </div>
+
+    <!-- active policies box -->
+    <div
+      class="bg-white rounded-md flex flex-col w-full h-[100px] justify-between"
+    >
+      <!-- upside -->
+      <div class="flex justify-between pl-5 pr-4">
+        <div class="flex items-start gap-2">
+          <img
+            src="../assets/gridBoxGreen.svg"
+            alt="blue grid box"
+            width="17px"
+            height="auto"
+            class="pt-[20px]"
+          />
+
+          <div class="flex flex-col">
+            <p class="text-[#585858] text-[28px] font-semibold pt-[10px]">78</p>
+
+            <p class="text-[9px] text-[#7F8B94] mt-[-5px]">Active Policies</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <img
+            src="../assets/greenUpArrow.svg"
+            alt="green arrow up"
+            width="15px"
+            height="auto"
+            class="pt-[20px]"
+          />
+          <p
+            class="text-[9px] text-[#585858] mulish-font font-semibold pt-[1px]"
+          >
+            +6
+          </p>
+        </div>
+      </div>
+
+      <!-- downside -->
+      <div
+        class="h-[30px] bg-[#bfece1] pl-5 pr-4 flex items-center justify-between rounded-br-md rounded-bl-md"
+      >
+        <div
+          class="flex items-center gap-1 text-[#00B388] text-[8px] mulish-font font-semibold"
+        >
+          <img
+            src="../assets/buildingIcon.svg"
+            alt=""
+            width="14px"
+            height="auto"
+          />
+          Corporate: 10
+        </div>
+
+        <div
+          class="flex items-center gap-1 text-[#06C194] text-[8px] mulish-font font-semibold"
+        >
+          <img
+            src="../assets/personIcon.svg"
+            alt=""
+            width="14px"
+            height="auto"
+          />
+          Individual: 40
+        </div>
+      </div>
+    </div>
+
+    <!-- drop offs box -->
+    <div
+      class="bg-white rounded-md flex flex-col w-full h-[100px] justify-between"
+    >
+      <!-- upside -->
+      <div class="flex justify-between pl-5 pr-4">
+        <div class="flex items-start gap-2">
+          <img
+            src="../assets/gridBoxRed.svg"
+            alt="blue grid box"
+            width="17px"
+            height="auto"
+            class="pt-[20px]"
+          />
+
+          <div class="flex flex-col">
+            <p class="text-[#585858] text-[28px] font-semibold pt-[10px]">20</p>
+
+            <p class="text-[9px] text-[#7F8B94] mt-[-5px]">Drop Offs</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <img
+            src="../assets/greenUpArrow.svg"
+            alt="green arrow up"
+            width="15px"
+            height="auto"
+            class="pt-[20px]"
+          />
+          <p
+            class="text-[9px] text-[#585858] mulish-font font-semibold pt-[1px]"
+          >
+            +6
+          </p>
+        </div>
+      </div>
+
+      <!-- downside -->
+      <div
+        class="h-[30px] bg-[#f9d1d2] pl-5 pr-4 flex items-center justify-between rounded-br-md rounded-bl-md"
+      >
+        <div
+          class="flex items-center gap-1 text-[#E30000] text-[8px] mulish-font font-semibold"
+        >
+          <img
+            src="../assets/buildingIcon.svg"
+            alt=""
+            width="14px"
+            height="auto"
+          />
+          Corporate: 5
+        </div>
+
+        <div
+          class="flex items-center gap-1 text-[#E94849] text-[8px] mulish-font font-semibold"
+        >
+          <img
+            src="../assets/personIcon.svg"
+            alt=""
+            width="14px"
+            height="auto"
+          />
+          Individual: 15
+        </div>
+      </div>
+    </div>
+
+    <!-- in progress box -->
+    <div
+      class="bg-white rounded-md flex flex-col w-full h-[100px] justify-between"
+    >
+      <!-- upside -->
+      <div class="flex justify-between pl-5 pr-4">
+        <div class="flex items-start gap-2">
+          <img
+            src="../assets/gridBoxGray.svg"
+            alt="blue grid box"
+            width="17px"
+            height="auto"
+            class="pt-[20px]"
+          />
+
+          <div class="flex flex-col">
+            <p class="text-[#585858] text-[28px] font-semibold pt-[10px]">5</p>
+
+            <p class="text-[9px] text-[#7F8B94] mt-[-5px]">In Progress</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <img
+            src="../assets/redDownArrow.svg"
+            alt="red arrow down"
+            width="15px"
+            height="auto"
+            class="pt-[20px]"
+          />
+          <p
+            class="text-[9px] text-[#585858] mulish-font font-semibold pt-[1px]"
+          >
+            +6
+          </p>
+        </div>
+      </div>
+
+      <!-- downside -->
+      <div
+        class="h-[30px] bg-[#D4D4D4] pl-5 pr-4 flex items-center justify-between rounded-br-md rounded-bl-md"
+      >
+        <div
+          class="flex items-center gap-1 text-[#585858] text-[8px] mulish-font font-semibold"
+        >
+          <img
+            src="../assets/buildingIcon.svg"
+            alt=""
+            width="14px"
+            height="auto"
+          />
+          Corporate: 1
+        </div>
+
+        <div
+          class="flex items-center gap-1 text-[#585858] text-[8px] mulish-font font-semibold"
+        >
+          <img
+            src="../assets/personIcon.svg"
+            alt=""
+            width="14px"
+            height="auto"
+          />
+          Individual: 4
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5th section -->
+  <div class="rounded-md bg-white w-full px-6 pt-5 pb-8 flex flex-col gap-4">
+    <!-- top -->
+    <div class="flex justify-end items-center">
+      <button
+        onclick="loadPage('../pages/reportsDashboard.html', this)"
+        class="bg-[#002855] text-[#F8F9F9] px-4 py-1 rounded-md flex items-center justify-center text-[11px] font-light gap-2"
+      >
+        Back to reports
+        <img
+          src="../assets/shortRightArrowIcon.svg"
+          alt=""
+          width="12px"
+          height="auto"
+        />
+      </button>
+    </div>
+
+    <!-- bottom -->
+    <div class="flex flex-col gap-4 lg:flex-row w-full">
+      <!-- left -->
+      <div
+        class="rounded-md w-full lg:w-[49%] border-[1px] border-[#EFF1F1] pt-3 pb-6 px-3"
+      >
+        <!-- data -->
+        <div class="flex justify-end items-center gap-3 pb-3">
+          <p class="underline text-[11px] text-[#002855]">YTD</p>
+          <p class="text-[11px] text-[#959798]">1 Week</p>
+          <p class="text-[11px] text-[#959798]">1 Month</p>
+        </div>
+
+        <div id="chart-container" class="w-full overflow-x-auto">
+          <canvas
+            id="myChart"
+            width="600"
+            height="270"
+            class="w-full overflow-auto"
+          ></canvas>
+        </div>
+      </div>
+
+      <!-- right -->
+      <div
+        class="rounded-md w-full lg:w-[49%] border-[1px] border-[#EFF1F1] pt-3 pb-6 px-6"
+      >
+        <!-- data -->
+        <div class="flex justify-end items-center gap-3 pb-3">
+          <p class="underline text-[11px] text-[#002855]">YTD</p>
+          <p class="text-[11px] text-[#959798]">1 Week</p>
+          <p class="text-[11px] text-[#959798]">1 Month</p>
+        </div>
+
+        <!-- table -->
+        <div class="overflow-x-auto border-[1px] border-[#DDDFE0] rounded-md">
+          <table class="min-w-full bg-white">
+            <thead
+              class="text-[#62686D] text-[11px] font-[200] leading-normal border-b-[1px] border-[#DDDFE0]"
+            >
+              <tr>
+                <th class="py-3 px-6 text-left font-[200]">Motor</th>
+                <th class="py-3 px-5 text-left font-[200]">Term Life</th>
+                <th class="py-3 px-6 text-left font-[200]">Group Life</th>
+                <th class="py-3 px-6 text-left font-[200]">Leadway Savings</th>
+              </tr>
+            </thead>
+            <tbody class="text-[12px] font-light">
+              <tr class="">
+                <td class="py-3 px-6 text-left text-[#75bb53]">10,000</td>
+                <td class="py-3 px-6 text-left text-[#75bb53]">30,000</td>
+                <td class="py-3 px-6 text-left text-[#75bb53]">65,023.26</td>
+                <td class="py-3 px-6 text-left text-[#75bb53]">169,302.33</td>
+              </tr>
+              <tr class="">
+                <td class="py-3 px-6 text-left text-[#F66B22]">3,000</td>
+                <td class="py-3 px-6 text-left text-[#F66B22]">10,000</td>
+                <td class="py-3 px-6 text-left text-[#F66B22]">15,000</td>
+                <td class="py-3 px-6 text-left text-[#F66B22]">25,000</td>
+              </tr>
+              <tr class="">
+                <td class="py-3 px-6 text-left text-[#0096D6]">7,000</td>
+                <td class="py-3 px-6 text-left text-[#0096D6]">20,000</td>
+                <td class="py-3 px-6 text-left text-[#0096D6]">50,023.26</td>
+                <td class="py-3 px-6 text-left text-[#0096D6]">144,302.33</td>
+              </tr>
+              <tr class="">
+                <td class="py-3 px-6 text-left text-[#F66B22]">2,000</td>
+                <td class="py-3 px-6 text-left text-[#F66B22]">2,000</td>
+                <td class="py-3 px-6 text-left text-[#F66B22]">2,000</td>
+                <td class="py-3 px-6 text-left text-[#F66B22]">2,000</td>
+              </tr>
+              <tr class="bg-[#edf6e8]">
+                <td class="py-3 px-6 text-left text-[#75bb53]">5,000</td>
+                <td class="py-3 px-6 text-left text-[#75bb53]">18,000</td>
+                <td class="py-3 px-6 text-left text-[#75bb53]">48,026.36</td>
+                <td class="py-3 px-6 text-left text-[#75bb53]">142,302.33</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
