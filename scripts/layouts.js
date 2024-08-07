@@ -412,14 +412,17 @@ function loadPage(url) {
       document.getElementById("content").innerHTML = html;
       initChart();
       initChart2();
+
       // initChart3();
       // Update active nav item based on the loaded URL
       updateActiveNavItem(url);
 
       // Add this line to initialize the modal
-      if (url.includes("reports.html")) {
-        initializeModal();
-      }
+      // if (url.includes("reports.html")) {
+      //   initializeModal();
+      // }
+      initializeModal();
+      initializeModal2();
     })
 
     .catch((error) => console.error("Error loading page:", error));
