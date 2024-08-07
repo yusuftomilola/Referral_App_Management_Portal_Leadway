@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Referral Management Login</title>
+    <link rel="icon" href="./assets/general/firstBankFavicon.JPG" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="hero">
+          <h1>Referral Management</h1>
+          <p class="p">Welcome. Login to your portal account.</p>
+          <form id="loginForm">
+            <div class="input-group">
+              <label for="username">Username</label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="enter username: admin"
+                  required
+                />
+                <i class="fas fa-user icon"></i>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="password">Password</label
+              ><span class="show-password showw" onclick="togglePassword()"
+                >SHOW</span
+              >
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="enter password: admin"
+                  required
+                />
+                <i class="fas fa-lock icon"></i>
+              </div>
+            </div>
+            <div class="actions">
+              <label
+                ><input type="checkbox" id="keepLoggedIn" checked /> Keep me
+                logged in</label
+              >
+              <span class="checkmark"></span>
+              <a href="#" class="reset-password">Reset Password</a>
+            </div>
+
+            <button type="submit">Login</button>
+          </form>
+          <p class="mytext">
+            Don't have an account? <a href="#" class="signupP">Sign Up</a>
+          </p>
+        </div>
+      </div>
+      <div class="right">
+        <img src="./assets/Group 162.svg" alt="Info" class="info-icon" />
+      </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
