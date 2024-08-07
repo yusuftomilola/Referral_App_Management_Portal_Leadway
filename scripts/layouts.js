@@ -1,4 +1,17 @@
-// [3] Function to show action dropdown
+// ALL APP PAGES
+const sectionMap = {
+  reports: [
+    "reports.html",
+    "reportsDashboard.html",
+    "reportsIncomeBreakdown.html",
+    "reportsAll.html",
+  ],
+  dashboard: ["dashboard.html"],
+  prospects: ["prospects.html", "prospectsChat.html"],
+  settings: ["settings.html"],
+};
+
+// Function to show action dropdown
 function actionmenu(event) {
   const dropdown = event.currentTarget.nextElementSibling;
   dropdown.style.display =
@@ -7,7 +20,7 @@ function actionmenu(event) {
       : "none";
 }
 
-// [4] incomeBreakdownDashboard.html chartjs
+// incomeBreakdownDashboard.html chartjs
 function initChart() {
   const ctx = document.getElementById("myChart");
   if (!ctx) return;
@@ -129,7 +142,7 @@ function initChart() {
   });
 }
 
-// [5] fullReportDashboard.html chartjs
+// fullReportDashboard.html chartjs
 function initChart2() {
   const ctx = document.getElementById("myChart2");
   if (!ctx) return;
@@ -145,7 +158,7 @@ function initChart2() {
           backgroundColor: "rgba(141, 211, 199, 1)",
           borderColor: "rgba(141, 211, 199, 1)",
           borderWidth: 1,
-          pointStyle: "circle",
+          pointStyle: "none",
         },
         {
           label: "Term Life",
@@ -244,7 +257,112 @@ function initChart2() {
   });
 }
 
-// loadpage
+// prospects chart on the main dashboard
+// function initChart3() {
+//   const ctx = document.getElementById("myChart3").getContext("2d");
+//   const tooltipEl = document.getElementById("chartjs-tooltip");
+
+//   new Chart(ctx, {
+//     type: "line",
+//     data: {
+//       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+//       datasets: [
+//         {
+//           label: "Data",
+//           data: [150, 300, 200, 700, 300, 500, 500],
+//           fill: false,
+//           borderColor: "#002855",
+//           borderWidth: 4,
+//           tension: 0.4,
+//           pointBackgroundColor: function (context) {
+//             // Highlight the point for May
+//             return context.dataIndex === 4 ? "#E6B014" : "rgba(0,0,0,0)";
+//           },
+//           pointRadius: function (context) {
+//             // Highlight the point for May
+//             return context.dataIndex === 4 ? 14 : 0;
+//           },
+//           pointHoverRadius: function (context) {
+//             // Highlight the point for May
+//             return context.dataIndex === 4 ? 6 : 0;
+//           },
+//           pointBorderWidth: function (context) {
+//             // Remove the border for the May point
+//             return context.dataIndex === 4 ? 0 : 1;
+//           },
+//         },
+//       ],
+//     },
+//     options: {
+//       responsive: false,
+//       plugins: {
+//         tooltip: {
+//           enabled: false, // Disable the default tooltip
+//         },
+//         legend: {
+//           display: false,
+//         },
+//       },
+//       scales: {
+//         x: {
+//           grid: {
+//             display: false,
+//             drawBorder: false,
+//           },
+//           border: {
+//             display: false,
+//           },
+//           ticks: {
+//             color: "#001855",
+//           },
+//         },
+//         y: {
+//           beginAtZero: true,
+//           ticks: {
+//             stepSize: 500,
+//             color: "#002855",
+//             callback: function (value) {
+//               // Skip displaying the 0 tick
+//               if (value === 0) {
+//                 return "";
+//               }
+//               return value;
+//             },
+//             // Manually include 100 in the ticks
+//             min: 0,
+//             max: 1000,
+//             stepSize: 500,
+//           },
+//           grid: {
+//             display: false,
+//             drawBorder: false,
+//           },
+//           border: {
+//             display: false,
+//           },
+//         },
+//       },
+//     },
+//     plugins: [
+//       {
+//         afterDraw: function (chart) {
+//           const meta = chart.getDatasetMeta(0);
+//           const point = meta.data[4]; // The data point for May
+
+//           if (point) {
+//             const position = point.tooltipPosition();
+//             tooltipEl.style.left = position.x - 100 + "px"; // Shift to the left
+//             tooltipEl.style.top = position.y - 10 + "px"; // Align vertically
+//             tooltipEl.style.opacity = 1;
+//             tooltipEl.innerHTML = "300"; // The value for May data point
+//           }
+//         },
+//       },
+//     ],
+//   });
+// }
+
+// function to loadpage all pages and menu active links
 document.addEventListener("DOMContentLoaded", function () {
   // Toggle mobile menu
   document.getElementById("hamburger").addEventListener("click", function () {
@@ -294,6 +412,7 @@ function loadPage(url) {
       document.getElementById("content").innerHTML = html;
       initChart();
       initChart2();
+      // initChart3();
       // Update active nav item based on the loaded URL
       updateActiveNavItem(url);
 
@@ -332,16 +451,3 @@ function updateActiveNavItem(url) {
       });
   }
 }
-
-// Your sectionMap object (unchanged)
-const sectionMap = {
-  reports: [
-    "reports.html",
-    "reportsDashboard.html",
-    "reportsIncomeBreakdown.html",
-    "reportsAll.html",
-  ],
-  dashboard: ["dashboard.html"],
-  prospects: ["prospects.html"],
-  settings: ["settings.html"],
-};
