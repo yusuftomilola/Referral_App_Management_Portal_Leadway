@@ -310,6 +310,8 @@
   border-radius: 8px;
 }
 
+/* small screen devices */
+
 @media screen and (max-width: 600px) {
   .modal,
   .modal2 {
