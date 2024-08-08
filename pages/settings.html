@@ -14,11 +14,11 @@
         <button
           id="account-settings-btn"
           onclick="showContent('account-settings')"
-          class="settings-item active"
+          class="settings-item"
           data-target="account-settings"
         >
           <div class="icon">
-            <img src="../assets/settingsUserIcon-active.svg" alt="" />
+            <img src="../assets/settingsUserIcon.svg" alt="" />
           </div>
           <div class="font-bold text-[10px] text-[#002f6c] text">
             Account Settings
@@ -60,7 +60,8 @@
 
     <!-- Settings content -->
     <div class="max-w-full w-full bg-white p-8 rounded-md lg:h-[680px]">
-      <div id="account-settings" class="content active">
+      <div id="account-settings" class="content active"></div>
+      <div id="account-settings" class="content hidden">
         <h2 class="text-[20px] font-light font-black text-[#002855] mb-6">
           Account Information
         </h2>
