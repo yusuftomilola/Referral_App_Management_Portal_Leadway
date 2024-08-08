@@ -1,1 +1,591 @@
-<p>This is the reports page</p>
+<div class="flex flex-col gap-4">
+  <!-- 1st section -->
+  <div
+    class="flex flex-col justify-start gap-4 sm:flex-row sm:justify-between sm:items-center"
+  >
+    <!-- report title -->
+    <h1 class="flex gap-1 text-[#585858] font-bold text-[16px]">Reports</h1>
+
+    <!-- create report box -->
+    <button
+      type="button"
+      class="show-modal bg-[#002855] text-[#F3F5F6] w-[170px] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+    >
+      <p class="flex gap-3 items-center justify-center">
+        <span class="text-[20px]">+</span> Create Report
+      </p>
+    </button>
+  </div>
+
+  <!-- 2nd section -->
+  <div
+    class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[35px]"
+  >
+    <!-- total sales Box -->
+    <div
+      class="bg-[#002855] rounded-md flex flex-col w-full h-[100px] px-5 pt-2 pb-3 justify-between"
+    >
+      <a
+        href="#"
+        data-page="../pages/reportsDashboard.html"
+        class="page-link text-[#F3F5F6] text-left text-[14px]"
+      >
+        Total Sales
+      </a>
+
+      <p class="text-[#F3F5F6] text-[14px] text-right pr-3">NGN 3,000,000</p>
+    </div>
+
+    <!-- total converts Box -->
+    <div
+      class="bg-[#E6B014] rounded-md flex flex-col w-full h-[100px] px-5 pt-2 justify-between"
+    >
+      <button
+        onclick="loadPage('../pages/reportsDashboard.html', this)"
+        class="text-[#F3F5F6] text-left text-[14px]"
+      >
+        Total Converts
+      </button>
+
+      <p class="text-[#F3F5F6] text-[40px] text-right pr-3">150</p>
+    </div>
+
+    <!-- prospects Box -->
+    <div
+      class="bg-[#353535] rounded-md flex flex-col w-full h-[100px] px-5 pt-2 justify-between"
+    >
+      <button
+        onclick="loadPage('../pages/reportsDashboard.html', this)"
+        class="text-[#F3F5F6] text-left text-[14px]"
+      >
+        Prospects
+      </button>
+
+      <p class="text-[#F3F5F6] text-[40px] text-right pr-3">150</p>
+    </div>
+
+    <!-- users Box -->
+    <div
+      class="bg-[#00B388] rounded-md flex flex-col w-full h-[100px] px-5 pt-2 justify-between"
+    >
+      <button
+        onclick="loadPage('../pages/reportsDashboard.html', this)"
+        class="text-[#F3F5F6] text-left text-[14px]"
+      >
+        Users
+      </button>
+
+      <p class="text-[#F3F5F6] text-[40px] text-right pr-3">150</p>
+    </div>
+  </div>
+
+  <!-- 3rd section -->
+  <div class="flex flex-col md:flex-row gap-4">
+    <!-- left side - recent reports -->
+    <div class="w-full md:w-[50%] rounded-md flex flex-col bg-white gap-2 pb-4">
+      <div class="flex items-center justify-between w-full px-5 pt-3 pb-2">
+        <h2 class="text-[#353535] text-[15px] font-semibold">Recent Reports</h2>
+
+        <button
+          onclick="loadPage('../pages/reportsAll.html', this)"
+          class="bg-[#EDF2F6] text-[#002855] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font border-[#002855] border-[1px]"
+        >
+          View All
+        </button>
+      </div>
+
+      <hr />
+
+      <!-- all reports container -->
+      <div class="pt-2 pb-3 flex flex-col gap-5">
+        <!-- report 001 container -->
+        <div class="px-5 flex justify-between items-center">
+          <div class="flex gap-4">
+            <p class="text-[#222B45] text-[12px] font-light">01</p>
+
+            <p class="text-[12px] text-[#222B45] font-light">Report 001</p>
+          </div>
+
+          <p class="text-[10px] text-[#96A5B8]">05 Jan 2023</p>
+
+          <button
+            onclick="loadPage('../pages/reportsDashboard.html', this)"
+            class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+          >
+            View
+          </button>
+        </div>
+
+        <hr />
+
+        <!-- report 002 container -->
+        <div class="px-5 flex justify-between items-center">
+          <div class="flex gap-4">
+            <p class="text-[#222B45] text-[12px] font-light">02</p>
+
+            <p class="text-[12px] text-[#222B45] font-light">Report 002</p>
+          </div>
+
+          <p class="text-[10px] text-[#96A5B8]">05 Jan 2023</p>
+
+          <button
+            onclick="loadPage('../pages/reportsDashboard.html', this)"
+            class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+          >
+            View
+          </button>
+        </div>
+
+        <hr />
+
+        <!-- report 003 container -->
+        <div class="px-5 flex justify-between items-center">
+          <div class="flex gap-4">
+            <p class="text-[#222B45] text-[12px] font-light">03</p>
+
+            <p class="text-[12px] text-[#222B45] font-light">Report 003</p>
+          </div>
+
+          <p class="text-[10px] text-[#96A5B8]">05 Jan 2023</p>
+
+          <button
+            onclick="loadPage('../pages/reportsDashboard.html', this)"
+            class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+          >
+            View
+          </button>
+        </div>
+
+        <hr />
+
+        <!-- report 004 container -->
+        <div class="px-5 flex justify-between items-center">
+          <div class="flex gap-4">
+            <p class="text-[#222B45] text-[12px] font-light">04</p>
+
+            <p class="text-[12px] text-[#222B45] font-light">Report 004</p>
+          </div>
+
+          <p class="text-[10px] text-[#96A5B8]">05 Jan 2023</p>
+
+          <button
+            onclick="loadPage('../pages/reportsDashboard.html', this)"
+            class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+          >
+            View
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- right side - top products -->
+    <div class="w-full md:w-[50%] rounded-md flex flex-col bg-white gap-2">
+      <div class="flex items-center justify-between w-full px-5 pt-3 pb-2">
+        <h2 class="text-[#353535] text-[15px] font-semibold">Top Products</h2>
+
+        <button
+          onclick="loadPage('../pages/prospects.html', this)"
+          class="bg-[#002855] text-[#ffffff] w-[100px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+        >
+          View Report
+        </button>
+      </div>
+
+      <div class="container mx-auto px-4 pb-4">
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-white">
+            <thead class="border-b">
+              <tr>
+                <th
+                  class="px-5 pb-3 text-left text-xs font-light text-[#96A5B8]"
+                >
+                  #
+                </th>
+                <th
+                  class="px-2 pb-3 text-left text-xs font-light text-[#96A5B8]"
+                >
+                  Name
+                </th>
+                <th
+                  class="px-5 pb-3 text-left text-xs font-light text-[#96A5B8]"
+                >
+                  Popularity
+                </th>
+                <th
+                  class="px-5 pb-3 text-left text-xs font-light text-[#96A5B8]"
+                ></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="px-5 py-4 text-xs font-light text-[#222B45]">01</td>
+                <td class="px-2 py-4 text-xs font-light text-[#222B45]">
+                  Motor
+                </td>
+                <td class="px-5 py-4" style="width: 180px">
+                  <div class="w-full bg-[#8CFAC7] h-[1px] rounded-full">
+                    <div
+                      class="bg-[#00E096] h-[1px] rounded-full"
+                      style="width: 40%"
+                    ></div>
+                  </div>
+                </td>
+                <td class="px-5 py-4">
+                  <button
+                    class="text-[#00E58F] border-[#00E58F] border-[1px] w-[45px] h-[24px] rounded-[8px] flex items-center justify-center text-[12px]"
+                  >
+                    40%
+                  </button>
+                </td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-5 py-4 text-xs font-light text-[#222B45]">02</td>
+                <td class="px-2 py-4 text-xs font-light text-[#222B45]">
+                  Term Life
+                </td>
+                <td class="px-5 py-4" style="width: 180px">
+                  <div class="w-full bg-[#CDE7FF] h-[1px] rounded-full">
+                    <div
+                      class="bg-[#0095FF] h-[1px] rounded-full"
+                      style="width: 22%"
+                    ></div>
+                  </div>
+                </td>
+                <td class="px-5 py-4">
+                  <button
+                    class="text-[#0095FF] border-[#0095FF] border-[1px] w-[45px] h-[24px] rounded-[8px] flex items-center justify-center text-[12px]"
+                  >
+                    22%
+                  </button>
+                </td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-5 py-4 text-xs font-light text-[#222B45]">03</td>
+                <td class="px-2 py-4 text-xs font-light text-[#222B45]">
+                  Group Life
+                </td>
+                <td class="px-5 py-4" style="width: 180px">
+                  <div class="w-full bg-[#C5A8FF] h-[1px] rounded-full">
+                    <div
+                      class="bg-[#884DFF] h-[1px] rounded-full"
+                      style="width: 8%"
+                    ></div>
+                  </div>
+                </td>
+                <td class="px-5 py-4">
+                  <button
+                    class="text-[#884DFF] border-[#884DFF] border-[1px] w-[45px] h-[24px] rounded-[8px] flex items-center justify-center text-[12px]"
+                  >
+                    8%
+                  </button>
+                </td>
+              </tr>
+              <tr class="">
+                <td class="px-5 py-4 text-xs font-light text-[#222B45]">04</td>
+                <td class="px-2 py-4 text-xs font-light text-[#222B45]">
+                  Leadway Savings
+                </td>
+                <td class="px-5 py-4" style="width: 180px">
+                  <div class="w-full bg-[#FFD5A4] h-[1px] rounded-full">
+                    <div
+                      class="bg-[#FF8F0D] h-[1px] rounded-full"
+                      style="width: 30%"
+                    ></div>
+                  </div>
+                </td>
+                <td class="px-5 py-4">
+                  <button
+                    class="text-[#FF8F0D] border-[#FF8F0D] border-[1px] w-[45px] h-[24px] rounded-[8px] flex items-center justify-center text-[12px]"
+                  >
+                    30%
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4th section -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <!-- 1st section - top referals -->
+    <div class="w-full rounded-md flex flex-col bg-white gap-2 max-h-[240px]">
+      <h2 class="px-5 pt-3 text-[#353535] text-[16px]">Top Referrals</h2>
+
+      <!-- All referrals container -->
+      <div class="px-5 pt-3 pb-4 flex flex-col gap-4">
+        <!-- referral one container -->
+        <div class="flex justify-between items-center">
+          <div class="flex gap-3 items-center">
+            <img
+              src="../assets/top-referrals-1.svg"
+              alt="referral image of esther"
+            />
+
+            <p class="text-[10px] text-[#96A5B8]">Esther Abodunrin</p>
+          </div>
+
+          <p class="text-[13px] text-[#222B45] font-bold">NGN 52,446</p>
+        </div>
+
+        <hr />
+
+        <!-- referral two container -->
+        <div class="flex justify-between items-center">
+          <div class="flex gap-3 items-center">
+            <img
+              src="../assets/top-referrals-2.svg"
+              alt="referral image of esther"
+            />
+
+            <p class="text-[10px] text-[#96A5B8]">Johnny Jack</p>
+          </div>
+
+          <p class="text-[13px] text-[#222B45] font-bold">NGN 52,446</p>
+        </div>
+
+        <hr />
+
+        <!-- referral three container -->
+        <div class="flex justify-between items-center">
+          <div class="flex gap-3 items-center">
+            <img
+              src="../assets/top-referrals-3.svg"
+              alt="referral image of ahmed"
+            />
+
+            <p class="text-[10px] text-[#96A5B8]">Ahmed Koffi</p>
+          </div>
+
+          <p class="text-[13px] text-[#222B45] font-bold">NGN 52,446</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2nd section - prospect Conversion chart -->
+    <div class="bg-white flex items-center justify-center rounded-md">
+      <img
+        src="../assets/prospectConversionCharts_Reports.svg"
+        width="100%"
+        height="auto"
+        alt="prospects chart"
+        class="rounded-md w-full h-[]"
+      />
+    </div>
+
+    <!-- 3rd section - top branches -->
+    <div
+      class="w-full rounded-md md:hidden lg:flex flex-col bg-white gap-2 max-h-[240px]"
+    >
+      <h2 class="px-5 pt-3 text-[#353535] text-[16px]">Top Branches</h2>
+
+      <!-- All branches container -->
+      <div class="px-5 pt-3 pb-4 flex flex-col gap-4">
+        <!-- top branch one container -->
+        <div class="flex justify-between items-center">
+          <div class="flex gap-3 items-center">
+            <img src="../assets/top-branches-1.svg" alt="lagos icon" />
+
+            <p class="text-[10px] text-[#96A5B8]">Lagos</p>
+          </div>
+
+          <p class="text-[13px] text-[#222B45] font-bold">5400</p>
+        </div>
+
+        <hr />
+
+        <!-- branch two container -->
+        <div class="flex justify-between items-center">
+          <div class="flex gap-3 items-center">
+            <img src="../assets/top-branches-2.svg" alt="port harcourt icon" />
+
+            <p class="text-[10px] text-[#96A5B8]">Port Harcourt</p>
+          </div>
+
+          <p class="text-[13px] text-[#222B45] font-bold">3200</p>
+        </div>
+
+        <hr />
+
+        <!-- branch three container -->
+        <div class="flex justify-between items-center">
+          <div class="flex gap-3 items-center">
+            <img src="../assets/top-branches-3.svg" alt="abuja branch image" />
+
+            <p class="text-[10px] text-[#96A5B8]">Abuja</p>
+          </div>
+
+          <p class="text-[13px] text-[#222B45] font-bold">987</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE TOP BRANCH -->
+  <div
+    class="w-full rounded-md hidden md:flex lg:hidden flex-col bg-white gap-2 max-h-[240px]"
+  >
+    <h2 class="px-5 pt-3 text-[#353535] text-[16px]">Top Branches</h2>
+
+    <!-- All branches container -->
+    <div class="px-5 pt-3 pb-4 flex flex-col gap-4">
+      <!-- top branch one container -->
+      <div class="flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img src="../assets/top-branches-1.svg" alt="lagos icon" />
+
+          <p class="text-[10px] text-[#96A5B8]">Lagos</p>
+        </div>
+
+        <p class="text-[13px] text-[#222B45] font-bold">5400</p>
+      </div>
+
+      <hr />
+
+      <!-- branch two container -->
+      <div class="flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img src="../assets/top-branches-2.svg" alt="port harcourt icon" />
+
+          <p class="text-[10px] text-[#96A5B8]">Port Harcourt</p>
+        </div>
+
+        <p class="text-[13px] text-[#222B45] font-bold">3200</p>
+      </div>
+
+      <hr />
+
+      <!-- branch three container -->
+      <div class="flex justify-between items-center">
+        <div class="flex gap-3 items-center">
+          <img src="../assets/top-branches-3.svg" alt="abuja branch image" />
+
+          <p class="text-[10px] text-[#96A5B8]">Abuja</p>
+        </div>
+
+        <p class="text-[13px] text-[#222B45] font-bold">987</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FIRST OVERLAY -->
+<div class="modal hidden">
+  <div class="modal-header">
+    <h2 class="mulish-font">Report Parameters</h2>
+    <button class="close close-modal" type="button">
+      <img src="../assets/xCloseIcon2.svg" alt="close icon" />
+    </button>
+  </div>
+  <div class="para">
+    <p class="mulish-font">
+      Select parameters you want to include in your report
+    </p>
+  </div>
+  <div class="modal-body">
+    <div class="section-title">
+      <span>Sales Overview</span>
+      <span id="change">Change</span>
+    </div>
+    <div class="date-picker">
+      <label for="date">Showing data from:</label>
+      <select name="date" id="" class="date-picker picker1">
+        <option value=" date">Wed March 29, 2020</option>
+      </select>
+      <select name="date" id="" class="date-picker picker2">
+        <option value=" date">Wed March 29, 2020</option>
+      </select>
+    </div>
+    <div class="checkbox-container">
+      <input type="checkbox" />
+      <label>Turn on recurrent reporting</label>
+    </div>
+    <div class="select-actions">
+      <span>Select All</span>
+      <span>Select None</span>
+    </div>
+    <div class="checkbox-list">
+      <div>
+        <input type="checkbox" />
+        <label>No of New Customers</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of New Corporate Customers</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Retail Customer</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of New Retail Customer</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Active Customers</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Inactive Customers</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Customers with Active Products</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Customers with InActive Products</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Current Prospects</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Prospects Turned to Customers</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Customers Who Made Claims</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Customers Who Made Renewals</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Customers Who Made Claims</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Customers Who Made Claims</label>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="close-modal cancel-btn">Cancel</button>
+
+    <button class="export-btn show-modal2">Create Report</button>
+  </div>
+</div>
+
+<div class="overlay hidden"></div>
+
+<!-- SECOND OVERLAY -->
+<!-- hidden -->
+<div class="modal2 hidden">
+  <h1 class="report">Report created successfully</h1>
+
+  <div class="icon">
+    <img src="../assets/checked.svg" />
+  </div>
+
+  <a href="#" data-page="../pages/reportsDashboard.html" class="page-link">
+    <button>View</button></a
+  >
+</div>
+
+<div class="overlay2 hidden"></div>

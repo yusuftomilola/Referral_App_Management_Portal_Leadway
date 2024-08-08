@@ -22,7 +22,7 @@
     <div
       class="bg-[#002855] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
     >
-      <a href="#" class="text-[#F3F5F6] text-left">Prospects</a>
+      <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#F3F5F6] text-left">Prospects</button>
 
       <p class="text-[#F3F5F6] text-[45px] text-right font-bold pr-3">200</p>
     </div>
@@ -42,36 +42,38 @@
   <!-- view prospects, view reports, create prospects -->
   <div class="flex gap-3 items-center">
     <!-- view prospects box -->
-    <div
+    <button
+    onclick="loadPage('../pages/prospects.html', this)"
       class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>View Prospect</p>
-    </div>
+    </button>
 
     <!-- view report box -->
-    <div
+    <button
+    onclick="loadPage('../pages/reports.html', this)"
       class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>View Report</p>
-    </div>
+    </button>
 
     <!-- create prospect box -->
-    <div
+    <button
+    onclick="loadPage('../pages/prospects.html', this)"
       class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>+ Create Prospects</p>
-    </div>
+    </button>
   </div>
 
   <!-- [4] -->
   <!-- prospects table-->
-  <div class="overflow-x-auto w-full bg-white rounded-md">
-    
-
+  <div class="overflow-x-auto overflow-y-hidden w-full bg-white rounded-md flex flex-col lg:h-[600px] xl:h-[80vh]">
       <div class="flex items-center justify-between w-full px-4 pt-3 pb-3">
-        <p class="text-[#353535] text-[20px]">Prospects</p>
+        <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#353535] text-[20px]">Prospects</button>
 
           <button
+          onclick="loadPage('../pages/prospects.html', this)"
             class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
           >
             View All
@@ -81,7 +83,7 @@
 
       <hr>
 
-<div class="overflow-x-auto pt-4">
+<div class="overflow-x-auto overflow-y-hidden flex-grow flex flex-col pt-4">
     <table class="min-w-full">
       <thead>
         <tr>
@@ -91,8 +93,8 @@
           <th class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]">Status</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
+      <tbody class="overflow-hidden flex-grow">
+        <tr onclick="loadPage('../pages/prospects.html', this)" class="cursor-pointer">
           <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
           <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
           <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
@@ -163,7 +165,24 @@
 
     </div>
 
-    <!-- RIGHT CONTENT CONTAINER -->
+    <!-- [3] prospect conversion -->
+    <!-- <div class="w-full rounded-md flex flex-col bg-white gap-2 relative pb-3 xl:hidden">
+      <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Prospect Conversion</h2>
+
+        <hr>
+
+        <div class="absolute top-[21%] right-[10%] flex gap-2 text-[#002855] text-[10px] items-start">
+          Today <img src="../assets/longDownArrowIcon.svg" alt="">
+        </div>
+
+      
+      <div class="w-full overflow-x-auto relative pt-6 px-5">
+        <canvas id="myChart3" width="380" height="200"></canvas>
+        <div id="chartjs-tooltip" class="chartjs-tooltip"></div>
+      </div> -->
+
+
+     <!-- RIGHT CONTENT CONTAINER -->
     <div class="w-[50%] flex flex-col gap-5">
 
       <!-- [2] -->
@@ -260,12 +279,12 @@
 <!-- MOBILE DASHBOARD VIEW -->
 
 <!-- 4 boxes -->
-<div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:hidden gap-5">
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2    lg:hidden gap-5">
     <!-- Prospects Box -->
     <div
       class="bg-[#002855] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
     >
-      <a href="#" class="text-[#F3F5F6] text-left">Prospects</a>
+      <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#F3F5F6] text-left">Prospects</button>
 
       <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">200</p>
     </div>
@@ -301,31 +320,49 @@
 <!-- 3 boxes -->
 <div class="flex lg:hidden justify-between items-center gap-1 sm:gap-3 flex-wrap sm:flex-nowrap">
 <!-- view prospects box -->
-    <div
+    <button
+    onclick="loadPage('../pages/prospects.html', this)"
       class="bg-[#002855] text-[#F3F5F6] w-[48.5%] sm:w-[100%]  h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>View Prospect</p>
-    </div>
+    </button>
 
     <!-- view report box -->
-    <div
+    <button
+    onclick="loadPage('../pages/reports.html', this)"
       class="bg-[#002855] text-[#F3F5F6] w-[48.5%] sm:w-[100%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>View Report</p>
-    </div>
+    </button>
 
     <!-- create prospect box -->
-    <div
+    <button
+    onclick="loadPage('../pages/prospects.html', this)"
       class="bg-[#002855] text-[#F3F5F6] w-[100%] sm:w-[100%] max-lg:h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>+ Create Prospects</p>
-    </div>
+    </button>
 </div>
 
 <!-- charts table -->
 <div class="lg:hidden">
         <img src="../assets/prospectConversionChart.JPG" alt="prospect conversion image" width="100%" height="auto" class="rounded-md">
       </div>
+
+      <!-- <div class="lg:hidden w-full rounded-md flex flex-col bg-white gap-2 relative pb-3">
+      <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Prospect Conversion</h2>
+
+        <hr>
+
+        <div class="absolute top-[21%] right-[10%] flex gap-2 text-[#002855] text-[10px] items-start">
+          Today <img src="../assets/longDownArrowIcon.svg" alt="">
+        </div>
+
+      prospect chart
+      <div class="w-full overflow-x-auto relative pt-6 px-5 bg-red-500">
+        <canvas id="myChart3" width="" height="" class="w-full overflow-auto h-auto"></canvas>
+        <div id="chartjs-tooltip" class="chartjs-tooltip"></div>
+      </div> -->
 
       <!-- activity table -->
 <div class="w-full rounded-md flex flex-col bg-white gap-2 lg:hidden ">
@@ -393,14 +430,15 @@
     
 
       <div class="flex items-center justify-between w-full px-4 pt-3 pb-3">
-        <p class="text-[#353535] text-[20px]">Prospects</p>
+        <p class="text-[#353535] text-[20px] cursor-pointer" onclick="loadPage('../pages/prospects.html', this)">Prospects</p>
 
           <button
+          onclick="loadPage('../pages/prospects.html', this)"
             class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
           >
             View All
           </button>
-        </button>
+        
       </div>
 
       <hr>
@@ -416,7 +454,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr class="cursor-pointer"
+        onclick="loadPage('../pages/prospects.html', this)"
+        >
           <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
           <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
           <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
@@ -487,3 +527,4 @@
 
   
 </div>
+
