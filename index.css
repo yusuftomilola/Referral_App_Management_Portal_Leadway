@@ -22,7 +22,7 @@ body {
 }
 .hero{
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto;   /* this helps to keep give equal margin across all screen view */
 }
 .signupP{
     text-decoration: none;
@@ -146,18 +146,15 @@ button:hover {
     top: 10px;
     right: 30px;
     width: 60px;
-    height: auto;
+    height: auto;  
 }
 #keepLoggedIn{
     font-size: 10px;
     background-color: #002855;
-    
 }
 .reset-password{
     font-size: 12px;
     color: rgb(153, 152, 152);
-
-
 }
 
 /* media queries for responsiveness on all screenview */
