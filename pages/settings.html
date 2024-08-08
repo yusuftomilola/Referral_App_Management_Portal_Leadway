@@ -1,446 +1,270 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>settings | Referral Portal</title>
-    <link rel="icon" href="../assets/general/firstBankFavicon.JPG" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../styles/layout.css" />
-    <link rel="stylesheet" href="../styles/reports.css" />
-    <link rel="stylesheet" href="../styles/settings.css" />
-    <link rel="stylesheet" href="/Referral_App_Management_Portal_Leadway/styles/settings.css">
-    <script src="../scripts/layouts.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
-        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css">
-        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css">
-        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css">
-        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  </head>
+<div class="flex flex-col gap-4">
+  <!-- report title -->
+  <h1 class="flex gap-1 text-[#585858] font-bold text-[16px] pl-4">Settings</h1>
 
-  <body class="overflow-hidden lg:overflow-auto">
-    <!-- Whole layout container -->
-    <div class="flex w-screen h-screen bg-blue-500">
-      <!-- sidebar layout container -->
-      <aside
-        class="hidden lg:flex flex-col gap-20 w-[260px] bg-[#002855] h-screen justify-start pt-8"
+  <div class="pb-8 flex flex-col lg:flex-row max-lg:gap-4">
+    <!-- Settings menu -->
+    <div
+      class="flex flex-wrap lg:flex-col bg-white max-w-full lg:max-w-[360px] shadow-md h-auto rounded-md lg:mr-5 p-2.5 lg:h-[680px]"
+    >
+      <div
+        class="flex flex-wrap justify-between gap-2 w-full settings-menu-container lg:pt-[25px]"
       >
-        <!-- first bank logo container -->
-        <a href="/layout" class="pl-8">
-          <img
-            src="../assets/general/firstBankLogo.svg"
-            alt="first bank logo"
-            width="150px"
-            height="54px"
-          />
-        </a>
-
-        <ul class="flex flex-col">
-          <li class="nav-item bg-[#E6B014] border-l-[3px] pl-8 py-3">
-            <!-- dashboard link -->
-            <a
-              class="flex gap-[10px] items-center text-white text-[14px] nav-link"
-              href="#dashboard"
-              data-url="/pages/dashboard.html"
-            >
-              <img
-                src="../assets/general/dashboardIcon.svg"
-                alt="dashboard icon"
-                width="18px"
-                height="auto"
-                class="nav-item-image mulish-font"
-              />
-              Dashboard
-            </a>
-          </li>
-
-          <li class="nav-item pl-8 py-3">
-            <!-- prospects link -->
-            <a
-              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              href="#prospects"
-              data-url="/pages/prospects.html"
-            >
-              <img
-                src="../assets/general/prospectsIcon.svg"
-                alt="prospects icon"
-                width="18.2px"
-                height="18.2px"
-                class="nav-item-image"
-              />
-              Prospects
-            </a>
-          </li>
-
-          <li class="nav-item pl-8 py-3">
-            <!-- reports link -->
-            <button
-              class="flex items-center gap-[14px] text-white text-[14px] nav-link"
-              href="#reports"
-              data-url="/pages/reports.html"
-            >
-              <img
-                src="../assets/general/reportsIcon.svg"
-                alt="reports icon"
-                width="14px"
-                height="auto"
-                class="nav-item-image"
-              />
-              Reports
-            </button>
-          </li>
-
-          <li class="nav-item pl-8 py-3">
-            <!-- settings link -->
-            <button
-              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              href="#settings"
-              data-url="/pages/settings.html"
-            >
-              <img
-                src="../assets/general/settingsIcon.svg"
-                alt="settings icon"
-                width="18.2px"
-                height="18.2px"
-                class="nav-item-image"
-              />
-              Settings
-            </button>
-          </li>
-        </ul>
-      </aside>
-
-      <!-- mobile sidebar layout container -->
-      <aside
-        class="fixed inset-0 z-50 flex flex-col gap-5 w-[260px] bg-[#002855] md:w-[35%] h-screen justify-start pt-8 mobile-menu lg:hidden"
-        id="mobile-menu"
-      >
-        <div class="flex items-center justify-between gap-6 pr-4 md:pr-8">
-          <!-- first bank logo container -->
-          <a href="/layout" class="pl-8">
-            <img
-              src="../assets/general/firstBankLogo.svg"
-              alt="first bank logo"
-              width="150px"
-              height="54px"
-            />
-          </a>
-
-          <!-- close button -->
-          <button class="text-white font-bold" id="close-menu">
-            <img
-              src="../assets/general/closeIcon.svg"
-              alt="close icon"
-              width="26px"
-              height="26px"
-            />
-          </button>
-        </div>
-
-        <!-- search box area -->
-        <div
-          class="rounded-md flex items-center bg-[#F0F2FA] h-[40px] w-[80%] mx-auto px-3 gap-3"
+        <!-- account settings -->
+        <button
+          id="account-settings-btn"
+          onclick="showContent('account-settings')"
+          class="settings-item active"
+          data-target="account-settings"
         >
-          <img
-            src="../assets/general/searchIcon.svg"
-            alt="search icon"
-            class="br-red-500"
-          />
-          <input
-            type="text"
-            placeholder="what are you looking for?"
-            class="outline-none border-none focus:outline-none focus:ring-0 bg-[#F0F2FA] mt-[-3px] placeholder:text-[#C4C4C4] w-[80%] placeholder:text-[12px] text-[12px]"
-          />
-        </div>
+          <div class="icon">
+            <img src="../assets/settingsUserIcon-active.svg" alt="" />
+          </div>
+          <div class="font-bold text-[10px] text-[#002f6c] text">
+            Account Settings
+          </div>
+        </button>
 
-        <ul class="flex flex-col">
-          <li class="nav-item bg-[#E6B014] border-l-[3px] pl-8 py-3">
-            <!-- dashboard link -->
-            <a
-              class="flex gap-[10px] items-center text-white text-[14px] nav-link"
-              href="#dashboard"
-              data-url="/pages/dashboard.html"
-            >
-              <img
-                src="../assets/general/dashboardIcon.svg"
-                alt="dashboard icon"
-                width="18px"
-                height="auto"
-                class="nav-item-image mulish-font"
-              />
-              Dashboard
-            </a>
-          </li>
-
-          <li class="nav-item pl-8 py-3">
-            <!-- prospects link -->
-            <a
-              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              href="#prospects"
-              data-url="/pages/prospects.html"
-            >
-              <img
-                src="../assets/general/prospectsIcon.svg"
-                alt="prospects icon"
-                width="18.2px"
-                height="18.2px"
-                class="nav-item-image"
-              />
-              Prospects
-            </a>
-          </li>
-
-          <li class="nav-item pl-8 py-3">
-            <!-- reports link -->
-            <button
-              class="flex items-center gap-[14px] text-white text-[14px] nav-link"
-              href="#reports"
-              data-url="/pages/reports.html"
-            >
-              <img
-                src="../assets/general/reportsIcon.svg"
-                alt="reports icon"
-                width="14px"
-                height="auto"
-                class="nav-item-image"
-              />
-              Reports
-            </button>
-          </li>
-
-          <li class="nav-item pl-8 py-3">
-            <!-- settings link -->
-            <button
-              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              href="#settings"
-              data-url="/pages/settings.html"
-            >
-              <img
-                src="../assets/general/settingsIcon.svg"
-                alt="settings icon"
-                width="18.2px"
-                height="18.2px"
-                class="nav-item-image"
-              />
-              Settings
-            </button>
-          </li>
-        </ul>
-      </aside>
-
-      <!-- right layout container -->
-      <section
-        class="flex flex-col w-full bg-[#F0F2FA] min-h-screen overflow-y-auto"
-      >
-        <!-- TOP BAR -->
-        <header
-          class="py-[10px] pl-7 pr-7 sm:pl-7 sm:pr-10 flex justify-between items-center bg-white sticky top-0"
+        <!-- change password -->
+        <button
+          id="change-password-btn"
+          onclick="showContent('change-password')"
+          class="settings-item"
+          data-target="change-password"
         >
-          <!-- hamburger icon -->
-          <button class="lg:hidden" id="hamburger">
-            <img
-              src="../assets/general/hamburgerIcon.svg"
-              alt="hamburger icon"
-              width="24px"
-              height="24px"
-            />
-          </button>
-
-          <!-- search box area -->
-          <div
-            class="hidden rounded-md lg:flex items-center bg-[#F0F2FA] h-[40px] w-[300px] px-3 gap-3 items-center"
-          >
-            <img
-              src="../assets/general/searchIcon.svg"
-              alt="search icon"
-              class="br-red-500"
-            />
-            <input
-              type="text"
-              placeholder="what are you looking for?"
-              class="outline-none border-none focus:outline-none focus:ring-0 bg-[#F0F2FA] mt-[-3px] placeholder:text-[#C4C4C4] w-[80%] placeholder:text-[14pxh]"
-            />
+          <div class="icon">
+            <img src="../assets/settingsPasswordIcon.svg" alt="" />
           </div>
 
-          <!-- user icons area -->
-          <div class="flex gap-4 items-center">
-            <!-- notification bell icon -->
-            <span
-              ><img
-                src="../assets/general/notificationBellIcon.svg"
-                alt="notification bell icon"
-                class="cursor-pointer"
-                width="20px"
-                height="auto"
-            /></span>
+          <div class="font-bold text-[10px] text-[#353535] text">
+            Change Password
+          </div>
+        </button>
 
-            <div class="flex gap-2 items-center">
-              <!-- user profile image icon -->
-              <span>
-                <img
-                  src="../assets/general/userProfileImageIcon.svg"
-                  alt="user profile image icon"
-                  width="30px"
-                  height="auto"
-                  class="cursor-pointer"
+        <!-- notification settings -->
+        <button
+          id="notification-settings-btn"
+          onclick="showContent('notification-settings')"
+          class="settings-item"
+          data-target="notification-settings"
+        >
+          <div class="icon">
+            <img src="../assets/settingsNotificationIcon.svg" alt="" />
+          </div>
+          <div class="font-bold text-[10px] text-[#353535] text">
+            Notification Settings
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Settings content -->
+    <div class="max-w-full w-full bg-white p-8 rounded-md lg:h-[680px]">
+      <div id="account-settings" class="content active">
+        <h2 class="text-[20px] font-light font-black text-[#002855] mb-6">
+          Account Information
+        </h2>
+        <form>
+          <!-- Personal info -->
+          <div
+            class="p-5 max-w-full w-full flex flex-col md:flex-row bg-[#F8F8F8]"
+          >
+            <div class="w-full">
+              <div class="mb-6 flex flex-col w-full">
+                <label for="firstName" class="mb-2">First Name:</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  value="Nurudeen"
+                  readonly
+                  class="md:w-[90%] w-[100%] w-[100%] p-2 rounded bg-[#E9E9E9] text-[#8C8C8C] outline-none"
                 />
-              </span>
+              </div>
+              <div class="mb-6 flex flex-col w-full">
+                <label for="email" class="mb-2">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value="thedeens@gmail.com"
+                  readonly
+                  class="md:w-[90%] w-[100%] p-2 rounded bg-[#E9E9E9] text-[#8C8C8C] outline-none"
+                />
+              </div>
+            </div>
+            <div class="w-full">
+              <div class="mb-6 flex flex-col w-full">
+                <label for="lastName" class="mb-2">Last Name:</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  value="Ibrahim"
+                  readonly
+                  class="md:w-[90%] w-[100%] p-2 rounded bg-[#E9E9E9] text-[#8C8C8C] outline-none"
+                />
+              </div>
+              <div class="mb-14 flex flex-col w-full">
+                <label for="phoneNumber" class="mb-2">Phone Number:</label>
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  value="08765413245"
+                  readonly
+                  class="md:w-[90%] w-[100%] p-2 rounded bg-[#E9E9E9] text-[#8C8C8C] outline-none"
+                />
+              </div>
+            </div>
+          </div>
 
-              <!-- user name text -->
-              <span>
-                <p class="text-[#353535] text-[13px] cursor-pointer">
-                  TheEndDeen
-                </p>
-              </span>
+          <!-- Bank info -->
+          <h2
+            class="text-[20px] font-light text-[#002855] font-black mb-3 mt-9"
+          >
+            Bank Information
+          </h2>
+          <div class="p-5 max-w-full w-full flex flex-col bg-[#F8F8F8]">
+            <div class="flex flex-col md:flex-row">
+              <div class="w-full">
+                <div class="mb-6 flex flex-col w-full">
+                  <label for="accountNumber" class="mb-2"
+                    >Account Number:</label
+                  >
+                  <input
+                    type="text"
+                    id="accountNumber"
+                    name="accountNumber"
+                    value="123675843"
+                    required
+                    class="md:w-[90%] w-[100%] p-2 border border-gray-300 rounded bg-white text-[#002855] outline-none"
+                  />
+                </div>
+
+                <div class="w-full">
+                  <div class="mb-6 flex flex-col w-full">
+                    <label for="bankAccountName" class="mb-2"
+                      >Bank Account Name:</label
+                    >
+                    <input
+                      type="text"
+                      id="bankAccountName"
+                      name="bankAccountName"
+                      value="Femi Falana"
+                      required
+                      class="md:w-[90%] w-[100%] p-2 border border-gray-300 rounded bg-white text-[#002855] outline-none"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-6 flex flex-col w-full">
+                <label for="bankName" class="mb-2">Bank Name:</label>
+                <input
+                  type="text"
+                  id="bankName"
+                  name="bankName"
+                  required
+                  class="md:w-[90%] w-[100%] p-2 border border-gray-300 rounded bg-white text-[#002855] outline-none"
+                />
+              </div>
             </div>
 
-            <!-- drop down arrow icon -->
-            <span>
-              <img
-                src="../assets/general/shortDownArrowIcon.svg"
-                alt="drop down arrow icon"
-                class="cursor-pointer mt-[3px]"
-                width="15px"
-                height="auto"
-              />
-            </span>
+            <div class="flex justify-end">
+              <button
+                type="submit"
+                class="px-16 py-3 bg-[#002855] text-white rounded-lg cursor-pointer mt-4 hover:bg-blue-800"
+              >
+                Save
+              </button>
+            </div>
           </div>
-        </header>
+        </form>
+      </div>
 
-        <!-- RIGHT MAIN CONTENT AREA -->
-        <!-- <main
-          id="content"
-          class="pl-6 pr-6 sm:pl-8 sm:pr-8 pt-6 flex-grow mb-10"
-        > -->
-        <div>
-            <!-- general settings container -->
-        <div class="setting-div">
-            <div class="settings">
-                <!-- settings menu -->
-                    <div class="settings-menu">
-                        <div class="set-wrapper">
-                            <button id="account-settings-btn" onclick="showContent('account-settings')" class="settings-item active" data-target="account-settings">
-                                <div class="icon"><i class="fa-solid fa-circle-user"></i> </div>
-                                <div class="text">Account Settings</div>
-                            </button>
-                            <button id="notification-settings-btn" onclick="showContent('notification-settings')" class="settings-item" data-target="notification-settings">
-                                <div class="icon"><img src="/Referral_App_Management_Portal_Leadway/assets/notify.svg" alt=""></div>
-                                <div class="text">Notification Settings</div>
-                            </button>
-                        </div>
-                            <button id="change-password-btn" onclick="showContent('change-password')" class="settings-item" data-target="change-password">
-                                <div class="icon"><img src="/Referral_App_Management_Portal_Leadway/assets/changePassword.svg" alt=""></div>
-                                <div class="text">Change Password</div>
-                            </button>
-                    </div>
-                    <!-- settinhgs content -->
-                    <div class="settings-content">
-                        <div id="account-settings" class="content active">
-                            <form>
-                                <h2>Account Settings</h2>
-                                <!-- Personal-detail -->
-                                <div class="personal-info">
-                                    <div class="input-wrapper">
-                                    <div class="input-group">
-                                        <label for="firstName">First Name:</label>
-                                        <input type="text" id="firstName" name="firstName" value="Nurudeen" readonly>
-                                    </div>
-                                    <div class="input-group">
-                                        <label for="email">Email:</label>
-                                        <input type="email" id="email" name="email" value="thedeens@gmail.com" readonly>
-                                        
-                                    </div>
-                                </div>
-                                <!-- wrapper 2 -->
-                                <div class="input-wrapper">
-                                    <div class="input-group">
-                                        <label for="lastName">Last Name:</label>
-                                        <input type="text" id="lastName" name="lastName" value="Ibrahim" readonly>
-                                    </div>
-                                    <div class="input-group">
-                                        <label for="phoneNumber">Phone Number:</label>
-                                        <input type="tel" id="phoneNumber" name="phoneNumber" value="08765413245" readonly>
-                                    </div>
-                                </div>
-                                 </div>
+      <!-- Change Password content -->
+      <div id="change-password" class="content hidden">
+        <h2 class="text-[20px] font-light font-black text-[#002855] mb-6">
+          Change Password
+        </h2>
 
-                                 <!-- bank details -->
-                                 <h2>Bank Information</h2>
-                                 <div class="bank-info">
-                                    <div class="input-wrapper">
-                                        <div class="input-group">
-                                            <label for="accountNumber">Account Number:</label>
-                                            <input type="text" id="accountNumber" name="accountNumber" value="123675843" required>
-                                        </div>
-                                        <div class="input-group">
-                                            <label for="bankName">Bank Name:</label>
-                                            <input type="text" id="bankName" name="bankName" required>
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                            <div class="input-group">
-                                                <label for="bankAccountName">Bank Account Name:</label>
-                                                <input type="text" id="bankAccountName" name="bankAccountName" value="Femi Falana" required>
-                                            </div>
-                                        </div>
-                                 </div>
-                                        <button type="submit">Save</button>
-                                </form>
-                        </div>
+        <form class="py-16 max-w-full w-full rounded-md bg-[#F8F8F8]">
+          <div class="w-[80%] sm:w-[50%] mx-auto">
+            <div class="mb-6 flex flex-col w-full">
+              <label for="current-password" class="mb-2">Old Password</label>
+              <input
+                type="password"
+                placeholder="*******************"
+                id="current-password"
+                name="current-password"
+                class="w-full p-2 border border-gray-300 rounded bg-white text-gray-700 outline-none"
+              />
+            </div>
+            <div class="mb-6 flex flex-col w-full">
+              <label for="new-password" class="mb-2">New Password</label>
+              <input
+                type="password"
+                placeholder="*******************"
+                id="new-password"
+                name="new-password"
+                class="w-full p-2 border border-gray-300 rounded bg-white text-gray-700 outline-none"
+              />
+            </div>
+            <div class="mb-6 flex flex-col w-full">
+              <label for="confirm-password" class="mb-2"
+                >Confirm New Password</label
+              >
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder="*******************"
+                name="confirm-password"
+                class="w-full p-2 border border-gray-300 rounded bg-white text-gray-700 outline-none"
+              />
+            </div>
+            <button
+              type="submit"
+              class="px-6 py-3 bg-[#002855] text-white rounded-lg cursor-pointer mt-4 w-full hover:bg-blue-800"
+            >
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
 
-                        <!-- Change Password content -->
-                    <div id="change-password" class="content hidden">
-                        <h2>Change Password</h2>
-                        <form class="change-form">
-                            <div class="input-group">
-                                <label for="current-password">Old Password</label>
-                                <input type="password" id="current-password" name="current-password">
-                            </div>
-                            <div class="input-group">
-                                <label for="new-password">New Password</label>
-                                <input type="password" id="new-password" name="new-password">
-                            </div>
-                            <div class="input-group">
-                                <label for="confirm-password">Confirm New Password</label>
-                                <input type="password" id="confirm-password" name="confirm-password">
-                            </div>
-                            <button type="submit">Save</button>
-                        </form>
-                    </div>
-                    <!-- notification content -->
-                    <div id="notification-settings" class="content hidden">
-                        <h2>Notification Settings</h2>
-                        <form>
-                            <div class="input-group">
-                                <label>
-                                    <input type="checkbox" name="email-notifications"> Email Notifications
-                                </label>
-                            </div>
-                            <div class="input-group">
-                                <label>
-                                    <input type="checkbox" name="sms-notifications"> SMS Notifications
-                                </label>
-                            </div>
-                            <div class="input-group">
-                                <label>
-                                    <input type="checkbox" name="push-notifications"> Push Notifications
-                                </label>
-                            </div>
-                            <button type="submit">Save</button>
-                        </form>
-                    </div>
-                </div>
-        </div>
-    <!-- </main> -->
-      </section>
+      <!-- Notification content -->
+      <div id="notification-settings" class="content hidden">
+        <h2 class="text-[20px] font-light font-black text-[#002855] mb-6">
+          Notification Settings
+        </h2>
+        <form>
+          <div class="mb-4">
+            <label class="flex items-center">
+              <input type="checkbox" name="email-notifications" class="mr-2" />
+              <span class="text-[14px]">Email Notifications</span>
+            </label>
+          </div>
+          <div class="mb-4">
+            <label class="flex items-center">
+              <input type="checkbox" name="sms-notifications" class="mr-2" />
+              <span class="text-[14px]">SMS Notifications</span>
+            </label>
+          </div>
+          <div class="mb-4">
+            <label class="flex items-center">
+              <input type="checkbox" name="push-notifications" class="mr-2" />
+              <span class="text-[14px]">Push Notifications</span>
+            </label>
+          </div>
+          <button
+            type="submit"
+            class="px-6 py-3 bg-[#002855] text-white rounded-lg cursor-pointer mt-4 hover:bg-blue-800"
+          >
+            Save
+          </button>
+        </form>
+      </div>
     </div>
-    <script src="/Referral_App_Management_Portal_Leadway/scripts/settings.js"></script>
-  </body>
-</html>
+  </div>
+</div>

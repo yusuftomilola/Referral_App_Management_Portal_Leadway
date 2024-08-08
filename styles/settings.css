@@ -1,266 +1,59 @@
 :root {
---sidebar-width: 15rem;
---header-height: 4rem;
---bg-color: #002f6c;
---hover-color: #004aad;
---active-color: #003580;
---text-color: white;
---border-color: #ddd;
---input-border-color: #ececec;
---input-background:#ccc;
-font-size:14px;
+  --bg-color: #002f6c;
+  --hover-color: #004aad;
+  --active-color: #003580;
+  font-size: 14px;
 }
 
-.settings {
-padding: 2rem;
-display:flex;
-gap:1em;
-}
-.settings-menu {
-display: flex;
-background: #fff;
-max-width: 330px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-height: 100vh;
-border-radius: 10px;
-margin-right: 20px;
-padding: 10px;
-}
 .settings-item {
-max-height: 105px;
-width: 126px;
-margin: 10px 10px;
-margin-bottom: 20px;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 8px;
-gap: 10px;
-/* border: 1px solid rgba(88, 88, 88, 1); */
-border:1px solid rgba(0, 0, 0, 0.5);
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s, box-shadow 0.3s;
-}
-.settings-item .icon {
-font-size: 40px;
-color: #6c757d;
+  height: 105px;
+  width: 48%;
+  /* margin: 10px; */
+  /* margin-bottom: 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 6px;
+  gap: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.settings-item .text {
-font-weight: 700;
-font-size:10px;
-color: rgba(53, 53, 53, 1)
+.settings-item .icon {
+  font-size: 90px;
+  color: #6c757d;
+  width: 30px;
 }
 
 .settings-item.active {
-background: #002f6c;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* background: #002f6c; */
+  border: 1.2px solid #002f6c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.settings-item.active .icon,
+/* .settings-item.active .icon,
 .settings-item.active .text {
-color:  #fff;
-
-}
+  color: #fff;
+} */
 
 .settings-item:hover {
-background-color: #f8f9fa;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.settings-content {
-max-width:100%;
-width:100%;
-background:#fff;
-padding: 2rem;
-border: 1px solid var(--border-color);
-border-radius: 0.5rem;
-}
-.content h2{
-font-size:2em;
-weight:900;
-margin-bottom:1.5em;
-}
-.settings-content .content {
-display: none;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.settings-content .content.active {
-display: block;
+.content {
+  display: none;
 }
 
-.hidden {
-display: none;
+.content.active {
+  display: block;
 }
 
-.input-group {
-margin-bottom: 1.5rem;
-flex-direction: column;
-width: 100%;
-}
-
-.input-group label {
-display: block;
-margin-bottom: 0.5rem;
-}
-
-.input-group input[type="text"],
-.input-group input[type="tel"],
-.input-group input[type="email"],
-.input-group input[type="password"] {
-max-width: 100%;
-width: 90%;
-padding: 0.5rem;
-border: 1px solid var(--input-border-color);
-border-radius: 0.3rem;
-box-sizing: border-box;
-background: rgb(233, 233, 233, 1);
-color: rgba(140, 140, 140, 1);
-outline: none;
-}
-.personal-info, .bank-info{
-padding: 20px;
-max-width: 100%;
-width: 100%;
-display: flex;
-background:rgba(248, 248, 248, 1);
-/* border: 1px solid red; */
-
-}
-.bank-info .input-group input{
-    background: #fff;
-}
-.input-wrapper{
-width: 100%;
-}
-button[type="submit"] {
-padding: 0.75rem 1.5rem;
-background-color: rgba(0, 40, 85, 1);
-color: var(--text-color);
-border: none;
-border-radius: 0.5rem;
-cursor: pointer;
-margin-top:1em;
-float:right;
-}
-
-button[type="submit"]:hover {
-background-color: var(--hover-color);
-}
-.change-form{
-padding: 4rem;
-max-width: 100%;
-width: 50%;
-display: flex;
-flex-direction: column;
-border-radius:5px;
-background:rgb(240, 240, 240); 
-margin: 0 auto;
-}
-.change-form .input-group input{
-    width: 100%;
-    background-color: #fff;
-}
-@media screen and (max-width:1023px) {
-.settings{
-flex-direction:column;
-}
-.settings-content{
-max-width: 100%;
-width:100%;
-}
-.personal-info{
-flex-direction: column;
-}
-.input-group{
-display: flex;
-flex-direction: column;
-margin-bottom: 1em;
-}
-.settings-menu{
-max-width: 100%;
-width:100%;
-height:fit-content;
-display:flex;
-flex-wrap:wrap;
-justify-content:space-evenly;
-}
-.set-wrapper{
-display:flex;
-max-width:100%;
-/* width: 100%; */
-justify-content:space-evenly;
-flex-wrap:wrap;
-
-}
-.bank-info{
-flex-direction:column;
-max-width:100%;
-width:100%;
-justify-content:center;
-margin:0 auto;
-}
-
-.input-group input[type="text"],
-.input-group input[type="email"],
-.input-group input[type="tel"],
-.input-group input[type="password"] {
-max-width: 100%;
-width: 100%;
-padding: 0.8rem;
-border: 1px solid var(--input-border-color);
-border-radius: 0.3rem;
-box-sizing: border-box;
-font-size: 12px;
-}
-.personal-info, .bank-info{
-padding: 4rem;
-max-width: 100%;
-width: 100%;
-display: flex;
-border-radius:5px;
-background:rgb(247, 247, 247);
-
-}
-.input-wrapper{
-width: 100%;
-}
-.set-wrapper{
-display:flex;
-}
-.change-form{
-padding: 4rem;
-max-width: 100%;
-width: 100%;
-display: flex;
-flex-direction: column;
-border-radius:5px;
-background:rgba(248, 248, 248, 1); 
-margin: 0 auto;
-}
-}
-@media screen and (max-width:767px) {
-.settings-item{
-width: 100%;
-}
-.set-wrapper{
-width: 100%;
-}
-.personal-info, .bank-info{
-padding: 1rem;
-}
-.change-form {
-    padding: 1em;
-    max-width: 100%;
-    width: 100%;
-}
-.change-form .input-group input{
-    background: #fff;
-}
-button{
-width:100%;
-text-align: center;
-float: right;
-}
-
+@media screen and (max-width: 1023px) {
+  .settings-item {
+    width: 30%;
+  }
 }
