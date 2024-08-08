@@ -1,0 +1,169 @@
+<main id="" class="flex-grow mb-10">
+  <div>
+    <h1 class="new-prospect-header">Create a New Prospect</h1>
+  </div>
+  <div class="new-prospect-container">
+    <div class="new-prospect-creation-type">
+      <h2>Select creation type</h2>
+
+      <button
+        onclick="loadPage('../pages/prospects.html', this)"
+        class="new-prospect-cancel"
+      >
+        Cancel
+      </button>
+    </div>
+    <div class="new-prospect-creation-type-2">
+      <label style="margin-right: 20px">
+        <input
+          type="radio"
+          name="creation-type"
+          value="individual"
+          checked
+          onclick="toggleBulkUpload()"
+        />
+        Individual
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          name="creation-type"
+          value="bulk-upload"
+          onclick="toggleBulkUpload()"
+        />
+        Bulk Upload
+      </label>
+    </div>
+    <div class="new-prospect-form-container" id="prospect">
+      <form class="new-prospect-form">
+        <h3 class="text-[20px] lg:text-[21px] font-[200] text-[#32404F]">
+          Fill prospect information
+        </h3>
+        <div class="new-prospect-form-row">
+          <div class="new-prospect-form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" />
+          </div>
+          <div class="new-prospect-form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" />
+          </div>
+        </div>
+        <div class="new-prospect-form-row">
+          <div class="new-prospect-form-group">
+            <label for="product-interest">Product Interest</label>
+            <div class="new-prospect-dropdown">
+              <select id="product-interest" name="product-interest">
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+          <div class="new-prospect-form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+        </div>
+        <div class="new-prospect-form-row">
+          <div class="new-prospect-form-group">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" name="phone-number" />
+          </div>
+          <div class="new-prospect-form-group new-prospect-half-width">
+            <label for="state">State</label>
+            <select id="state" name="state">
+              <option value=""></option>
+            </select>
+          </div>
+          <div class="new-prospect-form-group new-prospect-half-width">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" />
+          </div>
+        </div>
+        <div class="new-prospect-form-row">
+          <div class="new-prospect-form-group">
+            <label for="occupation">Occupation</label>
+            <input type="text" id="occupation" name="occupation" />
+          </div>
+          <div class="new-prospect-form-group">
+            <label>Gender</label>
+            <span class="new-prospect-span">
+              <label>
+                <input type="radio" name="gender" value="male" checked />
+                Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female" />
+                Female
+              </label>
+            </span>
+          </div>
+        </div>
+        <button type="button" class="show-modal new-prospect-create-prospect">
+          Create Prospect
+        </button>
+      </form>
+    </div>
+
+    <!-- Bulk upload -->
+    <div class="new-prospect-bulk-upload-container" id="bulkUploadContainer">
+      <h3>Bulk Upload</h3>
+      <p class="new-prospect-small" style="margin-bottom: 40px">
+        Please ensure the file is in Excel (.XLS) format
+      </p>
+      <div class="new-prospect-upload-area">
+        <div class="new-prospect-upload-icon">
+          <img src="../assets/icons8_upload-2.svg" alt="Upload Icon" />
+        </div>
+        <p>
+          <label style="cursor: pointer" class="new-prospect-center">
+            <a id="uploadButton" class="new-prospect-center new-prospect-color"
+              ><span>Select file</span>
+              <span class="text-[#002855]">or drag and drop</span></a
+            >
+
+            <input
+              type="file"
+              id="fileInput"
+              onchange="handleFileInputChange()"
+              style="display: none"
+            />
+          </label>
+        </p>
+
+        <p class="new-prospect-small">CSV or .XLSX file</p>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <button class="new-prospect-download-template">
+          <img src="../assets/downloadIcon.svg" alt="" /> Download excel
+          template
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="../scripts/new_prospect.js"></script>
+</main>
+
+<!-- First OVERLAY -->
+<!-- hidden -->
+<div
+  class="modal hidden flex flex-col items-center justify-center gap-[30px] max-w-[450px]"
+>
+  <h1 class="prospect text-center text-[32px] font-[500]">
+    Prospect created successfully
+  </h1>
+
+  <div class="icon w-[80px] h-[80px] mx-auto flex items-center justify-center">
+    <img src="../assets/checked.svg" class="w-full" />
+  </div>
+
+  <a href="#" data-page="../pages/prospects.html" class="page-link">
+    <button
+      class="bg-[#002855] text-[#ffffff] py-[10px] px-[20px] rounded-[3px] w-[185px] h-[53px] text-[17px] text-center font-[500]"
+    >
+      Close
+    </button></a
+  >
+</div>
+
+<div class="overlay hidden"></div>

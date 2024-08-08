@@ -7,15 +7,22 @@ const sectionMap = {
     "reportsAll.html",
   ],
   dashboard: ["dashboard.html"],
-  prospects: ["prospects.html", "prospectsChat.html"],
+  prospects: [
+    "prospects.html",
+    "prospectsChat.html",
+    "prospectsNew.html",
+    "prospectsNew_pros_doc_upload.html",
+  ],
   settings: ["settings.html"],
 };
 
 // Function to show action dropdown
 function actionmenu(event) {
   // Close any open dropdowns
-  const openDropdowns = document.querySelectorAll('.action-menu[style*="display: block"]');
-  openDropdowns.forEach(dropdown => {
+  const openDropdowns = document.querySelectorAll(
+    '.action-menu[style*="display: block"]'
+  );
+  openDropdowns.forEach((dropdown) => {
     dropdown.style.display = "none";
   });
 
@@ -31,8 +38,10 @@ function actionmenu(event) {
 }
 
 function closeDropdown(event) {
-  const openDropdowns = document.querySelectorAll('.action-menu[style*="display: block"]');
-  openDropdowns.forEach(dropdown => {
+  const openDropdowns = document.querySelectorAll(
+    '.action-menu[style*="display: block"]'
+  );
+  openDropdowns.forEach((dropdown) => {
     if (!dropdown.contains(event.target)) {
       dropdown.style.display = "none";
     }
@@ -41,7 +50,6 @@ function closeDropdown(event) {
   // Remove event listener to avoid multiple bindings
   document.removeEventListener("click", closeDropdown);
 }
-
 
 // incomeBreakdownDashboard.html chartjs
 function initChart() {
@@ -392,6 +400,91 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("mobile-menu").classList.add("open");
   });
 
+  document.getElementById("close-menu").addEventListener("click", function () {
+    document.getElementById("mobile-menu").classList.remove("open");
+  });
+
+  // Set initial active state for dashboard
+  setActiveDashboard();
+
+  // Initial page load
+  loadPage("../pages/dashboard.html");
+
+  // Event delegation for page links (both desktop and mobile)
+  document.addEventListener("click", function (event) {
+    const pageLink = event.target.closest(".page-link");
+    if (pageLink) {
+      event.preventDefault();
+      const pageUrl = pageLink.getAttribute("data-page");
+      loadPage(pageUrl);
+
+      // Close mobile menu if it's open
+      document.getElementById("mobile-menu").classList.remove("open");
+    }
+  });
+});
+
+function setActiveDashboard() {
+  // Remove active class from all nav items (desktop and mobile)
+  document
+    .querySelectorAll(".nav-item")
+    .forEach((item) => item.classList.remove("bg-[#E6B014]", "border-l-[3px]"));
+
+  // Add active class to dashboard nav items (desktop and mobile)
+  document.querySelectorAll('[data-section="dashboard"]').forEach((item) => {
+    item.classList.add("bg-[#E6B014]", "border-l-[3px]");
+  });
+}
+
+function loadPage(url) {
+  fetch(url)
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("content").innerHTML = html;
+      initChart();
+      initChart2();
+
+      // initChart3();
+      // Update active nav item based on the loaded URL
+      updateActiveNavItem(url);
+
+      // Add this line to initialize the modal
+      // if (url.includes("reports.html")) {
+      //   initializeModal();
+      // }
+      initializeModal();
+      initializeModal2();
+    })
+
+    .catch((error) => console.error("Error loading page:", error));
+}
+
+function updateActiveNavItem(url) {
+  const fileName = url.split("/").pop();
+  let activeSection = null;
+
+  // Find which section this URL belongs to
+  for (const [section, pages] of Object.entries(sectionMap)) {
+    if (pages.includes(fileName)) {
+      activeSection = section;
+      break;
+    }
+  }
+
+  // Remove active class from all nav items (desktop and mobile)
+  document
+    .querySelectorAll(".nav-item")
+    .forEach((item) => item.classList.remove("bg-[#E6B014]", "border-l-[3px]"));
+
+  // Add active class to the correct nav items (desktop and mobile)
+  if (activeSection) {
+    document
+      .querySelectorAll(`[data-section="${activeSection}"]`)
+      .forEach((item) => {
+        item.classList.add("bg-[#E6B014]", "border-l-[3px]");
+      });
+  }
+}
   document.getElementById("close-menu").addEventListener("click", function () {
     document.getElementById("mobile-menu").classList.remove("open");
   });
