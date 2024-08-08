@@ -25,10 +25,6 @@ body {
   border-left-width: 3px;
 }
 
-.pt-6{
-  padding-top: 1.0rem;
-}
-
 /* Custom styles for mobile menu animation */
 .mobile-menu {
   transform: translateX(-100%);
@@ -37,4 +33,26 @@ body {
 
 .mobile-menu.open {
   transform: translateX(0);
+}
+
+/* Custom styles for the tooltip */
+.chartjs-tooltip {
+  background: white;
+  color: #002855;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 60px;
+  border-radius: 5px;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(45%, 20%);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* chart 3 */
+@media screen and (min-width: 1200px) {
+  #myChart3 {
+    width: 100px;
+  }
 }

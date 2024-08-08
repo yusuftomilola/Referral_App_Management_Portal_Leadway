@@ -1,294 +1,317 @@
 /* new_prospect.css */
 
-@font-face {
-    font-family: "Circular Std Medium";
-    src: url("/fonts/circular-std-medium-500.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-}
-
-/* font */
-h1, h2, h3, p, label {
-    font-family: "Circular Std Medium", sans-serif;
-    color: #585858;
-}
-
-h2 {
-    font-weight: 450;
-}
-
-input{
-    font-weight:450;
-    font-size:20px;
-}
-
-label.center{
-    text-align: center;
-}
-
-/* header */
-.header{
-    margin-top: 5px;
-    margin-bottom: 9px;
-    font-weight: 700;
-}
-
-
-
 /* Container for the entire prospect section */
-.prospect-container {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    padding: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    /* margin-left: 40px;
-    margin-right: 40px; */
-    width: 100%;
-    height: 95%;
-    margin: auto;
-    padding-bottom: 40px;
+.new-prospect-header {
+  font-size: 22px;
+  color: #585858;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.new-prospect-container {
+  background-color: #fff;
+  border-radius: 8px;
+
+  margin: 20px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+  height: 95%;
+  margin: auto;
+  padding-bottom: 40px;
 }
 
 /* Heading for the section */
-.prospect-container h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.new-prospect-container h2 {
+  font-size: 21px;
+  /* margin-bottom: 20px; */
+  font-weight: 400;
+  color: #34475e;
 }
 
 /* Container for creation type options */
-.creation-type {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.new-prospect-creation-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.new-prospect-creation-type-2 {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.new-prospect-creation-type-2 label {
+  display: flex;
+  color: #34475e;
+  align-items: center;
+  gap: 5px;
 }
 
 /* Style for the cancel link */
-.creation-type .cancel {
-    color: rgb(0 40 85 / var(--tw-bg-opacity));
-    text-decoration: none;
-    font-weight: 500;
-        margin-bottom: 25px;
+.new-prospect-creation-type .new-prospect-cancel {
+  color: #002855;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  /* margin-bottom: 25px; */
 }
 
 /* Container for the form */
-.form-container {
-    background-color: #fff;
-    border-radius: 8px;
-    /* padding: 20px; */
-    width: 95%;
-    margin-top: 20px;
+.new-prospect-form-container {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 95%;
+  margin-top: 20px;
 }
 
 /* Form styling */
-.prospect-form {
-    display: flex;
-    flex-direction: column;
+.new-prospect-form {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Row grouping for form elements */
-.form-row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 15px;
+.new-prospect-form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 /* Grouping for form elements */
-.form-group {
-    display: flex;
-    flex-direction: column;
-    width: 48%;
+.new-prospect-form-group {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
 }
 
 /* Half-width form group */
-.form-group.half-width {
-    width: 23%;
+.new-prospect-form-group.new-prospect-half-width {
+  width: 23%;
 }
 
 /* Labels for form elements */
-.form-group label {
-    margin-bottom: 5px;
-    font-weight: bold;
+.new-prospect-form-group label {
+  margin-bottom: 5px;
+  font-weight: 450;
+  font-size: 16px;
+  color: #353535;
 }
 
 /* Input fields */
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"] {
-    border: 1px solid #ced4da;
-    border-radius: 15px;
-    padding: 8px;
-    font-size: 16px;
+.new-prospect-form-group input[type="text"],
+.new-prospect-form-group input[type="email"],
+.new-prospect-form-group input[type="tel"] {
+  border: 1px solid #ced4da;
+  border-radius: 15px;
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
 }
 
 /* Radio buttons for gender */
-.form-group input[type="radio"] {
-    margin-right: 5px;
+.new-prospect-form-group input[type="radio"] {
+  margin-right: 5px;
 }
 
 /* radio button color */
 input[type="radio"] {
-    accent-color: black;
+  accent-color: black;
 }
 
 /* dropdown */
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    border-radius: 8px;
+.new-prospect-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border-radius: 8px;
 }
 
+.new-prospect-dropdown select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,100 30,40 110,40" fill="black"/></svg>')
+    no-repeat right 10px center;
+  background-size: 10px;
+}
 
-.dropdown select {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,100 30,40 110,40" fill="black"/></svg>') no-repeat right 10px center;
-    background-size: 10px;
+.new-prospect-form-group select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,100 30,40 110,40" fill="black"/></svg>')
+    no-repeat right 10px center;
+  background-size: 10px;
 }
-.form-group select {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,100 30,40 110,40" fill="black"/></svg>') no-repeat right 10px center;
-    background-size: 10px;
-}
+
 /* Submit button */
-.create-prospect {
-    align-self: flex-end;
-    background-color: rgb(0 40 85 / var(--tw-bg-opacity));    
-    border: none;
-    border-radius: 4px;
-    color: white;
-    padding: 15px 30px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 190px;
+.new-prospect-create-prospect {
+  align-self: flex-end;
+  background-color: rgb(0 40 85 / var(--tw-bg-opacity));
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 190px;
 }
-.create-prospect-1 {
-    align-self: flex-end;
-    background-color: #fff;    
-    border: 2px #002855 solid;
-    border-radius: 4px;
-    color: #002855;
-    padding: 15px 30px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 190px;
+
+.new-prospect-create-prospect-1 {
+  align-self: flex-end;
+  background-color: #fff;
+  border: 2px #002855 solid;
+  border-radius: 4px;
+  color: #002855;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 190px;
 }
 
 /* Change background color on hover */
-.create-prospect:hover {
-    background-color: #0056b3;
-}
 
 /* BULK UPLOAD */
 /* Container for bulk upload section */
-.bulk-upload-container {
-    display: none;
-    /* Initially hidden */
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 3px;
-    margin-top: 20px;
-    /* text-align: center; */
-
-}
-.bulk-upload-container h3{
-    font-weight: 500;
-    font-size: 22px;
-    color: #32404F;
+.new-prospect-bulk-upload-container {
+  display: none;
+  /* Initially hidden */
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 3px;
+  margin-top: 20px;
 }
 
-.small{
-    color: #AFB0B1;
-    font-family: Circular Std;
-    font-weight:  500;
-    font-size:  18px;
+.new-prospect-bulk-upload-container h3 {
+  font-weight: 500;
+  font-size: 21px;
+  color: #32404f;
 }
 
-.color{
-    color: #EAB323;
+.new-prospect-small {
+  color: #afb0b1;
+  font-family: Circular Std;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.new-prospect-color {
+  color: #eab323;
 }
 
 /* Upload area styling */
-.upload-area {
-    border: 1px solid #ced4da;
-    border-radius: 8px;
-    padding: 40px;
-    margin-bottom: 20px;
-    text-align: center;
+.new-prospect-upload-area {
+  border: 1px solid #d8dbde;
+  border-radius: 8px;
+  padding: 40px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Upload icon styling */
-.upload-icon {
-    display: flex;
-    justify-content:center;
-    cursor: pointer;
-    /* background-color: #F4F4F4; */
+.new-prospect-upload-icon {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
-.upload-icon img {
-    display: flex;
-    justify-content:center;
-    width: 50px;
-    padding: 7px;
-    margin-bottom: 10px;
-    background-color: #F4F4F4;
-    border-radius: 50%;
+
+.new-prospect-upload-icon img {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  padding: 7px;
+  margin-bottom: 10px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
 }
 
 /* Download template button styling */
-.download-template {
-    background-color: rgb(0 40 85 / var(--tw-bg-opacity));
-    border: none;
-    margin-top: 10%;
-    border-radius: 4px;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+.new-prospect-download-template {
+  background-color: rgb(0 40 85 / var(--tw-bg-opacity));
+  border: none;
+  margin-top: 10%;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
-
-/* Change background color on hover */
-.download-template:hover {
-    background-color: #0056b3;
-}
-
 
 /* smaller screens */
-@media only screen and (max-width:400px) {
-    h2,
-    label {
-        font-size: smaller;
-    }
-    .prospect-container h2{
-        font-size: 20px;
-    }
-    .creation-type .cancel{
-        margin-bottom: 10px;
-        font-size: smaller;
-    }
-    .span{
-        display: flex;
-        flex-direction: column;
-    }
+@media only screen and (max-width: 400px) {
+  .new-prospect-download-template {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
 
-    .create-prospect{
-        /* width: 70%; */
-    }
+  h2,
+  label {
+    font-size: smaller;
+  }
+  .new-prospect-container h2 {
+    font-size: 20px;
+  }
+
+  .new-prospect-creation-type {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+
+  .new-prospect-creation-type .new-prospect-cancel {
+    margin-bottom: 13px;
+    font-size: smaller;
+    border: 1px solid #002855;
+    padding: 10px 15px;
+  }
+  .new-prospect-span {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .new-prospect-create-prospect {
+    /* width: 70%; */
+  }
+}
+@media only screen and (max-width: 700px) {
+  .new-prospect-form-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .new-prospect-form-group {
+    width: 100%; /* Ensure form groups take full width */
+    align-items: start; /* Center align form groups */
+  }
+  .new-prospect-form-group input[type="text"],
+  .new-prospect-form-group input[type="email"],
+  .new-prospect-form-group input[type="tel"] {
+    width: 100%; /* Ensure inputs take full width */
+    margin-left: 0; /* Remove any left margin */
+  }
+  .new-prospect-form-group.new-prospect-half-width {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .new-prospect-create-prospect {
+    align-self: center;
+  }
 }
