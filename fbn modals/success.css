@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Circular Std";
+  src: url(font/circular-std-medium-500.ttf);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+.modal2 {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
+  /* height: 506px; */
+
+  padding-inline: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.success {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  color: #000000;
+  line-height: 40.48px;
+  margin-bottom: 20px;
+  font-family: "Circular Std";
+}
+.modal2 p {
+  font-size: 15px;
+  font-weight: 450;
+  color: #000000;
+  line-height: 18.97px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.modal2 .icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal2 .icon img {
+  width: 80px;
+  height: auto;
+}
+.modal2 button {
+  background-color: #002855;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 185.94px;
+  height: 53.13px;
+  font-size: 17.08px;
+  line-height: 17.08px;
+  text-align: center;
+  font-weight: 500;
+}
+.modal2 button:hover {
+  background-color: #162c70;
+}
+
+.prospect {
+  font-size: 32px;
+  line-height: 40.48px;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  margin-top: 3.5rem;
+  font-family: "Circular Std";
+}
+
+.profile {
+  font-size: 32.3px;
+  line-height: 40.48px;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  margin-top: 3.5rem;
+  font-family: "Circular Std";
+}
+
+.report {
+  font-size: 23px;
+  width: 200px;
+  line-height: 30.48px;
+  color: #000;
+  font-weight: 500;
+  font-family: "Circular Std";
+}
