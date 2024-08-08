@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../styles/reportAll.css" />
     <link rel="stylesheet" href="../styles/modal.css" />
     <link rel="stylesheet" href="../styles/chat.css" />
+    <link rel="stylesheet" href="../styles/settings.css" />
     <link rel="stylesheet" href="../styles/new_prospect.css" />
     <link rel="stylesheet" href="../styles/new_pros_doc_upload.css" />
     <link rel="stylesheet" href="../styles/new_prospect.css" />
@@ -44,14 +45,8 @@
             class="nav-item pl-8 py-3 cursor-pointer"
             data-section="dashboard"
           >
-          <li
-            class="nav-item pl-8 py-3 cursor-pointer"
-            data-section="dashboard"
-          >
             <!-- dashboard link -->
             <a
-              data-page="../pages/dashboard.html"
-              class="page-link flex gap-[10px] items-center text-white text-[14px] nav-link"
               data-page="../pages/dashboard.html"
               class="page-link flex gap-[10px] items-center text-white text-[14px] nav-link"
             >
@@ -70,14 +65,8 @@
             class="nav-item pl-8 py-3 cursor-pointer"
             data-section="prospects"
           >
-          <li
-            class="nav-item pl-8 py-3 cursor-pointer"
-            data-section="prospects"
-          >
             <!-- prospects link -->
             <a
-              data-page="../pages/prospects.html"
-              class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
               data-page="../pages/prospects.html"
               class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
             >
@@ -93,11 +82,7 @@
           </li>
 
           <li class="nav-item pl-8 py-3 cursor-pointer" data-section="reports">
-          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="reports">
             <!-- reports link -->
-            <a
-              data-page="../pages/reports.html"
-              class="page-link flex gap-[14px] text-white text-[14px] nav-link"
             <a
               data-page="../pages/reports.html"
               class="page-link flex gap-[14px] text-white text-[14px] nav-link"
@@ -111,15 +96,10 @@
               />
               Reports
             </a>
-            </a>
           </li>
 
           <li class="nav-item pl-8 py-3 cursor-pointer" data-section="settings">
-          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="settings">
             <!-- settings link -->
-            <a
-              data-page="../pages/settings.html"
-              class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
             <a
               data-page="../pages/settings.html"
               class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
@@ -133,12 +113,10 @@
               />
               Settings
             </a>
-            </a>
           </li>
         </ul>
       </aside>
 
-      <!-- mobile sidebar menu layout container -->
       <!-- mobile sidebar menu layout container -->
       <aside
         class="fixed inset-0 z-50 flex flex-col gap-5 w-[260px] bg-[#002855] md:w-[35%] h-screen justify-start pt-8 mobile-menu lg:hidden"
@@ -187,14 +165,8 @@
             class="nav-item pl-8 py-3 cursor-pointer"
             data-section="dashboard"
           >
-          <li
-            class="nav-item pl-8 py-3 cursor-pointer"
-            data-section="dashboard"
-          >
             <!-- dashboard link -->
             <a
-              data-page="../pages/dashboard.html"
-              class="page-link flex gap-[10px] items-center text-white text-[14px] nav-link"
               data-page="../pages/dashboard.html"
               class="page-link flex gap-[10px] items-center text-white text-[14px] nav-link"
             >
@@ -213,14 +185,8 @@
             class="nav-item pl-8 py-3 cursor-pointer"
             data-section="prospects"
           >
-          <li
-            class="nav-item pl-8 py-3 cursor-pointer"
-            data-section="prospects"
-          >
             <!-- prospects link -->
             <a
-              data-page="../pages/prospects.html"
-              class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
               data-page="../pages/prospects.html"
               class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
             >
@@ -236,11 +202,7 @@
           </li>
 
           <li class="nav-item pl-8 py-3 cursor-pointer" data-section="reports">
-          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="reports">
             <!-- reports link -->
-            <a
-              data-page="../pages/reports.html"
-              class="page-link flex items-center gap-[14px] text-white text-[14px] nav-link"
             <a
               data-page="../pages/reports.html"
               class="page-link flex items-center gap-[14px] text-white text-[14px] nav-link"
@@ -254,15 +216,10 @@
               />
               Reports
             </a>
-            </a>
           </li>
 
           <li class="nav-item pl-8 py-3 cursor-pointer" data-section="settings">
-          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="settings">
             <!-- settings link -->
-            <a
-              data-page="../pages/settings.html"
-              class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
             <a
               data-page="../pages/settings.html"
               class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
@@ -276,7 +233,6 @@
               />
               Settings
             </a>
-            </a>
           </li>
         </ul>
       </aside>
@@ -288,10 +244,8 @@
         <!-- TOP BAR -->
         <header
           style="z-index: 1"
-          style="z-index: 1"
           class="py-[10px] pl-7 pr-7 sm:pl-7 sm:pr-10 flex justify-between items-center bg-white sticky top-0"
         >
-          <!-- z-20 -->
           <!-- z-20 -->
           <!-- hamburger icon -->
           <button class="lg:hidden" id="hamburger">
@@ -379,5 +333,6 @@
     <script src="../scripts/modal.js"></script>
     <script src="../scripts/chatModal.js"></script>
     <script src="../scripts/new_prospect.js"></script>
+    <script src="../scripts/settings.js"></script>
   </body>
 </html>
