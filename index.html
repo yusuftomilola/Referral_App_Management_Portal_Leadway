@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Referral Management Login</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="./assets/general/firstBankFavicon.JPG" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -24,7 +25,7 @@
                   type="text"
                   id="username"
                   name="username"
-                  placeholder="enter your username"
+                  placeholder="enter username: admin"
                   required
                 />
                 <i class="fas fa-user icon"></i>
@@ -32,7 +33,7 @@
             </div>
             <div class="input-group">
               <label for="password">Password</label
-              ><span class="show-password" onclick="togglePassword()"
+              ><span class="show-password showw" onclick="togglePassword()"
                 >SHOW</span
               >
               <div class="input-wrapper">
@@ -40,7 +41,7 @@
                   type="password"
                   id="password"
                   name="password"
-                  placeholder="enter your password"
+                  placeholder="enter password: admin"
                   required
                 />
                 <i class="fas fa-lock icon"></i>
@@ -49,10 +50,12 @@
             <div class="actions">
               <label
                 ><input type="checkbox" id="keepLoggedIn" checked /> Keep me
-                logged in</label>
+                logged in</label
+              >
               <span class="checkmark"></span>
               <a href="#" class="reset-password">Reset Password</a>
             </div>
+
             <button type="submit">Login</button>
           </form>
           <p class="mytext">
@@ -61,10 +64,9 @@
         </div>
       </div>
       <div class="right">
-        <img src="Group 162.svg" alt="Info" class="info-icon" />
+        <img src="./assets/Group 162.svg" alt="Info" class="info-icon" />
       </div>
-      
     </div>
-    <script src="index.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

@@ -8,7 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles/layout.css" />
     <link rel="stylesheet" href="../styles/reports.css" />
-    <script src="../scripts/layouts.js" defer></script>
+    <link rel="stylesheet" href="../styles/reportAll.css" />
+    <link rel="stylesheet" href="../styles/modal.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,12 +36,14 @@
         </a>
 
         <ul class="flex flex-col">
-          <li class="nav-item bg-[#E6B014] border-l-[3px] pl-8 py-3">
+          <li
+            class="nav-item pl-8 py-3 cursor-pointer"
+            data-section="dashboard"
+          >
             <!-- dashboard link -->
             <a
-              class="flex gap-[10px] items-center text-white text-[14px] nav-link"
-              href="#dashboard"
-              data-url="/pages/dashboard.html"
+              data-page="../pages/dashboard.html"
+              class="page-link flex gap-[10px] items-center text-white text-[14px] nav-link"
             >
               <img
                 src="../assets/general/dashboardIcon.svg"
@@ -53,12 +56,14 @@
             </a>
           </li>
 
-          <li class="nav-item pl-8 py-3">
+          <li
+            class="nav-item pl-8 py-3 cursor-pointer"
+            data-section="prospects"
+          >
             <!-- prospects link -->
             <a
-              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              href="#prospects"
-              data-url="/pages/prospects.html"
+              data-page="../pages/prospects.html"
+              class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
             >
               <img
                 src="../assets/general/prospectsIcon.svg"
@@ -71,12 +76,11 @@
             </a>
           </li>
 
-          <li class="nav-item pl-8 py-3">
+          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="reports">
             <!-- reports link -->
-            <button
-              class="flex items-center gap-[14px] text-white text-[14px] nav-link"
-              href="#reports"
-              data-url="/pages/reports.html"
+            <a
+              data-page="../pages/reports.html"
+              class="page-link flex gap-[14px] text-white text-[14px] nav-link"
             >
               <img
                 src="../assets/general/reportsIcon.svg"
@@ -86,15 +90,14 @@
                 class="nav-item-image"
               />
               Reports
-            </button>
+            </a>
           </li>
 
-          <li class="nav-item pl-8 py-3">
+          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="settings">
             <!-- settings link -->
-            <button
-              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              href="#settings"
-              data-url="/pages/settings.html"
+            <a
+              data-page="../pages/settings.html"
+              class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
             >
               <img
                 src="../assets/general/settingsIcon.svg"
@@ -104,12 +107,12 @@
                 class="nav-item-image"
               />
               Settings
-            </button>
+            </a>
           </li>
         </ul>
       </aside>
 
-      <!-- mobile sidebar layout container -->
+      <!-- mobile sidebar menu layout container -->
       <aside
         class="fixed inset-0 z-50 flex flex-col gap-5 w-[260px] bg-[#002855] md:w-[35%] h-screen justify-start pt-8 mobile-menu lg:hidden"
         id="mobile-menu"
@@ -153,12 +156,14 @@
         </div>
 
         <ul class="flex flex-col">
-          <li class="nav-item bg-[#E6B014] border-l-[3px] pl-8 py-3">
+          <li
+            class="nav-item pl-8 py-3 cursor-pointer"
+            data-section="dashboard"
+          >
             <!-- dashboard link -->
             <a
-              class="flex gap-[10px] items-center text-white text-[14px] nav-link"
-              href="#dashboard"
-              data-url="/pages/dashboard.html"
+              data-page="../pages/dashboard.html"
+              class="page-link flex gap-[10px] items-center text-white text-[14px] nav-link"
             >
               <img
                 src="../assets/general/dashboardIcon.svg"
@@ -171,12 +176,14 @@
             </a>
           </li>
 
-          <li class="nav-item pl-8 py-3">
+          <li
+            class="nav-item pl-8 py-3 cursor-pointer"
+            data-section="prospects"
+          >
             <!-- prospects link -->
             <a
-              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              href="#prospects"
-              data-url="/pages/prospects.html"
+              data-page="../pages/prospects.html"
+              class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
             >
               <img
                 src="../assets/general/prospectsIcon.svg"
@@ -189,12 +196,11 @@
             </a>
           </li>
 
-          <li class="nav-item pl-8 py-3">
+          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="reports">
             <!-- reports link -->
-            <button
-              class="flex items-center gap-[14px] text-white text-[14px] nav-link"
-              href="#reports"
-              data-url="/pages/reports.html"
+            <a
+              data-page="../pages/reports.html"
+              class="page-link flex items-center gap-[14px] text-white text-[14px] nav-link"
             >
               <img
                 src="../assets/general/reportsIcon.svg"
@@ -204,15 +210,14 @@
                 class="nav-item-image"
               />
               Reports
-            </button>
+            </a>
           </li>
 
-          <li class="nav-item pl-8 py-3">
+          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="settings">
             <!-- settings link -->
-            <button
-              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              href="#settings"
-              data-url="/pages/settings.html"
+            <a
+              data-page="../pages/settings.html"
+              class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
             >
               <img
                 src="../assets/general/settingsIcon.svg"
@@ -222,7 +227,7 @@
                 class="nav-item-image"
               />
               Settings
-            </button>
+            </a>
           </li>
         </ul>
       </aside>
@@ -235,6 +240,7 @@
         <header
           class="py-[10px] pl-7 pr-7 sm:pl-7 sm:pr-10 flex justify-between items-center bg-white sticky top-0"
         >
+          <!-- z-20 -->
           <!-- hamburger icon -->
           <button class="lg:hidden" id="hamburger">
             <img
@@ -313,5 +319,10 @@
         ></main>
       </section>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="../scripts/layouts.js"></script>
+    <script src="../scripts/modal.js"></script>
   </body>
 </html>
