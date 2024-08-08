@@ -1,0 +1,196 @@
+<main id="" class="flex-grow mb-10">
+  <div>
+    <!-- Document uploaded page -->
+    <h1 class="upload-prospect-header">Create Prospect - Document upload</h1>
+  </div>
+  <div
+    class="upload-prospect-container upload-prospect-second-container"
+    id="myProspect"
+  >
+    <h2 class="upload-prospect-kb-1">
+      My-prospect list.xls <span class="upload-prospect-kb">154kb</span>
+    </h2>
+
+    <div class="upload-prospect-list overflow-auto">
+      <div class="upload-prospect-row upload-prospect-header">
+        <span>Name</span>
+
+        <span>Email</span>
+
+        <span>Phone Number</span>
+
+        <span>Product Interest</span>
+      </div>
+
+      <div class="upload-prospect-row upload-prospect-row-item">
+        <img src="../assets/profile.jpg" alt="Profile Image" />
+        <span>Nurudeen Ibrahim</span>
+        <span>theenddeen@gmail.com</span>
+        <span>08165476543</span>
+        <span>Auto Insurance</span>
+      </div>
+
+      <div class="upload-prospect-row upload-prospect-row-item px-2">
+        <img src="../assets/profile.jpg" alt="Profile Image" />
+        <span>Nurudeen Ibrahim</span>
+        <span>theenddeen@gmail.com</span>
+        <span>08165476543</span>
+        <span>Auto Insurance</span>
+      </div>
+      <div class="upload-prospect-row upload-prospect-row-item px-2">
+        <img src="../assets/profile.jpg" alt="Profile Image" />
+        <span>Nurudeen Ibrahim</span>
+        <span>theenddeen@gmail.com</span>
+        <span>08165476543</span>
+        <span>Auto Insurance</span>
+      </div>
+      <div class="upload-prospect-row upload-prospect-row-item px-2">
+        <img src="../assets/profile.jpg" alt="Profile Image" />
+        <span>Nurudeen Ibrahim</span>
+        <span>theenddeen@gmail.com</span>
+        <span>08165476543</span>
+        <span>Auto Insurance</span>
+      </div>
+    </div>
+
+    <div class="upload-prospect-buttons-2">
+      <button
+        class="border-[2px] border-[#002855] w-[190px] cancel-btnn text-[#002855]"
+        onclick="loadPage('../pages/prospectsNew.html', this)"
+        id="cancel"
+      >
+        Cancel
+      </button>
+      <button type="button" class="show-modal new-prospect-create-prospect">
+        Create Prospects
+      </button>
+    </div>
+  </div>
+
+  <div class="upload-prospect-container" style="display: none">
+    <div class="upload-prospect-creation-type">
+      <h2>Select creation type</h2>
+      <a href="#" class="upload-prospect-cancel">Cancel</a>
+    </div>
+    <div class="upload-prospect-creation-type-2">
+      <label>
+        <input
+          type="radio"
+          name="creation-type"
+          value="individual"
+          onclick="toggleBulkUpload()"
+        />
+        Individual
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="creation-type"
+          value="bulk-upload"
+          checked
+          onclick="toggleBulkUpload()"
+        />
+        Bulk Upload
+      </label>
+    </div>
+    <div class="upload-prospect-form-container" id="prospect">
+      <form class="upload-prospect-form">
+        <h3>Fill prospect information</h3>
+        <div class="upload-prospect-form-row">
+          <div class="upload-prospect-form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" />
+          </div>
+          <div class="upload-prospect-form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" />
+          </div>
+        </div>
+        <div class="upload-prospect-form-row">
+          <div class="upload-prospect-form-group">
+            <label for="product-interest">Product Interest</label>
+            <input type="text" id="product-interest" name="product-interest" />
+          </div>
+          <div class="upload-prospect-form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+        </div>
+        <div class="upload-prospect-form-row">
+          <div class="upload-prospect-form-group">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" name="phone-number" />
+          </div>
+          <div class="upload-prospect-form-group upload-prospect-half-width">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" />
+          </div>
+          <div class="upload-prospect-form-group upload-prospect-half-width">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" />
+          </div>
+        </div>
+        <div class="upload-prospect-form-row">
+          <div class="upload-prospect-form-group">
+            <label for="occupation">Occupation</label>
+            <input type="text" id="occupation" name="occupation" />
+          </div>
+          <div class="upload-prospect-form-group">
+            <label>Gender</label>
+            <span>
+              <label>
+                <input type="radio" name="gender" value="male" checked />
+                Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female" />
+                Female
+              </label>
+            </span>
+          </div>
+        </div>
+        <button class="upload-prospect-create-prospect">Create Prospect</button>
+      </form>
+    </div>
+
+    <!-- Bulk upload -->
+    <div class="upload-prospect-bulk-upload-container" id="bulkUploadContainer">
+      <h3>Bulk Upload</h3>
+      <p>Please ensure the file is in Excel (.XLS) format</p>
+      <div class="upload-prospect-upload-area">
+        <div class="upload-prospect-upload-icon">
+          <img src="../assets/icons8_upload-2.svg" alt="Upload Icon" />
+        </div>
+        <p>Select file or drag and drop</p>
+        <p>CSV or .XLSX file</p>
+      </div>
+      <button class="upload-prospect-download-template">
+        Download excel template
+      </button>
+    </div>
+  </div>
+</main>
+
+<!-- First OVERLAY -->
+<!-- hidden -->
+<div
+  class="modal hidden flex flex-col items-center justify-center gap-[30px] max-w-[450px]"
+>
+  <h1 class="prospect text-center text-[32px] font-[500]">
+    Prospect created successfully
+  </h1>
+
+  <div class="icon w-[80px] h-[80px] mx-auto flex items-center justify-center">
+    <img src="../assets/checked.svg" class="w-full" />
+  </div>
+
+  <a href="#" data-page="../pages/prospects.html" class="page-link">
+    <button
+      class="bg-[#002855] text-[#ffffff] py-[10px] px-[20px] rounded-[3px] w-[185px] h-[53px] text-[17px] text-center font-[500]"
+    >
+      Close
+    </button></a
+  >
+</div>
+
+<div class="overlay hidden"></div>
