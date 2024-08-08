@@ -1,0 +1,365 @@
+<div class="flex flex-col gap-4">
+  <!-- Header -->
+  <div class="flex justify-between">
+    <h1 class="text-[24px] font-[700] text-[#353535]">Prospects</h1>
+    <a
+      onclick="loadPage('../pages/prospects.html', this)"
+      class="cursor-pointer flex justify-between items-center space-x-2 text-[#002855] font-bold px-4 py-2"
+    >
+      <span
+        ><img src="../assets/general/backArrow_.svg" alt="" class="w-2 h-2"
+      /></span>
+      <span class="whitespace-nowrap text-[12px] font-[700]">
+        Back to prospects</span
+      >
+    </a>
+  </div>
+
+  <!-- top card -->
+  <div
+    class="w-full bg-white mt-4 flex justify-between px-4 rounded-md overflow-x-auto"
+  >
+    <div class="w-full bg-white md:flex rounded-md overflow-x-auto">
+      <div
+        class="flex-col lg:w-[250px] items-center space-y-4 py-4 justify-between px-8"
+      >
+        <span id="profile-pic" class=""
+          ><img src="../assets/general/profilePic2.svg" alt=""
+        /></span>
+        <span
+          class="mx-auto mt-8 text-[20px] text-[#353535] font-bold whitespace-nowrap"
+          >Nurudeen Ibrahim</span
+        >
+      </div>
+      <div id="collapsible-content" class="w-full border-l border-[#F3F5F6]">
+        <div id="collapsible-content" class="flex-grow">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+            <div class="grid grid-row-2 p-4">
+              <span class="text-[10px] text-[#7A7C87]">Name</span>
+              <span class="text-[14px] text-[#353535] font-[450]"
+                >Nurudeen Ibrahim
+              </span>
+            </div>
+            <div class="grid grid-row-2 p-4">
+              <span class="text-[10px] text-[#7A7C87]">Insurance Agent</span>
+              <span class="text-[14px] text-[#353535] font-[450]"
+                >Seyi Olanrewaju
+              </span>
+            </div>
+            <div class="grid grid-row-2 p-4">
+              <span class="text-[10px] text-[#7A7C87]">Product Interest</span>
+              <span class="text-[14px] text-[#353535] font-[450]"
+                >Auto Insurance
+              </span>
+            </div>
+            <div class="grid grid-row-2 p-4">
+              <span class="text-[10px] text-[#7A7C87]">Date Added</span>
+              <span class="text-[14px] text-[#353535] font-[450]"
+                >04 Jan 2023
+              </span>
+            </div>
+            <div class="grid grid-row-2 p-4">
+              <span class="text-[10px] text-[#7A7C87]">Phone Number</span>
+              <span class="text-[14px] text-[#353535] font-[450]"
+                >08165432516
+              </span>
+            </div>
+            <div class="grid grid-row-2 p-4">
+              <span class="text-[10px] text-[#7A7C87]">Email address</span>
+              <span class="text-[14px] text-[#353535] font-[450]"
+                >thedeen@gmail.com
+              </span>
+            </div>
+            <div class="grid grid-row-2 p-4">
+              <span class="text-[10px] text-[#7A7C87]">Branch</span>
+              <span class="text-[14px] text-[#353535] font-[450]"
+                >Lagos Branch
+              </span>
+            </div>
+            <div class="grid grid-row-2 p-4">
+              <span class="text-[10px] text-[#7A7C87]">Status</span>
+              <span class="text-[14px] text-[#FFCD28] font-[450]"
+                >Ongoing
+              </span>
+            </div>
+          </div>
+          <div class="border-t border-[#F3F5F6] p-2">
+            <button
+              type="button"
+              class="show-modal mt-4 ml-4 mb-4 text-[#002855] w-[168px] text-[15px] font-bold px-4 py-2 border border-[#002855] relative bg-transparent rounded-md"
+            >
+              Start a Chat
+              <span class="absolute top-0 left-0 w-1 h-1 bg-white"></span>
+              <span class="absolute top-0 right-0 w-1 h-1 bg-white"></span>
+              <span class="absolute bottom-0 left-0 w-1 h-1 bg-white"></span>
+              <span class="absolute bottom-0 right-0 w-1 h-1 bg-white"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right section: Icon -->
+    <div class="flex items-start ml-auto p-4">
+      <button id="collapseBtn" onclick="toggleCollapse()">
+        <img
+          src="../assets/general/upArrowicon.svg"
+          alt="Icon"
+          class="w-4 h-4 cursor-pointer"
+        />
+      </button>
+    </div>
+  </div>
+
+  <div>
+    <!-- Status Tabs -->
+    <div class="flex mt-8">
+      <button
+        id="activityBtn"
+        onclick="selectTab('activity')"
+        class="py-2 w-[142px] h-[43px] bg-[#ffffff] text-[#002855] font-bold text-sm rounded"
+      >
+        <span class="border-[#002855] border-b-2 px-2 pb-2">Activity</span>
+      </button>
+      <button
+        id="chatBtn"
+        onclick="selectTab('chat')"
+        class="py-2 w-[142px] h-[43px] bg-[#002855] text-[#ffffff] font-bold text-sm rounded"
+      >
+        <span class="border-[#002855] border-b-2 px-2 pb-2">Chat</span>
+      </button>
+    </div>
+    <!-- lower section -->
+    <div
+      id="activityContent"
+      class="flex-col justify-between lg:h-[441px] bg-[#FFFFFF]"
+    >
+      <!-- activity summary content -->
+      <div class="activity overflow-x-auto py-8">
+        <span class="ml-8 text-[#353535] font-[450] text-[14px]">
+          Activity Summary Today</span
+        >
+        <div
+          class="flex justify-between w-full py-4 mt-4 items-center border-t-[1px]"
+        >
+          <span class="ml-8 flex space-x-4 items-center"
+            ><div>
+              <img
+                src="../assets/general/bulletPoint.svg"
+                alt=""
+                class="w-2 h-2"
+              />
+            </div>
+            <span class="text-[#353535] text-[12px] font-[450]"
+              >Seyi Olanrewaju scheduled a meeting with the prospects</span
+            ></span
+          >
+          <span class="text-[#353535] text-[12px] mr-8">9:35 am </span>
+        </div>
+        <div
+          class="flex justify-between w-full py-4 items-center border-t-[1px]"
+        >
+          <span class="ml-8 flex space-x-4 items-center"
+            ><div>
+              <img
+                src="../assets/general/bulletPoint.svg"
+                alt=""
+                class="w-2 h-2"
+              />
+            </div>
+            <span class="text-[#353535] text-[12px] font-[450]"
+              >Seyi Olanrewaju replied to your chat</span
+            ></span
+          >
+          <button
+            id="chatBtn"
+            onclick="selectTab('chat')"
+            class="text-[#ffffff] text-[10px] bg-[#002855] w-[60px] h-[25px] mr-6 rounded"
+          >
+            View
+          </button>
+        </div>
+        <div
+          class="flex justify-between w-full py-4 items-center border-t-[1px]"
+        >
+          <span class="ml-8 flex space-x-4 items-center"
+            ><div>
+              <img
+                src="../assets/general/bulletPoint.svg"
+                alt=""
+                class="w-2 h-2"
+              />
+            </div>
+            <span class="text-[#353535] text-[12px] font-[450]"
+              >Prospect would like to change product</span
+            ></span
+          >
+          <span class="text-[#353535] text-[12px] mr-8">9:35 am </span>
+        </div>
+        <div
+          class="flex justify-between w-full py-4 items-center border-t-[1px]"
+        >
+          <span class="ml-8 flex space-x-4 items-center"
+            ><div>
+              <img
+                src="../assets/general/bulletPoint.svg"
+                alt=""
+                class="w-2 h-2"
+              />
+            </div>
+            <span class="text-[#353535] text-[12px] font-[450]"
+              >Seyi Olanrewaju scheduled a meeting with the prospects</span
+            ></span
+          >
+          <span class="text-[#353535] text-[12px] mr-8">9:35 am </span>
+        </div>
+        <div
+          class="flex justify-between w-full py-4 items-center border-t-[1px]"
+        >
+          <span class="ml-8 flex space-x-4 items-center"
+            ><div>
+              <img
+                src="../assets/general/bulletPoint.svg"
+                alt=""
+                class="w-2 h-2"
+              />
+            </div>
+            <span class="text-[#353535] text-[12px] font-[450]"
+              >Seyi Olanrewaju scheduled a meeting with the prospects</span
+            ></span
+          >
+          <span class="text-[#353535] text-[12px] mr-8">9:35 am </span>
+        </div>
+        <div
+          class="flex justify-between w-full py-4 items-center border-b-[1px] border-t-[1px]"
+        >
+          <span class="ml-8 flex space-x-4 items-center"
+            ><div>
+              <img
+                src="../assets/general/bulletPoint.svg"
+                alt=""
+                class="w-2 h-2"
+              />
+            </div>
+            <span class="text-[#353535] text-[12px] font-[450]"
+              >Seyi Olanrewaju scheduled a meeting with the prospects</span
+            ></span
+          >
+          <span class="text-[#353535] text-[12px] mr-8">9:35 am </span>
+        </div>
+      </div>
+    </div>
+    <div
+      id="chatContent"
+      class="flex-col justify-between lg:h-[441px] bg-[#FFFFFF] hidden"
+    >
+      <div class="chat overflow-x-auto py-8 px-6">
+        <!-- Chat messages container -->
+        <div class="space-y-4 overflow-x-auto custom-scrollbar h-[265px] pb-20">
+          <!-- Message from prospect -->
+          <div class="flex items-start space-x-3">
+            <img
+              src="../assets/general/profilePic2.svg"
+              alt="Prospect"
+              class="self-center w-10 h-10 rounded-full"
+            />
+            <div>
+              <span
+                class="text-[5px] text-[#585858] font-bold block mb-1 text-right"
+                >04 Jan 2023 1:45pm</span
+              >
+              <div class="bg-[#F3F5F6] text-[#000000] p-4 rounded-lg shadow-md">
+                <p class="text-[14px]">
+                  The prospect would like a customised product.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Message from sales manager -->
+          <div class="flex justify-end items-start space-x-3">
+            <div>
+              <span
+                class="text-[5px] text-[#585858] font-bold block mb-1 text-left"
+                >04 Jan 2023 2:00pm</span
+              >
+              <div class="bg-[#D7F8F4] text-[#000000] p-4 rounded-lg shadow-md">
+                <p class="text-[14px]">
+                  Let's schedule a meeting with the prospect.
+                </p>
+              </div>
+            </div>
+            <img
+              src="../assets/general/managerAvatar.svg"
+              alt="Sales Manager"
+              class="self-center w-10 h-10 rounded-full"
+            />
+          </div>
+          <!-- Another message from prospect -->
+          <div class="flex items-start space-x-3">
+            <img
+              src="../assets/general/profilePic2.svg"
+              alt="Prospect"
+              class="self-center w-10 h-10 rounded-full"
+            />
+            <div>
+              <span
+                class="text-[5px] text-[#585858] font-bold block mb-1 text-right"
+                >04 Jan 2023 3:45pm</span
+              >
+              <div class="bg-[#F3F5F6] text-[#000000] p-4 rounded-lg shadow-md">
+                <p class="text-[14px]">
+                  I've scheduled a meeting for 4pm with the prospect.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Input area for new message -->
+        <div
+          class="flex items-center my-4 sm:my-6 md:my-8 lg:my-16 space-x-2 bg-[#F0F2FA] px-4 sm:px-6 md:px-8 py-2 mx-auto w-full max-w-lg rounded-full hover:shadow-md overflow-hidden"
+        >
+          <button class="text-gray-400 hover:text-gray-600 flex-shrink-0">
+            <img
+              src="../assets/general/emojis.svg"
+              alt=""
+              class="w-5 h-5 sm:w-6 sm:h-6"
+            />
+          </button>
+          <button class="text-gray-400 hover:text-gray-600 flex-shrink-0">
+            <img
+              src="../assets/general/Plus.svg"
+              alt=""
+              class="w-5 h-5 sm:w-6 sm:h-6"
+            />
+          </button>
+          <input
+            type="text"
+            class="flex-grow bg-[#F0F2FA] p-2 border-none outline-none placeholder:font-italic text-sm sm:text-base"
+            placeholder="Say something..."
+          />
+          <button class="text-blue-500 hover:text-blue-700 flex-shrink-0">
+            <img
+              src="../assets/general/voice.svg"
+              alt=""
+              class="w-5 h-5 sm:w-6 sm:h-6"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="chat-container modal hidden">
+  <div class="chat-header">Start Chat</div>
+  <div class="chat-box">What's the update on the prospect?</div>
+  <button
+    onclick="selectTab('chat')"
+    class="done-button close-modal"
+    type="button"
+  >
+    Done
+  </button>
+</div>
+
+<div class="overlay hidden"></div>
