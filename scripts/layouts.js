@@ -7,15 +7,22 @@ const sectionMap = {
     "reportsAll.html",
   ],
   dashboard: ["dashboard.html"],
-  prospects: ["prospects.html", "prospectsChat.html"],
+  prospects: [
+    "prospects.html",
+    "prospectsChat.html",
+    "prospectsNew.html",
+    "prospectsNew_pros_doc_upload.html",
+  ],
   settings: ["settings.html"],
 };
 
 // Function to show action dropdown
 function actionmenu(event) {
   // Close any open dropdowns
-  const openDropdowns = document.querySelectorAll('.action-menu[style*="display: block"]');
-  openDropdowns.forEach(dropdown => {
+  const openDropdowns = document.querySelectorAll(
+    '.action-menu[style*="display: block"]'
+  );
+  openDropdowns.forEach((dropdown) => {
     dropdown.style.display = "none";
   });
 
@@ -31,8 +38,10 @@ function actionmenu(event) {
 }
 
 function closeDropdown(event) {
-  const openDropdowns = document.querySelectorAll('.action-menu[style*="display: block"]');
-  openDropdowns.forEach(dropdown => {
+  const openDropdowns = document.querySelectorAll(
+    '.action-menu[style*="display: block"]'
+  );
+  openDropdowns.forEach((dropdown) => {
     if (!dropdown.contains(event.target)) {
       dropdown.style.display = "none";
     }
@@ -41,7 +50,6 @@ function closeDropdown(event) {
   // Remove event listener to avoid multiple bindings
   document.removeEventListener("click", closeDropdown);
 }
-
 
 // incomeBreakdownDashboard.html chartjs
 function initChart() {
