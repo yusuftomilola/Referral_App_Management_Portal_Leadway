@@ -693,24 +693,27 @@ function loadPage(url) {
     .then((response) => response.text())
     .then((html) => {
       document.getElementById("content").innerHTML = html;
-      initChart();
-      initChart2();
 
       // Update active nav item based on the loaded URL
       updateActiveNavItem(url);
 
-      // Add this line to initialize the modal
-      // if (url.includes("reports.html")) {
-      //   initializeModal();
-      // }
-      initChart3();
-      initChart4();
-      initChart5();
-      initializeModal();
-      initializeModal2();
+      // Initialize components after content is fully loaded
+      initializeComponents();
     })
-
     .catch((error) => console.error("Error loading page:", error));
+}
+
+function initializeComponents() {
+  // Initialize charts only if their containers exist
+  if (document.getElementById("myChart")) initChart();
+  if (document.getElementById("myChart2")) initChart2();
+  if (document.getElementById("myChart3")) initChart3();
+  if (document.getElementById("myChart4")) initChart4();
+  if (document.getElementById("myChart5")) initChart5();
+
+  // Initialize modals only if their elements exist
+  if (document.querySelector(".modal")) initializeModal();
+  if (ddocument.querySelector(".modal2")) initializeModal2();
 }
 
 function updateActiveNavItem(url) {
