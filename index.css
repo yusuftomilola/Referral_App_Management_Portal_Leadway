@@ -138,7 +138,7 @@ button {
 }
 
 button:hover {
-    background-color: #021a33;
+    background-color: #021a33;   /*this changes the color of button on hover */
 }
 
 .info-icon {
