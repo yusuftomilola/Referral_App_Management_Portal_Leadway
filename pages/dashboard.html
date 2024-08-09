@@ -165,21 +165,7 @@
 
     </div>
 
-    <!-- [3] prospect conversion -->
-    <!-- <div class="w-full rounded-md flex flex-col bg-white gap-2 relative pb-3 xl:hidden">
-      <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Prospect Conversion</h2>
-
-        <hr>
-
-        <div class="absolute top-[21%] right-[10%] flex gap-2 text-[#002855] text-[10px] items-start">
-          Today <img src="../assets/longDownArrowIcon.svg" alt="">
-        </div>
-
-      
-      <div class="w-full overflow-x-auto relative pt-6 px-5">
-        <canvas id="myChart3" width="380" height="200"></canvas>
-        <div id="chartjs-tooltip" class="chartjs-tooltip"></div>
-      </div> -->
+    
 
 
      <!-- RIGHT CONTENT CONTAINER -->
@@ -208,12 +194,27 @@
       </div>
 
       <!-- [3] -->
-      <div class="">
+      <!-- <div class="">
         <img src="../assets/prospectConversionChart.JPG" alt="prospect conversion image" width="100%" height="auto" class="rounded-md">
-      </div>
+      </div> -->
+
+      <!-- [3] prospect conversion chart -->
+    <div class="w-full rounded-md flex flex-col bg-white gap-2 pb-6 prospectConversionChartContainer" style="max-height: 300px;">
+  <div class="relative flex justify-between items-center">
+    <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Prospect Conversion</h2>
+    <div class="absolute top-[55px] right-[40px] flex gap-2 text-[#002855] text-[10px] items-start">
+      Today <img src="../assets/longDownArrowIcon.svg" alt="">
+    </div>
+  </div>
+  <hr>
+  <div class="w-full relative pt-6 px-5">
+    <canvas id="myChart3"></canvas>
+    <div id="chartjs-tooltip" class="chartjs-tooltip"></div>
+  </div>
+</div>
 
       <!-- [4] -->
-    <div class="w-full rounded-md flex flex-col bg-white gap-2 ">
+    <div class="w-full rounded-md flex flex-col bg-white gap-2 activityContainer">
       <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Activity</h2>
 
         <hr>
