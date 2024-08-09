@@ -346,9 +346,19 @@
 </div>
 
 <!-- charts table -->
-<div class="lg:hidden">
-        <img src="../assets/prospectConversionChart.JPG" alt="prospect conversion image" width="100%" height="auto" class="rounded-md">
-      </div>
+<div class="lg:hidden w-full rounded-md max-lg:flex flex-col bg-white gap-2 pb-6 prospectConversionChartMobileContainer block sm:block md:block" style="max-height: 300px;">
+  <div class="relative flex justify-between items-center">
+    <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Prospect Conversion</h2>
+    <div class="absolute top-[55px] right-[40px] flex gap-2 text-[#002855] text-[10px] items-start">
+      Today <img src="../assets/longDownArrowIcon.svg" alt="">
+    </div>
+  </div>
+  <hr>
+  <div class="w-full relative pt-6 px-5">
+    <canvas id="myChart4"></canvas>
+    <div id="chartjs-tooltip-mobile-dashboard" class="chartjs-tooltip-mobile-dashboard"></div>
+  </div>
+</div>
 
       <!-- <div class="lg:hidden w-full rounded-md flex flex-col bg-white gap-2 relative pb-3">
       <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Prospect Conversion</h2>
