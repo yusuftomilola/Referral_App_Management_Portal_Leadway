@@ -8,7 +8,7 @@ body {
 
 .container {
     display: flex;
-    width: 100vw;
+    width: 100vw;      /* make width 100% across all screen view */
     height: 100vh;
 }
 
