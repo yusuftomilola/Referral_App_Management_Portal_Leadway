@@ -522,6 +522,129 @@ function initChart4() {
   resizeChart();
 }
 
+// reports chart on the main dashboard
+function initChart5() {
+  const ctx = document.getElementById("myChart5").getContext("2d");
+  const tooltipEl = document.getElementById(
+    "chartjs-tooltip-reports-dashboard"
+  );
+  if (!ctx) {
+    console.error("Canvas element for myChart5 not found");
+    return;
+  }
+
+  // function to resize the chart
+  function resizeChart() {
+    myChart.resize();
+  }
+
+  const myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+      datasets: [
+        {
+          label: "Data",
+          data: [150, 300, 200, 700, 300, 500, 500],
+          fill: false,
+          borderColor: "#7DC6FA",
+          borderWidth: 4,
+          tension: 0.4,
+          pointBackgroundColor: function (context) {
+            // Highlight the point for May
+            return context.dataIndex === 4 ? "#0095FF" : "rgba(0,0,0,0)";
+          },
+          pointRadius: function (context) {
+            // Highlight the point for May
+            return context.dataIndex === 4 ? 14 : 0;
+          },
+          pointHoverRadius: function (context) {
+            // Highlight the point for May
+            return context.dataIndex === 4 ? 6 : 0;
+          },
+          pointBorderWidth: function (context) {
+            // Remove the border for the May point
+            return context.dataIndex === 4 ? 0 : 1;
+          },
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        tooltip: {
+          enabled: false, // Disable the default tooltip
+        },
+        legend: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false,
+            drawBorder: false,
+          },
+          border: {
+            display: false,
+          },
+          ticks: {
+            color: "#898CAA",
+          },
+        },
+        y: {
+          beginAtZero: true,
+          ticks: {
+            stepSize: 500,
+            color: "#898CAA",
+            callback: function (value) {
+              // Skip displaying the 0 tick
+              if (value === 0) {
+                return "";
+              }
+              return value;
+            },
+            // Manually include 100 in the ticks
+            min: 0,
+            max: 1000,
+            stepSize: 500,
+          },
+          grid: {
+            display: false,
+            drawBorder: false,
+          },
+          border: {
+            display: false,
+          },
+        },
+      },
+    },
+    plugins: [
+      {
+        afterDraw: function (chart) {
+          const meta = chart.getDatasetMeta(0);
+          const point = meta.data[4]; // The data point for May
+
+          if (point) {
+            const position = point.tooltipPosition();
+            tooltipEl.style.left = position.x - 100 + "px"; // Shift to the left
+            tooltipEl.style.top = position.y - 10 + "px"; // Align vertically
+            tooltipEl.style.opacity = 1;
+            tooltipEl.innerHTML = "300"; // The value for May data point
+          }
+        },
+      },
+    ],
+  });
+
+  // Add event listener for window resize
+  window.addEventListener("resize", resizeChart);
+
+  // Initial resize
+  resizeChart();
+}
+
 // function to loadpage all pages and menu active links
 document.addEventListener("DOMContentLoaded", function () {
   // Toggle mobile menu
@@ -582,6 +705,7 @@ function loadPage(url) {
       // }
       initChart3();
       initChart4();
+      initChart5();
       initializeModal();
       initializeModal2();
     })

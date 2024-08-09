@@ -365,7 +365,7 @@
     </div>
 
     <!-- 2nd section - prospect Conversion chart -->
-    <div class="bg-white flex items-center justify-center rounded-md">
+    <!-- <div class="bg-white flex items-center justify-center rounded-md">
       <img
         src="../assets/prospectConversionCharts_Reports.svg"
         width="100%"
@@ -373,6 +373,29 @@
         alt="prospects chart"
         class="rounded-md w-full h-[]"
       />
+    </div> -->
+    <div
+      class="w-full rounded-md flex flex-col bg-white gap-2 pb-6"
+      style="max-height: 300px"
+    >
+      <div class="relative flex justify-between items-center">
+        <h2 class="px-5 pt-3 text-[#353535] text-[16px]">
+          Prospect Conversion
+        </h2>
+        <div
+          class="absolute top-[55px] right-[40px] flex gap-2 text-[#002855] text-[10px] items-start"
+        >
+          Today <img src="../assets/longDownArrowIcon.svg" alt="" />
+        </div>
+      </div>
+      <hr />
+      <div class="w-full relative pt-6 px-5">
+        <canvas id="myChart5"></canvas>
+        <div
+          id="chartjs-tooltip-reports-dashboard"
+          class="chartjs-tooltip-reports-dashboard"
+        ></div>
+      </div>
     </div>
 
     <!-- 3rd section - top branches -->
