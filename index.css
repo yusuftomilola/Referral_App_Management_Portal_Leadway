@@ -107,7 +107,7 @@ h1 {
     right: 15px;
     cursor: pointer;
     color: #002855;
-    user-select: none;
+   user-select: none;  /*   Prevents the text from being selected. */
     font-size: 10px;
     font-weight: 600;
 }
