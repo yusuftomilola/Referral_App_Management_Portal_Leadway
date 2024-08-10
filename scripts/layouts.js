@@ -713,9 +713,9 @@ function initializeComponents() {
 
   // Initialize modals only if their elements exist
   if (document.querySelector(".modal")) initializeModal();
-  if (document.querySelector(".modal2")) initializeModal2();
-  if (document.querySelector(".modal3")) initializeModalExport();
-  if (document.querySelector(".modal8")) initializeModalExport();
+  if (document.querySelector(".modal2")) initializeModal();
+  if (document.querySelector(".modal3")) initializeModal();
+  if (document.querySelector(".modal8")) initializeModal();
 }
 
 function updateActiveNavItem(url) {
