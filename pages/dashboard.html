@@ -1,6 +1,7 @@
 <div class="flex flex-col gap-4">
   
   <!-- [1] -->
+  <!-- Welcome Deen Heading -->
   <h1 class="flex gap-1 text-[#585858] font-bold items-center text-[18px]">
     Welcome, Deen
     <img
@@ -11,40 +12,58 @@
     />
   </h1>
 
-  <!-- OTHER DASHBOARD VIEWS -->
-  <div class="w-full hidden lg:flex gap-5">
-
-    <!-- LEFT CONTENT CONTAINER -->
-    <div class="w-[50%] flex flex-col gap-5">
-      <!-- [2] -->
-<div class="w-full flex gap-5 justify-between items-center">
+<!-- [2] -->
+<!-- 4 boxes container - prospects, users, converted and unconverted -->
+<div class="w-full gap-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
     <!-- Prospects Box -->
     <div
-      class="bg-[#002855] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
+      class="bg-[#002855] rounded-md flex flex-col w-full  h-[100px] px-5 py-2 justify-between"
     >
       <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#F3F5F6] text-left">Prospects</button>
 
-      <p class="text-[#F3F5F6] text-[45px] text-right font-bold pr-3">200</p>
+      <p class="text-[#F3F5F6] text-[40px] lg:text-[45px] text-right font-bold pr-3">200</p>
     </div>
-
 
     <!-- Users Box -->
     <div
-      class="bg-[#E6B014] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
+      class="bg-[#E6B014] rounded-md flex flex-col w-full  h-[100px] px-5 py-2 justify-between"
     >
       <a href="#" class="text-[#F3F5F6] text-left">Users</a>
 
-      <p class="text-[#F3F5F6] text-[45px] text-right font-bold pr-3">150</p>
+      <p class="text-[#F3F5F6] text-[40px] lg:text-[45px] text-right font-bold pr-3">150</p>
     </div>
+
+    <!-- Converted Box -->
+      <div
+        class="bg-[#353535] rounded-md flex flex-col w-full  h-[100px] px-5 py-2 justify-between"
+      >
+        <a href="#" class="text-[#F3F5F6] text-left">Converted</a>
+
+        <p class="text-[#F3F5F6] text-[40px] lg:text-[45px] text-right font-bold pr-3">150</p>
+      </div>
+
+      <!-- Unconverted Box -->
+      <div
+        class="bg-[#00B388] rounded-md flex flex-col w-full  h-[100px] px-5 py-2 justify-between"
+      >
+        <a href="#" class="text-[#F3F5F6] text-left">Unconverted</a>
+
+        <p class="text-[#F3F5F6] text-[45px] text-right pr-3 font-bold">150</p>
+      </div>
   </div>
 
+  <!-- REMAINING CONTENTS CONTAINER -->
+  <div class="w-full flex flex-col lg:flex-row gap-5">
+    
+    <!-- LEFT CONTENT CONTAINER -->
+    <div class="w-full lg:w-[50%] flex flex-col gap-5">
   <!-- [3] -->
   <!-- view prospects, view reports, create prospects -->
-  <div class="flex gap-3 items-center">
-    <!-- view prospects box -->
+  <div class="flex justify-between items-center gap-1 sm:gap-3 flex-wrap sm:flex-nowrap">
+<!-- view prospects box -->
     <button
     onclick="loadPage('../pages/prospects.html', this)"
-      class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+      class="bg-[#002855] text-[#F3F5F6] w-[48.5%] sm:w-[100%]  h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>View Prospect</p>
     </button>
@@ -52,23 +71,25 @@
     <!-- view report box -->
     <button
     onclick="loadPage('../pages/reports.html', this)"
-      class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+      class="bg-[#002855] text-[#F3F5F6] w-[48.5%] sm:w-[100%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>View Report</p>
     </button>
 
     <!-- create prospect box -->
     <button
-    onclick="loadPage('../pages/prospects.html', this)"
-      class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+    onclick="loadPage('../pages/prospectsNew.html', this)"
+      class="bg-[#002855] text-[#F3F5F6] w-[100%] sm:w-[100%] h-[35px]  rounded-[3px] flex items-center justify-center text-[13px]"
     >
       <p>+ Create Prospects</p>
     </button>
-  </div>
+
+    
+</div>
 
   <!-- [4] -->
-  <!-- prospects table-->
-  <div class="overflow-x-auto overflow-y-hidden w-full bg-white rounded-md flex-grow flex-col">
+  <!-- LARGE SCREEN DISPLAY ONLY - prospects table-->
+  <div class="hidden lg:flex overflow-x-auto overflow-y-hidden w-full bg-white rounded-md flex-grow flex-col">
       <div class="flex items-center justify-between w-full px-4 pt-3 pb-3">
         <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#353535] text-[20px]">Prospects</button>
 
@@ -162,43 +183,12 @@
 
     
   </div>
-
     </div>
 
-    
-
-
      <!-- RIGHT CONTENT CONTAINER -->
-    <div class="w-[50%] flex flex-col gap-5">
+    <div class="w-full lg:w-[50%] flex flex-col gap-5">
 
-      <!-- [2] -->
-      <div class="w-full flex gap-5 justify-between items-center">
-
-      <!-- Converted Box -->
-      <div
-        class="bg-[#353535] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
-      >
-        <a href="#" class="text-[#F3F5F6] text-left">Converted</a>
-
-        <p class="text-[#F3F5F6] text-[45px] text-right font-bold pr-3">150</p>
-      </div>
-
-      <!-- Unconverted Box -->
-      <div
-        class="bg-[#00B388] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
-      >
-        <a href="#" class="text-[#F3F5F6] text-left">Unconverted</a>
-
-        <p class="text-[#F3F5F6] text-[45px] text-right pr-3 font-bold">150</p>
-      </div>
-      </div>
-
-      <!-- [3] -->
-      <!-- <div class="">
-        <img src="../assets/prospectConversionChart.JPG" alt="prospect conversion image" width="100%" height="auto" class="rounded-md">
-      </div> -->
-
-      <!-- [3] prospect conversion chart -->
+      <!-- [5] prospect conversion chart -->
     <div class="w-full rounded-md flex flex-col bg-white gap-2 pb-6 prospectConversionChartContainer" style="max-height: 300px;">
   <div class="relative flex justify-between items-center">
     <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Prospect Conversion</h2>
@@ -213,7 +203,7 @@
   </div>
 </div>
 
-      <!-- [4] -->
+      <!-- [6] activity info container-->
     <div class="w-full rounded-md flex flex-col bg-white gap-2 activityContainer">
       <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Activity</h2>
 
@@ -273,175 +263,12 @@
       </div>
 
     </div>
-  </div>
-  </div>
 
-
-<!-- MOBILE DASHBOARD VIEW -->
-
-<!-- 4 boxes -->
-    <div class="w-full grid grid-cols-1 sm:grid-cols-2    lg:hidden gap-5">
-    <!-- Prospects Box -->
-    <div
-      class="bg-[#002855] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
-    >
-      <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#F3F5F6] text-left">Prospects</button>
-
-      <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">200</p>
-    </div>
-
-    <!-- Users Box -->
-    <div
-      class="bg-[#E6B014] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
-    >
-      <a href="#" class="text-[#F3F5F6] text-left">Users</a>
-
-      <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">150</p>
-    </div>
-
-    <!-- Converted Box -->
-    <div
-        class="bg-[#353535] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
-      >
-        <a href="#" class="text-[#F3F5F6] text-left">Converted</a>
-
-        <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">150</p>
-    </div>
-
-    <!-- Unconverted Box -->
-    <div
-        class="bg-[#00B388] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
-      >
-        <a href="#" class="text-[#F3F5F6] text-left">Unconverted</a>
-
-        <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">150</p>
-    </div>
-</div>
-
-<!-- 3 boxes -->
-<div class="flex lg:hidden justify-between items-center gap-1 sm:gap-3 flex-wrap sm:flex-nowrap">
-<!-- view prospects box -->
-    <button
-    onclick="loadPage('../pages/prospects.html', this)"
-      class="bg-[#002855] text-[#F3F5F6] w-[48.5%] sm:w-[100%]  h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
-    >
-      <p>View Prospect</p>
-    </button>
-
-    <!-- view report box -->
-    <button
-    onclick="loadPage('../pages/reports.html', this)"
-      class="bg-[#002855] text-[#F3F5F6] w-[48.5%] sm:w-[100%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
-    >
-      <p>View Report</p>
-    </button>
-
-    <!-- create prospect box -->
-    <button
-    onclick="loadPage('../pages/prospectsNew.html', this)"
-      class="bg-[#002855] text-[#F3F5F6] w-[100%] sm:w-[100%] max-lg:h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
-    >
-      <p>+ Create Prospects</p>
-    </button>
-</div>
-
-<!-- charts table -->
-<div class="lg:hidden w-full rounded-md max-lg:flex flex-col bg-white gap-2 pb-6 prospectConversionChartMobileContainer block sm:block md:block" style="max-height: 300px;">
-  <div class="relative flex justify-between items-center">
-    <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Prospect Conversion</h2>
-    <div class="absolute top-[55px] right-[40px] flex gap-2 text-[#002855] text-[10px] items-start">
-      Today <img src="../assets/longDownArrowIcon.svg" alt="">
-    </div>
-  </div>
-  <hr>
-  <div class="w-full relative pt-6 px-5">
-    <canvas id="myChart4"></canvas>
-    <div id="chartjs-tooltip-mobile-dashboard" class="chartjs-tooltip-mobile-dashboard"></div>
-  </div>
-</div>
-
-      <!-- <div class="lg:hidden w-full rounded-md flex flex-col bg-white gap-2 relative pb-3">
-      <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Prospect Conversion</h2>
-
-        <hr>
-
-        <div class="absolute top-[21%] right-[10%] flex gap-2 text-[#002855] text-[10px] items-start">
-          Today <img src="../assets/longDownArrowIcon.svg" alt="">
-        </div>
-
-      prospect chart
-      <div class="w-full overflow-x-auto relative pt-6 px-5 bg-red-500">
-        <canvas id="myChart3" width="" height="" class="w-full overflow-auto h-auto"></canvas>
-        <div id="chartjs-tooltip" class="chartjs-tooltip"></div>
-      </div> -->
-
-      <!-- activity table -->
-<div class="w-full rounded-md flex flex-col bg-white gap-2 lg:hidden ">
-      <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Activity</h2>
-
-        <hr>
-
-        <!-- info container -->
-      <div class="px-5 pt-6 pb-8 flex flex-col gap-5">
-    <!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">New User "Adeniyi Sam</span> has been created</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-
-<!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Seyi Olanrewaju</span> has been assigned a prospect</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-
-    <!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Jide Alade</span> just converted a prospect</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-
-    <!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">New User "Adeniyi Sam</span> has been created</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-
-    <!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Seyi Olanrewaju</span> has been assigned to a prospect</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-      </div>
-
-    </div>
-
-<!-- prospects table-->
-  <div class="overflow-x-auto w-full bg-white rounded-md lg:hidden">
-    
-
+    <!-- [4] -->
+  <!-- MOBILE DISPLAY ONLY -  prospects table-->
+  <div class="lg:hidden flex overflow-x-auto overflow-y-hidden w-full bg-white rounded-md flex-grow flex-col">
       <div class="flex items-center justify-between w-full px-4 pt-3 pb-3">
-        <p class="text-[#353535] text-[20px] cursor-pointer" onclick="loadPage('../pages/prospects.html', this)">Prospects</p>
+        <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#353535] text-[20px]">Prospects</button>
 
           <button
           onclick="loadPage('../pages/prospects.html', this)"
@@ -449,93 +276,91 @@
           >
             View All
           </button>
-        
+        </button>
       </div>
 
       <hr>
 
-<div class="overflow-x-auto pt-4">
+<div class="overflow-x-auto overflow-y-hidden h-full flex flex-col pt-4">
     <table class="min-w-full">
       <thead>
         <tr>
-          <th class="py-4 px-4 text-left text-[12px] text-[#1F4173]">Name</th>
-          <th class="py-4 px-4 text-left text-[12px] text-[#1F4173]">Assigned To</th>
-          <th class="py-4 px-4 text-left text-[12px] text-[#1F4173]">Date Added</th>
-          <th class="py-4 px-4 text-left text-[12px] text-[#1F4173]">Status</th>
+          <th class="py-2 xl:py-4  px-4 text-left text-[12px] text-[#1F4173]">Name</th>
+          <th class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]">Assigned To</th>
+          <th class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]">Date Added</th>
+          <th class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]">Status</th>
         </tr>
       </thead>
-      <tbody>
-        <tr class="cursor-pointer"
-        onclick="loadPage('../pages/prospectsChat.html', this)"
-        >
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+      <tbody class="overflow-hidden flex-grow">
+        <tr onclick="loadPage('../pages/prospectsChat.html', this)" class="cursor-pointer">
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
         </tr>
         <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Mohammed Ganiyu</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Ade Ayobami</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Mohammed Ganiyu</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Ade Ayobami</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
         </tr>
         <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">David Jacobs</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Jide Alade</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#00B388]">Completed</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">David Jacobs</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Jide Alade</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#00B388]">Completed</td>
         </tr>
         <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
         </tr>
         <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
         </tr>
         <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#00B388]">Completed</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#00B388]">Completed</td>
         </tr>
         <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
         </tr>
         <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
         </tr>
         <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
         </tr>
         <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
+          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
         </tr>
       </tbody>
     </table>
   </div>
       
-    
+ 
 
     
   </div>
-
-  
+  </div>
+  </div>
 </div>
 
