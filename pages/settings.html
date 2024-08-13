@@ -3,50 +3,64 @@
   <h1 class="flex gap-1 text-[#585858] font-bold text-[16px] pl-4">Settings</h1>
 
   <div class="pb-8 flex flex-col lg:flex-row max-lg:gap-4">
-    <!-- Settings menu -->
+    <!-- Settings Menu: Container for various user settings options -->
     <div
       class="flex flex-wrap lg:flex-col bg-white max-w-full lg:max-w-[360px] shadow-md h-auto rounded-md lg:mr-5 p-2.5 lg:h-[680px]"
+      aria-label="Settings menu container"
     >
+      <!-- Settings Menu Items Container: Holds individual setting options -->
       <div
         class="flex flex-wrap justify-between gap-2 w-full settings-menu-container lg:pt-[25px]"
+        aria-label="Settings menu items"
       >
-        <!-- account settings -->
+        <!-- Account Settings Button: Navigates to account settings -->
         <button
           id="account-settings-btn"
           onclick="showContent('account-settings')"
           class="settings-item"
           data-target="account-settings"
+          aria-label="Account settings"
         >
+          <!-- Icon for Account Settings -->
           <div class="icon">
-            <img src="../assets/settingsUserIcon.svg" alt="" />
+            <img src="../assets/settingsUserIcon.svg" alt="User icon" />
           </div>
+          <!-- Text Label for Account Settings -->
           <div class="text-[10px] text-[#353535] text">Account Settings</div>
         </button>
 
-        <!-- change password -->
+        <!-- Change Password Button: Navigates to change password settings -->
         <button
           id="change-password-btn"
           onclick="showContent('change-password')"
           class="settings-item"
           data-target="change-password"
+          aria-label="Change password"
         >
+          <!-- Icon for Change Password -->
           <div class="icon">
-            <img src="../assets/settingsPasswordIcon.svg" alt="" />
+            <img src="../assets/settingsPasswordIcon.svg" alt="Password icon" />
           </div>
-
+          <!-- Text Label for Change Password -->
           <div class="text-[10px] text-[#353535] text">Change Password</div>
         </button>
 
-        <!-- notification settings -->
+        <!-- Notification Settings Button: Navigates to notification settings -->
         <button
           id="notification-settings-btn"
           onclick="showContent('notification-settings')"
           class="settings-item"
           data-target="notification-settings"
+          aria-label="Notification settings"
         >
+          <!-- Icon for Notification Settings -->
           <div class="icon">
-            <img src="../assets/settingsNotificationIcon.svg" alt="" />
+            <img
+              src="../assets/settingsNotificationIcon.svg"
+              alt="Notification icon"
+            />
           </div>
+          <!-- Text Label for Notification Settings -->
           <div class="text-[10px] text-[#353535] text">
             Notification Settings
           </div>
@@ -54,18 +68,36 @@
       </div>
     </div>
 
-    <!-- Settings content -->
-    <div class="max-w-full w-full bg-white p-8 rounded-md lg:h-[680px]">
-      <div id="account-settings" class="content active"></div>
-      <div id="account-settings" class="content hidden">
+    <!-- Settings content container: Contains different sections like account settings, change password, and notification settings -->
+    <div
+      class="max-w-full w-full bg-white p-8 rounded-md lg:h-[680px]"
+      aria-label="Settings content container"
+    >
+      <!-- Account Settings Section -->
+      <div
+        id="account-settings"
+        class="content active"
+        aria-label="Account settings section"
+      ></div>
+
+      <div
+        id="account-settings"
+        class="content hidden"
+        aria-label="Account settings form"
+      >
+        <!-- Header for Account Information -->
         <h2 class="text-[20px] font-light font-black text-[#002855] mb-6">
           Account Information
         </h2>
+
+        <!-- Form for Personal Information -->
         <form>
-          <!-- Personal info -->
+          <!-- Personal Info: Container for first name, last name, email, and phone number -->
           <div
             class="p-5 max-w-full w-full flex flex-col md:flex-row bg-[#F8F8F8]"
+            aria-label="Personal information"
           >
+            <!-- Left Column: Contains first name and email fields -->
             <div class="w-full">
               <div class="mb-6 flex flex-col w-full">
                 <label for="firstName" class="mb-2">First Name:</label>
@@ -75,7 +107,7 @@
                   name="firstName"
                   value="Nurudeen"
                   readonly
-                  class="md:w-[90%] w-[100%] w-[100%] p-2 rounded bg-[#E9E9E9] text-[#8C8C8C] outline-none"
+                  class="md:w-[90%] w-[100%] p-2 rounded bg-[#E9E9E9] text-[#8C8C8C] outline-none"
                 />
               </div>
               <div class="mb-6 flex flex-col w-full">
@@ -90,6 +122,8 @@
                 />
               </div>
             </div>
+
+            <!-- Right Column: Contains last name and phone number fields -->
             <div class="w-full">
               <div class="mb-6 flex flex-col w-full">
                 <label for="lastName" class="mb-2">Last Name:</label>
@@ -116,13 +150,19 @@
             </div>
           </div>
 
-          <!-- Bank info -->
+          <!-- Bank Info Section -->
           <h2
             class="text-[20px] font-light text-[#002855] font-black mb-3 mt-9"
           >
             Bank Information
           </h2>
-          <div class="p-5 max-w-full w-full flex flex-col bg-[#F8F8F8]">
+
+          <!-- Form for Bank Information -->
+          <div
+            class="p-5 max-w-full w-full flex flex-col bg-[#F8F8F8]"
+            aria-label="Bank information"
+          >
+            <!-- Bank Info Fields: Contains account number, bank account name, and bank name -->
             <div class="flex flex-col md:flex-row">
               <div class="w-full">
                 <div class="mb-6 flex flex-col w-full">
@@ -138,7 +178,6 @@
                     class="md:w-[90%] w-[100%] p-2 border border-gray-300 rounded bg-white text-[#002855] outline-none"
                   />
                 </div>
-
                 <div class="w-full">
                   <div class="mb-6 flex flex-col w-full">
                     <label for="bankAccountName" class="mb-2"
@@ -155,7 +194,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="mb-6 flex flex-col w-full">
                 <label for="bankName" class="mb-2">Bank Name:</label>
                 <input
@@ -168,10 +206,12 @@
               </div>
             </div>
 
+            <!-- Submit Button: Save bank information -->
             <div class="flex justify-end">
               <button
                 type="submit"
                 class="px-16 py-3 bg-[#002855] text-white rounded-lg cursor-pointer mt-4 hover:bg-blue-800"
+                aria-label="Save bank information"
               >
                 Save
               </button>
@@ -180,13 +220,22 @@
         </form>
       </div>
 
-      <!-- Change Password content -->
-      <div id="change-password" class="content hidden">
+      <!-- Change Password Section -->
+      <div
+        id="change-password"
+        class="content hidden"
+        aria-label="Change password section"
+      >
+        <!-- Header for Change Password -->
         <h2 class="text-[20px] font-light font-black text-[#002855] mb-6">
           Change Password
         </h2>
 
-        <form class="py-16 max-w-full w-full rounded-md bg-[#F8F8F8]">
+        <!-- Form for Changing Password -->
+        <form
+          class="py-16 max-w-full w-full rounded-md bg-[#F8F8F8]"
+          aria-label="Change password form"
+        >
           <div class="w-[80%] sm:w-[50%] mx-auto">
             <div class="mb-6 flex flex-col w-full">
               <label for="current-password" class="mb-2">Old Password</label>
@@ -220,9 +269,11 @@
                 class="w-full p-2 border border-gray-300 rounded bg-white text-gray-700 outline-none"
               />
             </div>
+            <!-- Submit Button: Save new password -->
             <button
               type="submit"
               class="px-6 py-3 bg-[#002855] text-white rounded-lg cursor-pointer mt-4 w-full hover:bg-blue-800"
+              aria-label="Save new password"
             >
               Save
             </button>
@@ -230,12 +281,19 @@
         </form>
       </div>
 
-      <!-- Notification content -->
-      <div id="notification-settings" class="content hidden">
+      <!-- Notification Settings Section -->
+      <div
+        id="notification-settings"
+        class="content hidden"
+        aria-label="Notification settings section"
+      >
+        <!-- Header for Notification Settings -->
         <h2 class="text-[20px] font-light font-black text-[#002855] mb-6">
           Notification Settings
         </h2>
-        <form>
+
+        <!-- Form for Notification Settings -->
+        <form aria-label="Notification settings form">
           <div class="mb-4">
             <label class="flex items-center">
               <input type="checkbox" name="email-notifications" class="mr-2" />
@@ -254,9 +312,11 @@
               <span class="text-[14px]">Push Notifications</span>
             </label>
           </div>
+          <!-- Submit Button: Save notification settings -->
           <button
             type="submit"
             class="px-6 py-3 bg-[#002855] text-white rounded-lg cursor-pointer mt-4 hover:bg-blue-800"
+            aria-label="Save notification settings"
           >
             Save
           </button>

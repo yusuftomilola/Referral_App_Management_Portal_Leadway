@@ -1,15 +1,16 @@
 <div class="flex flex-col gap-4 overflow-auto">
-  <!-- 1st section -->
+  <!-- 1st section: Report Header and Create Report Button -->
   <div
     class="flex flex-col justify-start gap-4 sm:flex-row sm:justify-between sm:items-center"
   >
-    <!-- report title -->
+    <!-- Report Title -->
     <h1 class="flex gap-1 text-[#585858] font-bold text-[16px]">Reports</h1>
 
-    <!-- create report box -->
+    <!-- Create Report Button -->
     <button
       type="button"
       class="show-modal bg-[#002855] text-[#F3F5F6] w-[170px] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+      aria-label="Create a new report"
     >
       <p class="flex gap-3 items-center justify-center">
         <span class="text-[20px]">+</span> Create Report
@@ -19,10 +20,11 @@
 
   <div></div>
 
-  <!-- 2nd section -->
+  <!-- 2nd section: Search and Find Report -->
   <div
     class="flex flex-col gap-4 md:gap-0 lg:gap-0 md:flex-row lg:flex-row items-center justify-center md:items-center md:justify-around lg:items-center lg:justify-around w-full pl-0 md:pl-[11px] pr-0 md:pr-[35px] py-4 border rounded-md border-[#D8D8D8] bg-[#FFFFFF] h-[95px]"
   >
+    <!-- Search Container -->
     <div
       class="w-full border rounded-md border-[#D8D8D8] bg-[#FFFFFF] p-0"
       style="
@@ -31,47 +33,56 @@
         align-items: center;
         justify-content: center;
       "
+      aria-label="Search for reports"
     >
       <div
         class="w-full md:w-[95%] rounded-md bg-[#FFFFFF] flex flex-col md:flex-row md:items-center gap-5"
       >
+        <!-- Search By Name Container -->
         <div
           class="w-full md:w-[85%] border rounded-md border-[#D8D8D8] flex h-[35px]"
         >
-          <!-- search by name container -->
           <div
             class="bg-[#F3F5F6] w-1/4 flex flex-col justify-around items-center md:flex-row"
           >
             <span class="hidden lg:inline text-[#34475E] text-[13px]"
               >Search By: Name</span
             >
-            <span
-              ><img
+            <span>
+              <img
                 src="../assets/shortBlueDownArrow.svg"
-                alt=""
+                alt="Dropdown arrow for search options"
                 width="13px"
                 height="auto"
-            /></span>
+              />
+            </span>
           </div>
 
-          <!-- search icon & input container -->
+          <!-- Search Icon & Input Container -->
           <div class="w-3/4 flex">
             <svg
               class="w-[15px] h-[16px] mx-[10px] my-[auto] text-[#9F9F9F]"
               fill="#9F9F9F"
               viewBox="0 0 24 24"
+              aria-label="Search icon"
             >
               <path
                 d="M21.71 20.29l-5.4-5.4A7.92 7.92 0 0 0 18 10a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.89-1.69l5.4 5.4a1 1 0 0 0 1.42-1.42zM10 16a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"
               ></path>
             </svg>
-            <input type="search" class="w-[90%]" style="outline: none" />
+            <input
+              type="search"
+              class="w-[90%]"
+              style="outline: none"
+              aria-label="Search input field"
+            />
           </div>
         </div>
 
-        <!-- find button -->
+        <!-- Find Button -->
         <button
           class="w-full md:w-[15%] h-[35px] border rounded-md bg-[#002855] text-[#F3F5F6] text-[13px] flex items-center justify-center"
+          aria-label="Find report"
         >
           Find
         </button>
@@ -79,79 +90,110 @@
     </div>
   </div>
 
-  <!-- 3rd section -->
+  <!-- 3rd Section: Recent Search Result Header -->
   <h1 class="text-[#9E9E9E] text-[14px] my-2">Recent search result:</h1>
 
-  <!-- 4th section -->
+  <!-- 4th Section: Table of Recent Search Results -->
   <div class="h-[450px] px-8 pt-6 bg-white rounded-md">
+    <!-- Container for Centering Table -->
     <div class="mx-auto">
+      <!-- Table with Horizontal Scrolling for Overflow -->
       <div class="overflow-x-auto">
-        <table class="w-full border-separate border-spacing-y-[6px]">
+        <table
+          class="w-full border-separate border-spacing-y-[6px]"
+          aria-label="Recent search results table"
+        >
+          <!-- Table Header -->
           <thead>
             <tr>
+              <!-- Name Column Header with Sort Icon -->
               <th
                 class="text-left pb-3 px-4 pl-10 text-[#7F8B94] text-[11px] font-[200]"
+                aria-label="Column for report names with sort option"
               >
                 <div class="flex gap-2 items-center">
-                  Name <img src="../assets/scrollupdown.svg" alt="" />
+                  Name <img src="../assets/scrollupdown.svg" alt="Sort icon" />
                 </div>
               </th>
+              <!-- Date Created Column Header with Sort Icon -->
               <th
                 class="text-left pb-3 px-4 text-[#7F8B94] text-[11px] font-[200]"
+                aria-label="Column for date created with sort option"
               >
                 <div class="flex gap-2 items-center">
-                  Date Created <img src="../assets/scrollupdown.svg" alt="" />
+                  Date Created
+                  <img src="../assets/scrollupdown.svg" alt="Sort icon" />
                 </div>
               </th>
+              <!-- Created By Column Header with Sort Icon -->
               <th
                 class="text-left pb-3 px-4 text-[#7F8B94] text-[11px] font-[200]"
+                aria-label="Column for created by with sort option"
               >
                 <div class="flex gap-2 items-center">
-                  Created By <img src="../assets/scrollupdown.svg" alt="" />
+                  Created By
+                  <img src="../assets/scrollupdown.svg" alt="Sort icon" />
                 </div>
               </th>
+              <!-- Date Modified Column Header with Sort Icon -->
               <th
                 class="text-left pb-3 px-4 text-[#7F8B94] text-[11px] font-[200]"
+                aria-label="Column for date modified with sort option"
               >
                 <div class="flex gap-2 items-center">
-                  Date Modified <img src="../assets/scrollupdown.svg" alt="" />
+                  Date Modified
+                  <img src="../assets/scrollupdown.svg" alt="Sort icon" />
                 </div>
               </th>
+              <!-- Action Column Header -->
               <th
                 class="text-right pb-3 pl-4 pr-4 text-[#7F8B94] text-[11px] font-[200]"
+                aria-label="Action column"
               >
                 Action
               </th>
             </tr>
           </thead>
+          <!-- Table Body with Rows of Data -->
           <tbody class="text-[#353535] text-[11px]">
+            <!-- Table Row: Report 001 -->
             <tr class="bg-white cursor-pointer">
+              <!-- Report Name Cell -->
               <td
                 class="border-gray-300 text-left py-4 px-4 pl-10 font-[200] border-l-[1px] border-t-[1px] border-b-[1px]"
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
+                aria-label="Click to view details of Report 001"
               >
                 Report 001
               </td>
+              <!-- Date Created Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4 font-[200]"
+                aria-label="Click to view details of Report 001's creation date"
               >
                 04 Jan 2023
               </td>
+              <!-- Created By Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4 font-[200]"
+                aria-label="Click to view details of Report 001's creator"
               >
                 Micheal Adesanya
               </td>
+              <!-- Date Modified Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4 font-[200]"
+                aria-label="Click to view details of Report 001's modification date"
               >
                 09 Jan 2023
               </td>
+              <!-- Action Cell with Menu -->
               <td
                 class="border-t-[1px] border-b-[1px] border-r-[1px] border-gray-300 text-right pl-4 pr-6 font-[200] relative"
+                aria-label="Actions menu for Report 001"
               >
                 <div
                   class="hover:text-gray-900 py-4"
@@ -163,6 +205,7 @@
                   id="action-menu"
                   class="action-menu absolute bg-white w-[111px] text-[12px]"
                   style="right: 0; bottom: -50px; display: none"
+                  aria-label="Action menu options"
                 >
                   <p onclick="loadPage('../pages/reportsDashboard.html', this)">
                     View
@@ -172,33 +215,44 @@
                 </div>
               </td>
             </tr>
+            <!-- Table Row: Report 002 -->
             <tr class="bg-white cursor-pointer">
+              <!-- Report Name Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-l-[1px] border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4 pl-10"
+                aria-label="Click to view details of Report 002"
               >
                 Report 002
               </td>
+              <!-- Date Created Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4"
+                aria-label="Click to view details of Report 002's creation date"
               >
                 04 Jan 2023
               </td>
+              <!-- Created By Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4"
+                aria-label="Click to view details of Report 002's creator"
               >
                 Micheal Adesanya
               </td>
+              <!-- Date Modified Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4"
+                aria-label="Click to view details of Report 002's modification date"
               >
                 09 Jan 2023
               </td>
+              <!-- Action Cell with Menu -->
               <td
                 class="border-t-[1px] border-b-[1px] border-r-[1px] border-gray-300 text-right pl-4 pr-6 relative"
+                aria-label="Actions menu for Report 002"
               >
                 <div
                   class="hover:text-gray-900 py-4"
@@ -210,6 +264,7 @@
                   id="action-menu"
                   class="action-menu absolute bg-white w-[111px] text-[12px]"
                   style="right: 0; bottom: -50px; display: none"
+                  aria-label="Action menu options"
                 >
                   <p onclick="loadPage('../pages/reportsDashboard.html', this)">
                     View
@@ -219,33 +274,44 @@
                 </div>
               </td>
             </tr>
+            <!-- Table Row: Report 003 -->
             <tr class="bg-white cursor-pointer">
+              <!-- Report Name Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-l-[1px] border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4 pl-10"
+                aria-label="Click to view details of Report 003"
               >
                 Report 003
               </td>
+              <!-- Date Created Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4"
+                aria-label="Click to view details of Report 003's creation date"
               >
                 04 Jan 2023
               </td>
+              <!-- Created By Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4"
+                aria-label="Click to view details of Report 003's creator"
               >
                 Micheal Adesanya
               </td>
+              <!-- Date Modified Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4"
+                aria-label="Click to view details of Report 003's modification date"
               >
                 09 Jan 2023
               </td>
+              <!-- Action Cell with Menu -->
               <td
                 class="border-t-[1px] border-b-[1px] border-r-[1px] border-gray-300 text-right pl-4 pr-6 relative"
+                aria-label="Actions menu for Report 003"
               >
                 <div
                   class="hover:text-gray-900 py-4"
@@ -257,6 +323,7 @@
                   id="action-menu"
                   class="action-menu absolute bg-white w-[111px] text-[12px]"
                   style="right: 0; bottom: -50px; display: none"
+                  aria-label="Action menu options"
                 >
                   <p onclick="loadPage('../pages/reportsDashboard.html', this)">
                     View
@@ -266,33 +333,44 @@
                 </div>
               </td>
             </tr>
+            <!-- Table Row: Report 004 -->
             <tr class="bg-white cursor-pointer">
+              <!-- Report Name Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-l-[1px] border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4 pl-10"
+                aria-label="Click to view details of Report 004"
               >
                 Report 004
               </td>
+              <!-- Date Created Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4"
+                aria-label="Click to view details of Report 004's creation date"
               >
                 04 Jan 2023
               </td>
+              <!-- Created By Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4"
+                aria-label="Click to view details of Report 004's creator"
               >
                 Micheal Adesanya
               </td>
+              <!-- Date Modified Cell -->
               <td
                 onclick="loadPage('../pages/reportsDashboard.html', this)"
                 class="border-t-[1px] border-b-[1px] border-gray-300 text-left py-4 px-4"
+                aria-label="Click to view details of Report 004's modification date"
               >
                 09 Jan 2023
               </td>
+              <!-- Action Cell with Menu -->
               <td
                 class="border-t-[1px] border-b-[1px] border-r-[1px] border-gray-300 text-right pl-4 pr-6 relative"
+                aria-label="Actions menu for Report 004"
               >
                 <div
                   class="hover:text-gray-900 py-4"
@@ -304,6 +382,7 @@
                   id="action-menu"
                   class="action-menu absolute bg-white w-[111px] text-[12px]"
                   style="right: 0; top: -50px; display: none"
+                  aria-label="Action menu options"
                 >
                   <p onclick="loadPage('../pages/reportsDashboard.html', this)">
                     View

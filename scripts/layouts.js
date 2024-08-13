@@ -16,6 +16,38 @@ const sectionMap = {
   settings: ["settings.html"],
 };
 
+// Function to load the pages
+function loadPage(url) {
+  fetch(url)
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("content").innerHTML = html;
+
+      // Update active nav item based on the loaded URL
+      updateActiveNavItem(url);
+
+      // Initialize components after content is fully loaded
+      initializeComponents();
+    })
+    .catch((error) => console.error("Error loading page:", error));
+}
+
+// function to initialize charts and modals
+function initializeComponents() {
+  // Initialize charts only if their containers exist
+  if (document.getElementById("myChart")) initChart();
+  if (document.getElementById("myChart2")) initChart2();
+  if (document.getElementById("myChart3")) initChart3();
+  if (document.getElementById("myChart4")) initChart4();
+  if (document.getElementById("myChart5")) initChart5();
+
+  // Initialize modals only if their elements exist
+  if (document.querySelector(".modal")) initializeModal();
+  if (document.querySelector(".modal2")) initializeModal();
+  if (document.querySelector(".modal3")) initializeModal();
+  if (document.querySelector(".modal8")) initializeModal();
+}
+
 // Function to show action dropdown
 function actionmenu(event) {
   // Close any open dropdowns
@@ -37,6 +69,7 @@ function actionmenu(event) {
   event.stopPropagation();
 }
 
+// function to close the drop down menu
 function closeDropdown(event) {
   const openDropdowns = document.querySelectorAll(
     '.action-menu[style*="display: block"]'
@@ -676,6 +709,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// function to add styles to the active nav link
 function setActiveDashboard() {
   // Remove active class from all nav items (desktop and mobile)
   document
@@ -688,36 +722,7 @@ function setActiveDashboard() {
   });
 }
 
-function loadPage(url) {
-  fetch(url)
-    .then((response) => response.text())
-    .then((html) => {
-      document.getElementById("content").innerHTML = html;
-
-      // Update active nav item based on the loaded URL
-      updateActiveNavItem(url);
-
-      // Initialize components after content is fully loaded
-      initializeComponents();
-    })
-    .catch((error) => console.error("Error loading page:", error));
-}
-
-function initializeComponents() {
-  // Initialize charts only if their containers exist
-  if (document.getElementById("myChart")) initChart();
-  if (document.getElementById("myChart2")) initChart2();
-  if (document.getElementById("myChart3")) initChart3();
-  if (document.getElementById("myChart4")) initChart4();
-  if (document.getElementById("myChart5")) initChart5();
-
-  // Initialize modals only if their elements exist
-  if (document.querySelector(".modal")) initializeModal();
-  if (document.querySelector(".modal2")) initializeModal();
-  if (document.querySelector(".modal3")) initializeModal();
-  if (document.querySelector(".modal8")) initializeModal();
-}
-
+// function to keep the styles on the active nav link for all sub pages under a particular page
 function updateActiveNavItem(url) {
   const fileName = url.split("/").pop();
   let activeSection = null;

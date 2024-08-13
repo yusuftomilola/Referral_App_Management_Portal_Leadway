@@ -1,84 +1,130 @@
 <main id="" class="flex-grow mb-10">
   <div>
-    <!-- Document uploaded page -->
-    <h1 class="upload-prospect-header">Create Prospect - Document upload</h1>
+    <!-- Document uploaded page header -->
+    <h1 class="upload-prospect-header" aria-label="Page Title">
+      Create Prospect - Document upload
+    </h1>
   </div>
+
   <div
     class="upload-prospect-container upload-prospect-second-container"
     id="myProspect"
+    aria-label="Uploaded Prospect Document and List"
   >
+    <!-- File name and size display -->
     <h2 class="upload-prospect-kb-1">
-      My-prospect list.xls <span class="upload-prospect-kb">154kb</span>
+      My-prospect list.xls
+      <span class="upload-prospect-kb" aria-label="File Size">154kb</span>
     </h2>
 
     <div class="upload-prospect-list overflow-auto">
+      <!-- Table header for prospect list -->
       <div class="upload-prospect-row upload-prospect-header">
-        <span>Name</span>
-
-        <span>Email</span>
-
-        <span>Phone Number</span>
-
-        <span>Product Interest</span>
+        <span aria-label="Name Column Header">Name</span>
+        <span aria-label="Email Column Header">Email</span>
+        <span aria-label="Phone Number Column Header">Phone Number</span>
+        <span aria-label="Product Interest Column Header"
+          >Product Interest</span
+        >
       </div>
 
+      <!-- Row 1: Prospect Details -->
       <div class="upload-prospect-row upload-prospect-row-item">
-        <img src="../assets/profile.jpg" alt="Profile Image" />
-        <span>Nurudeen Ibrahim</span>
-        <span>theenddeen@gmail.com</span>
-        <span>08165476543</span>
-        <span>Auto Insurance</span>
+        <img
+          src="../assets/profile.jpg"
+          alt="Profile Image of Nurudeen Ibrahim"
+        />
+        <span aria-label="Prospect Name">Nurudeen Ibrahim</span>
+        <span aria-label="Prospect Email">theenddeen@gmail.com</span>
+        <span aria-label="Prospect Phone Number">08165476543</span>
+        <span aria-label="Prospect Product Interest">Auto Insurance</span>
       </div>
 
+      <!-- Row 2: Prospect Details -->
       <div class="upload-prospect-row upload-prospect-row-item px-2">
-        <img src="../assets/profile.jpg" alt="Profile Image" />
-        <span>Nurudeen Ibrahim</span>
-        <span>theenddeen@gmail.com</span>
-        <span>08165476543</span>
-        <span>Auto Insurance</span>
+        <img
+          src="../assets/profile.jpg"
+          alt="Profile Image of Nurudeen Ibrahim"
+        />
+        <span aria-label="Prospect Name">Nurudeen Ibrahim</span>
+        <span aria-label="Prospect Email">theenddeen@gmail.com</span>
+        <span aria-label="Prospect Phone Number">08165476543</span>
+        <span aria-label="Prospect Product Interest">Auto Insurance</span>
       </div>
+
+      <!-- Row 3: Prospect Details -->
       <div class="upload-prospect-row upload-prospect-row-item px-2">
-        <img src="../assets/profile.jpg" alt="Profile Image" />
-        <span>Nurudeen Ibrahim</span>
-        <span>theenddeen@gmail.com</span>
-        <span>08165476543</span>
-        <span>Auto Insurance</span>
+        <img
+          src="../assets/profile.jpg"
+          alt="Profile Image of Nurudeen Ibrahim"
+        />
+        <span aria-label="Prospect Name">Nurudeen Ibrahim</span>
+        <span aria-label="Prospect Email">theenddeen@gmail.com</span>
+        <span aria-label="Prospect Phone Number">08165476543</span>
+        <span aria-label="Prospect Product Interest">Auto Insurance</span>
       </div>
+
+      <!-- Row 4: Prospect Details -->
       <div class="upload-prospect-row upload-prospect-row-item px-2">
-        <img src="../assets/profile.jpg" alt="Profile Image" />
-        <span>Nurudeen Ibrahim</span>
-        <span>theenddeen@gmail.com</span>
-        <span>08165476543</span>
-        <span>Auto Insurance</span>
+        <img
+          src="../assets/profile.jpg"
+          alt="Profile Image of Nurudeen Ibrahim"
+        />
+        <span aria-label="Prospect Name">Nurudeen Ibrahim</span>
+        <span aria-label="Prospect Email">theenddeen@gmail.com</span>
+        <span aria-label="Prospect Phone Number">08165476543</span>
+        <span aria-label="Prospect Product Interest">Auto Insurance</span>
       </div>
     </div>
 
+    <!-- Buttons for canceling or creating prospects -->
     <div class="upload-prospect-buttons-2">
       <button
         class="border-[2px] border-[#002855] w-[190px] cancel-btnn text-[#002855]"
         onclick="loadPage('../pages/prospectsNew.html', this)"
         id="cancel"
+        aria-label="Cancel Document Upload"
       >
         Cancel
       </button>
-      <button type="button" class="show-modal new-prospect-create-prospect">
+      <button
+        type="button"
+        class="show-modal new-prospect-create-prospect"
+        aria-label="Create New Prospects"
+      >
         Create Prospects
       </button>
     </div>
   </div>
 
-  <div class="upload-prospect-container" style="display: none">
+  <div
+    class="upload-prospect-container"
+    style="display: none"
+    aria-label="Prospect Upload Container"
+  >
+    <!-- Creation Type Selection -->
     <div class="upload-prospect-creation-type">
-      <h2>Select creation type</h2>
-      <a href="#" class="upload-prospect-cancel">Cancel</a>
+      <h2 aria-label="Select Creation Type">Select creation type</h2>
+      <a
+        href="#"
+        class="upload-prospect-cancel"
+        aria-label="Cancel Creation Type Selection"
+        >Cancel</a
+      >
     </div>
-    <div class="upload-prospect-creation-type-2">
+
+    <!-- Options for creation type: Individual or Bulk Upload -->
+    <div
+      class="upload-prospect-creation-type-2"
+      aria-label="Creation Type Options"
+    >
       <label>
         <input
           type="radio"
           name="creation-type"
           value="individual"
           onclick="toggleBulkUpload()"
+          aria-label="Select Individual Creation Type"
         />
         Individual
       </label>
@@ -89,82 +135,153 @@
           value="bulk-upload"
           checked
           onclick="toggleBulkUpload()"
+          aria-label="Select Bulk Upload Creation Type"
         />
         Bulk Upload
       </label>
     </div>
-    <div class="upload-prospect-form-container" id="prospect">
+
+    <!-- Prospect Information Form -->
+    <div
+      class="upload-prospect-form-container"
+      id="prospect"
+      aria-label="Prospect Information Form"
+    >
       <form class="upload-prospect-form">
-        <h3>Fill prospect information</h3>
+        <h3 aria-label="Fill Prospect Information">
+          Fill prospect information
+        </h3>
+
+        <!-- Form fields for prospect details -->
         <div class="upload-prospect-form-row">
           <div class="upload-prospect-form-group">
             <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name" />
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              aria-label="First Name"
+            />
           </div>
           <div class="upload-prospect-form-group">
             <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name" />
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              aria-label="Last Name"
+            />
           </div>
         </div>
+
         <div class="upload-prospect-form-row">
           <div class="upload-prospect-form-group">
             <label for="product-interest">Product Interest</label>
-            <input type="text" id="product-interest" name="product-interest" />
+            <input
+              type="text"
+              id="product-interest"
+              name="product-interest"
+              aria-label="Product Interest"
+            />
           </div>
           <div class="upload-prospect-form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" />
+            <input type="email" id="email" name="email" aria-label="Email" />
           </div>
         </div>
+
         <div class="upload-prospect-form-row">
           <div class="upload-prospect-form-group">
             <label for="phone-number">Phone Number</label>
-            <input type="tel" id="phone-number" name="phone-number" />
+            <input
+              type="tel"
+              id="phone-number"
+              name="phone-number"
+              aria-label="Phone Number"
+            />
           </div>
           <div class="upload-prospect-form-group upload-prospect-half-width">
             <label for="state">State</label>
-            <input type="text" id="state" name="state" />
+            <input type="text" id="state" name="state" aria-label="State" />
           </div>
           <div class="upload-prospect-form-group upload-prospect-half-width">
             <label for="city">City</label>
-            <input type="text" id="city" name="city" />
+            <input type="text" id="city" name="city" aria-label="City" />
           </div>
         </div>
+
         <div class="upload-prospect-form-row">
           <div class="upload-prospect-form-group">
             <label for="occupation">Occupation</label>
-            <input type="text" id="occupation" name="occupation" />
+            <input
+              type="text"
+              id="occupation"
+              name="occupation"
+              aria-label="Occupation"
+            />
           </div>
           <div class="upload-prospect-form-group">
             <label>Gender</label>
-            <span>
+            <span aria-label="Gender Selection">
               <label>
-                <input type="radio" name="gender" value="male" checked />
+                <input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  checked
+                  aria-label="Male"
+                />
                 Male
               </label>
               <label>
-                <input type="radio" name="gender" value="female" />
+                <input
+                  type="radio"
+                  name="gender"
+                  value="female"
+                  aria-label="Female"
+                />
                 Female
               </label>
             </span>
           </div>
         </div>
-        <button class="upload-prospect-create-prospect">Create Prospect</button>
+        <!-- Button to submit the prospect creation form -->
+        <button
+          class="upload-prospect-create-prospect"
+          aria-label="Create Prospect"
+        >
+          Create Prospect
+        </button>
       </form>
     </div>
 
-    <!-- Bulk upload -->
-    <div class="upload-prospect-bulk-upload-container" id="bulkUploadContainer">
-      <h3>Bulk Upload</h3>
-      <p>Please ensure the file is in Excel (.XLS) format</p>
-      <div class="upload-prospect-upload-area">
+    <!-- Bulk Upload Section -->
+    <div
+      class="upload-prospect-bulk-upload-container"
+      id="bulkUploadContainer"
+      aria-label="Bulk Upload Section"
+    >
+      <h3 aria-label="Bulk Upload">Bulk Upload</h3>
+      <p aria-label="File Format Requirement">
+        Please ensure the file is in Excel (.XLS) format
+      </p>
+
+      <!-- File upload area with instructions -->
+      <div class="upload-prospect-upload-area" aria-label="Upload Area">
         <div class="upload-prospect-upload-icon">
           <img src="../assets/icons8_upload-2.svg" alt="Upload Icon" />
         </div>
-        <p>Select file or drag and drop</p>
-        <p>CSV or .XLSX file</p>
+        <p aria-label="Select or Drag and Drop File">
+          Select file or drag and drop
+        </p>
+        <p aria-label="Accepted File Formats">CSV or .XLSX file</p>
       </div>
-      <button class="upload-prospect-download-template">
+
+      <!-- Button to download an Excel template -->
+      <button
+        class="upload-prospect-download-template"
+        aria-label="Download Excel Template"
+      >
         Download excel template
       </button>
     </div>
