@@ -48,7 +48,7 @@ function initializeComponents() {
   if (document.querySelector(".modal8")) initializeModal();
 }
 
-// Function to show action dropdown
+// Function to show the drop down menu
 function actionmenu(event) {
   // Close any open dropdowns
   const openDropdowns = document.querySelectorAll(
