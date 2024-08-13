@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="../styles/reports.css" />
     <link rel="stylesheet" href="../styles/reportAll.css" />
     <link rel="stylesheet" href="../styles/modal.css" />
+    <link rel="stylesheet" href="../styles/exportModal.css" />
+    <link rel="stylesheet" href="../styles/chat.css" />
+    <link rel="stylesheet" href="../styles/settings.css" />
+    <link rel="stylesheet" href="../styles/new_prospect.css" />
+    <link rel="stylesheet" href="../styles/new_pros_doc_upload.css" />
+    <link rel="stylesheet" href="../styles/new_prospect.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,6 +30,7 @@
       <!-- sidebar layout container -->
       <aside
         class="hidden lg:flex flex-col gap-20 w-[260px] bg-[#002855] h-screen justify-start pt-8"
+        aria-label="Sidebar"
       >
         <!-- first bank logo container -->
         <a href="/layout" class="pl-8">
@@ -35,7 +42,9 @@
           />
         </a>
 
-        <ul class="flex flex-col">
+        <!-- Navigation menu -->
+        <ul class="flex flex-col" aria-label="Main Navigation">
+          <!-- [1] Main navigation menu. -->
           <li
             class="nav-item pl-8 py-3 cursor-pointer"
             data-section="dashboard"
@@ -44,6 +53,7 @@
             <a
               data-page="../pages/dashboard.html"
               class="page-link flex gap-[10px] items-center text-white text-[14px] nav-link"
+              aria-label="Dashboard"
             >
               <img
                 src="../assets/general/dashboardIcon.svg"
@@ -64,6 +74,7 @@
             <a
               data-page="../pages/prospects.html"
               class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
+              aria-label="Prospects"
             >
               <img
                 src="../assets/general/prospectsIcon.svg"
@@ -81,6 +92,7 @@
             <a
               data-page="../pages/reports.html"
               class="page-link flex gap-[14px] text-white text-[14px] nav-link"
+              aria-label="Reports"
             >
               <img
                 src="../assets/general/reportsIcon.svg"
@@ -98,6 +110,7 @@
             <a
               data-page="../pages/settings.html"
               class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
+              aria-label="Settings"
             >
               <img
                 src="../assets/general/settingsIcon.svg"
@@ -116,6 +129,7 @@
       <aside
         class="fixed inset-0 z-50 flex flex-col gap-5 w-[260px] bg-[#002855] md:w-[35%] h-screen justify-start pt-8 mobile-menu lg:hidden"
         id="mobile-menu"
+        aria-label="Mobile navigation menu"
       >
         <div class="flex items-center justify-between gap-6 pr-4 md:pr-8">
           <!-- first bank logo container -->
@@ -125,11 +139,16 @@
               alt="first bank logo"
               width="150px"
               height="54px"
+              aria-label="First Bank logo"
             />
           </a>
 
           <!-- close button -->
-          <button class="text-white font-bold" id="close-menu">
+          <button
+            class="text-white font-bold"
+            id="close-menu"
+            aria-label="Close menu"
+          >
             <img
               src="../assets/general/closeIcon.svg"
               alt="close icon"
@@ -142,28 +161,34 @@
         <!-- search box area -->
         <div
           class="rounded-md flex items-center bg-[#F0F2FA] h-[40px] w-[80%] mx-auto px-3 gap-3"
+          aria-label="Search box"
         >
           <img
             src="../assets/general/searchIcon.svg"
             alt="search icon"
             class="br-red-500"
+            aria-label="Search icon"
           />
           <input
             type="text"
             placeholder="what are you looking for?"
             class="outline-none border-none focus:outline-none focus:ring-0 bg-[#F0F2FA] mt-[-3px] placeholder:text-[#C4C4C4] w-[80%] placeholder:text-[12px] text-[12px]"
+            aria-label="Search input"
           />
         </div>
 
+        <!-- navigation links list -->
         <ul class="flex flex-col">
+          <!-- dashboard link -->
           <li
             class="nav-item pl-8 py-3 cursor-pointer"
             data-section="dashboard"
+            aria-label="Dashboard section"
           >
-            <!-- dashboard link -->
             <a
               data-page="../pages/dashboard.html"
               class="page-link flex gap-[10px] items-center text-white text-[14px] nav-link"
+              aria-label="Dashboard page link"
             >
               <img
                 src="../assets/general/dashboardIcon.svg"
@@ -176,14 +201,16 @@
             </a>
           </li>
 
+          <!-- prospects link -->
           <li
             class="nav-item pl-8 py-3 cursor-pointer"
             data-section="prospects"
+            aria-label="Prospects section"
           >
-            <!-- prospects link -->
             <a
               data-page="../pages/prospects.html"
               class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
+              aria-label="Prospects page link"
             >
               <img
                 src="../assets/general/prospectsIcon.svg"
@@ -196,11 +223,16 @@
             </a>
           </li>
 
-          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="reports">
-            <!-- reports link -->
+          <!-- reports link -->
+          <li
+            class="nav-item pl-8 py-3 cursor-pointer"
+            data-section="reports"
+            aria-label="Reports section"
+          >
             <a
               data-page="../pages/reports.html"
               class="page-link flex items-center gap-[14px] text-white text-[14px] nav-link"
+              aria-label="Reports page link"
             >
               <img
                 src="../assets/general/reportsIcon.svg"
@@ -213,11 +245,16 @@
             </a>
           </li>
 
-          <li class="nav-item pl-8 py-3 cursor-pointer" data-section="settings">
-            <!-- settings link -->
+          <!-- settings link -->
+          <li
+            class="nav-item pl-8 py-3 cursor-pointer"
+            data-section="settings"
+            aria-label="Settings section"
+          >
             <a
               data-page="../pages/settings.html"
               class="page-link flex items-center gap-[10px] text-white text-[14px] nav-link"
+              aria-label="Settings page link"
             >
               <img
                 src="../assets/general/settingsIcon.svg"
@@ -235,14 +272,16 @@
       <!-- right layout container -->
       <section
         class="flex flex-col w-full bg-[#F0F2FA] min-h-screen overflow-y-auto"
+        aria-label="Main content section"
       >
         <!-- TOP BAR -->
         <header
+          style="z-index: 1"
           class="py-[10px] pl-7 pr-7 sm:pl-7 sm:pr-10 flex justify-between items-center bg-white sticky top-0"
+          aria-label="Top bar"
         >
-          <!-- z-20 -->
           <!-- hamburger icon -->
-          <button class="lg:hidden" id="hamburger">
+          <button class="lg:hidden" id="hamburger" aria-label="Open menu">
             <img
               src="../assets/general/hamburgerIcon.svg"
               alt="hamburger icon"
@@ -254,34 +293,33 @@
           <!-- search box area -->
           <div
             class="hidden rounded-md lg:flex items-center bg-[#F0F2FA] h-[40px] w-[300px] px-3 gap-3 items-center"
+            aria-label="Search box"
           >
-            <img
-              src="../assets/general/searchIcon.svg"
-              alt="search icon"
-              class="br-red-500"
-            />
+            <img src="../assets/general/searchIcon.svg" alt="search icon" />
             <input
               type="text"
               placeholder="what are you looking for?"
-              class="outline-none border-none focus:outline-none focus:ring-0 bg-[#F0F2FA] mt-[-3px] placeholder:text-[#C4C4C4] w-[80%] placeholder:text-[14pxh]"
+              class="outline-none border-none focus:outline-none focus:ring-0 bg-[#F0F2FA] mt-[-3px] placeholder:text-[#C4C4C4] w-[80%] placeholder:text-[14px]"
+              aria-label="Search input"
             />
           </div>
 
           <!-- user icons area -->
-          <div class="flex gap-4 items-center">
+          <div class="flex gap-4 items-center" aria-label="User menu">
             <!-- notification bell icon -->
-            <span
-              ><img
+            <span aria-label="Notification bell">
+              <img
                 src="../assets/general/notificationBellIcon.svg"
                 alt="notification bell icon"
                 class="cursor-pointer"
                 width="20px"
                 height="auto"
-            /></span>
+              />
+            </span>
 
-            <div class="flex gap-2 items-center">
+            <div class="flex gap-2 items-center" aria-label="User profile">
               <!-- user profile image icon -->
-              <span>
+              <span aria-label="User profile image">
                 <img
                   src="../assets/general/userProfileImageIcon.svg"
                   alt="user profile image icon"
@@ -292,7 +330,7 @@
               </span>
 
               <!-- user name text -->
-              <span>
+              <span aria-label="User name">
                 <p class="text-[#353535] text-[13px] cursor-pointer">
                   TheEndDeen
                 </p>
@@ -300,7 +338,7 @@
             </div>
 
             <!-- drop down arrow icon -->
-            <span>
+            <span aria-label="User menu dropdown">
               <img
                 src="../assets/general/shortDownArrowIcon.svg"
                 alt="drop down arrow icon"
@@ -316,6 +354,7 @@
         <main
           id="content"
           class="pl-6 pr-6 sm:pl-8 sm:pr-8 pt-6 flex-grow mb-10"
+          aria-label="Main content area"
         ></main>
       </section>
     </div>
@@ -323,6 +362,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script src="../scripts/layouts.js"></script>
+    <script src="../scripts/prospectChat.js"></script>
     <script src="../scripts/modal.js"></script>
+    <script src="../scripts/chatModal.js"></script>
+    <script src="../scripts/new_prospect.js"></script>
+    <script src="../scripts/settings.js"></script>
   </body>
 </html>

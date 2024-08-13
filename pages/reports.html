@@ -1,15 +1,17 @@
 <div class="flex flex-col gap-4">
-  <!-- 1st section -->
+  <!-- 1st section: Container for the report title and create report button -->
   <div
     class="flex flex-col justify-start gap-4 sm:flex-row sm:justify-between sm:items-center"
+    aria-label="Report section"
   >
-    <!-- report title -->
+    <!-- report title: Displays the title of the report section -->
     <h1 class="flex gap-1 text-[#585858] font-bold text-[16px]">Reports</h1>
 
-    <!-- create report box -->
+    <!-- create report box: Button to open a modal for creating a new report -->
     <button
       type="button"
       class="show-modal bg-[#002855] text-[#F3F5F6] w-[170px] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+      aria-label="Create a new report"
     >
       <p class="flex gap-3 items-center justify-center">
         <span class="text-[20px]">+</span> Create Report
@@ -20,75 +22,108 @@
   <!-- 2nd section -->
   <div
     class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[35px]"
+    aria-label="Dashboard Summary Boxes"
   >
-    <!-- total sales Box -->
-    <div
-      class="bg-[#002855] rounded-md flex flex-col w-full h-[100px] px-5 pt-2 pb-3 justify-between"
+    <!-- Total Sales Box -->
+    <a
+      href="#"
+      data-page="../pages/reportsDashboard.html"
+      class="page-link text-[#F3F5F6] text-left text-[14px]"
+      aria-label="Total Sales"
     >
-      <a
-        href="#"
-        data-page="../pages/reportsDashboard.html"
-        class="page-link text-[#F3F5F6] text-left text-[14px]"
+      <div
+        class="bg-[#002855] rounded-md flex flex-col w-full h-[100px] px-5 pt-2 pb-3 justify-between"
+        aria-label="Total Sales Box"
       >
         Total Sales
-      </a>
 
-      <p class="text-[#F3F5F6] text-[14px] text-right pr-3">NGN 3,000,000</p>
-    </div>
+        <p
+          class="text-[#F3F5F6] text-[14px] text-right pr-3"
+          aria-label="Amount"
+        >
+          NGN 3,000,000
+        </p>
+      </div>
+    </a>
 
-    <!-- total converts Box -->
-    <div
-      class="bg-[#E6B014] rounded-md flex flex-col w-full h-[100px] px-5 pt-2 justify-between"
+    <!-- Total Converts Box -->
+    <button
+      onclick="loadPage('../pages/reportsDashboard.html', this)"
+      class="text-[#F3F5F6] text-left text-[14px]"
+      aria-label="Total Converts"
     >
-      <button
-        onclick="loadPage('../pages/reportsDashboard.html', this)"
-        class="text-[#F3F5F6] text-left text-[14px]"
+      <div
+        class="bg-[#E6B014] rounded-md flex flex-col w-full h-[100px] px-5 pt-2 justify-between"
+        aria-label="Total Converts Box"
       >
         Total Converts
-      </button>
 
-      <p class="text-[#F3F5F6] text-[40px] text-right pr-3">150</p>
-    </div>
+        <p
+          class="text-[#F3F5F6] text-[40px] text-right pr-3"
+          aria-label="Number of Converts"
+        >
+          150
+        </p>
+      </div>
+    </button>
 
-    <!-- prospects Box -->
-    <div
-      class="bg-[#353535] rounded-md flex flex-col w-full h-[100px] px-5 pt-2 justify-between"
+    <!-- Prospects Box -->
+    <button
+      onclick="loadPage('../pages/reportsDashboard.html', this)"
+      class="text-[#F3F5F6] text-left text-[14px]"
+      aria-label="Prospects"
     >
-      <button
-        onclick="loadPage('../pages/reportsDashboard.html', this)"
-        class="text-[#F3F5F6] text-left text-[14px]"
+      <div
+        class="bg-[#353535] rounded-md flex flex-col w-full h-[100px] px-5 pt-2 justify-between"
+        aria-label="Prospects Box"
       >
         Prospects
-      </button>
 
-      <p class="text-[#F3F5F6] text-[40px] text-right pr-3">150</p>
-    </div>
+        <p
+          class="text-[#F3F5F6] text-[40px] text-right pr-3"
+          aria-label="Number of Prospects"
+        >
+          150
+        </p>
+      </div>
+    </button>
 
-    <!-- users Box -->
-    <div
-      class="bg-[#00B388] rounded-md flex flex-col w-full h-[100px] px-5 pt-2 justify-between"
+    <!-- Users Box -->
+    <button
+      onclick="loadPage('../pages/reportsDashboard.html', this)"
+      class="text-[#F3F5F6] text-left text-[14px]"
+      aria-label="Users"
     >
-      <button
-        onclick="loadPage('../pages/reportsDashboard.html', this)"
-        class="text-[#F3F5F6] text-left text-[14px]"
+      <div
+        class="bg-[#00B388] rounded-md flex flex-col w-full h-[100px] px-5 pt-2 justify-between"
+        aria-label="Users Box"
       >
         Users
-      </button>
 
-      <p class="text-[#F3F5F6] text-[40px] text-right pr-3">150</p>
-    </div>
+        <p
+          class="text-[#F3F5F6] text-[40px] text-right pr-3"
+          aria-label="Number of Users"
+        >
+          150
+        </p>
+      </div>
+    </button>
   </div>
 
   <!-- 3rd section -->
   <div class="flex flex-col md:flex-row gap-4">
-    <!-- left side - recent reports -->
-    <div class="w-full md:w-[50%] rounded-md flex flex-col bg-white gap-2 pb-4">
+    <!-- Left side - Recent Reports -->
+    <div
+      class="w-full md:w-[50%] rounded-md flex flex-col bg-white gap-2 pb-4"
+      aria-label="Recent Reports Section"
+    >
       <div class="flex items-center justify-between w-full px-5 pt-3 pb-2">
         <h2 class="text-[#353535] text-[15px] font-semibold">Recent Reports</h2>
 
         <button
           onclick="loadPage('../pages/reportsAll.html', this)"
           class="bg-[#EDF2F6] text-[#002855] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font border-[#002855] border-[1px]"
+          aria-label="View All Reports"
         >
           View All
         </button>
@@ -96,13 +131,15 @@
 
       <hr />
 
-      <!-- all reports container -->
+      <!-- All reports container -->
       <div class="pt-2 pb-3 flex flex-col gap-5">
-        <!-- report 001 container -->
-        <div class="px-5 flex justify-between items-center">
+        <!-- Report 001 container -->
+        <div
+          class="px-5 flex justify-between items-center"
+          aria-label="Report 001"
+        >
           <div class="flex gap-4">
             <p class="text-[#222B45] text-[12px] font-light">01</p>
-
             <p class="text-[12px] text-[#222B45] font-light">Report 001</p>
           </div>
 
@@ -111,6 +148,7 @@
           <button
             onclick="loadPage('../pages/reportsDashboard.html', this)"
             class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+            aria-label="View Report 001"
           >
             View
           </button>
@@ -118,11 +156,13 @@
 
         <hr />
 
-        <!-- report 002 container -->
-        <div class="px-5 flex justify-between items-center">
+        <!-- Report 002 container -->
+        <div
+          class="px-5 flex justify-between items-center"
+          aria-label="Report 002"
+        >
           <div class="flex gap-4">
             <p class="text-[#222B45] text-[12px] font-light">02</p>
-
             <p class="text-[12px] text-[#222B45] font-light">Report 002</p>
           </div>
 
@@ -131,6 +171,7 @@
           <button
             onclick="loadPage('../pages/reportsDashboard.html', this)"
             class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+            aria-label="View Report 002"
           >
             View
           </button>
@@ -138,11 +179,13 @@
 
         <hr />
 
-        <!-- report 003 container -->
-        <div class="px-5 flex justify-between items-center">
+        <!-- Report 003 container -->
+        <div
+          class="px-5 flex justify-between items-center"
+          aria-label="Report 003"
+        >
           <div class="flex gap-4">
             <p class="text-[#222B45] text-[12px] font-light">03</p>
-
             <p class="text-[12px] text-[#222B45] font-light">Report 003</p>
           </div>
 
@@ -151,6 +194,7 @@
           <button
             onclick="loadPage('../pages/reportsDashboard.html', this)"
             class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+            aria-label="View Report 003"
           >
             View
           </button>
@@ -158,11 +202,13 @@
 
         <hr />
 
-        <!-- report 004 container -->
-        <div class="px-5 flex justify-between items-center">
+        <!-- Report 004 container -->
+        <div
+          class="px-5 flex justify-between items-center"
+          aria-label="Report 004"
+        >
           <div class="flex gap-4">
             <p class="text-[#222B45] text-[12px] font-light">04</p>
-
             <p class="text-[12px] text-[#222B45] font-light">Report 004</p>
           </div>
 
@@ -171,6 +217,7 @@
           <button
             onclick="loadPage('../pages/reportsDashboard.html', this)"
             class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+            aria-label="View Report 004"
           >
             View
           </button>
@@ -178,14 +225,18 @@
       </div>
     </div>
 
-    <!-- right side - top products -->
-    <div class="w-full md:w-[50%] rounded-md flex flex-col bg-white gap-2">
+    <!-- Right side - Top Products -->
+    <div
+      class="w-full md:w-[50%] rounded-md flex flex-col bg-white gap-2"
+      aria-label="Top Products Section"
+    >
       <div class="flex items-center justify-between w-full px-5 pt-3 pb-2">
         <h2 class="text-[#353535] text-[15px] font-semibold">Top Products</h2>
 
         <button
           onclick="loadPage('../pages/prospects.html', this)"
           class="bg-[#002855] text-[#ffffff] w-[100px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+          aria-label="View Top Products Report"
         >
           View Report
         </button>
@@ -193,33 +244,46 @@
 
       <div class="container mx-auto px-4 pb-4">
         <div class="overflow-x-auto">
-          <table class="min-w-full bg-white">
+          <table class="min-w-full bg-white" aria-label="Top Products Table">
             <thead class="border-b">
               <tr>
                 <th
                   class="px-5 pb-3 text-left text-xs font-light text-[#96A5B8]"
+                  aria-label="Table Header: Number"
                 >
                   #
                 </th>
                 <th
                   class="px-2 pb-3 text-left text-xs font-light text-[#96A5B8]"
+                  aria-label="Table Header: Name"
                 >
                   Name
                 </th>
                 <th
                   class="px-5 pb-3 text-left text-xs font-light text-[#96A5B8]"
+                  aria-label="Table Header: Popularity"
                 >
                   Popularity
                 </th>
                 <th
                   class="px-5 pb-3 text-left text-xs font-light text-[#96A5B8]"
+                  aria-label="Table Header: Percentage"
                 ></th>
               </tr>
             </thead>
             <tbody>
+              <!-- Product Row 1 -->
               <tr class="border-b">
-                <td class="px-5 py-4 text-xs font-light text-[#222B45]">01</td>
-                <td class="px-2 py-4 text-xs font-light text-[#222B45]">
+                <td
+                  class="px-5 py-4 text-xs font-light text-[#222B45]"
+                  aria-label="Product Number 1"
+                >
+                  01
+                </td>
+                <td
+                  class="px-2 py-4 text-xs font-light text-[#222B45]"
+                  aria-label="Product Name Motor"
+                >
                   Motor
                 </td>
                 <td class="px-5 py-4" style="width: 180px">
@@ -227,20 +291,31 @@
                     <div
                       class="bg-[#00E096] h-[1px] rounded-full"
                       style="width: 40%"
+                      aria-label="Popularity Bar 40%"
                     ></div>
                   </div>
                 </td>
                 <td class="px-5 py-4">
                   <button
                     class="text-[#00E58F] border-[#00E58F] border-[1px] w-[45px] h-[24px] rounded-[8px] flex items-center justify-center text-[12px]"
+                    aria-label="Popularity Percentage 40%"
                   >
                     40%
                   </button>
                 </td>
               </tr>
+              <!-- Product Row 2 -->
               <tr class="border-b">
-                <td class="px-5 py-4 text-xs font-light text-[#222B45]">02</td>
-                <td class="px-2 py-4 text-xs font-light text-[#222B45]">
+                <td
+                  class="px-5 py-4 text-xs font-light text-[#222B45]"
+                  aria-label="Product Number 2"
+                >
+                  02
+                </td>
+                <td
+                  class="px-2 py-4 text-xs font-light text-[#222B45]"
+                  aria-label="Product Name Term Life"
+                >
                   Term Life
                 </td>
                 <td class="px-5 py-4" style="width: 180px">
@@ -248,20 +323,31 @@
                     <div
                       class="bg-[#0095FF] h-[1px] rounded-full"
                       style="width: 22%"
+                      aria-label="Popularity Bar 22%"
                     ></div>
                   </div>
                 </td>
                 <td class="px-5 py-4">
                   <button
                     class="text-[#0095FF] border-[#0095FF] border-[1px] w-[45px] h-[24px] rounded-[8px] flex items-center justify-center text-[12px]"
+                    aria-label="Popularity Percentage 22%"
                   >
                     22%
                   </button>
                 </td>
               </tr>
+              <!-- Product Row 3 -->
               <tr class="border-b">
-                <td class="px-5 py-4 text-xs font-light text-[#222B45]">03</td>
-                <td class="px-2 py-4 text-xs font-light text-[#222B45]">
+                <td
+                  class="px-5 py-4 text-xs font-light text-[#222B45]"
+                  aria-label="Product Number 3"
+                >
+                  03
+                </td>
+                <td
+                  class="px-2 py-4 text-xs font-light text-[#222B45]"
+                  aria-label="Product Name Group Life"
+                >
                   Group Life
                 </td>
                 <td class="px-5 py-4" style="width: 180px">
@@ -269,20 +355,31 @@
                     <div
                       class="bg-[#884DFF] h-[1px] rounded-full"
                       style="width: 8%"
+                      aria-label="Popularity Bar 8%"
                     ></div>
                   </div>
                 </td>
                 <td class="px-5 py-4">
                   <button
                     class="text-[#884DFF] border-[#884DFF] border-[1px] w-[45px] h-[24px] rounded-[8px] flex items-center justify-center text-[12px]"
+                    aria-label="Popularity Percentage 8%"
                   >
                     8%
                   </button>
                 </td>
               </tr>
+              <!-- Product Row 4 -->
               <tr class="">
-                <td class="px-5 py-4 text-xs font-light text-[#222B45]">04</td>
-                <td class="px-2 py-4 text-xs font-light text-[#222B45]">
+                <td
+                  class="px-5 py-4 text-xs font-light text-[#222B45]"
+                  aria-label="Product Number 4"
+                >
+                  04
+                </td>
+                <td
+                  class="px-2 py-4 text-xs font-light text-[#222B45]"
+                  aria-label="Product Name Leadway Savings"
+                >
                   Leadway Savings
                 </td>
                 <td class="px-5 py-4" style="width: 180px">
@@ -290,12 +387,14 @@
                     <div
                       class="bg-[#FF8F0D] h-[1px] rounded-full"
                       style="width: 30%"
+                      aria-label="Popularity Bar 30%"
                     ></div>
                   </div>
                 </td>
                 <td class="px-5 py-4">
                   <button
                     class="text-[#FF8F0D] border-[#FF8F0D] border-[1px] w-[45px] h-[24px] rounded-[8px] flex items-center justify-center text-[12px]"
+                    aria-label="Popularity Percentage 30%"
                   >
                     30%
                   </button>
@@ -308,115 +407,140 @@
     </div>
   </div>
 
-  <!-- 4th section -->
+  <!-- 4th section - Main container for three different sections -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    <!-- 1st section - top referals -->
-    <div class="w-full rounded-md flex flex-col bg-white gap-2 max-h-[240px]">
+    <!-- 1st section - Top Referrals -->
+    <div
+      class="w-full rounded-md flex flex-col bg-white gap-2 max-h-[240px]"
+      aria-label="Top Referrals"
+    >
+      <!-- Section heading -->
       <h2 class="px-5 pt-3 text-[#353535] text-[16px]">Top Referrals</h2>
 
-      <!-- All referrals container -->
+      <!-- Container for individual referrals -->
       <div class="px-5 pt-3 pb-4 flex flex-col gap-4">
-        <!-- referral one container -->
-        <div class="flex justify-between items-center">
+        <!-- Referral one container -->
+        <div class="flex justify-between items-center" aria-label="Referral 1">
           <div class="flex gap-3 items-center">
             <img
               src="../assets/top-referrals-1.svg"
               alt="referral image of esther"
+              aria-label="Image of Esther Abodunrin"
             />
-
             <p class="text-[10px] text-[#96A5B8]">Esther Abodunrin</p>
           </div>
-
           <p class="text-[13px] text-[#222B45] font-bold">NGN 52,446</p>
         </div>
-
         <hr />
 
-        <!-- referral two container -->
-        <div class="flex justify-between items-center">
+        <!-- Referral two container -->
+        <div class="flex justify-between items-center" aria-label="Referral 2">
           <div class="flex gap-3 items-center">
             <img
               src="../assets/top-referrals-2.svg"
-              alt="referral image of esther"
+              alt="referral image of johnny"
+              aria-label="Image of Johnny Jack"
             />
-
             <p class="text-[10px] text-[#96A5B8]">Johnny Jack</p>
           </div>
-
           <p class="text-[13px] text-[#222B45] font-bold">NGN 52,446</p>
         </div>
-
         <hr />
 
-        <!-- referral three container -->
-        <div class="flex justify-between items-center">
+        <!-- Referral three container -->
+        <div class="flex justify-between items-center" aria-label="Referral 3">
           <div class="flex gap-3 items-center">
             <img
               src="../assets/top-referrals-3.svg"
               alt="referral image of ahmed"
+              aria-label="Image of Ahmed Koffi"
             />
-
             <p class="text-[10px] text-[#96A5B8]">Ahmed Koffi</p>
           </div>
-
           <p class="text-[13px] text-[#222B45] font-bold">NGN 52,446</p>
         </div>
       </div>
     </div>
 
-    <!-- 2nd section - prospect Conversion chart -->
-    <div class="">
-      <img
-        src="../assets/prospectConversionCharts_Reports.svg"
-        width="100%"
-        height="auto"
-        alt="prospects chart"
-        class="rounded-md w-full h-[]"
-      />
+    <!-- 2nd section - Prospect Conversion Chart -->
+    <div
+      class="w-full rounded-md flex flex-col bg-white gap-2 pb-6"
+      style="max-height: 300px"
+      aria-label="Prospect Conversion Chart"
+    >
+      <!-- Chart heading and controls -->
+      <div class="relative flex justify-between items-center">
+        <h2 class="px-5 pt-3 text-[#353535] text-[16px]">
+          Prospect Conversion
+        </h2>
+        <div
+          class="absolute top-[55px] right-[40px] flex gap-2 text-[#002855] text-[10px] items-start"
+          aria-label="Current date selection"
+        >
+          Today
+          <img src="../assets/longDownArrowIcon.svg" alt="Dropdown arrow" />
+        </div>
+      </div>
+      <hr />
+      <!-- Chart container -->
+      <div class="w-full relative pt-6 px-5">
+        <canvas id="myChart5" aria-label="Prospect Conversion Chart"></canvas>
+        <div
+          id="chartjs-tooltip-reports-dashboard"
+          class="chartjs-tooltip-reports-dashboard"
+          aria-label="Chart tooltip"
+        ></div>
+      </div>
     </div>
 
-    <!-- 3rd section - top branches -->
+    <!-- 3rd section - Top Branches -->
     <div
       class="w-full rounded-md md:hidden lg:flex flex-col bg-white gap-2 max-h-[240px]"
+      aria-label="Top Branches"
     >
+      <!-- Section heading -->
       <h2 class="px-5 pt-3 text-[#353535] text-[16px]">Top Branches</h2>
 
-      <!-- All branches container -->
+      <!-- Container for individual branches -->
       <div class="px-5 pt-3 pb-4 flex flex-col gap-4">
-        <!-- top branch one container -->
-        <div class="flex justify-between items-center">
+        <!-- Top branch one container -->
+        <div class="flex justify-between items-center" aria-label="Branch 1">
           <div class="flex gap-3 items-center">
-            <img src="../assets/top-branches-1.svg" alt="lagos icon" />
-
+            <img
+              src="../assets/top-branches-1.svg"
+              alt="lagos icon"
+              aria-label="Lagos Branch Icon"
+            />
             <p class="text-[10px] text-[#96A5B8]">Lagos</p>
           </div>
-
           <p class="text-[13px] text-[#222B45] font-bold">5400</p>
         </div>
-
         <hr />
 
-        <!-- branch two container -->
-        <div class="flex justify-between items-center">
+        <!-- Branch two container -->
+        <div class="flex justify-between items-center" aria-label="Branch 2">
           <div class="flex gap-3 items-center">
-            <img src="../assets/top-branches-2.svg" alt="port harcourt icon" />
-
+            <img
+              src="../assets/top-branches-2.svg"
+              alt="port harcourt icon"
+              aria-label="Port Harcourt Branch Icon"
+            />
             <p class="text-[10px] text-[#96A5B8]">Port Harcourt</p>
           </div>
-
           <p class="text-[13px] text-[#222B45] font-bold">3200</p>
         </div>
-
         <hr />
 
-        <!-- branch three container -->
-        <div class="flex justify-between items-center">
+        <!-- Branch three container -->
+        <div class="flex justify-between items-center" aria-label="Branch 3">
           <div class="flex gap-3 items-center">
-            <img src="../assets/top-branches-3.svg" alt="abuja branch image" />
-
+            <img
+              src="../assets/top-branches-3.svg"
+              alt="abuja branch image"
+              aria-label="Abuja Branch Icon"
+            />
             <p class="text-[10px] text-[#96A5B8]">Abuja</p>
           </div>
-
           <p class="text-[13px] text-[#222B45] font-bold">987</p>
         </div>
       </div>
@@ -424,47 +548,56 @@
   </div>
 
   <!-- MOBILE TOP BRANCH -->
+  <!-- Container for the Top Branches section, visible only on medium screens and hidden on large screens -->
   <div
     class="w-full rounded-md hidden md:flex lg:hidden flex-col bg-white gap-2 max-h-[240px]"
+    aria-label="Top Branches"
   >
+    <!-- Section heading -->
     <h2 class="px-5 pt-3 text-[#353535] text-[16px]">Top Branches</h2>
 
-    <!-- All branches container -->
+    <!-- Container for all branches -->
     <div class="px-5 pt-3 pb-4 flex flex-col gap-4">
-      <!-- top branch one container -->
-      <div class="flex justify-between items-center">
+      <!-- Top branch one container -->
+      <div class="flex justify-between items-center" aria-label="Branch 1">
         <div class="flex gap-3 items-center">
-          <img src="../assets/top-branches-1.svg" alt="lagos icon" />
-
+          <img
+            src="../assets/top-branches-1.svg"
+            alt="lagos icon"
+            aria-label="Lagos Branch Icon"
+          />
           <p class="text-[10px] text-[#96A5B8]">Lagos</p>
         </div>
-
         <p class="text-[13px] text-[#222B45] font-bold">5400</p>
       </div>
 
       <hr />
 
-      <!-- branch two container -->
-      <div class="flex justify-between items-center">
+      <!-- Branch two container -->
+      <div class="flex justify-between items-center" aria-label="Branch 2">
         <div class="flex gap-3 items-center">
-          <img src="../assets/top-branches-2.svg" alt="port harcourt icon" />
-
+          <img
+            src="../assets/top-branches-2.svg"
+            alt="port harcourt icon"
+            aria-label="Port Harcourt Branch Icon"
+          />
           <p class="text-[10px] text-[#96A5B8]">Port Harcourt</p>
         </div>
-
         <p class="text-[13px] text-[#222B45] font-bold">3200</p>
       </div>
 
       <hr />
 
-      <!-- branch three container -->
-      <div class="flex justify-between items-center">
+      <!-- Branch three container -->
+      <div class="flex justify-between items-center" aria-label="Branch 3">
         <div class="flex gap-3 items-center">
-          <img src="../assets/top-branches-3.svg" alt="abuja branch image" />
-
+          <img
+            src="../assets/top-branches-3.svg"
+            alt="abuja branch image"
+            aria-label="Abuja Branch Icon"
+          />
           <p class="text-[10px] text-[#96A5B8]">Abuja</p>
         </div>
-
         <p class="text-[13px] text-[#222B45] font-bold">987</p>
       </div>
     </div>

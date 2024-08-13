@@ -1,30 +1,48 @@
 <div class="flex flex-col gap-4">
-  <!-- 1st section -->
+  <!-- 1st Section: Header with Report Title and Date Selection -->
   <div
     class="flex flex-col justify-start gap-4 sm:flex-row sm:justify-between sm:items-center mb-3"
+    aria-label="Header section with report title and date selection"
   >
-    <!-- report title -->
+    <!-- Report Title -->
     <h1
       class="flex gap-1 text-[#585858] font-bold text-[16px] cursor-pointer"
       onclick="loadPage('../pages/reports.html', this)"
+      aria-label="Reports title, click to navigate to the reports page"
     >
       Reports
     </h1>
 
-    <!-- Date area -->
-    <div class="flex gap-2 items-start flex-col sm:flex-row sm:items-center">
-      <p class="text-[11px] text-[#7F8B94]">Showing data from:</p>
+    <!-- Date Area: Date Range Selector -->
+    <div
+      class="flex gap-2 items-start flex-col sm:flex-row sm:items-center"
+      aria-label="Date range selector"
+    >
+      <p
+        class="text-[11px] text-[#7F8B94]"
+        aria-label="Label for date range selector"
+      >
+        Showing data from:
+      </p>
 
-      <div class="flex gap-2 items-center">
+      <!-- Date Buttons: Start and End Dates -->
+      <div
+        class="flex gap-2 items-center"
+        aria-label="Start and end date selection"
+      >
+        <!-- Start Date Button -->
         <button
           class="bg-white text-[10px] flex justify-between text-[#585858] items-center gap-5 px-2 py-2 border-[1px] border-[#909090]"
+          aria-label="Start date selection, currently set to Wed March 29, 2020"
         >
           Wed March 29, 2020
           <img src="../assets/shortDownArrow.svg" alt="down arrow" />
         </button>
 
+        <!-- End Date Button -->
         <button
           class="bg-white text-[10px] flex justify-between text-[#585858] items-center gap-5 px-2 py-2 border-[1px] border-[#909090]"
+          aria-label="End date selection, currently set to Wed March 29, 2020"
         >
           Wed March 29, 2020
           <img src="../assets/shortDownArrow.svg" alt="down arrow" />
@@ -33,87 +51,109 @@
     </div>
   </div>
 
-  <!-- 2nd section -->
+  <!-- 2nd Section: Sales Report Title and Action Buttons -->
   <div
     class="flex flex-col justify-start gap-4 sm:flex-row sm:justify-between sm:items-center"
+    aria-label="Sales report title and action buttons section"
   >
-    <!-- sales report title -->
+    <!-- Sales Report Title -->
     <h1
       class="flex gap-3 text-[#585858] font-semibold text-[12px] items-center"
+      aria-label="Sales report title"
     >
       Sales Report
-      <span
-        ><img src="../assets/xCloseIcon.svg" alt="" width="10px" height="auto"
-      /></span>
+      <span>
+        <img
+          src="../assets/xCloseIcon.svg"
+          alt="Close icon"
+          width="10px"
+          height="auto"
+        />
+      </span>
     </h1>
 
-    <!-- back to report & export report container -->
-    <div class="flex gap-4 justify-start items-center">
-      <!-- back to report box -->
+    <!-- Back to Report & Export Report Container -->
+    <div
+      class="flex gap-4 justify-start items-center"
+      aria-label="Back to report and export report action buttons"
+    >
+      <!-- Back to Report Button -->
       <button
         onclick="loadPage('../pages/reports.html', this)"
         class="text-[10px] flex justify-between text-[#002855] items-center gap-2"
+        aria-label="Back to report button"
       >
         <img
           src="../assets/leftArrowIcon.svg"
-          alt="down arrow"
+          alt="Back to report icon"
           width="10px"
           height="auto"
         />
         Back To Report
       </button>
 
-      <!-- export report box -->
-      <div
-        class="bg-[#002855] text-[#F3F5F6] w-[170px] h-[35px] rounded-[3px] flex items-center justify-center text-[12px]"
+      <!-- Export Report Button -->
+      <button
+        type="button"
+        class="show-modal bg-[#002855] text-[#F3F5F6] w-[170px] h-[35px] rounded-[3px] flex items-center justify-center text-[12px]"
+        aria-label="Export report button"
       >
         <p class="flex gap-3 items-center justify-center">
-          <span class="w-[15px] h-auto"
-            ><img src="../assets/exportIcon.svg" alt=""
-          /></span>
+          <span class="w-[15px] h-auto">
+            <img src="../assets/exportIcon.svg" alt="Export icon" />
+          </span>
           Export Report
         </p>
-      </div>
+      </button>
     </div>
   </div>
 
-  <!-- 3rd section -->
-  <div class="w-full bg-[#9F9F9F] h-[1px] flex items-center mt-[-7px]">
+  <!-- 3rd Section: Decorative Divider Line -->
+  <div
+    class="w-full bg-[#9F9F9F] h-[1px] flex items-center mt-[-7px]"
+    aria-label="Decorative divider line"
+  >
+    <!-- Highlighted Divider Segment -->
     <div class="bg-[#002855] h-[3px] w-[80px] rounded-full"></div>
   </div>
 
-  <!-- 4th section -->
+  <!-- 4th Section: Summary Dashboard with Four Data Boxes -->
   <div
     class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[20px] mt-[3px]"
+    aria-label="Summary dashboard section with four data boxes"
   >
-    <!-- products bought Box -->
+    <!-- Products Bought Box -->
     <div
       class="bg-white rounded-md flex flex-col w-full h-[100px] justify-between"
+      aria-label="Products bought data box"
     >
-      <!-- upside -->
+      <!-- Upside: Products Bought Count and Indicator -->
       <div class="flex justify-between pl-5 pr-4">
         <div class="flex items-start gap-2">
           <img
             src="../assets/gridBoxBlue.svg"
-            alt="blue grid box"
+            alt="blue grid box icon"
             width="17px"
             height="auto"
             class="pt-[20px]"
           />
 
           <div class="flex flex-col">
+            <!-- Number of Products Bought -->
             <p class="text-[#585858] text-[28px] font-semibold pt-[10px]">
               134
             </p>
 
+            <!-- Label: Products Bought -->
             <p class="text-[9px] text-[#7F8B94] mt-[-5px]">Products Bought</p>
           </div>
         </div>
 
+        <!-- Growth Indicator: Products Bought -->
         <div class="flex flex-col">
           <img
             src="../assets/greenUpArrow.svg"
-            alt="green arrow up"
+            alt="green up arrow icon"
             width="15px"
             height="auto"
             class="pt-[20px]"
@@ -126,7 +166,7 @@
         </div>
       </div>
 
-      <!-- downside -->
+      <!-- Downside: See Breakdown Link -->
       <div
         class="h-[30px] bg-[#C0DDF9] pl-5 pr-4 flex items-center justify-end rounded-br-md rounded-bl-md"
       >
@@ -136,32 +176,36 @@
       </div>
     </div>
 
-    <!-- active policies box -->
+    <!-- Active Policies Box -->
     <div
       class="bg-white rounded-md flex flex-col w-full h-[100px] justify-between"
+      aria-label="Active policies data box"
     >
-      <!-- upside -->
+      <!-- Upside: Active Policies Count and Indicator -->
       <div class="flex justify-between pl-5 pr-4">
         <div class="flex items-start gap-2">
           <img
             src="../assets/gridBoxGreen.svg"
-            alt="blue grid box"
+            alt="green grid box icon"
             width="17px"
             height="auto"
             class="pt-[20px]"
           />
 
           <div class="flex flex-col">
+            <!-- Number of Active Policies -->
             <p class="text-[#585858] text-[28px] font-semibold pt-[10px]">78</p>
 
+            <!-- Label: Active Policies -->
             <p class="text-[9px] text-[#7F8B94] mt-[-5px]">Active Policies</p>
           </div>
         </div>
 
+        <!-- Growth Indicator: Active Policies -->
         <div class="flex flex-col">
           <img
             src="../assets/greenUpArrow.svg"
-            alt="green arrow up"
+            alt="green up arrow icon"
             width="15px"
             height="auto"
             class="pt-[20px]"
@@ -174,28 +218,30 @@
         </div>
       </div>
 
-      <!-- downside -->
+      <!-- Downside: Corporate and Individual Policies Breakdown -->
       <div
         class="h-[30px] bg-[#bfece1] pl-5 pr-4 flex items-center justify-between rounded-br-md rounded-bl-md"
       >
+        <!-- Corporate Policies Count -->
         <div
           class="flex items-center gap-1 text-[#00B388] text-[8px] mulish-font font-semibold"
         >
           <img
             src="../assets/buildingIcon.svg"
-            alt=""
+            alt="corporate policies icon"
             width="14px"
             height="auto"
           />
           Corporate: 10
         </div>
 
+        <!-- Individual Policies Count -->
         <div
           class="flex items-center gap-1 text-[#06C194] text-[8px] mulish-font font-semibold"
         >
           <img
             src="../assets/personIcon.svg"
-            alt=""
+            alt="individual policies icon"
             width="14px"
             height="auto"
           />
@@ -204,32 +250,36 @@
       </div>
     </div>
 
-    <!-- drop offs box -->
+    <!-- Drop Offs Box -->
     <div
       class="bg-white rounded-md flex flex-col w-full h-[100px] justify-between"
+      aria-label="Drop offs data box"
     >
-      <!-- upside -->
+      <!-- Upside: Drop Offs Count and Indicator -->
       <div class="flex justify-between pl-5 pr-4">
         <div class="flex items-start gap-2">
           <img
             src="../assets/gridBoxRed.svg"
-            alt="blue grid box"
+            alt="red grid box icon"
             width="17px"
             height="auto"
             class="pt-[20px]"
           />
 
           <div class="flex flex-col">
+            <!-- Number of Drop Offs -->
             <p class="text-[#585858] text-[28px] font-semibold pt-[10px]">20</p>
 
+            <!-- Label: Drop Offs -->
             <p class="text-[9px] text-[#7F8B94] mt-[-5px]">Drop Offs</p>
           </div>
         </div>
 
+        <!-- Growth Indicator: Drop Offs -->
         <div class="flex flex-col">
           <img
             src="../assets/greenUpArrow.svg"
-            alt="green arrow up"
+            alt="green up arrow icon"
             width="15px"
             height="auto"
             class="pt-[20px]"
@@ -242,28 +292,30 @@
         </div>
       </div>
 
-      <!-- downside -->
+      <!-- Downside: Corporate and Individual Drop Offs Breakdown -->
       <div
         class="h-[30px] bg-[#f9d1d2] pl-5 pr-4 flex items-center justify-between rounded-br-md rounded-bl-md"
       >
+        <!-- Corporate Drop Offs Count -->
         <div
           class="flex items-center gap-1 text-[#E30000] text-[8px] mulish-font font-semibold"
         >
           <img
             src="../assets/buildingIcon.svg"
-            alt=""
+            alt="corporate drop offs icon"
             width="14px"
             height="auto"
           />
           Corporate: 5
         </div>
 
+        <!-- Individual Drop Offs Count -->
         <div
           class="flex items-center gap-1 text-[#E94849] text-[8px] mulish-font font-semibold"
         >
           <img
             src="../assets/personIcon.svg"
-            alt=""
+            alt="individual drop offs icon"
             width="14px"
             height="auto"
           />
@@ -272,32 +324,36 @@
       </div>
     </div>
 
-    <!-- in progress box -->
+    <!-- In Progress Box -->
     <div
       class="bg-white rounded-md flex flex-col w-full h-[100px] justify-between"
+      aria-label="In progress data box"
     >
-      <!-- upside -->
+      <!-- Upside: In Progress Count and Indicator -->
       <div class="flex justify-between pl-5 pr-4">
         <div class="flex items-start gap-2">
           <img
             src="../assets/gridBoxGray.svg"
-            alt="blue grid box"
+            alt="gray grid box icon"
             width="17px"
             height="auto"
             class="pt-[20px]"
           />
 
           <div class="flex flex-col">
+            <!-- Number of In Progress Items -->
             <p class="text-[#585858] text-[28px] font-semibold pt-[10px]">5</p>
 
+            <!-- Label: In Progress -->
             <p class="text-[9px] text-[#7F8B94] mt-[-5px]">In Progress</p>
           </div>
         </div>
 
+        <!-- Decline Indicator: In Progress -->
         <div class="flex flex-col">
           <img
             src="../assets/redDownArrow.svg"
-            alt="red arrow down"
+            alt="red down arrow icon"
             width="15px"
             height="auto"
             class="pt-[20px]"
@@ -310,28 +366,30 @@
         </div>
       </div>
 
-      <!-- downside -->
+      <!-- Downside: Corporate and Individual In Progress Breakdown -->
       <div
         class="h-[30px] bg-[#D4D4D4] pl-5 pr-4 flex items-center justify-between rounded-br-md rounded-bl-md"
       >
+        <!-- Corporate In Progress Count -->
         <div
           class="flex items-center gap-1 text-[#585858] text-[8px] mulish-font font-semibold"
         >
           <img
             src="../assets/buildingIcon.svg"
-            alt=""
+            alt="corporate in progress icon"
             width="14px"
             height="auto"
           />
           Corporate: 1
         </div>
 
+        <!-- Individual In Progress Count -->
         <div
           class="flex items-center gap-1 text-[#585858] text-[8px] mulish-font font-semibold"
         >
           <img
             src="../assets/personIcon.svg"
-            alt=""
+            alt="individual in progress icon"
             width="14px"
             height="auto"
           />
@@ -341,18 +399,22 @@
     </div>
   </div>
 
-  <!-- 5th section -->
+  <!-- 5th Section: Income Breakdown Dashboard -->
   <div
     class="h-[600px] rounded-md bg-white w-full px-6 py-5 flex flex-col gap-8"
+    aria-label="Income breakdown dashboard section"
   >
-    <!-- top -->
+    <!-- Top Section: Checkbox Options and Income Breakdown Button -->
     <div
       class="flex justify-between items-center flex-col md:flex-row gap-4 md:gap-0"
+      aria-label="Top section with checkbox options and income breakdown button"
     >
+      <!-- Checkbox Options for Different Insurance Types -->
       <div
         class="grid grid-cols-2 sm:grid-cols-4 gap-4 items-center sm:gap-0 justify-start items-start"
+        aria-label="Checkbox options for insurance types"
       >
-        <!-- motor -->
+        <!-- Motor Insurance Checkbox -->
         <div class="flex gap-2 items-center text-[12px]">
           <img
             src="../assets/checkMarkIcon.svg"
@@ -363,7 +425,7 @@
           Motor
         </div>
 
-        <!-- term life -->
+        <!-- Term Life Insurance Checkbox -->
         <div class="flex gap-2 items-center text-[12px]">
           <img
             src="../assets/checkMarkIcon.svg"
@@ -374,7 +436,7 @@
           Term Life
         </div>
 
-        <!-- group life -->
+        <!-- Group Life Insurance Checkbox -->
         <div class="flex gap-2 items-center text-[12px]">
           <img
             src="../assets/checkMarkIcon.svg"
@@ -385,7 +447,7 @@
           Group Life
         </div>
 
-        <!-- leadway savings -->
+        <!-- Leadway Savings Checkbox -->
         <div class="flex gap-2 items-center text-[12px]">
           <img
             src="../assets/checkMarkIcon.svg"
@@ -397,17 +459,18 @@
         </div>
       </div>
 
-      <!-- income breakdown -->
+      <!-- Income Breakdown Button -->
       <button
         onclick="loadPage('../pages/reportsIncomeBreakdown.html', this)"
         class="bg-[#002855] text-[#F8F9F9] px-4 py-1 rounded-md flex items-center justify-center text-[11px] font-light"
+        aria-label="Income breakdown button"
       >
         Income Breakdown
       </button>
     </div>
 
-    <!-- bottom -->
-    <div class="w-full overflow-x-auto">
+    <!-- Bottom Section: Income Breakdown Chart -->
+    <div class="w-full overflow-x-auto" aria-label="Income breakdown chart">
       <canvas
         id="myChart2"
         width="800"
@@ -417,3 +480,166 @@
     </div>
   </div>
 </div>
+
+<!-- FIRST OVERLAY -->
+<div class="modal hidden">
+  <div class="modal-header">
+    <h2 class="mulish-font">Report Parameters</h2>
+    <button class="close close-modal" type="button">
+      <img src="../assets/xCloseIcon2.svg" alt="close icon" />
+    </button>
+  </div>
+  <div class="para">
+    <p class="mulish-font">
+      Select parameters you want to include in your report
+    </p>
+  </div>
+  <div class="modal-body">
+    <div class="section-title">
+      <span>Sales Overview</span>
+      <span id="change">Change</span>
+    </div>
+    <div class="date-picker">
+      <label for="date">Showing data from:</label>
+
+      <select name="date" id="" class="date-picker picker1">
+        <option value=" date">Wed March 29, 2020</option>
+      </select>
+
+      <select name="date" id="" class="date-picker picker2">
+        <option value=" date">Wed March 29, 2020</option>
+      </select>
+    </div>
+    <div class="checkbox-container">
+      <input type="checkbox" />
+      <label>Turn on recurrent reporting</label>
+    </div>
+    <div class="select-actions">
+      <span>Select All</span>
+      <span>Select None</span>
+    </div>
+
+    <div class="checkbox-list">
+      <div>
+        <input type="checkbox" />
+        <label>No of Active Customers</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Drop Off Customers (Prospects)</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>No of Admin Users</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>Income Statement</label>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label>Commission Payment</label>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="cancel-btn cancel-modal close-modal">Cancel</button>
+    <button class="export-btn show-modal8">Export Report</button>
+  </div>
+</div>
+
+<div class="overlay hidden"></div>
+
+<!-- SECOND OVERLAY -->
+<div class="modal8 hidden">
+  <div class="modal-header8">
+    <h2 class="mulish-font">Report Parameters</h2>
+    <button class="close8 close-modal8" type="button">
+      <img src="../assets/xCloseIcon2.svg" alt="close icon" />
+    </button>
+  </div>
+  <div class="para8">
+    <p class="mulish-font">
+      Select parameters you want to include in your report
+    </p>
+  </div>
+  <div class="modal-body8">
+    <div class="section-title8">
+      <span>Sales Overview</span>
+      <span id="change">Change</span>
+    </div>
+    <div class="date-picker8">
+      <label for="date">Showing data from:</label>
+
+      <select name="date" id="" class="date-picker8 picker1">
+        <option value=" date">Wed March 29, 2020</option>
+      </select>
+
+      <select name="date" id="" class="date-picker8 picker2">
+        <option value=" date">Wed March 29, 2020</option>
+      </select>
+    </div>
+
+    <div class="checkbox-container8">
+      <input type="checkbox" />
+      <label>Turn on recurrent reporting</label>
+    </div>
+
+    <div class="input-group">
+      <label for="">When:</label>
+      <input type="email" placeholder="Every first day of the month" />
+    </div>
+
+    <div class="input-group" id="magen">
+      <label for="">To:</label>
+      <input type="email" placeholder="Enter Email Addresses" />
+    </div>
+
+    <div class="format-container">
+      <div class="format-item">
+        <p>Format:</p>
+        <span>Excel</span>
+        <label class="switch">
+          <input type="checkbox" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="format-item" id="margin">
+        <span>PDF</span>
+        <label class="switch">
+          <input type="checkbox" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="format-item" id="margin">
+        <span>PPT</span>
+        <label class="switch">
+          <input type="checkbox" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer8">
+    <button class="cancel-btn8 close-modal8">Cancel</button>
+    <button class="export-btn8 show-modal3">Export</button>
+  </div>
+</div>
+
+<div class="overlay2 hidden"></div>
+
+<!-- THIRD OVERLAY -->
+<!-- hidden -->
+<div class="modal3 hidden">
+  <h1 class="report">Report exported successfully</h1>
+
+  <div class="icon">
+    <img src="../assets/checked.svg" />
+  </div>
+  <a href="#" data-page="../pages/reports.html" class="page-link">
+    <button>Back</button>
+  </a>
+</div>
+
+<div class="overlay3 hidden"></div>

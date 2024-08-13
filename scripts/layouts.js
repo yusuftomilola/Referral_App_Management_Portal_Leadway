@@ -7,17 +7,81 @@ const sectionMap = {
     "reportsAll.html",
   ],
   dashboard: ["dashboard.html"],
-  prospects: ["prospects.html", "prospectsChat.html"],
+  prospects: [
+    "prospects.html",
+    "prospectsChat.html",
+    "prospectsNew.html",
+    "prospectsNew_pros_doc_upload.html",
+  ],
   settings: ["settings.html"],
 };
 
-// Function to show action dropdown
+// Function to load the pages
+function loadPage(url) {
+  fetch(url)
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("content").innerHTML = html;
+
+      // Update active nav item based on the loaded URL
+      updateActiveNavItem(url);
+
+      // Initialize components after content is fully loaded
+      initializeComponents();
+    })
+    .catch((error) => console.error("Error loading page:", error));
+}
+
+// function to initialize charts and modals
+function initializeComponents() {
+  // Initialize charts only if their containers exist
+  if (document.getElementById("myChart")) initChart();
+  if (document.getElementById("myChart2")) initChart2();
+  if (document.getElementById("myChart3")) initChart3();
+  if (document.getElementById("myChart4")) initChart4();
+  if (document.getElementById("myChart5")) initChart5();
+
+  // Initialize modals only if their elements exist
+  if (document.querySelector(".modal")) initializeModal();
+  if (document.querySelector(".modal2")) initializeModal();
+  if (document.querySelector(".modal3")) initializeModal();
+  if (document.querySelector(".modal8")) initializeModal();
+}
+
+// Function to show the drop down menu
 function actionmenu(event) {
+  // Close any open dropdowns
+  const openDropdowns = document.querySelectorAll(
+    '.action-menu[style*="display: block"]'
+  );
+  openDropdowns.forEach((dropdown) => {
+    dropdown.style.display = "none";
+  });
+
+  // Open the clicked dropdown
   const dropdown = event.currentTarget.nextElementSibling;
-  dropdown.style.display =
-    dropdown.style.display === "none" || dropdown.style.display === ""
-      ? "block"
-      : "none";
+  dropdown.style.display = "block";
+
+  // Add event listener to close dropdown when clicking outside
+  document.addEventListener("click", closeDropdown);
+
+  // Prevent the event from propagating to the document
+  event.stopPropagation();
+}
+
+// function to close the drop down menu
+function closeDropdown(event) {
+  const openDropdowns = document.querySelectorAll(
+    '.action-menu[style*="display: block"]'
+  );
+  openDropdowns.forEach((dropdown) => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.style.display = "none";
+    }
+  });
+
+  // Remove event listener to avoid multiple bindings
+  document.removeEventListener("click", closeDropdown);
 }
 
 // incomeBreakdownDashboard.html chartjs
@@ -258,109 +322,361 @@ function initChart2() {
 }
 
 // prospects chart on the main dashboard
-// function initChart3() {
-//   const ctx = document.getElementById("myChart3").getContext("2d");
-//   const tooltipEl = document.getElementById("chartjs-tooltip");
+function initChart3() {
+  const ctx = document.getElementById("myChart3").getContext("2d");
+  const tooltipEl = document.getElementById("chartjs-tooltip");
 
-//   new Chart(ctx, {
-//     type: "line",
-//     data: {
-//       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-//       datasets: [
-//         {
-//           label: "Data",
-//           data: [150, 300, 200, 700, 300, 500, 500],
-//           fill: false,
-//           borderColor: "#002855",
-//           borderWidth: 4,
-//           tension: 0.4,
-//           pointBackgroundColor: function (context) {
-//             // Highlight the point for May
-//             return context.dataIndex === 4 ? "#E6B014" : "rgba(0,0,0,0)";
-//           },
-//           pointRadius: function (context) {
-//             // Highlight the point for May
-//             return context.dataIndex === 4 ? 14 : 0;
-//           },
-//           pointHoverRadius: function (context) {
-//             // Highlight the point for May
-//             return context.dataIndex === 4 ? 6 : 0;
-//           },
-//           pointBorderWidth: function (context) {
-//             // Remove the border for the May point
-//             return context.dataIndex === 4 ? 0 : 1;
-//           },
-//         },
-//       ],
-//     },
-//     options: {
-//       responsive: false,
-//       plugins: {
-//         tooltip: {
-//           enabled: false, // Disable the default tooltip
-//         },
-//         legend: {
-//           display: false,
-//         },
-//       },
-//       scales: {
-//         x: {
-//           grid: {
-//             display: false,
-//             drawBorder: false,
-//           },
-//           border: {
-//             display: false,
-//           },
-//           ticks: {
-//             color: "#001855",
-//           },
-//         },
-//         y: {
-//           beginAtZero: true,
-//           ticks: {
-//             stepSize: 500,
-//             color: "#002855",
-//             callback: function (value) {
-//               // Skip displaying the 0 tick
-//               if (value === 0) {
-//                 return "";
-//               }
-//               return value;
-//             },
-//             // Manually include 100 in the ticks
-//             min: 0,
-//             max: 1000,
-//             stepSize: 500,
-//           },
-//           grid: {
-//             display: false,
-//             drawBorder: false,
-//           },
-//           border: {
-//             display: false,
-//           },
-//         },
-//       },
-//     },
-//     plugins: [
-//       {
-//         afterDraw: function (chart) {
-//           const meta = chart.getDatasetMeta(0);
-//           const point = meta.data[4]; // The data point for May
+  //function to resize the chart
+  function resizeChart() {
+    myChart.resize();
+  }
 
-//           if (point) {
-//             const position = point.tooltipPosition();
-//             tooltipEl.style.left = position.x - 100 + "px"; // Shift to the left
-//             tooltipEl.style.top = position.y - 10 + "px"; // Align vertically
-//             tooltipEl.style.opacity = 1;
-//             tooltipEl.innerHTML = "300"; // The value for May data point
-//           }
-//         },
-//       },
-//     ],
-//   });
-// }
+  const myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+      datasets: [
+        {
+          label: "Data",
+          data: [150, 300, 200, 700, 300, 500, 500],
+          fill: false,
+          borderColor: "#002855",
+          borderWidth: 4,
+          tension: 0.4,
+          pointBackgroundColor: function (context) {
+            // Highlight the point for May
+            return context.dataIndex === 4 ? "#E6B014" : "rgba(0,0,0,0)";
+          },
+          pointRadius: function (context) {
+            // Highlight the point for May
+            return context.dataIndex === 4 ? 14 : 0;
+          },
+          pointHoverRadius: function (context) {
+            // Highlight the point for May
+            return context.dataIndex === 4 ? 6 : 0;
+          },
+          pointBorderWidth: function (context) {
+            // Remove the border for the May point
+            return context.dataIndex === 4 ? 0 : 1;
+          },
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        tooltip: {
+          enabled: false, // Disable the default tooltip
+        },
+        legend: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false,
+            drawBorder: false,
+          },
+          border: {
+            display: false,
+          },
+          ticks: {
+            color: "#001855",
+          },
+        },
+        y: {
+          beginAtZero: true,
+          ticks: {
+            stepSize: 500,
+            color: "#002855",
+            callback: function (value) {
+              // Skip displaying the 0 tick
+              if (value === 0) {
+                return "";
+              }
+              return value;
+            },
+            // Manually include 100 in the ticks
+            min: 0,
+            max: 1000,
+            stepSize: 500,
+          },
+          grid: {
+            display: false,
+            drawBorder: false,
+          },
+          border: {
+            display: false,
+          },
+        },
+      },
+    },
+    plugins: [
+      {
+        afterDraw: function (chart) {
+          const meta = chart.getDatasetMeta(0);
+          const point = meta.data[4]; // The data point for May
+
+          if (point) {
+            const position = point.tooltipPosition();
+            tooltipEl.style.left = position.x - 100 + "px"; // Shift to the left
+            tooltipEl.style.top = position.y - 10 + "px"; // Align vertically
+            tooltipEl.style.opacity = 1;
+            tooltipEl.innerHTML = "300"; // The value for May data point
+          }
+        },
+      },
+    ],
+  });
+
+  // Add event listener for window resize
+  window.addEventListener("resize", resizeChart);
+
+  // Initial resize
+  resizeChart();
+}
+
+// mobile prospects chart on the main dashboard
+function initChart4() {
+  const ctx = document.getElementById("myChart4").getContext("2d");
+  const tooltipEl = document.getElementById("chartjs-tooltip-mobile-dashboard");
+
+  //function to resize the chart
+  function resizeChart() {
+    myChart.resize();
+  }
+
+  const myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+      datasets: [
+        {
+          label: "Data",
+          data: [150, 300, 200, 700, 300, 500, 500],
+          fill: false,
+          borderColor: "#002855",
+          borderWidth: 4,
+          tension: 0.4,
+          pointBackgroundColor: function (context) {
+            // Highlight the point for May
+            return context.dataIndex === 4 ? "#E6B014" : "rgba(0,0,0,0)";
+          },
+          pointRadius: function (context) {
+            // Highlight the point for May
+            return context.dataIndex === 4 ? 14 : 0;
+          },
+          pointHoverRadius: function (context) {
+            // Highlight the point for May
+            return context.dataIndex === 4 ? 6 : 0;
+          },
+          pointBorderWidth: function (context) {
+            // Remove the border for the May point
+            return context.dataIndex === 4 ? 0 : 1;
+          },
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        tooltip: {
+          enabled: false, // Disable the default tooltip
+        },
+        legend: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false,
+            drawBorder: false,
+          },
+          border: {
+            display: false,
+          },
+          ticks: {
+            color: "#001855",
+          },
+        },
+        y: {
+          beginAtZero: true,
+          ticks: {
+            stepSize: 500,
+            color: "#002855",
+            callback: function (value) {
+              // Skip displaying the 0 tick
+              if (value === 0) {
+                return "";
+              }
+              return value;
+            },
+            // Manually include 100 in the ticks
+            min: 0,
+            max: 1000,
+            stepSize: 500,
+          },
+          grid: {
+            display: false,
+            drawBorder: false,
+          },
+          border: {
+            display: false,
+          },
+        },
+      },
+    },
+    plugins: [
+      {
+        afterDraw: function (chart) {
+          const meta = chart.getDatasetMeta(0);
+          const point = meta.data[4]; // The data point for May
+
+          if (point) {
+            const position = point.tooltipPosition();
+            tooltipEl.style.left = position.x - 100 + "px"; // Shift to the left
+            tooltipEl.style.top = position.y - 10 + "px"; // Align vertically
+            tooltipEl.style.opacity = 1;
+            tooltipEl.innerHTML = "300"; // The value for May data point
+          }
+        },
+      },
+    ],
+  });
+
+  // Add event listener for window resize
+  window.addEventListener("resize", resizeChart);
+
+  // Initial resize
+  resizeChart();
+}
+
+// reports chart on the main dashboard
+function initChart5() {
+  const ctx = document.getElementById("myChart5").getContext("2d");
+  const tooltipEl = document.getElementById(
+    "chartjs-tooltip-reports-dashboard"
+  );
+  if (!ctx) {
+    console.error("Canvas element for myChart5 not found");
+    return;
+  }
+
+  // function to resize the chart
+  function resizeChart() {
+    myChart.resize();
+  }
+
+  const myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+      datasets: [
+        {
+          label: "Data",
+          data: [150, 300, 200, 700, 300, 500, 500],
+          fill: false,
+          borderColor: "#7DC6FA",
+          borderWidth: 4,
+          tension: 0.4,
+          pointBackgroundColor: function (context) {
+            // Highlight the point for May
+            return context.dataIndex === 4 ? "#0095FF" : "rgba(0,0,0,0)";
+          },
+          pointRadius: function (context) {
+            // Highlight the point for May
+            return context.dataIndex === 4 ? 14 : 0;
+          },
+          pointHoverRadius: function (context) {
+            // Highlight the point for May
+            return context.dataIndex === 4 ? 6 : 0;
+          },
+          pointBorderWidth: function (context) {
+            // Remove the border for the May point
+            return context.dataIndex === 4 ? 0 : 1;
+          },
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        tooltip: {
+          enabled: false, // Disable the default tooltip
+        },
+        legend: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false,
+            drawBorder: false,
+          },
+          border: {
+            display: false,
+          },
+          ticks: {
+            color: "#898CAA",
+          },
+        },
+        y: {
+          beginAtZero: true,
+          ticks: {
+            stepSize: 500,
+            color: "#898CAA",
+            callback: function (value) {
+              // Skip displaying the 0 tick
+              if (value === 0) {
+                return "";
+              }
+              return value;
+            },
+            // Manually include 100 in the ticks
+            min: 0,
+            max: 1000,
+            stepSize: 500,
+          },
+          grid: {
+            display: false,
+            drawBorder: false,
+          },
+          border: {
+            display: false,
+          },
+        },
+      },
+    },
+    plugins: [
+      {
+        afterDraw: function (chart) {
+          const meta = chart.getDatasetMeta(0);
+          const point = meta.data[4]; // The data point for May
+
+          if (point) {
+            const position = point.tooltipPosition();
+            tooltipEl.style.left = position.x - 100 + "px"; // Shift to the left
+            tooltipEl.style.top = position.y - 10 + "px"; // Align vertically
+            tooltipEl.style.opacity = 1;
+            tooltipEl.innerHTML = "300"; // The value for May data point
+          }
+        },
+      },
+    ],
+  });
+
+  // Add event listener for window resize
+  window.addEventListener("resize", resizeChart);
+
+  // Initial resize
+  resizeChart();
+}
 
 // function to loadpage all pages and menu active links
 document.addEventListener("DOMContentLoaded", function () {
@@ -393,6 +709,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// function to add styles to the active nav link
 function setActiveDashboard() {
   // Remove active class from all nav items (desktop and mobile)
   document
@@ -405,26 +722,7 @@ function setActiveDashboard() {
   });
 }
 
-function loadPage(url) {
-  fetch(url)
-    .then((response) => response.text())
-    .then((html) => {
-      document.getElementById("content").innerHTML = html;
-      initChart();
-      initChart2();
-      // initChart3();
-      // Update active nav item based on the loaded URL
-      updateActiveNavItem(url);
-
-      // Add this line to initialize the modal
-      if (url.includes("reports.html")) {
-        initializeModal();
-      }
-    })
-
-    .catch((error) => console.error("Error loading page:", error));
-}
-
+// function to keep the styles on the active nav link for all sub pages under a particular page
 function updateActiveNavItem(url) {
   const fileName = url.split("/").pop();
   let activeSection = null;
