@@ -13,11 +13,13 @@
   </head>
   <body>
     <div class="container">
+      <!-- Main content area, contains login form and other elements -->
       <div class="left">
         <div class="hero">
           <h1>Referral Management</h1>
           <p class="p">Welcome. Login to your portal account.</p>
           <form id="loginForm">
+            <!-- Username input group -->
             <div class="input-group">
               <label for="username">Username</label>
               <div class="input-wrapper">
@@ -27,10 +29,14 @@
                   name="username"
                   placeholder="enter username: admin"
                   required
+                  aria-label="Username"
                 />
-                <i class="fas fa-user icon"></i>
+                <!-- aria-label for screen readers to describe the input -->
+                <i class="fas fa-user icon" aria-hidden="true"></i>
+                <!-- Icon is decorative, aria-hidden is set to true -->
               </div>
             </div>
+            <!-- Password input group -->
             <div class="input-group">
               <label for="password">Password</label
               ><span class="show-password showw" onclick="togglePassword()"
@@ -43,28 +49,54 @@
                   name="password"
                   placeholder="enter password: admin"
                   required
+                  aria-label="Password"
                 />
-                <i class="fas fa-lock icon"></i>
+
+                <!-- aria-label for screen readers to describe the input -->
+
+                <i class="fas fa-lock icon" aria-hidden="true"></i>
+                <!-- Icon is decorative, aria-hidden is set to true -->
               </div>
             </div>
+            <!-- Keep me logged in and reset password link -->
             <div class="actions">
               <label
-                ><input type="checkbox" id="keepLoggedIn" checked /> Keep me
-                logged in</label
+                ><input
+                  type="checkbox"
+                  id="keepLoggedIn"
+                  checked
+                  aria-label="Keep me logged in"
+                />
+                Keep me logged in</label
               >
               <span class="checkmark"></span>
-              <a href="#" class="reset-password">Reset Password</a>
+              <a
+                href="#"
+                class="reset-password"
+                aria-label="Reset your password"
+                >Reset Password</a
+              >
             </div>
-
+            <!-- Submit button -->
             <button type="submit">Login</button>
           </form>
           <p class="mytext">
-            Don't have an account? <a href="#" class="signupP">Sign Up</a>
+            Don't have an account?
+            <a href="#" class="signupP" aria-label="Sign up for an account"
+              >Sign Up</a
+            >
           </p>
         </div>
       </div>
+      <!-- Right side image, possibly decorative -->
       <div class="right">
-        <img src="./assets/Group 162.svg" alt="Info" class="info-icon" />
+        <img
+          src="./assets/Group 162.svg"
+          alt="Info"
+          class="info-icon"
+          aria-hidden="true"
+        />
+        <!-- Image is decorative, aria-hidden is set to true -->
       </div>
     </div>
     <script src="./scripts/index.js"></script>

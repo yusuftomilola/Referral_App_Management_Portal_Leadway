@@ -4,6 +4,8 @@ function selectTab(tab) {
     const activityContent = document.getElementById('activityContent');
     const chatContent = document.getElementById('chatContent');
 
+  // handle tab toggle
+
     if (tab === 'activity') {
       activityBtn.classList.add('bg-[#ffffff]', 'text-[#002855]');
       activityBtn.classList.remove('bg-[#002855]', 'text-[#ffffff]');

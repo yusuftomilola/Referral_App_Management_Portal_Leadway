@@ -1,7 +1,10 @@
 <div class="flex flex-col gap-4">
-  
   <!-- [1] -->
-  <h1 class="flex gap-1 text-[#585858] font-bold items-center text-[18px]">
+  <!-- Welcome Deen Heading -->
+  <h1
+    class="flex gap-1 text-[#585858] font-bold items-center text-[18px]"
+    aria-label="Welcome message for Deen"
+  >
     Welcome, Deen
     <img
       src="../assets/wavingHand.svg"
@@ -11,520 +14,880 @@
     />
   </h1>
 
-  <!-- OTHER DASHBOARD VIEWS -->
-  <div class="w-full hidden lg:flex gap-5">
-
-    <!-- LEFT CONTENT CONTAINER -->
-    <div class="w-[50%] flex flex-col gap-5">
-      <!-- [2] -->
-<div class="w-full flex gap-5 justify-between items-center">
-    <!-- Prospects Box -->
-    <div
-      class="bg-[#002855] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
-    >
-      <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#F3F5F6] text-left">Prospects</button>
-
-      <p class="text-[#F3F5F6] text-[45px] text-right font-bold pr-3">200</p>
-    </div>
-
-
-    <!-- Users Box -->
-    <div
-      class="bg-[#E6B014] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
-    >
-      <a href="#" class="text-[#F3F5F6] text-left">Users</a>
-
-      <p class="text-[#F3F5F6] text-[45px] text-right font-bold pr-3">150</p>
-    </div>
-  </div>
-
-  <!-- [3] -->
-  <!-- view prospects, view reports, create prospects -->
-  <div class="flex gap-3 items-center">
-    <!-- view prospects box -->
-    <button
-    onclick="loadPage('../pages/prospects.html', this)"
-      class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
-    >
-      <p>View Prospect</p>
-    </button>
-
-    <!-- view report box -->
-    <button
-    onclick="loadPage('../pages/reports.html', this)"
-      class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
-    >
-      <p>View Report</p>
-    </button>
-
-    <!-- create prospect box -->
-    <button
-    onclick="loadPage('../pages/prospects.html', this)"
-      class="bg-[#002855] text-[#F3F5F6] w-[33.33%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
-    >
-      <p>+ Create Prospects</p>
-    </button>
-  </div>
-
-  <!-- [4] -->
-  <!-- prospects table-->
-  <div class="overflow-x-auto overflow-y-hidden w-full bg-white rounded-md flex flex-col lg:h-[600px] xl:h-[80vh]">
-      <div class="flex items-center justify-between w-full px-4 pt-3 pb-3">
-        <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#353535] text-[20px]">Prospects</button>
-
-          <button
-          onclick="loadPage('../pages/prospects.html', this)"
-            class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
-          >
-            View All
-          </button>
-        </button>
-      </div>
-
-      <hr>
-
-<div class="overflow-x-auto overflow-y-hidden flex-grow flex flex-col pt-4">
-    <table class="min-w-full">
-      <thead>
-        <tr>
-          <th class="py-2 xl:py-4  px-4 text-left text-[12px] text-[#1F4173]">Name</th>
-          <th class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]">Assigned To</th>
-          <th class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]">Date Added</th>
-          <th class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]">Status</th>
-        </tr>
-      </thead>
-      <tbody class="overflow-hidden flex-grow">
-        <tr onclick="loadPage('../pages/prospects.html', this)" class="cursor-pointer">
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Mohammed Ganiyu</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Ade Ayobami</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">David Jacobs</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Jide Alade</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#00B388]">Completed</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#00B388]">Completed</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-      
- 
-
-    
-  </div>
-
-    </div>
-
-    <!-- [3] prospect conversion -->
-    <!-- <div class="w-full rounded-md flex flex-col bg-white gap-2 relative pb-3 xl:hidden">
-      <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Prospect Conversion</h2>
-
-        <hr>
-
-        <div class="absolute top-[21%] right-[10%] flex gap-2 text-[#002855] text-[10px] items-start">
-          Today <img src="../assets/longDownArrowIcon.svg" alt="">
-        </div>
-
-      
-      <div class="w-full overflow-x-auto relative pt-6 px-5">
-        <canvas id="myChart3" width="380" height="200"></canvas>
-        <div id="chartjs-tooltip" class="chartjs-tooltip"></div>
-      </div> -->
-
-
-     <!-- RIGHT CONTENT CONTAINER -->
-    <div class="w-[50%] flex flex-col gap-5">
-
-      <!-- [2] -->
-      <div class="w-full flex gap-5 justify-between items-center">
-
-      <!-- Converted Box -->
-      <div
-        class="bg-[#353535] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
-      >
-        <a href="#" class="text-[#F3F5F6] text-left">Converted</a>
-
-        <p class="text-[#F3F5F6] text-[45px] text-right font-bold pr-3">150</p>
-      </div>
-
-      <!-- Unconverted Box -->
-      <div
-        class="bg-[#00B388] rounded-md flex flex-col w-[50%] h-[100px] px-5 py-2 justify-between"
-      >
-        <a href="#" class="text-[#F3F5F6] text-left">Unconverted</a>
-
-        <p class="text-[#F3F5F6] text-[45px] text-right pr-3 font-bold">150</p>
-      </div>
-      </div>
-
-      <!-- [3] -->
-      <div class="">
-        <img src="../assets/prospectConversionChart.JPG" alt="prospect conversion image" width="100%" height="auto" class="rounded-md">
-      </div>
-
-      <!-- [4] -->
-    <div class="w-full rounded-md flex flex-col bg-white gap-2 ">
-      <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Activity</h2>
-
-        <hr>
-
-        <!-- info container -->
-      <div class="px-5 pt-6 pb-8 flex flex-col gap-5">
-    <!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">New User "Adeniyi Sam</span> has been created</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-
-<!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Seyi Olanrewaju</span> has been assigned a prospect</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-
-    <!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Jide Alade</span> just converted a prospect</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-
-    <!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">New User "Adeniyi Sam</span> has been created</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-
-    <!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Seyi Olanrewaju</span> has been assigned to a prospect</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-      </div>
-
-    </div>
-  </div>
-  </div>
-
-
-<!-- MOBILE DASHBOARD VIEW -->
-
-<!-- 4 boxes -->
-    <div class="w-full grid grid-cols-1 sm:grid-cols-2    lg:hidden gap-5">
+  <!-- [2] -->
+  <!-- 4 boxes container - prospects, users, converted and unconverted -->
+  <div
+    class="w-full gap-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+    aria-label="Dashboard statistics boxes"
+  >
     <!-- Prospects Box -->
     <div
       class="bg-[#002855] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
+      aria-label="Prospects count box"
     >
-      <button onclick="loadPage('../pages/prospects.html', this)" class="text-[#F3F5F6] text-left">Prospects</button>
-
-      <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">200</p>
+      <button
+        onclick="loadPage('../pages/prospects.html', this)"
+        class="text-[#F3F5F6] text-left"
+        aria-label="View prospects page"
+      >
+        Prospects
+      </button>
+      <p
+        class="text-[#F3F5F6] text-[40px] lg:text-[45px] text-right font-bold pr-3"
+        aria-label="Number of prospects"
+      >
+        200
+      </p>
     </div>
 
     <!-- Users Box -->
     <div
       class="bg-[#E6B014] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
+      aria-label="Users count box"
     >
-      <a href="#" class="text-[#F3F5F6] text-left">Users</a>
-
-      <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">150</p>
+      <a href="#" class="text-[#F3F5F6] text-left" aria-label="View users page"
+        >Users</a
+      >
+      <p
+        class="text-[#F3F5F6] text-[40px] lg:text-[45px] text-right font-bold pr-3"
+        aria-label="Number of users"
+      >
+        150
+      </p>
     </div>
 
     <!-- Converted Box -->
     <div
-        class="bg-[#353535] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
+      class="bg-[#353535] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
+      aria-label="Converted users count box"
+    >
+      <a
+        href="#"
+        class="text-[#F3F5F6] text-left"
+        aria-label="View converted users page"
+        >Converted</a
       >
-        <a href="#" class="text-[#F3F5F6] text-left">Converted</a>
-
-        <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">150</p>
+      <p
+        class="text-[#F3F5F6] text-[40px] lg:text-[45px] text-right font-bold pr-3"
+        aria-label="Number of converted users"
+      >
+        150
+      </p>
     </div>
 
     <!-- Unconverted Box -->
     <div
-        class="bg-[#00B388] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
+      class="bg-[#00B388] rounded-md flex flex-col w-full h-[100px] px-5 py-2 justify-between"
+      aria-label="Unconverted users count box"
+    >
+      <a
+        href="#"
+        class="text-[#F3F5F6] text-left"
+        aria-label="View unconverted users page"
+        >Unconverted</a
       >
-        <a href="#" class="text-[#F3F5F6] text-left">Unconverted</a>
-
-        <p class="text-[#F3F5F6] text-[40px] text-right font-bold pr-3">150</p>
+      <p
+        class="text-[#F3F5F6] text-[45px] text-right pr-3 font-bold"
+        aria-label="Number of unconverted users"
+      >
+        150
+      </p>
     </div>
-</div>
+  </div>
 
-<!-- 3 boxes -->
-<div class="flex lg:hidden justify-between items-center gap-1 sm:gap-3 flex-wrap sm:flex-nowrap">
-<!-- view prospects box -->
-    <button
-    onclick="loadPage('../pages/prospects.html', this)"
-      class="bg-[#002855] text-[#F3F5F6] w-[48.5%] sm:w-[100%]  h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
-    >
-      <p>View Prospect</p>
-    </button>
-
-    <!-- view report box -->
-    <button
-    onclick="loadPage('../pages/reports.html', this)"
-      class="bg-[#002855] text-[#F3F5F6] w-[48.5%] sm:w-[100%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
-    >
-      <p>View Report</p>
-    </button>
-
-    <!-- create prospect box -->
-    <button
-    onclick="loadPage('../pages/prospects.html', this)"
-      class="bg-[#002855] text-[#F3F5F6] w-[100%] sm:w-[100%] max-lg:h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
-    >
-      <p>+ Create Prospects</p>
-    </button>
-</div>
-
-<!-- charts table -->
-<div class="lg:hidden">
-        <img src="../assets/prospectConversionChart.JPG" alt="prospect conversion image" width="100%" height="auto" class="rounded-md">
-      </div>
-
-      <!-- <div class="lg:hidden w-full rounded-md flex flex-col bg-white gap-2 relative pb-3">
-      <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Prospect Conversion</h2>
-
-        <hr>
-
-        <div class="absolute top-[21%] right-[10%] flex gap-2 text-[#002855] text-[10px] items-start">
-          Today <img src="../assets/longDownArrowIcon.svg" alt="">
-        </div>
-
-      prospect chart
-      <div class="w-full overflow-x-auto relative pt-6 px-5 bg-red-500">
-        <canvas id="myChart3" width="" height="" class="w-full overflow-auto h-auto"></canvas>
-        <div id="chartjs-tooltip" class="chartjs-tooltip"></div>
-      </div> -->
-
-      <!-- activity table -->
-<div class="w-full rounded-md flex flex-col bg-white gap-2 lg:hidden ">
-      <h2 class="px-5 pt-3 text-[#353535] text-[20px]">Activity</h2>
-
-        <hr>
-
-        <!-- info container -->
-      <div class="px-5 pt-6 pb-8 flex flex-col gap-5">
-    <!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">New User "Adeniyi Sam</span> has been created</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-
-<!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Seyi Olanrewaju</span> has been assigned a prospect</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-
-    <!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Jide Alade</span> just converted a prospect</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-
-    <!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">New User "Adeniyi Sam</span> has been created</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-
-    <!-- single user container -->
-    <div class="flex justify-between">
-      <div class="flex flex-col gap-1">
-        <p class="text-[#585858] text-[12px]"><span class="font-semibold">Seyi Olanrewaju</span> has been assigned to a prospect</p>
-        <p class="text-[10px] text-[#002855]">10 mins</p>
-      </div>
-
-      <p class="text-[12px] text-[#002855]">VIEW</p>
-    </div>
-      </div>
-
-    </div>
-
-<!-- prospects table-->
-  <div class="overflow-x-auto w-full bg-white rounded-md lg:hidden">
-    
-
-      <div class="flex items-center justify-between w-full px-4 pt-3 pb-3">
-        <p class="text-[#353535] text-[20px] cursor-pointer" onclick="loadPage('../pages/prospects.html', this)">Prospects</p>
-
-          <button
+  <!-- REMAINING CONTENTS CONTAINER -->
+  <div class="w-full flex flex-col lg:flex-row gap-5">
+    <!-- LEFT CONTENT CONTAINER -->
+    <div class="w-full lg:w-[50%] flex flex-col gap-5">
+      <!-- [3] -->
+      <!-- View prospects, view reports, create prospects - Action buttons container -->
+      <div
+        class="flex justify-between items-center gap-1 sm:gap-3 flex-wrap sm:flex-nowrap"
+        aria-label="Action buttons container"
+      >
+        <!-- View prospects button -->
+        <button
           onclick="loadPage('../pages/prospects.html', this)"
+          class="bg-[#002855] text-[#F3F5F6] w-[48.5%] sm:w-[100%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+          aria-label="View prospects page"
+        >
+          <p>View Prospect</p>
+        </button>
+
+        <!-- View report button -->
+        <button
+          onclick="loadPage('../pages/reports.html', this)"
+          class="bg-[#002855] text-[#F3F5F6] w-[48.5%] sm:w-[100%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+          aria-label="View reports page"
+        >
+          <p>View Report</p>
+        </button>
+
+        <!-- Create prospect button -->
+        <button
+          onclick="loadPage('../pages/prospectsNew.html', this)"
+          class="bg-[#002855] text-[#F3F5F6] w-[100%] sm:w-[100%] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+          aria-label="Create new prospect"
+        >
+          <p>+ Create Prospects</p>
+        </button>
+      </div>
+
+      <!-- [4] -->
+      <!-- LARGE SCREEN DISPLAY ONLY - Prospects table -->
+      <div
+        class="hidden lg:flex overflow-x-auto overflow-y-hidden w-full bg-white rounded-md flex-grow flex-col"
+        aria-label="Prospects table for large screens"
+      >
+        <!-- Prospects table header -->
+        <div
+          class="flex items-center justify-between w-full px-4 pt-3 pb-3"
+          aria-label="Table header with prospects and view all button"
+        >
+          <!-- Prospects title button -->
+          <button
+            onclick="loadPage('../pages/prospects.html', this)"
+            class="text-[#353535] text-[20px]"
+            aria-label="Navigate to prospects page"
+          >
+            Prospects
+          </button>
+
+          <!-- View all button -->
+          <button
+            onclick="loadPage('../pages/prospects.html', this)"
             class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+            aria-label="View all prospects"
           >
             View All
           </button>
-        
+        </div>
+
+        <hr />
+
+        <!-- Table body with prospect details -->
+        <div
+          class="overflow-x-auto overflow-y-hidden h-full flex flex-col pt-4"
+        >
+          <table class="min-w-full" aria-label="List of prospects">
+            <thead>
+              <tr aria-label="Prospect details headers">
+                <th
+                  class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]"
+                  aria-label="Prospect Name header"
+                >
+                  Name
+                </th>
+                <th
+                  class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]"
+                  aria-label="Assigned to header"
+                >
+                  Assigned To
+                </th>
+                <th
+                  class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]"
+                  aria-label="Date added header"
+                >
+                  Date Added
+                </th>
+                <th
+                  class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]"
+                  aria-label="Status header"
+                >
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody class="overflow-hidden flex-grow" aria-label="Prospect rows">
+              <!-- First prospect row -->
+              <tr
+                onclick="loadPage('../pages/prospectsChat.html', this)"
+                class="cursor-pointer"
+                aria-label="Prospect row: Nurudeen Ibrahim"
+              >
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Prospect Name: Nurudeen Ibrahim"
+                >
+                  Nurudeen Ibrahim
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Assigned to: Seyi Olarenwaju"
+                >
+                  Seyi Olarenwaju
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Date added: 04-01-2023"
+                >
+                  04-01-2023
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]"
+                  aria-label="Status: Pending"
+                >
+                  Pending
+                </td>
+              </tr>
+
+              <!-- Second prospect row -->
+              <tr aria-label="Prospect row: Mohammed Ganiyu">
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Prospect Name: Mohammed Ganiyu"
+                >
+                  Mohammed Ganiyu
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Assigned to: Ade Ayobami"
+                >
+                  Ade Ayobami
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Date added: 04-01-2023"
+                >
+                  04-01-2023
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]"
+                  aria-label="Status: Pending"
+                >
+                  Pending
+                </td>
+              </tr>
+
+              <!-- Third prospect row -->
+              <tr aria-label="Prospect row: David Jacobs">
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Prospect Name: David Jacobs"
+                >
+                  David Jacobs
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Assigned to: Jide Alade"
+                >
+                  Jide Alade
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Date added: 04-01-2023"
+                >
+                  04-01-2023
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#00B388]"
+                  aria-label="Status: Completed"
+                >
+                  Completed
+                </td>
+              </tr>
+
+              <!-- Fourth prospect row -->
+              <tr
+                aria-label="Prospect row: Nurudeen Ibrahim, assigned to Seyi Olarenwaju, date added 04-01-2023, status Pending"
+              >
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Prospect Name: Nurudeen Ibrahim"
+                >
+                  Nurudeen Ibrahim
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Assigned to: Seyi Olarenwaju"
+                >
+                  Seyi Olarenwaju
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Date Added: 04-01-2023"
+                >
+                  04-01-2023
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]"
+                  aria-label="Status: Pending"
+                >
+                  Pending
+                </td>
+              </tr>
+
+              <!-- Fifth prospect row -->
+              <tr
+                aria-label="Prospect row: Nurudeen Ibrahim, assigned to Seyi Olarenwaju, date added 04-01-2023, status Pending"
+              >
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Prospect Name: Nurudeen Ibrahim"
+                >
+                  Nurudeen Ibrahim
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Assigned to: Seyi Olarenwaju"
+                >
+                  Seyi Olarenwaju
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Date Added: 04-01-2023"
+                >
+                  04-01-2023
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]"
+                  aria-label="Status: Pending"
+                >
+                  Pending
+                </td>
+              </tr>
+
+              <!-- Sixth prospect row -->
+              <tr
+                aria-label="Prospect row: Nurudeen Ibrahim, assigned to Seyi Olarenwaju, date added 04-01-2023, status Completed"
+              >
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Prospect Name: Nurudeen Ibrahim"
+                >
+                  Nurudeen Ibrahim
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Assigned to: Seyi Olarenwaju"
+                >
+                  Seyi Olarenwaju
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Date Added: 04-01-2023"
+                >
+                  04-01-2023
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#00B388]"
+                  aria-label="Status: Completed"
+                >
+                  Completed
+                </td>
+              </tr>
+
+              <!-- Seventh prospect row -->
+              <tr
+                aria-label="Prospect row: Nurudeen Ibrahim, assigned to Seyi Olarenwaju, date added 04-01-2023, status Pending"
+              >
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Prospect Name: Nurudeen Ibrahim"
+                >
+                  Nurudeen Ibrahim
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Assigned to: Seyi Olarenwaju"
+                >
+                  Seyi Olarenwaju
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Date Added: 04-01-2023"
+                >
+                  04-01-2023
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]"
+                  aria-label="Status: Pending"
+                >
+                  Pending
+                </td>
+              </tr>
+
+              <!-- Eighth prospect row -->
+              <tr
+                aria-label="Prospect row: Nurudeen Ibrahim, assigned to Seyi Olarenwaju, date added 04-01-2023, status Pending"
+              >
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Prospect Name: Nurudeen Ibrahim"
+                >
+                  Nurudeen Ibrahim
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Assigned to: Seyi Olarenwaju"
+                >
+                  Seyi Olarenwaju
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Date Added: 04-01-2023"
+                >
+                  04-01-2023
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]"
+                  aria-label="Status: Pending"
+                >
+                  Pending
+                </td>
+              </tr>
+
+              <!-- Ninth prospect row -->
+              <tr
+                aria-label="Prospect row: Nurudeen Ibrahim, assigned to Seyi Olarenwaju, date added 04-01-2023, status Pending"
+              >
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Prospect Name: Nurudeen Ibrahim"
+                >
+                  Nurudeen Ibrahim
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Assigned to: Seyi Olarenwaju"
+                >
+                  Seyi Olarenwaju
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Date Added: 04-01-2023"
+                >
+                  04-01-2023
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]"
+                  aria-label="Status: Pending"
+                >
+                  Pending
+                </td>
+              </tr>
+
+              <!-- Tenth prospect row -->
+              <tr
+                aria-label="Prospect row: Nurudeen Ibrahim, assigned to Seyi Olarenwaju, date added 04-01-2023, status Pending"
+              >
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Prospect Name: Nurudeen Ibrahim"
+                >
+                  Nurudeen Ibrahim
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Assigned to: Seyi Olarenwaju"
+                >
+                  Seyi Olarenwaju
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]"
+                  aria-label="Date Added: 04-01-2023"
+                >
+                  04-01-2023
+                </td>
+                <td
+                  class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]"
+                  aria-label="Status: Pending"
+                >
+                  Pending
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT CONTAINER -->
+    <div class="w-full lg:w-[50%] flex flex-col gap-5">
+      <!-- [5] Prospect Conversion Chart -->
+      <div
+        class="w-full rounded-md flex flex-col bg-white gap-2 pb-6 prospectConversionChartContainer"
+        style="max-height: 300px"
+        aria-label="Prospect Conversion Chart"
+      >
+        <div class="relative flex justify-between items-center">
+          <h2
+            class="px-5 pt-3 text-[#353535] text-[20px]"
+            aria-label="Prospect Conversion"
+          >
+            Prospect Conversion
+          </h2>
+          <div
+            class="absolute top-[55px] right-[40px] flex gap-2 text-[#002855] text-[10px] items-start"
+            aria-label="Date filter dropdown"
+          >
+            Today
+            <img src="../assets/longDownArrowIcon.svg" alt="Dropdown arrow" />
+          </div>
+        </div>
+        <hr />
+        <div class="w-full relative pt-6 px-5">
+          <canvas
+            id="myChart3"
+            aria-label="Prospect Conversion Chart Canvas"
+          ></canvas>
+          <div
+            id="chartjs-tooltip"
+            class="chartjs-tooltip"
+            aria-label="Chart tooltip"
+          ></div>
+        </div>
       </div>
 
-      <hr>
+      <!-- [6] Activity Info Container -->
+      <div
+        class="w-full rounded-md flex flex-col bg-white gap-2 activityContainer"
+        aria-label="Activity Info Container"
+      >
+        <h2 class="px-5 pt-3 text-[#353535] text-[20px]" aria-label="Activity">
+          Activity
+        </h2>
+        <hr />
 
-<div class="overflow-x-auto pt-4">
-    <table class="min-w-full">
-      <thead>
-        <tr>
-          <th class="py-4 px-4 text-left text-[12px] text-[#1F4173]">Name</th>
-          <th class="py-4 px-4 text-left text-[12px] text-[#1F4173]">Assigned To</th>
-          <th class="py-4 px-4 text-left text-[12px] text-[#1F4173]">Date Added</th>
-          <th class="py-4 px-4 text-left text-[12px] text-[#1F4173]">Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="cursor-pointer"
-        onclick="loadPage('../pages/prospects.html', this)"
+        <!-- Info Container -->
+        <div class="px-5 pt-6 pb-8 flex flex-col gap-5">
+          <!-- Single User Container -->
+          <div
+            class="flex justify-between"
+            aria-label="Activity Item: New User Adeniyi Sam has been created"
+          >
+            <div class="flex flex-col gap-1">
+              <p class="text-[#585858] text-[12px]">
+                <span class="font-semibold">New User "Adeniyi Sam</span> has
+                been created
+              </p>
+              <p
+                class="text-[10px] text-[#002855]"
+                aria-label="Time since activity: 10 mins"
+              >
+                10 mins
+              </p>
+            </div>
+            <p class="text-[12px] text-[#002855]" aria-label="View details">
+              VIEW
+            </p>
+          </div>
+
+          <!-- Single User Container -->
+          <div
+            class="flex justify-between"
+            aria-label="Activity Item: Seyi Olanrewaju has been assigned a prospect"
+          >
+            <div class="flex flex-col gap-1">
+              <p class="text-[#585858] text-[12px]">
+                <span class="font-semibold">Seyi Olanrewaju</span> has been
+                assigned a prospect
+              </p>
+              <p
+                class="text-[10px] text-[#002855]"
+                aria-label="Time since activity: 10 mins"
+              >
+                10 mins
+              </p>
+            </div>
+            <p class="text-[12px] text-[#002855]" aria-label="View details">
+              VIEW
+            </p>
+          </div>
+
+          <!-- Single User Container -->
+          <div
+            class="flex justify-between"
+            aria-label="Activity Item: Jide Alade just converted a prospect"
+          >
+            <div class="flex flex-col gap-1">
+              <p class="text-[#585858] text-[12px]">
+                <span class="font-semibold">Jide Alade</span> just converted a
+                prospect
+              </p>
+              <p
+                class="text-[10px] text-[#002855]"
+                aria-label="Time since activity: 10 mins"
+              >
+                10 mins
+              </p>
+            </div>
+            <p class="text-[12px] text-[#002855]" aria-label="View details">
+              VIEW
+            </p>
+          </div>
+
+          <!-- Single User Container -->
+          <div
+            class="flex justify-between"
+            aria-label="Activity Item: New User Adeniyi Sam has been created"
+          >
+            <div class="flex flex-col gap-1">
+              <p class="text-[#585858] text-[12px]">
+                <span class="font-semibold">New User "Adeniyi Sam</span> has
+                been created
+              </p>
+              <p
+                class="text-[10px] text-[#002855]"
+                aria-label="Time since activity: 10 mins"
+              >
+                10 mins
+              </p>
+            </div>
+            <p class="text-[12px] text-[#002855]" aria-label="View details">
+              VIEW
+            </p>
+          </div>
+
+          <!-- Single User Container -->
+          <div
+            class="flex justify-between"
+            aria-label="Activity Item: Seyi Olanrewaju has been assigned to a prospect"
+          >
+            <div class="flex flex-col gap-1">
+              <p class="text-[#585858] text-[12px]">
+                <span class="font-semibold">Seyi Olanrewaju</span> has been
+                assigned to a prospect
+              </p>
+              <p
+                class="text-[10px] text-[#002855]"
+                aria-label="Time since activity: 10 mins"
+              >
+                10 mins
+              </p>
+            </div>
+            <p class="text-[12px] text-[#002855]" aria-label="View details">
+              VIEW
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- [4] -->
+      <!-- MOBILE DISPLAY ONLY -  prospects table-->
+      <!-- Mobile View Container -->
+      <div
+        class="lg:hidden flex overflow-x-auto overflow-y-hidden w-full bg-white rounded-md flex-grow flex-col"
+        aria-label="Mobile view container for prospects"
+      >
+        <!-- Header Section -->
+        <div class="flex items-center justify-between w-full px-4 pt-3 pb-3">
+          <!-- Prospects Button -->
+          <button
+            onclick="loadPage('../pages/prospects.html', this)"
+            class="text-[#353535] text-[20px]"
+            aria-label="Navigate to Prospects Page"
+          >
+            Prospects
+          </button>
+
+          <!-- View All Button -->
+          <button
+            onclick="loadPage('../pages/prospects.html', this)"
+            class="bg-[#002855] text-[#FFFFFF] w-[70px] h-[26px] rounded-[3px] flex items-center justify-center text-[10px] lato-font"
+            aria-label="View all prospects"
+          >
+            View All
+          </button>
+        </div>
+
+        <hr />
+
+        <!-- Table Container -->
+        <div
+          class="overflow-x-auto overflow-y-hidden h-full flex flex-col pt-4"
         >
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Mohammed Ganiyu</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Ade Ayobami</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">David Jacobs</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Jide Alade</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#00B388]">Completed</td>
-        </tr>
-        <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#00B388]">Completed</td>
-        </tr>
-        <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-        <tr>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Nurudeen Ibrahim</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">Seyi Olarenwaju</td>
-          <td class="py-4 px-4 text-[11px] text-[#353535]">04-01-2023</td>
-          <td class="py-4 px-4 text-[11px] text-[#FFCD28]">Pending</td>
-        </tr>
-      </tbody>
-    </table>
+          <!-- Table for Prospect Data -->
+          <table class="min-w-full" aria-label="Prospect Data Table">
+            <thead>
+              <tr>
+                <!-- Table Header Cells -->
+                <th
+                  class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]"
+                  aria-label="Column: Name"
+                >
+                  Name
+                </th>
+                <th
+                  class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]"
+                  aria-label="Column: Assigned To"
+                >
+                  Assigned To
+                </th>
+                <th
+                  class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]"
+                  aria-label="Column: Date Added"
+                >
+                  Date Added
+                </th>
+                <th
+                  class="py-2 xl:py-4 px-4 text-left text-[12px] text-[#1F4173]"
+                  aria-label="Column: Status"
+                >
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody class="overflow-hidden flex-grow">
+              <!-- Table Row: Example Prospect -->
+              <tr
+                onclick="loadPage('../pages/prospectsChat.html', this)"
+                class="cursor-pointer"
+                aria-label="Prospect: Nurudeen Ibrahim, Assigned to Seyi Olarenwaju, Status: Pending"
+              >
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Nurudeen Ibrahim
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Seyi Olarenwaju
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  04-01-2023
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">
+                  Pending
+                </td>
+              </tr>
+              <!-- Table Row: Example Prospect -->
+              <tr
+                aria-label="Prospect: Mohammed Ganiyu, Assigned to Ade Ayobami, Status: Pending"
+              >
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Mohammed Ganiyu
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Ade Ayobami
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  04-01-2023
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">
+                  Pending
+                </td>
+              </tr>
+              <!-- Table Row: Example Prospect -->
+              <tr
+                aria-label="Prospect: David Jacobs, Assigned to Jide Alade, Status: Completed"
+              >
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  David Jacobs
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Jide Alade
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  04-01-2023
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#00B388]">
+                  Completed
+                </td>
+              </tr>
+              <!-- Table Row: Example Prospect -->
+              <tr
+                aria-label="Prospect: Nurudeen Ibrahim, Assigned to Seyi Olarenwaju, Status: Pending"
+              >
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Nurudeen Ibrahim
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Seyi Olarenwaju
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  04-01-2023
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">
+                  Pending
+                </td>
+              </tr>
+              <!-- Table Row: Example Prospect -->
+              <tr
+                aria-label="Prospect: Nurudeen Ibrahim, Assigned to Seyi Olarenwaju, Status: Pending"
+              >
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Nurudeen Ibrahim
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Seyi Olarenwaju
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  04-01-2023
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">
+                  Pending
+                </td>
+              </tr>
+              <!-- Table Row: Example Prospect -->
+              <tr
+                aria-label="Prospect: Nurudeen Ibrahim, Assigned to Seyi Olarenwaju, Status: Completed"
+              >
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Nurudeen Ibrahim
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Seyi Olarenwaju
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  04-01-2023
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#00B388]">
+                  Completed
+                </td>
+              </tr>
+              <!-- Table Row: Example Prospect -->
+              <tr
+                aria-label="Prospect: Nurudeen Ibrahim, Assigned to Seyi Olarenwaju, Status: Pending"
+              >
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Nurudeen Ibrahim
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Seyi Olarenwaju
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  04-01-2023
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">
+                  Pending
+                </td>
+              </tr>
+              <!-- Table Row: Example Prospect -->
+              <tr
+                aria-label="Prospect: Nurudeen Ibrahim, Assigned to Seyi Olarenwaju, Status: Pending"
+              >
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Nurudeen Ibrahim
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Seyi Olarenwaju
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  04-01-2023
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">
+                  Pending
+                </td>
+              </tr>
+              <!-- Table Row: Example Prospect -->
+              <tr
+                aria-label="Prospect: Nurudeen Ibrahim, Assigned to Seyi Olarenwaju, Status: Pending"
+              >
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Nurudeen Ibrahim
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  Seyi Olarenwaju
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#353535]">
+                  04-01-2023
+                </td>
+                <td class="py-2 px-4 xl:py-4 text-[11px] text-[#FFCD28]">
+                  Pending
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
-      
-    
-
-    
-  </div>
-
-  
 </div>
-

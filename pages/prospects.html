@@ -1,15 +1,24 @@
 <div class="flex flex-col gap-4 overflow-auto">
   <!-- 1st section -->
+  <!-- Container for the report title and create report button -->
   <div
     class="flex flex-col justify-start gap-4 sm:flex-row sm:justify-between sm:items-center"
+    aria-label="Header section with title and create button"
   >
-    <!-- report title -->
-    <h1 class="flex gap-1 text-[#585858] font-bold text-[16px]">Prospects</h1>
+    <!-- Report Title -->
+    <h1
+      class="flex gap-1 text-[#585858] font-bold text-[16px]"
+      aria-label="Report title: Prospects"
+    >
+      Prospects
+    </h1>
 
-    <!-- create report box -->
+    <!-- Create Report Button -->
     <button
+      onclick="loadPage('../pages/prospectsNew.html', this)"
       type="button"
       class="show-modal bg-[#002855] text-[#F3F5F6] w-[170px] h-[35px] rounded-[3px] flex items-center justify-center text-[13px]"
+      aria-label="Navigate to create new prospect page"
     >
       <p class="flex gap-3 items-center justify-center">
         <span class="text-[20px]">+</span> Create Prospect
@@ -17,9 +26,10 @@
     </button>
   </div>
 
-  <!-- Search and Add Prospect -->
+  <!-- Search and Add Prospect Section -->
   <div
     class="flex flex-col gap-4 md:gap-0 lg:gap-0 md:flex-row lg:flex-row items-center justify-center md:items-center md:justify-around lg:items-center lg:justify-around w-full pl-0 md:pl-[11px] pr-0 md:pr-[35px] py-4 border rounded-md border-[#D8D8D8] bg-[#FFFFFF] h-[95px]"
+    aria-label="Search and add prospect section"
   >
     <div
       class="w-full border rounded-md border-[#D8D8D8] bg-[#FFFFFF] p-0"
@@ -36,40 +46,52 @@
         <div
           class="w-full md:w-[85%] border rounded-md border-[#D8D8D8] flex h-[35px]"
         >
-          <!-- search by name container -->
+          <!-- Search By Name Container -->
           <div
             class="bg-[#F3F5F6] w-1/4 flex flex-col justify-around items-center md:flex-row"
+            aria-label="Search by name"
           >
-            <span class="hidden lg:inline text-[#34475E] text-[13px]"
+            <span
+              class="hidden lg:inline text-[#34475E] text-[13px]"
+              aria-label="Search by name label"
               >Search By: Name</span
             >
-            <span
-              ><img
+            <span>
+              <img
                 src="../assets/shortBlueDownArrow.svg"
-                alt=""
+                alt="Dropdown arrow"
                 width="13px"
                 height="auto"
-            /></span>
+                aria-label="Dropdown arrow for search options"
+              />
+            </span>
           </div>
 
-          <!-- search icon & input container -->
+          <!-- Search Icon & Input Container -->
           <div class="w-3/4 flex">
             <svg
               class="w-[15px] h-[16px] mx-[10px] my-[auto] text-[#9F9F9F]"
               fill="#9F9F9F"
               viewBox="0 0 24 24"
+              aria-label="Search icon"
             >
               <path
                 d="M21.71 20.29l-5.4-5.4A7.92 7.92 0 0 0 18 10a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.89-1.69l5.4 5.4a1 1 0 0 0 1.42-1.42zM10 16a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"
               ></path>
             </svg>
-            <input type="search" class="w-[90%]" style="outline: none" />
+            <input
+              type="search"
+              class="w-[90%]"
+              style="outline: none"
+              aria-label="Search input field"
+            />
           </div>
         </div>
 
-        <!-- find button -->
+        <!-- Find Button -->
         <button
           class="w-full md:w-[15%] h-[35px] border rounded-md bg-[#002855] text-[#F3F5F6] text-[13px] flex items-center justify-center"
+          aria-label="Find prospects"
         >
           Find
         </button>
@@ -79,39 +101,73 @@
 
   <div>
     <!-- Status Tabs -->
-    <div class="flex space-x-[1px] mt-4 overflow-hidden">
+    <!-- Container for the status filter buttons with horizontal spacing -->
+    <div
+      class="flex space-x-[1px] mt-4 overflow-hidden"
+      aria-label="Status filter buttons"
+    >
+      <!-- Button for 'All' status, highlighted with a border -->
       <button
         class="py-2 w-[99px] bg-[#ffffff] text-[#002855] font-bold text-sm rounded"
+        aria-label="Filter by All"
       >
         <span class="border-[#002855] border-b-2 px-2 pb-2">All</span>
       </button>
-      <button class="py-2 w-[99px] bg-[#0277E6] text-sm text-white rounded">
+
+      <!-- Button for 'Open' status -->
+      <button
+        class="py-2 w-[99px] bg-[#0277E6] text-sm text-white rounded"
+        aria-label="Filter by Open"
+      >
         Open
       </button>
-      <button class="py-2 w-[99px] bg-[#00B388] text-sm text-white rounded">
+
+      <!-- Button for 'Closed' status -->
+      <button
+        class="py-2 w-[99px] bg-[#00B388] text-sm text-white rounded"
+        aria-label="Filter by Closed"
+      >
         Closed
       </button>
-      <button class="py-2 w-[99px] bg-[#FFB946] text-sm text-white rounded">
+
+      <!-- Button for 'Ongoing' status -->
+      <button
+        class="py-2 w-[99px] bg-[#FFB946] text-sm text-white rounded"
+        aria-label="Filter by Ongoing"
+      >
         Ongoing
       </button>
-      <button class="py-2 w-[99px] bg-[#E30000] text-sm text-white rounded">
+
+      <!-- Button for 'Out of SLA' status -->
+      <button
+        class="py-2 w-[99px] bg-[#E30000] text-sm text-white rounded"
+        aria-label="Filter by Out of SLA"
+      >
         Out of SLA
       </button>
     </div>
 
     <!-- Prospects Table -->
     <div class="flex-col justify-between p-4 bg-[#FFFFFF]">
+      <!-- Wrapper to enable horizontal scrolling for the table -->
       <div class="overflow-x-auto">
+        <!-- Table for displaying prospect data -->
         <table
           class="min-w-full bg-white whitespace-nowrap border-separate border-spacing-y-[6px]"
+          aria-label="Prospects Table"
         >
+          <!-- Table Header -->
           <thead class="text-[12px] font-[700] text-[#7F8B94] border-none p-4">
             <tr>
-              <th class="py-2 px-2 text-center">
+              <!-- Empty header for profile picture column -->
+              <th
+                class="py-2 px-2 text-center"
+                aria-label="Profile Picture Column"
+              >
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </th>
-              <!-- Empty header for profile pic -->
-              <th class="py-2 px-2 text-center">
+              <!-- Header for Name column with sort icon -->
+              <th class="py-2 px-2 text-center" aria-label="Name Column">
                 <div class="flex justify-center items-center">
                   <span class="mr-2">Name</span>
                   <img
@@ -121,7 +177,8 @@
                   />
                 </div>
               </th>
-              <th class="py-2 px-2 text-center">
+              <!-- Header for Email column with sort icon -->
+              <th class="py-2 px-2 text-center" aria-label="Email Column">
                 <div class="flex justify-center items-center">
                   <span class="mr-2">Email</span>
                   <img
@@ -131,7 +188,11 @@
                   />
                 </div>
               </th>
-              <th class="py-2 px-2 text-center">
+              <!-- Header for Phone Number column with sort icon -->
+              <th
+                class="py-2 px-2 text-center"
+                aria-label="Phone Number Column"
+              >
                 <div class="flex justify-center items-center">
                   <span class="mr-2">Phone Number</span>
                   <img
@@ -141,7 +202,11 @@
                   />
                 </div>
               </th>
-              <th class="py-2 px-2 text-center">
+              <!-- Header for Product Interest column with sort icon -->
+              <th
+                class="py-2 px-2 text-center"
+                aria-label="Product Interest Column"
+              >
                 <div class="flex justify-center items-center">
                   <span class="mr-2">Product Interest</span>
                   <img
@@ -151,7 +216,8 @@
                   />
                 </div>
               </th>
-              <th class="py-2 px-2 text-center">
+              <!-- Header for Assigned To column with sort icon -->
+              <th class="py-2 px-2 text-center" aria-label="Assigned To Column">
                 <div class="flex justify-center items-center">
                   <span class="mr-2">Assigned to</span>
                   <img
@@ -161,7 +227,8 @@
                   />
                 </div>
               </th>
-              <th class="py-2 px-2 text-center">
+              <!-- Header for Date Added column with sort icon -->
+              <th class="py-2 px-2 text-center" aria-label="Date Added Column">
                 <div class="flex justify-center items-center">
                   <span class="mr-2">Date Added</span>
                   <img
@@ -171,7 +238,8 @@
                   />
                 </div>
               </th>
-              <th class="py-2 px-2 text-center">
+              <!-- Header for Status column with sort icon -->
+              <th class="py-2 px-2 text-center" aria-label="Status Column">
                 <div class="flex justify-center items-center">
                   <span class="mr-2">Status</span>
                   <img
@@ -181,7 +249,8 @@
                   />
                 </div>
               </th>
-              <th class="py-2 px-2 text-center">
+              <!-- Header for Action column with sort icon -->
+              <th class="py-2 px-2 text-center" aria-label="Action Column">
                 <div class="flex justify-center items-center">
                   <span class="mr-2">Action</span>
                   <img
@@ -422,44 +491,87 @@
         </table>
       </div>
 
-      <!-- Pagination -->
+      <!-- Pagination and view settings container -->
       <div
         class="mt-32 flex justify-between items-center px-12 py-2 overflow-x-auto"
+        aria-label="Pagination and View Settings"
       >
+        <!-- Pagination Controls -->
         <div class="flex space-x-2">
-          <button class="bg-[#F5F8FA] px-2 py-1">
+          <!-- Previous Page Button -->
+          <button class="bg-[#F5F8FA] px-2 py-1" aria-label="Previous Page">
             <img
               src="../assets/general/paginationBackArrow.svg"
               class="w-2 h-2 self-center"
-              alt=""
+              alt="Previous Page Icon"
             />
           </button>
-          <button class="rounded-md text-[#002855] text-[12px]">1</button>
-          <button class="rounded-md text-[#737373] text-[12px]">2</button>
-          <button class="rounded-md text-[#737373] text-[12px]">3</button>
-          <span class="px-2 py-1 text-[12px]">..</span>
-          <button class="rounded-md text-[12px] text-[#737373]">6</button>
-          <button class="bg-[#F5F8FA] px-2 py-1">
+          <!-- Page Number Buttons -->
+          <button
+            class="rounded-md text-[#002855] text-[12px]"
+            aria-label="Page 1"
+          >
+            1
+          </button>
+          <button
+            class="rounded-md text-[#737373] text-[12px]"
+            aria-label="Page 2"
+          >
+            2
+          </button>
+          <button
+            class="rounded-md text-[#737373] text-[12px]"
+            aria-label="Page 3"
+          >
+            3
+          </button>
+          <!-- Ellipsis indicating more pages -->
+          <span class="px-2 py-1 text-[12px]" aria-label="More Pages">..</span>
+          <button
+            class="rounded-md text-[12px] text-[#737373]"
+            aria-label="Page 6"
+          >
+            6
+          </button>
+          <!-- Next Page Button -->
+          <button class="bg-[#F5F8FA] px-2 py-1" aria-label="Next Page">
             <img
               src="../assets/general/paginationForwardArrow.svg"
               class="w-2 h-2 self-center"
-              alt=""
+              alt="Next Page Icon"
             />
           </button>
         </div>
+
+        <!-- View Settings -->
         <div class="flex items-center space-x-2">
-          <span class="text-[#7F8B94] text-[12px] font-[700]">Views</span>
-          <select class="border rounded-md p-1 text-[9px] text-[#7F8B94]">
+          <!-- Label for the view settings dropdown -->
+          <span class="text-[#7F8B94] text-[12px] font-[700]" aria-label="Views"
+            >Views</span
+          >
+          <!-- Dropdown for selecting the number of items per page -->
+          <select
+            class="border rounded-md p-1 text-[9px] text-[#7F8B94]"
+            aria-label="Items per Page"
+          >
             <option>15</option>
             <option>30</option>
             <option>45</option>
           </select>
-          <span class="text-[#7F8B94] text-[12px] font-[700] whitespace-nowrap"
-            >items per page</span
+          <!-- Label for the items per page dropdown -->
+          <span
+            class="text-[#7F8B94] text-[12px] font-[700] whitespace-nowrap"
+            aria-label="Items per Page Label"
           >
-          <span class="text-[12px] font-[700] text-[#9F9F9F] whitespace-nowrap"
-            >1 - 15 of 15 Entries</span
+            items per page
+          </span>
+          <!-- Text showing the range of entries displayed -->
+          <span
+            class="text-[12px] font-[700] text-[#9F9F9F] whitespace-nowrap"
+            aria-label="Entries Range"
           >
+            1 - 15 of 15 Entries
+          </span>
         </div>
       </div>
     </div>
